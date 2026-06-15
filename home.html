@@ -293,10 +293,9 @@
                 <button>
                     <i class="fa-solid fa-bag-shopping bag-outline"></i>
                 </button>
-                <button>
-                    <a href="login.html">
-                        <i class="fa-regular fa-user"></i>
-                    </a> </button>
+                <button id="loginBtn">
+                    <i class="fa-regular fa-user"></i>
+                </button>
             </div>
 
         </div>
@@ -307,8 +306,9 @@
     <section class="hero">
         <div class="relative h-screen w-full overflow-hidden">
 
-            <!-- Background Image -->
-            <img src="images/home-bg.png" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover">
+            <!-- Slider Images -->
+            <img id="slideImage" src="images/home-bg.png" alt="Hero Background"
+                class="absolute inset-0 w-full h-full object-cover transition-all duration-500">
 
             <!-- Dark Overlay -->
             <div class="absolute inset-0 bg-black/40"></div>
@@ -324,10 +324,11 @@
 
                 <!-- Slider Dots -->
                 <div class="flex justify-center items-center gap-2 mt-6">
-                    <span class="w-12 h-3 rounded-full bg-[#c8b06d]"></span>
-                    <span class="w-3 h-3 rounded-full bg-white"></span>
-                    <span class="w-3 h-3 rounded-full bg-white"></span>
-                    <span class="w-3 h-3 rounded-full bg-white"></span>
+                    <button onclick="changeSlide(0)" class="dot w-12 h-3 rounded-full bg-[#c8b06d]"></button>
+
+                    <button onclick="changeSlide(1)" class="dot w-3 h-3 rounded-full bg-white"></button>
+
+                    <button onclick="changeSlide(2)" class="dot w-3 h-3 rounded-full bg-white"></button>
                 </div>
 
             </div>
@@ -1178,15 +1179,10 @@
                         </div>
 
                         <!-- CTA -->
-                        <button
-                            class="mt-12 inline-flex items-center gap-4 rounded-xl bg-gradient-to-r from-[#E4C587] to-[#D8C5A0] px-8 py-4 font-['Poppins'] text-[17.45px] font-medium leading-none tracking-normal text-black transition hover:opacity-90">
+                        <button onclick="openModal()"
+                            class="mt-12 inline-flex items-center gap-4 rounded-xl bg-gradient-to-r from-[#E4C587] to-[#D8C5A0] px-8 py-4 font-['Poppins'] text-[17.45px] font-medium text-black transition hover:opacity-90">
                             BOOK AN APPOINTMENT
-
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5l7 7-7 7" />
-                            </svg>
+                            <span>→</span>
                         </button>
                     </div>
 
@@ -1295,9 +1291,10 @@
                     </p>
 
                     <button
-                        class="mt-10 bg-[#d3b375] hover:bg-[#c4a05e] px-8 py-4 rounded text-black font-medium flex items-center gap-2">
+                        class="mt-12 inline-flex items-center gap-4 rounded-xl bg-gradient-to-r from-[#E4C587] to-[#D8C5A0] px-8 py-4 font-['Poppins'] text-[17.45px] font-medium leading-none tracking-normal text-black transition hover:opacity-90">
                         SHOP
-                        <span>➜</span>
+
+                        <span>→</span>
                     </button>
                 </div>
             </div>
@@ -1684,6 +1681,128 @@
 
     </footer>
 
+    <!-- Login Popup -->
+    <div id="loginModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+
+        <div class="relative w-full max-w-md bg-white rounded-3xl p-6 md:p-8 shadow-2xl">
+
+            <!-- Close Button -->
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">
+                &times;
+            </button>
+
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-bold tracking-widest">WELCOME</h1>
+                <p class="text-gray-500 text-sm mt-2">Sign in to your account</p>
+            </div>
+
+            <form class="space-y-4">
+
+                <!-- Email -->
+                <div class="relative">
+                    <input type="email" placeholder="Enter Email"
+                        class="w-full h-12 rounded-lg bg-gray-100 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+
+                    <i class="fa-regular fa-envelope absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                </div>
+
+                <!-- Password -->
+                <div class="relative">
+                    <input id="passwordInput" type="password" placeholder="Enter Password"
+                        class="w-full h-12 rounded-lg bg-gray-100 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+
+                    <i id="togglePassword"
+                        class="fa-regular fa-eye-slash absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                </div>
+
+                <div class="flex justify-end">
+                    <a href="#" class="text-xs text-gray-500 hover:text-black">
+                        Recover Password?
+                    </a>
+                </div>
+
+                <button type="submit" class="w-full h-12 bg-black text-white rounded-lg font-medium hover:bg-gray-800">
+                    Sign In
+                </button>
+
+            </form>
+
+            <!-- Divider -->
+            <div class="flex items-center my-4">
+                <div class="flex-1 border-t border-gray-200"></div>
+
+                <span class="px-4 text-sm text-gray-400">
+                    Or continue with
+                </span>
+
+                <div class="flex-1 border-t border-gray-200"></div>
+            </div>
+
+            <!-- Social Login -->
+            <div class="grid grid-cols-3 gap-3">
+
+                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
+                    <i class="fa-brands fa-google text-red-500 text-lg"></i>
+                </button>
+
+                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
+                    <i class="fa-brands fa-apple text-black text-xl"></i>
+                </button>
+
+                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
+                    <i class="fa-brands fa-facebook-f text-blue-600 text-lg"></i>
+                </button>
+
+            </div>
+
+            <div class="text-center mt-6 text-sm text-gray-500">
+                Don't have an account?
+                <a href="#" class="font-semibold text-black hover:underline">
+                    Sign Up
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS Login Popup -->
+    <script>
+        const loginBtn = document.getElementById("loginBtn");
+        const loginModal = document.getElementById("loginModal");
+
+        loginBtn.addEventListener("click", () => {
+            loginModal.classList.remove("hidden");
+            loginModal.classList.add("flex");
+        });
+
+        function closeLoginModal() {
+            loginModal.classList.add("hidden");
+            loginModal.classList.remove("flex");
+        }
+
+        // Close when clicking outside
+        loginModal.addEventListener("click", function (e) {
+            if (e.target === this) {
+                closeLoginModal();
+            }
+        });
+
+        // Toggle Password
+        document.getElementById("togglePassword").addEventListener("click", function () {
+            const password = document.getElementById("passwordInput");
+
+            if (password.type === "password") {
+                password.type = "text";
+                this.classList.remove("fa-eye-slash");
+                this.classList.add("fa-eye");
+            } else {
+                password.type = "password";
+                this.classList.remove("fa-eye");
+                this.classList.add("fa-eye-slash");
+            }
+        });
+    </script>
+
     <!-- Sidebar Overlay -->
     <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
 
@@ -1761,6 +1880,29 @@
         </div>
     </div>
 
+    <!-- Slider Main -->
+    <script>
+        const images = [
+            "images/home-bg.png",
+            "images/region-bg.png",
+            "images/eid-banner.png"
+        ];
+
+        function changeSlide(index) {
+            document.getElementById("slideImage").src = images[index];
+
+            const dots = document.querySelectorAll(".dot");
+
+            dots.forEach(dot => {
+                dot.classList.remove("w-12", "bg-[#c8b06d]");
+                dot.classList.add("w-3", "bg-white");
+            });
+
+            dots[index].classList.remove("w-3", "bg-white");
+            dots[index].classList.add("w-12", "bg-[#c8b06d]");
+        }
+    </script>
+
     <!-- JS -->
     <script>
         // Sidebar
@@ -1793,6 +1935,198 @@
 
             togglePassword.classList.toggle("fa-eye");
             togglePassword.classList.toggle("fa-eye-slash");
+        });
+    </script>
+
+    <!-- Popup Modal (BOOK AN APPOINTMENT) -->
+    <div id="appointmentModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+
+        <!-- Modal -->
+        <div class="w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-xl border border-[#C9A227] bg-[#F8F6F0]">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between px-8 py-5 border-b border-[#E0D7B8]">
+
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-[#C9A227] flex items-center justify-center text-white text-xl">
+                        ✨
+                    </div>
+
+                    <div>
+                        <h2 class="text-4xl font-bold tracking-[4px] text-[#3A2D0B] uppercase">
+                            Book Appointment
+                        </h2>
+                        <p class="text-[#C9A227] font-medium">
+                            Mon–Sat · 11:00 AM–5:00 PM · Fri break 12:30–2:30 PM
+                        </p>
+                    </div>
+                </div>
+
+                <button onclick="closeModal()"
+                    class="w-12 h-12 rounded-full border-2 border-[#C9A227] text-[#C9A227] text-2xl hover:bg-[#C9A227] hover:text-white transition">
+                    ×
+                </button>
+
+            </div>
+
+            <!-- Form -->
+            <div class="p-8">
+
+                <!-- Personal Information -->
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="flex-1 h-px bg-[#D9C98A]"></div>
+                    <span class="text-[#C9A227] font-semibold tracking-widest uppercase text-sm">
+                        Personal Information
+                    </span>
+                    <div class="flex-1 h-px bg-[#D9C98A]"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-5">
+
+                    <div>
+                        <label class="block text-sm font-bold text-[#5A4720] uppercase mb-2">
+                            Your Full Name *
+                        </label>
+                        <input type="text"
+                            class="w-full rounded-xl border border-[#D9C98A] bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C9A227]"
+                            placeholder="Your Name">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-[#5A4720] uppercase mb-2">
+                            E-Mail Address *
+                        </label>
+                        <input type="email"
+                            class="w-full rounded-xl border border-[#D9C98A] bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C9A227]"
+                            placeholder="example@email.com">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-[#5A4720] uppercase mb-2">
+                            Contact / WhatsApp *
+                        </label>
+                        <input type="text"
+                            class="w-full rounded-xl border border-[#D9C98A] bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C9A227]"
+                            placeholder="+92 Enter phone number">
+                    </div>
+
+                </div>
+
+                <!-- Location -->
+                <div class="flex items-center gap-4 my-8">
+                    <div class="flex-1 h-px bg-[#D9C98A]"></div>
+                    <span class="text-[#C9A227] font-semibold tracking-widest uppercase text-sm">
+                        Location
+                    </span>
+                    <div class="flex-1 h-px bg-[#D9C98A]"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-5">
+
+                    <select class="w-full rounded-xl border border-[#D9C98A] bg-white px-4 py-3">
+                        <option>Select Country</option>
+                    </select>
+
+                    <select class="w-full rounded-xl border border-[#D9C98A] bg-white px-4 py-3">
+                        <option>Select State</option>
+                    </select>
+
+                    <select class="w-full rounded-xl border border-[#D9C98A] bg-white px-4 py-3">
+                        <option>Select City</option>
+                    </select>
+
+                </div>
+
+                <!-- Appointment Details -->
+                <div class="flex items-center gap-4 my-8">
+                    <div class="flex-1 h-px bg-[#D9C98A]"></div>
+                    <span class="text-[#C9A227] font-semibold tracking-widest uppercase text-sm">
+                        Appointment Details
+                    </span>
+                    <div class="flex-1 h-px bg-[#D9C98A]"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-5">
+
+                    <div>
+                        <label class="block text-sm font-bold text-[#5A4720] uppercase mb-2">
+                            Appointment Date *
+                        </label>
+                        <input type="date" class="w-full rounded-xl border border-[#D9C98A] px-4 py-3">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-[#5A4720] uppercase mb-2">
+                            Time Slot (1 Hr) *
+                        </label>
+                        <select class="w-full rounded-xl border border-[#D9C98A] px-4 py-3">
+                            <option>Select Time</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-[#5A4720] uppercase mb-2">
+                            Desired Product *
+                        </label>
+                        <select class="w-full rounded-xl border border-[#D9C98A] px-4 py-3">
+                            <option>Select Product</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-[#5A4720] uppercase mb-2">
+                            Event / Function Type *
+                        </label>
+                        <select class="w-full rounded-xl border border-[#D9C98A] px-4 py-3">
+                            <option>Select Event</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-[#5A4720] uppercase mb-2">
+                            Expected Delivery Date *
+                        </label>
+                        <input type="date" class="w-full rounded-xl border border-[#D9C98A] px-4 py-3">
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex justify-center gap-5 mt-10">
+
+                    <button
+                        class="min-w-[170px] rounded-2xl bg-[#C9A227] px-10 py-4 text-white font-bold tracking-[3px] uppercase shadow-lg hover:opacity-90">
+                        Book
+                    </button>
+
+                    <button
+                        class="min-w-[170px] rounded-2xl border-2 border-[#C9A227] px-10 py-4 text-[#8A6A10] font-bold tracking-[3px] uppercase hover:bg-[#C9A227] hover:text-white">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- JS Popup Modal (BOOK AN APPOINTMENT -->
+    <script>
+        function openModal() {
+            document.getElementById('appointmentModal').classList.remove('hidden');
+            document.getElementById('appointmentModal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('appointmentModal').classList.add('hidden');
+            document.getElementById('appointmentModal').classList.remove('flex');
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('appointmentModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeModal();
+            }
         });
     </script>
 
