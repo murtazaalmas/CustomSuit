@@ -302,7 +302,7 @@
 
     </header>
 
-    <!-- Main -->
+    <!-- Main Slider-->
     <section class="hero">
         <div class="relative h-screen w-full overflow-hidden">
 
@@ -1765,44 +1765,6 @@
         </div>
     </div>
 
-    <!-- JS Login Popup -->
-    <script>
-        const loginBtn = document.getElementById("loginBtn");
-        const loginModal = document.getElementById("loginModal");
-
-        loginBtn.addEventListener("click", () => {
-            loginModal.classList.remove("hidden");
-            loginModal.classList.add("flex");
-        });
-
-        function closeLoginModal() {
-            loginModal.classList.add("hidden");
-            loginModal.classList.remove("flex");
-        }
-
-        // Close when clicking outside
-        loginModal.addEventListener("click", function (e) {
-            if (e.target === this) {
-                closeLoginModal();
-            }
-        });
-
-        // Toggle Password
-        document.getElementById("togglePassword").addEventListener("click", function () {
-            const password = document.getElementById("passwordInput");
-
-            if (password.type === "password") {
-                password.type = "text";
-                this.classList.remove("fa-eye-slash");
-                this.classList.add("fa-eye");
-            } else {
-                password.type = "password";
-                this.classList.remove("fa-eye");
-                this.classList.add("fa-eye-slash");
-            }
-        });
-    </script>
-
     <!-- Sidebar Overlay -->
     <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
 
@@ -1879,64 +1841,6 @@
 
         </div>
     </div>
-
-    <!-- Slider Main -->
-    <script>
-        const images = [
-            "images/home-bg.png",
-            "images/region-bg.png",
-            "images/eid-banner.png"
-        ];
-
-        function changeSlide(index) {
-            document.getElementById("slideImage").src = images[index];
-
-            const dots = document.querySelectorAll(".dot");
-
-            dots.forEach(dot => {
-                dot.classList.remove("w-12", "bg-[#c8b06d]");
-                dot.classList.add("w-3", "bg-white");
-            });
-
-            dots[index].classList.remove("w-3", "bg-white");
-            dots[index].classList.add("w-12", "bg-[#c8b06d]");
-        }
-    </script>
-
-    <!-- JS -->
-    <script>
-        // Sidebar
-        const menuBtn = document.getElementById("menuBtn");
-        const sidebar = document.getElementById("sidebar");
-        const sidebarOverlay = document.getElementById("sidebarOverlay");
-        const closeSidebar = document.getElementById("closeSidebar");
-
-        menuBtn.addEventListener("click", () => {
-            sidebar.style.transform = "translateX(0)";
-            sidebarOverlay.classList.remove("hidden");
-        });
-
-        function closeMenu() {
-            sidebar.style.transform = "translateX(-100%)";
-            sidebarOverlay.classList.add("hidden");
-        }
-
-        closeSidebar.addEventListener("click", closeMenu);
-        sidebarOverlay.addEventListener("click", closeMenu);
-
-        // Password toggle
-        const passwordInput = document.getElementById("passwordInput");
-        const togglePassword = document.getElementById("togglePassword");
-
-        togglePassword.addEventListener("click", () => {
-            const isHidden = passwordInput.type === "password";
-
-            passwordInput.type = isHidden ? "text" : "password";
-
-            togglePassword.classList.toggle("fa-eye");
-            togglePassword.classList.toggle("fa-eye-slash");
-        });
-    </script>
 
     <!-- Popup Modal (BOOK AN APPOINTMENT) -->
     <div id="appointmentModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
@@ -2110,6 +2014,90 @@
 
         </div>
     </div>
+
+    <!-- JS Login Popup -->
+    <script>
+        const loginBtn = document.getElementById("loginBtn");
+        const loginModal = document.getElementById("loginModal");
+
+        loginBtn.addEventListener("click", () => {
+            loginModal.classList.remove("hidden");
+            loginModal.classList.add("flex");
+        });
+
+        function closeLoginModal() {
+            loginModal.classList.add("hidden");
+            loginModal.classList.remove("flex");
+        }
+
+        // Close when clicking outside
+        loginModal.addEventListener("click", function (e) {
+            if (e.target === this) {
+                closeLoginModal();
+            }
+        });
+
+        // Toggle Password
+        document.getElementById("togglePassword").addEventListener("click", function () {
+            const password = document.getElementById("passwordInput");
+
+            if (password.type === "password") {
+                password.type = "text";
+                this.classList.remove("fa-eye-slash");
+                this.classList.add("fa-eye");
+            } else {
+                password.type = "password";
+                this.classList.remove("fa-eye");
+                this.classList.add("fa-eye-slash");
+            }
+        });
+    </script>
+
+    <!-- JS Slider Main -->
+    <script>
+        const images = [
+            "images/home-bg.png",
+            "images/region-bg.png",
+            "images/eid-banner.png"
+        ];
+
+        function changeSlide(index) {
+            document.getElementById("slideImage").src = images[index];
+
+            const dots = document.querySelectorAll(".dot");
+
+            dots.forEach(dot => {
+                dot.classList.remove("w-12", "bg-[#c8b06d]");
+                dot.classList.add("w-3", "bg-white");
+            });
+
+            dots[index].classList.remove("w-3", "bg-white");
+            dots[index].classList.add("w-12", "bg-[#c8b06d]");
+        }
+    </script>
+
+    <!-- JS Sidebar-->
+    <script>
+        // Sidebar
+        const menuBtn = document.getElementById("menuBtn");
+        const sidebar = document.getElementById("sidebar");
+        const sidebarOverlay = document.getElementById("sidebarOverlay");
+        const closeSidebar = document.getElementById("closeSidebar");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.style.transform = "translateX(0)";
+            sidebarOverlay.classList.remove("hidden");
+        });
+
+        function closeMenu() {
+            sidebar.style.transform = "translateX(-100%)";
+            sidebarOverlay.classList.add("hidden");
+        }
+
+        closeSidebar.addEventListener("click", closeMenu);
+        sidebarOverlay.addEventListener("click", closeMenu);
+    </script>
+
     <!-- JS Popup Modal (BOOK AN APPOINTMENT -->
     <script>
         function openModal() {
