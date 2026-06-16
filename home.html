@@ -1502,107 +1502,54 @@
 
         </div>
     </section>
-  
+
     <!-- Royal Bridal Lehenga -->
-    <section>
+    <section class="max-w-7xl mx-auto py-10 px-5">
 
-        <div class="grid grid-cols-1 lg:grid-cols-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-            <!-- Left Large Image -->
+            <!-- LEFT IMAGE -->
             <div class="lg:col-span-5">
-                <img src="images/bridal-main.jpg" alt="Royal Bridal" class="w-full h-full object-cover scale-x-[-1]">
+                <img src="images/bridal-main.jpg" class="w-full h-full object-cover scale-x-[-1] rounded-xl">
             </div>
 
-            <!-- Right Content -->
-            <div class="lg:col-span-7 p-10">
+            <!-- RIGHT SIDE -->
+            <div class="lg:col-span-7">
 
-                <!-- Header -->
+                <!-- HEADER -->
                 <div class="flex justify-between items-center mb-8">
-                    <h2
-                        class="font-['Abril_Fatface'] text-[33.67px] font-normal leading-[100%] tracking-normal text-gray-800">
-                        Royal Bridal Lehenga
-                    </h2>
+
+                    <h2 class="text-3xl font-serif">Royal Bridal Lehenga</h2>
 
                     <div class="flex items-center gap-4">
                         <a href="#" class="text-gray-500 text-lg hover:text-black">
                             View all
                         </a>
-
-                        <button>
+                        <button onclick="prevGroup()">
                             <i class="fa-solid fa-arrow-left text-xl"></i>
                         </button>
 
-                        <button>
+                        <button onclick="nextGroup()">
                             <i class="fa-solid fa-arrow-right text-xl"></i>
                         </button>
-                    </div>
-                </div>
 
-                <!-- Product Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                    <!-- Card -->
-                    <div>
-                        <div class="overflow-hidden rounded-[28px]">
-                            <img src="images/gold.jpg" class="w-full h-[430px] object-cover" alt="">
-                        </div>
-
-                        <h3
-                            class="mt-2 font-['Inter'] text-[22.95px] font-light leading-[100%] tracking-normal text-[#575757]">
-                            Gold
-                        </h3>
-
-                        <p
-                            class="mt-2 font-['Abril_Fatface'] text-[19.34px] font-normal leading-[100%] tracking-normal text-[#303030]">
-                            Rs. 950,000
-                        </p>
-                    </div>
-
-                    <!-- Card -->
-                    <div>
-                        <div class="overflow-hidden rounded-[28px]">
-                            <img src="images/lilac.jpg" class="w-full h-[430px] object-cover" alt="">
-                        </div>
-
-                        <h3
-                            class="mt-2 font-['Inter'] text-[22.95px] font-light leading-[100%] tracking-normal text-[#575757]">
-                            Lilac
-                        </h3>
-
-                        <p
-                            class="mt-2 font-['Abril_Fatface'] text-[19.34px] font-normal leading-[100%] tracking-normal text-[#303030]">
-                            Rs. 950,000
-                        </p>
-                    </div>
-
-                    <!-- Card -->
-                    <div>
-                        <div class="overflow-hidden rounded-[28px]">
-                            <img src="images/rosegold.jpg" class="w-full h-[430px] object-cover" alt="">
-                        </div>
-
-                        <h3
-                            class="mt-2 font-['Inter'] text-[22.95px] font-light leading-[100%] tracking-normal text-[#575757]">
-                            Rose Gold
-                        </h3>
-
-                        <p
-                            class="mt-2 font-['Abril_Fatface'] text-[19.34px] font-normal leading-[100%] tracking-normal text-[#303030]">
-                            Rs. 950,000
-                        </p>
                     </div>
 
                 </div>
 
-                <!-- Slider Bar -->
+                <!-- GRID (3 ITEMS VIEW) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="cardContainer"></div>
+
+                <!-- PROGRESS BAR -->
                 <div class="mt-10">
-                    <div class="w-full h-2 bg-gray-200 rounded-full">
-                        <div class="w-1/4 h-2 bg-gray-700 rounded-full"></div>
+                    <div id="barContainer" class="w-full h-2 bg-gray-200 rounded-full cursor-pointer relative">
+
+                        <div id="progressBar" class="h-2 bg-gray-700 rounded-full transition-all duration-500"></div>
+
                     </div>
                 </div>
 
             </div>
-
         </div>
 
     </section>
@@ -2342,7 +2289,7 @@
         });
     </script>
 
-       <!-- JS Slider Shop By Occasion -->
+    <!-- JS Slider Shop By Occasion -->
     <script>
         const slides = document.querySelectorAll(".slide");
         const dots = document.querySelectorAll(".dot");
@@ -2387,6 +2334,92 @@
 
         // init
         goToSlide(0);
+    </script>
+
+    <!-- JS Slider (Royal Bridal Lehenga) -->
+    <script>
+
+        const products = [
+            { img: "images/gold.jpg", name: "Gold", price: "Rs. 950,000" },
+            { img: "images/lilac.jpg", name: "Lilac", price: "Rs. 950,000" },
+            { img: "images/rosegold.jpg", name: "Rose Gold", price: "Rs. 950,000" },
+
+            { img: "images/green.jpg", name: "Green", price: "Rs. 850,000" },
+            { img: "images/red.jpg", name: "Red", price: "Rs. 920,000" },
+            { img: "images/blue.jpg", name: "Blue", price: "Rs. 990,000" }
+        ];
+
+        let startIndex = 0;
+        const perPage = 3;
+
+        const container = document.getElementById("cardContainer");
+        const progressBar = document.getElementById("progressBar");
+        const barContainer = document.getElementById("barContainer");
+
+        const totalGroups = Math.ceil(products.length / perPage);
+
+        function render() {
+
+            container.innerHTML = "";
+
+            const slice = products.slice(startIndex, startIndex + perPage);
+
+            slice.forEach(p => {
+                container.innerHTML += `
+            <div>
+                <div class="overflow-hidden rounded-[28px]">
+                    <img src="${p.img}" class="w-full h-[430px] object-cover">
+                </div>
+
+                <h3 class="mt-2 text-[#575757] text-[22px]">${p.name}</h3>
+                <p class="mt-2 text-[#303030] font-serif text-[19px]">${p.price}</p>
+            </div>
+        `;
+            });
+
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const currentGroup = startIndex / perPage;
+            const percent = ((currentGroup + 1) / totalGroups) * 100;
+            progressBar.style.width = percent + "%";
+        }
+
+        function nextGroup() {
+            if (startIndex + perPage < products.length) {
+                startIndex += perPage;
+            } else {
+                startIndex = 0;
+            }
+            render();
+        }
+
+        function prevGroup() {
+            if (startIndex - perPage >= 0) {
+                startIndex -= perPage;
+            } else {
+                startIndex = (totalGroups - 1) * perPage;
+            }
+            render();
+        }
+
+        // CLICK ON PROGRESS BAR
+        barContainer.addEventListener("click", (e) => {
+            const rect = barContainer.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+
+            const percent = clickX / rect.width;
+
+            const targetGroup = Math.floor(percent * totalGroups);
+
+            startIndex = targetGroup * perPage;
+
+            render();
+        });
+
+        render();
+
     </script>
 
 </body>
