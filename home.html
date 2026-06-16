@@ -283,18 +283,40 @@
             <!-- Right Icons -->
             <div class="flex justify-end items-center gap-5 text-white text-lg">
                 <button>
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-search-icon lucide-search">
+                        <path d="m21 21-4.34-4.34" />
+                        <circle cx="11" cy="11" r="8" />
+                    </svg>
                 </button>
 
                 <button>
-                    <i class="fa-regular fa-heart"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-heart-icon lucide-heart">
+                        <path
+                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                    </svg>
                 </button>
 
                 <button>
-                    <i class="fa-solid fa-bag-shopping bag-outline"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                        <path d="M3.103 6.034h17.794" />
+                        <path
+                            d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                    </svg>
                 </button>
                 <button id="loginBtn">
-                    <i class="fa-regular fa-user"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user-round-icon lucide-user-round">
+                        <circle cx="12" cy="8" r="5" />
+                        <path d="M20 21a8 8 0 0 0-16 0" />
+                    </svg>
                 </button>
             </div>
 
@@ -338,7 +360,7 @@
 
     <!-- Shop by Category -->
     <section>
-        <div class="container">
+        <div class="">
             <div class="my-8 text-center flex flex-col items-center">
                 <small class="font-light text-[20.15px] leading-[100%] tracking-normal text-[#E4C587] font-[Inter]">
                     DISCOVER
@@ -456,7 +478,7 @@
 
     <!-- Best Selling Pieces -->
     <section>
-        <div class="container">
+        <div class="max-w-7xl mx-auto">
 
             <div class="my-8 flex items-end justify-between">
                 <!-- Left Content -->
@@ -477,13 +499,12 @@
                     View all
                 </a>
             </div>
-
-
-            <div class="product-grid">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[25px] bg-[linear-gradient(135deg,_#FFFFFF_0%,_#EBEBEB_100%)] px-4 mb-6">
 
                 <!-- Repeat Cards -->
 
-                <div class=" border-gray-200 bg-white p-6">
+                <div class=" border-gray-200 bg-white p-4">
                     <!-- Product Image -->
                     <div class="overflow-hidden rounded-lg">
                         <img src="images/product1.png" alt="Camel Chikankari"
@@ -544,19 +565,34 @@
 
                         <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
-                            <span> <i class="fa-solid fa-scissors"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-scissors-icon lucide-scissors">
+                                <circle cx="6" cy="6" r="3" />
+                                <path d="M8.12 8.12 12 12" />
+                                <path d="M20 4 8.12 15.88" />
+                                <circle cx="6" cy="18" r="3" />
+                                <path d="M14.8 14.8 20 20" />
+                            </svg>
                             Tailored for you
                         </p>
 
                         <!-- Button -->
                         <button
                             class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-                            <span><i class="fa-solid fa-bag-shopping"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                                <path d="M16 10a4 4 0 0 1-8 0" />
+                                <path d="M3.103 6.034h17.794" />
+                                <path
+                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                            </svg>
                             ADD TO BAG
                         </button>
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-6">
+                <div class=" border-gray-200 bg-white p-4">
                     <!-- Product Image -->
                     <div class="overflow-hidden rounded-lg">
                         <img src="images/product2.png" alt="Camel Chikankari"
@@ -617,19 +653,34 @@
 
                         <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
-                            <span> <i class="fa-solid fa-scissors"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-scissors-icon lucide-scissors">
+                                <circle cx="6" cy="6" r="3" />
+                                <path d="M8.12 8.12 12 12" />
+                                <path d="M20 4 8.12 15.88" />
+                                <circle cx="6" cy="18" r="3" />
+                                <path d="M14.8 14.8 20 20" />
+                            </svg>
                             Tailored for you
                         </p>
 
                         <!-- Button -->
                         <button
                             class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-                            <span><i class="fa-solid fa-bag-shopping"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                                <path d="M16 10a4 4 0 0 1-8 0" />
+                                <path d="M3.103 6.034h17.794" />
+                                <path
+                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                            </svg>
                             ADD TO BAG
                         </button>
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-6">
+                <div class=" border-gray-200 bg-white p-4">
                     <!-- Product Image -->
                     <div class="overflow-hidden rounded-lg">
                         <img src="images/product3.png" alt="Camel Chikankari"
@@ -690,19 +741,34 @@
 
                         <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
-                            <span> <i class="fa-solid fa-scissors"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-scissors-icon lucide-scissors">
+                                <circle cx="6" cy="6" r="3" />
+                                <path d="M8.12 8.12 12 12" />
+                                <path d="M20 4 8.12 15.88" />
+                                <circle cx="6" cy="18" r="3" />
+                                <path d="M14.8 14.8 20 20" />
+                            </svg>
                             Tailored for you
                         </p>
 
                         <!-- Button -->
                         <button
                             class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-                            <span><i class="fa-solid fa-bag-shopping"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                                <path d="M16 10a4 4 0 0 1-8 0" />
+                                <path d="M3.103 6.034h17.794" />
+                                <path
+                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                            </svg>
                             ADD TO BAG
                         </button>
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-6">
+                <div class=" border-gray-200 bg-white p-4">
                     <!-- Product Image -->
                     <div class="overflow-hidden rounded-lg">
                         <img src="images/product4.png" alt="Camel Chikankari"
@@ -763,19 +829,34 @@
 
                         <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
-                            <span> <i class="fa-solid fa-scissors"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-scissors-icon lucide-scissors">
+                                <circle cx="6" cy="6" r="3" />
+                                <path d="M8.12 8.12 12 12" />
+                                <path d="M20 4 8.12 15.88" />
+                                <circle cx="6" cy="18" r="3" />
+                                <path d="M14.8 14.8 20 20" />
+                            </svg>
                             Tailored for you
                         </p>
 
                         <!-- Button -->
                         <button
                             class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-                            <span><i class="fa-solid fa-bag-shopping"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                                <path d="M16 10a4 4 0 0 1-8 0" />
+                                <path d="M3.103 6.034h17.794" />
+                                <path
+                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                            </svg>
                             ADD TO BAG
                         </button>
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-6">
+                <div class=" border-gray-200 bg-white p-4">
                     <!-- Product Image -->
                     <div class="overflow-hidden rounded-lg">
                         <img src="images/product5.png" alt="Camel Chikankari"
@@ -836,19 +917,34 @@
 
                         <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
-                            <span> <i class="fa-solid fa-scissors"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-scissors-icon lucide-scissors">
+                                <circle cx="6" cy="6" r="3" />
+                                <path d="M8.12 8.12 12 12" />
+                                <path d="M20 4 8.12 15.88" />
+                                <circle cx="6" cy="18" r="3" />
+                                <path d="M14.8 14.8 20 20" />
+                            </svg>
                             Tailored for you
                         </p>
 
                         <!-- Button -->
                         <button
                             class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-                            <span><i class="fa-solid fa-bag-shopping"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                                <path d="M16 10a4 4 0 0 1-8 0" />
+                                <path d="M3.103 6.034h17.794" />
+                                <path
+                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                            </svg>
                             ADD TO BAG
                         </button>
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-6">
+                <div class=" border-gray-200 bg-white p-4">
                     <!-- Product Image -->
                     <div class="overflow-hidden rounded-lg">
                         <img src="images/product6.png" alt="Camel Chikankari"
@@ -909,19 +1005,34 @@
 
                         <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
-                            <span> <i class="fa-solid fa-scissors"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-scissors-icon lucide-scissors">
+                                <circle cx="6" cy="6" r="3" />
+                                <path d="M8.12 8.12 12 12" />
+                                <path d="M20 4 8.12 15.88" />
+                                <circle cx="6" cy="18" r="3" />
+                                <path d="M14.8 14.8 20 20" />
+                            </svg>
                             Tailored for you
                         </p>
 
                         <!-- Button -->
                         <button
                             class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-                            <span><i class="fa-solid fa-bag-shopping"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                                <path d="M16 10a4 4 0 0 1-8 0" />
+                                <path d="M3.103 6.034h17.794" />
+                                <path
+                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                            </svg>
                             ADD TO BAG
                         </button>
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-6">
+                <div class=" border-gray-200 bg-white p-4">
                     <!-- Product Image -->
                     <div class="overflow-hidden rounded-lg">
                         <img src="images/product7.png" alt="Camel Chikankari"
@@ -982,19 +1093,34 @@
 
                         <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
-                            <span> <i class="fa-solid fa-scissors"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-scissors-icon lucide-scissors">
+                                <circle cx="6" cy="6" r="3" />
+                                <path d="M8.12 8.12 12 12" />
+                                <path d="M20 4 8.12 15.88" />
+                                <circle cx="6" cy="18" r="3" />
+                                <path d="M14.8 14.8 20 20" />
+                            </svg>
                             Tailored for you
                         </p>
 
                         <!-- Button -->
                         <button
                             class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-                            <span><i class="fa-solid fa-bag-shopping"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                                <path d="M16 10a4 4 0 0 1-8 0" />
+                                <path d="M3.103 6.034h17.794" />
+                                <path
+                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                            </svg>
                             ADD TO BAG
                         </button>
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-6">
+                <div class=" border-gray-200 bg-white p-4">
                     <!-- Product Image -->
                     <div class="overflow-hidden rounded-lg">
                         <img src="images/product8.png" alt="Camel Chikankari"
@@ -1055,14 +1181,29 @@
 
                         <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
-                            <span> <i class="fa-solid fa-scissors"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-scissors-icon lucide-scissors">
+                                <circle cx="6" cy="6" r="3" />
+                                <path d="M8.12 8.12 12 12" />
+                                <path d="M20 4 8.12 15.88" />
+                                <circle cx="6" cy="18" r="3" />
+                                <path d="M14.8 14.8 20 20" />
+                            </svg>
                             Tailored for you
                         </p>
 
                         <!-- Button -->
                         <button
                             class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-                            <span><i class="fa-solid fa-bag-shopping"></i></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                                <path d="M16 10a4 4 0 0 1-8 0" />
+                                <path d="M3.103 6.034h17.794" />
+                                <path
+                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                            </svg>
                             ADD TO BAG
                         </button>
                     </div>
@@ -1074,129 +1215,159 @@
     </section>
 
     <!-- BESPOKE SERVICE -->
-    <section>
-        <section class="relative h-screen overflow-hidden bg-black">
-            <!-- Background Image -->
-            <img src="images/bespokeService.jpg" alt="Bespoke Service"
-                class="absolute inset-0 h-full w-full object-cover scale-x-[-1] translate-x-[30%]" />
+    <section class="relative h-screen overflow-hidden bg-black">
+        <!-- Background Image -->
+        <img src="images/bespokeService.jpg" alt="Bespoke Service"
+            class="absolute inset-0 h-full w-full object-cover scale-x-[-1] translate-x-[30%]" />
 
-            <!-- Dark Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/20"></div>
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/20"></div>
 
-            <!-- Content -->
-            <div class="relative z-10 flex h-full items-center">
-                <div class="mx-auto w-full max-w-7xl px-6 lg:px-12">
+        <!-- Content -->
+        <div class="relative z-10 flex h-full items-center">
+            <div class="mx-auto w-full max-w-7xl px-6 lg:px-12">
 
-                    <div class="max-w-3xl">
-                        <!-- Badge -->
-                        <div
-                            class="mb-8 inline-flex items-center gap-2 rounded-full border border-[#C9A96E]/40 px-5 py-2 text-sm text-[#C9A96E]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M15 7l2 2m0 0l-7.5 7.5H7v-2.5L14.5 6.5 17 9z" />
-                            </svg>
+                <div class="max-w-3xl">
+                    <!-- Badge -->
+                    <div
+                        class="mb-8 inline-flex items-center gap-2 rounded-full border border-[#C9A96E]/40 px-5 py-2 text-md text-[#C9A96E]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-ruler-icon lucide-ruler">
+                            <path
+                                d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" />
+                            <path d="m14.5 12.5 2-2" />
+                            <path d="m11.5 9.5 2-2" />
+                            <path d="m8.5 6.5 2-2" />
+                            <path d="m17.5 15.5 2-2" />
+                        </svg>
 
-                            BESPOKE SERVICE
-                        </div>
-
-                        <!-- Heading -->
-                        <h1
-                            class="font-['Abhaya_Libre_ExtraBold'] text-[60px] font-extrabold leading-[90%] tracking-normal text-white">
-                            Get the Perfect Fit-
-                            <span class="block text-[#C9A96E]">
-                                Made Just for You
-                            </span>
-                        </h1>
-
-                        <!-- Cards -->
-                        <div class="mt-12 grid grid-cols-2 gap-8">
-
-                            <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
-                                <div class="mb-2 text-[28px] text-[#C9A96E]">
-                                    <i class="fa-solid fa-shirt"></i>
-                                </div>
-
-                                <h3
-                                    class="font-['Poppins'] text-[16px] font-bold leading-none tracking-normal text-white">
-                                    Select Outfit
-                                </h3>
-
-                                <p
-                                    class="mt-3 font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
-                                    Browse & choose your design
-                                </p>
-                            </div>
-
-                            <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
-                                <div class="mb-2 text-[28px] text-[#C9A96E]">
-                                    <i class="fa-solid fa-ruler-combined"></i>
-                                </div>
-
-                                <h3
-                                    class="font-['Poppins'] text-[16px] font-bold leading-none tracking-normal text-white">
-                                    Enter Measurements
-                                </h3>
-
-                                <p
-                                    class="mt-3 font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
-                                    Provide your exact measurements
-                                </p>
-                            </div>
-
-                            <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
-                                <div class="mb-2 text-[28px] text-[#C9A96E]">
-                                    <i class="fa-solid fa-scissors"></i>
-                                </div>
-
-                                <h3
-                                    class="font-['Poppins'] text-[16px] font-bold leading-none tracking-normal text-white">
-                                    Tailoring in Progress
-                                </h3>
-
-                                <p
-                                    class="mt-3 font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
-                                    Expert craftsmanship begins
-                                </p>
-                            </div>
-
-                            <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
-                                <div class="mb-2 text-[28px] text-[#C9A96E]">
-                                    <i class="fa-solid fa-box"></i>
-                                </div>
-
-                                <h3
-                                    class="font-['Poppins'] text-[16px] font-bold leading-none tracking-normal text-white">
-                                    Delivered to You
-                                </h3>
-
-                                <p
-                                    class="mt-3 font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
-                                    Arrives beautifully packaged
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <!-- CTA -->
-                        <button onclick="openModal()"
-                            class="mt-12 inline-flex items-center gap-4 rounded-xl bg-gradient-to-r from-[#E4C587] to-[#D8C5A0] px-8 py-4 font-['Poppins'] text-[17.45px] font-medium text-black transition hover:opacity-90">
-                            BOOK AN APPOINTMENT
-                            <span>→</span>
-                        </button>
+                        BESPOKE SERVICE
                     </div>
 
+                    <!-- Heading -->
+                    <h1
+                        class="font-['Abhaya_Libre_ExtraBold'] text-[60px] font-extrabold leading-[90%] tracking-normal text-white">
+                        Get the Perfect Fit-
+                        <span class="block text-[#C9A96E]">
+                            Made Just for You
+                        </span>
+                    </h1>
+
+                    <!-- Cards -->
+                    <div class="mt-12 grid grid-cols-2 gap-8">
+
+                        <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
+                            <div class="mb-2 text-[28px] text-[#C9A96E]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                                    <path d="M16 10a4 4 0 0 1-8 0" />
+                                    <path d="M3.103 6.034h17.794" />
+                                    <path
+                                        d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                                </svg>
+                            </div>
+
+                            <h3 class="font-['Poppins'] text-[16px] font-bold leading-none tracking-normal text-white">
+                                Select Outfit
+                            </h3>
+
+                            <p
+                                class="mt-3 font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
+                                Browse & choose your design
+                            </p>
+                        </div>
+
+                        <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
+                            <div class="mb-2 text-[28px] text-[#C9A96E]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-ruler-icon lucide-ruler">
+                                    <path
+                                        d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" />
+                                    <path d="m14.5 12.5 2-2" />
+                                    <path d="m11.5 9.5 2-2" />
+                                    <path d="m8.5 6.5 2-2" />
+                                    <path d="m17.5 15.5 2-2" />
+                                </svg>
+                            </div>
+
+                            <h3 class="font-['Poppins'] text-[16px] font-bold leading-none tracking-normal text-white">
+                                Enter Measurements
+                            </h3>
+
+                            <p
+                                class="mt-3 font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
+                                Provide your exact measurements
+                            </p>
+                        </div>
+
+                        <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
+                            <div class="mb-2 text-[28px] text-[#C9A96E]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-scissors-icon lucide-scissors">
+                                    <circle cx="6" cy="6" r="3" />
+                                    <path d="M8.12 8.12 12 12" />
+                                    <path d="M20 4 8.12 15.88" />
+                                    <circle cx="6" cy="18" r="3" />
+                                    <path d="M14.8 14.8 20 20" />
+                                </svg>
+                            </div>
+
+                            <h3 class="font-['Poppins'] text-[16px] font-bold leading-none tracking-normal text-white">
+                                Tailoring in Progress
+                            </h3>
+
+                            <p
+                                class="mt-3 font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
+                                Expert craftsmanship begins
+                            </p>
+                        </div>
+
+                        <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
+                            <div class="mb-2 text-[28px] text-[#C9A96E]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-box-icon lucide-box">
+                                    <path
+                                        d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                                    <path d="m3.3 7 8.7 5 8.7-5" />
+                                    <path d="M12 22V12" />
+                                </svg>
+                            </div>
+
+                            <h3 class="font-['Poppins'] text-[16px] font-bold leading-none tracking-normal text-white">
+                                Delivered to You
+                            </h3>
+
+                            <p
+                                class="mt-3 font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
+                                Arrives beautifully packaged
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- CTA -->
+                    <button onclick="openModal()"
+                        class="mt-12 inline-flex items-center gap-4 rounded-xl bg-gradient-to-r from-[#E4C587] to-[#D8C5A0] px-8 py-4 font-['Poppins'] text-[17.45px] font-medium text-black transition hover:opacity-90">
+                        BOOK AN APPOINTMENT
+                        <i class="fa-solid fa-arrow-right "></i>
+                    </button>
                 </div>
+
             </div>
-        </section>
+        </div>
     </section>
 
     <!-- Luxury Accessories -->
-    <section class="py-12">
-        <div class="container mx-auto px-4">
+    <section class="">
+        <div class="px-4">
 
             <!-- Heading -->
-            <div class="mb-10 flex flex-col items-center text-center">
+            <div class="my-8 flex flex-col items-center text-center">
                 <small class="font-[Inter] text-[20.15px] font-light leading-[100%] text-[#E4C587]">
                     COMPLETE THE LOOK
                 </small>
@@ -1207,7 +1378,7 @@
             </div>
 
             <!-- Grid -->
-            <div class="grid grid-cols-4 gap-6">
+            <div class="grid grid-cols-4 gap-6 mb-6">
 
                 <!-- Card 1 -->
                 <div class="group relative overflow-hidden rounded-2xl aspect-[3/5]">
@@ -1274,18 +1445,19 @@
     </section>
 
     <!-- Shop By Occasion -->
-    <section class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-4 min-h-[560px]">
+    <section>
+        <div class="grid grid-cols-1 lg:grid-cols-4 min-h-[700px]">
 
             <!-- Left Content -->
-            <div class="bg-gray-100 flex items-center px-10 py-16">
+            <div class="flex items-center px-10 py-16">
                 <div>
-                    <h2 class="text-5xl font-serif font-bold text-gray-800 leading-tight">
+                    <h2
+                        class="font-['Abril_Fatface'] text-[48px] font-normal leading-[115%] tracking-normal text-[#303030]">
                         Shop <br>
                         By Occasion
                     </h2>
 
-                    <p class="mt-8 text-gray-500 text-xl leading-relaxed">
+                    <p class="mt-8 font-['Inter'] text-md font-medium leading-[100%] tracking-normal text-[#A69C9C]">
                         Celebrate Eid in effortless elegance.
                         Timeless designs made for moments that matter.
                     </p>
@@ -1294,7 +1466,7 @@
                         class="mt-12 inline-flex items-center gap-4 rounded-xl bg-gradient-to-r from-[#E4C587] to-[#D8C5A0] px-8 py-4 font-['Poppins'] text-[17.45px] font-medium leading-none tracking-normal text-black transition hover:opacity-90">
                         SHOP
 
-                        <span>→</span>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
             </div>
@@ -1302,41 +1474,43 @@
             <!-- Right Banner -->
             <div class="lg:col-span-3 relative overflow-hidden">
 
-                <img src="images/eid-banner.png" alt="Eid Collection" class="w-full h-full object-cover">
+                <!-- Slides -->
+                <div class="relative w-full h-full">
 
-                <!-- Overlay Title -->
+                    <img src="images/eid-banner.png"
+                        class="slide absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-700">
+                    <img src="images/eid-banner.png"
+                        class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700">
+                    <img src="images/eid-banner.png"
+                        class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700">
+
+                </div>
+
+                <!-- Title -->
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <h1 class="text-white text-5xl md:text-7xl font-serif font-bold">
-                        EID EDIT
-                    </h1>
+                    <h1 class="text-white text-5xl md:text-7xl font-serif font-bold">EID EDIT</h1>
                 </div>
 
-                <!-- Slider Dots -->
+                <!-- Dots -->
                 <div class="absolute bottom-6 right-6 flex items-center gap-2">
-                    <div class="w-10 h-3 bg-white rounded-full"></div>
-                    <div class="w-3 h-3 bg-white rounded-full"></div>
-                    <div class="w-3 h-3 bg-white rounded-full"></div>
-                    <div class="w-3 h-3 bg-white rounded-full"></div>
-                </div>
-
-                <!-- Decorative Icon -->
-                <div class="absolute bottom-10 left-6 text-white text-5xl opacity-80">
-                    ✦
+                    <button class="dot w-10 h-3 bg-white rounded-full"></button>
+                    <button class="dot w-3 h-3 bg-white rounded-full"></button>
+                    <button class="dot w-3 h-3 bg-white rounded-full"></button>
                 </div>
 
             </div>
 
         </div>
     </section>
-
-    <!-- Collection Section -->
-    <section class="max-w-7xl mx-auto">
+  
+    <!-- Royal Bridal Lehenga -->
+    <section>
 
         <div class="grid grid-cols-1 lg:grid-cols-12">
 
             <!-- Left Large Image -->
             <div class="lg:col-span-5">
-                <img src="images/bridal-main.jpg" alt="Royal Bridal" class="w-full h-full object-cover">
+                <img src="images/bridal-main.jpg" alt="Royal Bridal" class="w-full h-full object-cover scale-x-[-1]">
             </div>
 
             <!-- Right Content -->
@@ -1344,7 +1518,8 @@
 
                 <!-- Header -->
                 <div class="flex justify-between items-center mb-8">
-                    <h2 class="text-4xl font-serif font-bold text-gray-800">
+                    <h2
+                        class="font-['Abril_Fatface'] text-[33.67px] font-normal leading-[100%] tracking-normal text-gray-800">
                         Royal Bridal Lehenga
                     </h2>
 
@@ -1372,11 +1547,13 @@
                             <img src="images/gold.jpg" class="w-full h-[430px] object-cover" alt="">
                         </div>
 
-                        <h3 class="mt-3 text-3xl text-gray-600">
+                        <h3
+                            class="mt-2 font-['Inter'] text-[22.95px] font-light leading-[100%] tracking-normal text-[#575757]">
                             Gold
                         </h3>
 
-                        <p class="font-bold text-xl">
+                        <p
+                            class="mt-2 font-['Abril_Fatface'] text-[19.34px] font-normal leading-[100%] tracking-normal text-[#303030]">
                             Rs. 950,000
                         </p>
                     </div>
@@ -1387,11 +1564,13 @@
                             <img src="images/lilac.jpg" class="w-full h-[430px] object-cover" alt="">
                         </div>
 
-                        <h3 class="mt-3 text-3xl text-gray-600">
+                        <h3
+                            class="mt-2 font-['Inter'] text-[22.95px] font-light leading-[100%] tracking-normal text-[#575757]">
                             Lilac
                         </h3>
 
-                        <p class="font-bold text-xl">
+                        <p
+                            class="mt-2 font-['Abril_Fatface'] text-[19.34px] font-normal leading-[100%] tracking-normal text-[#303030]">
                             Rs. 950,000
                         </p>
                     </div>
@@ -1402,11 +1581,13 @@
                             <img src="images/rosegold.jpg" class="w-full h-[430px] object-cover" alt="">
                         </div>
 
-                        <h3 class="mt-3 text-3xl text-gray-600">
+                        <h3
+                            class="mt-2 font-['Inter'] text-[22.95px] font-light leading-[100%] tracking-normal text-[#575757]">
                             Rose Gold
                         </h3>
 
-                        <p class="font-bold text-xl">
+                        <p
+                            class="mt-2 font-['Abril_Fatface'] text-[19.34px] font-normal leading-[100%] tracking-normal text-[#303030]">
                             Rs. 950,000
                         </p>
                     </div>
@@ -1427,66 +1608,109 @@
     </section>
 
     <!-- Features Section -->
-    <section class="max-w-7xl mx-auto py-20">
+    <section class="p-20 bg-[#FAF8F5]">
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
 
             <!-- Feature -->
             <div>
-                <div class="w-16 h-16 mx-auto border border-[#d6bf8a] rounded-full flex items-center justify-center">
-                    <i class="fa-regular fa-crown text-[#d6bf8a]"></i>
+                <div class="w-16 h-16 mx-auto border border-[#EBE4D7] rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#C0A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-crown-icon lucide-crown">
+                        <path
+                            d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
+                        <path d="M5 21h14" />
+                    </svg>
                 </div>
 
-                <h3 class="mt-5 text-2xl font-semibold">
+                <h3
+                    class="mt-5 font-['Inter'] text-[20px] font-semibold leading-[100%] tracking-normal text-[#303030] text-center">
+
                     Premium Fabric
                 </h3>
 
-                <p class="text-gray-500 mt-2">
+                <p class="font-['Inter'] text-[15px] font-normal leading-[100%] tracking-normal text-[#818181] mt-2">
                     Curated from finest mills worldwide
                 </p>
             </div>
 
             <!-- Feature -->
             <div>
-                <div class="w-16 h-16 mx-auto border border-[#d6bf8a] rounded-full flex items-center justify-center">
-                    <i class="fa-solid fa-scissors text-[#d6bf8a]"></i>
+                <div
+                    class="w-16 h-16 mx-auto border border-[#EBE4D7] bg-white rounded-full flex items-center justify-center">
+                    <!-- <i class="fa-solid fa-scissors text-[#C0A96E]"></i> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#C0A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-scissors-icon lucide-scissors">
+                        <circle cx="6" cy="6" r="3" />
+                        <path d="M8.12 8.12 12 12" />
+                        <path d="M20 4 8.12 15.88" />
+                        <circle cx="6" cy="18" r="3" />
+                        <path d="M14.8 14.8 20 20" />
+                    </svg>
                 </div>
 
-                <h3 class="mt-5 text-2xl font-semibold">
+                <h3
+                    class="mt-5 font-['Inter'] text-[20px] font-semibold leading-[100%] tracking-normal text-[#303030] text-center">
+
                     Custom Tailoring
                 </h3>
 
-                <p class="text-gray-500 mt-2">
+                <p class="font-['Inter'] text-[15px] font-normal leading-[100%] tracking-normal text-[#818181] mt-2">
                     Made-to-measure for your perfect fit
                 </p>
             </div>
 
             <!-- Feature -->
             <div>
-                <div class="w-16 h-16 mx-auto border border-[#d6bf8a] rounded-full flex items-center justify-center">
-                    <i class="fa-solid fa-truck text-[#d6bf8a]"></i>
+                <div
+                    class="w-16 h-16 mx-auto border border-[#EBE4D7] bg-white rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#C0A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-truck-icon lucide-truck">
+                        <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                        <path d="M15 18H9" />
+                        <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                        <circle cx="17" cy="18" r="2" />
+                        <circle cx="7" cy="18" r="2" />
+                    </svg>
                 </div>
 
-                <h3 class="mt-5 text-2xl font-semibold">
+                <h3
+                    class="mt-5 font-['Inter'] text-[20px] font-semibold leading-[100%] tracking-normal text-[#303030] text-center">
+
                     Worldwide Delivery
                 </h3>
 
-                <p class="text-gray-500 mt-2">
+                <p class="font-['Inter'] text-[15px] font-normal leading-[100%] tracking-normal text-[#818181] mt-2">
                     Express shipping to 50+ countries
                 </p>
             </div>
 
             <!-- Feature -->
             <div>
-                <div class="w-16 h-16 mx-auto border border-[#d6bf8a] rounded-full flex items-center justify-center">
-                    <i class="fa-solid fa-box-open text-[#d6bf8a]"></i>
+                <div
+                    class="w-16 h-16 mx-auto border border-[#EBE4D7] bg-white rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#C0A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-package-open-icon lucide-package-open">
+                        <path d="M12 22v-9" />
+                        <path
+                            d="M15.17 2.21a1.67 1.67 0 0 1 1.63 0L21 4.57a1.93 1.93 0 0 1 0 3.36L8.82 14.79a1.655 1.655 0 0 1-1.64 0L3 12.43a1.93 1.93 0 0 1 0-3.36z" />
+                        <path
+                            d="M20 13v3.87a2.06 2.06 0 0 1-1.11 1.83l-6 3.08a1.93 1.93 0 0 1-1.78 0l-6-3.08A2.06 2.06 0 0 1 4 16.87V13" />
+                        <path
+                            d="M21 12.43a1.93 1.93 0 0 0 0-3.36L8.83 2.2a1.64 1.64 0 0 0-1.63 0L3 4.57a1.93 1.93 0 0 0 0 3.36l12.18 6.86a1.636 1.636 0 0 0 1.63 0z" />
+                    </svg>
                 </div>
 
-                <h3 class="mt-5 text-2xl font-semibold">
+                <h3
+                    class="mt-5 font-['Inter'] text-[20px] font-semibold leading-[100%] tracking-normal text-[#303030] text-center">
                     Easy Returns
                 </h3>
 
-                <p class="text-gray-500 mt-2">
+                <p class="font-['Inter'] text-[15px] font-normal leading-[100%] tracking-normal text-[#818181] mt-2">
                     30-day hassle-free return policy
                 </p>
             </div>
@@ -1843,7 +2067,7 @@
     </div>
 
     <!-- Popup Modal (BOOK AN APPOINTMENT) -->
-    <div id="appointmentModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+    <div id="appointmentModal" class="hidden fixed inset-0 z-50 items-center justify-center bg-black/50 p-4">
 
         <!-- Modal -->
         <div class="w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-xl border border-[#C9A227] bg-[#F8F6F0]">
@@ -2116,6 +2340,53 @@
                 closeModal();
             }
         });
+    </script>
+
+       <!-- JS Slider Shop By Occasion -->
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+
+        let current = 0;
+
+        function goToSlide(index) {
+
+            // hide all slides
+            slides.forEach((slide, i) => {
+                slide.style.opacity = (i === index) ? "1" : "0";
+            });
+
+            // update dots style
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add("w-10");
+                    dot.classList.remove("w-3");
+                    dot.style.opacity = "1";
+                } else {
+                    dot.classList.add("w-3");
+                    dot.classList.remove("w-10");
+                    dot.style.opacity = "0.5";
+                }
+            });
+
+            current = index;
+        }
+
+        // click dots → slide change
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                goToSlide(index);
+            });
+        });
+
+        // auto slide
+        setInterval(() => {
+            let next = (current + 1) % slides.length;
+            goToSlide(next);
+        }, 4000);
+
+        // init
+        goToSlide(0);
     </script>
 
 </body>
