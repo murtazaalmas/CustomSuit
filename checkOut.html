@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Fashion Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Abril+Fatface&family=Inter:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Inter, sans-serif;
+            overflow-x: hidden;
+            background: #f6f3ee;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        /* Header */
+
+        .header {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            z-index: 50;
+            padding: 0 40px;
+        }
+
+        .header-inner {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+        }
+
+        .header-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            color: white;
+        }
+
+
+        /* Footer */
+
+        footer {
+            background: #f7f4ee;
+            padding: 70px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid li {
+            margin-bottom: 12px;
+        }
+
+        .footer-grid input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        .bag-outline {
+            color: transparent;
+            -webkit-text-stroke: 1.5px #fff;
+        }
+
+        @media(max-width:991px) {
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .category-grid,
+            .product-grid,
+            .accessories-grid,
+            .feature-grid,
+            .instagram,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-large {
+                height: 350px;
+            }
+
+            .header {
+                padding: 0 20px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="absolute top-0 left-0 right-0 z-30 text-center font-inter font-bold text-[12px] leading-[100%] tracking-[0px] text-[#C0A96E] py-2"
+        style="background: linear-gradient(90deg, #221E1B 0%, #3C2B1E 50%, #211E1B 100%);">
+        FREE SHIPPING ON ORDERS ABOVE Rs. 10,000 | CUSTOM TAILORING AVAILABLE
+    </div>
+
+    <!-- Header -->
+    <header class="absolute top-7 left-0 right-0 z-30 px-6 md:px-10">
+
+        <div class="grid grid-cols-3 items-center px-10">
+
+            <!-- Menu -->
+            <div>
+                <button id="menuBtn" class="text-black text-2xl">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+
+            <!-- Logo -->
+            <div class="flex justify-center">
+                <img src="images/logo.png" alt="Logo" class="h-20 md:h-24 w-auto">
+            </div>
+
+            <!-- Right Icons -->
+            <div class="flex justify-end items-center gap-5 text-black text-lg">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-search-icon lucide-search">
+                        <path d="m21 21-4.34-4.34" />
+                        <circle cx="11" cy="11" r="8" />
+                    </svg>
+                </button>
+
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-heart-icon lucide-heart">
+                        <path
+                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                    </svg>
+                </button>
+
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                        <path d="M3.103 6.034h17.794" />
+                        <path
+                            d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                    </svg>
+                </button>
+                <button id="loginBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user-round-icon lucide-user-round">
+                        <circle cx="12" cy="8" r="5" />
+                        <path d="M20 21a8 8 0 0 0-16 0" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+        <div class="w-full h-px bg-[radial-gradient(circle,_#A3A3A3_1px,_transparent_1px)] bg-[length:7px_1px]"></div>
+    </header>
+
+
+
+    <!-- Best Selling Pieces -->
+    <section>
+        <div class="max-w-7xl mx-auto my-40">
+
+            <div class="px-6 font-medium text-[16px] text-[#8F8F8F] leading-[160%] tracking-[0px]"
+                style="font-family: 'Poppins', sans-serif;">
+                Homepage &gt; Home
+            </div>
+
+
+            <div class="min-h-screen bg-[#f6f3ee] py-10 px-4">
+                <div class="max-w-7xl mx-auto">
+
+                    <!-- Header -->
+                    <div class="text-center mb-10">
+                        <h1 class="text-5xl font-serif font-semibold text-[#2d2522]">
+                            Secure Checkout
+                        </h1>
+
+                        <!-- Steps -->
+                        <div class="flex items-center justify-center mt-8 gap-4">
+                            <div class="flex items-center gap-2">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-[#d8b16f] text-white flex items-center justify-center">
+                                    ✓
+                                </div>
+                                <span class="text-xs uppercase tracking-wider text-gray-500">
+                                    Shipping
+                                </span>
+                            </div>
+
+                            <div class="w-20 h-[2px] bg-[#d8b16f]"></div>
+
+                            <div
+                                class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 text-sm">
+                                2
+                            </div>
+
+                            <span class="text-xs text-gray-500">Review & Payments</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="grid lg:grid-cols-[1fr_360px] gap-8">
+
+                        <!-- Left Side -->
+                        <div class="bg-white rounded-lg p-8 flex flex-col justify-between min-h-[900px]">
+                            <div>
+                                <h2 class="font-serif text-3xl text-[#2d2522] mb-2">
+                                    Shipping Address
+                                </h2>
+
+                                <p class="text-sm text-gray-500 mb-8">
+                                    Returning customer?
+                                    <a href="#" class="text-[#c49b5f] hover:underline">
+                                        Click here to login
+                                    </a>
+                                </p>
+
+                                <form class="space-y-8">
+                                    <div>
+                                        <label class="block text-sm text-gray-500 mb-2">
+                                            Email Address*
+                                        </label>
+                                        <input type="email"
+                                            class="w-full border-b border-gray-200 bg-transparent py-2 outline-none" />
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm text-gray-500 mb-2">
+                                            Name*
+                                        </label>
+                                        <input type="text"
+                                            class="w-full border-b border-gray-200 bg-transparent py-2 outline-none" />
+                                    </div>
+
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label class="block text-sm text-gray-500 mb-2">
+                                                Country*
+                                            </label>
+                                            <input type="text"
+                                                class="w-full border-b border-gray-200 bg-transparent py-2 outline-none" />
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm text-gray-500 mb-2">
+                                                State/Province*
+                                            </label>
+                                            <input type="text"
+                                                class="w-full border-b border-gray-200 bg-transparent py-2 outline-none" />
+                                        </div>
+                                    </div>
+
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label class="block text-sm text-gray-500 mb-2">
+                                                City*
+                                            </label>
+                                            <input type="text"
+                                                class="w-full border-b border-gray-200 bg-transparent py-2 outline-none" />
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm text-gray-500 mb-2">
+                                                Zip/Postal Code
+                                            </label>
+                                            <input type="text"
+                                                class="w-full border-b border-gray-200 bg-transparent py-2 outline-none" />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm text-gray-500 mb-2">
+                                            Street Address*
+                                        </label>
+                                        <input type="text"
+                                            class="w-full border-b border-gray-200 bg-transparent py-2 outline-none" />
+                                    </div>
+
+                                    <div class="grid md:grid-cols-[70px_1fr] gap-4">
+                                        <div>
+                                            <label class="block text-sm text-gray-500 mb-2">
+                                                Code
+                                            </label>
+                                            <input value="+92"
+                                                class="w-full border-b border-gray-200 bg-transparent py-2 outline-none" />
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm text-gray-500 mb-2">
+                                                Phone Number*
+                                            </label>
+                                            <input type="text"
+                                                class="w-full border-b border-gray-200 bg-transparent py-2 outline-none" />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm text-gray-500 mb-2">
+                                            Note
+                                        </label>
+                                        <textarea rows="3"
+                                            class="w-full border-b border-gray-200 bg-transparent py-2 outline-none resize-none"></textarea>
+                                    </div>
+
+                                    <!-- Shipping Method -->
+                                    <div class="pt-8">
+                                        <h3 class="font-serif text-3xl text-[#2d2522] mb-6">
+                                            Shipping Method
+                                        </h3>
+
+                                        <div class="border border-gray-200 rounded-lg p-4">
+                                            <label class="flex items-center gap-3 cursor-pointer">
+                                                <input type="radio" checked />
+                                                <div>
+                                                    <p class="font-medium">Standard Shipping</p>
+                                                    <p class="text-sm text-gray-500">
+                                                        Delivery in 5-7 business days
+                                                    </p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- CTA -->
+                            <button
+                                class="mt-12 w-full bg-[#231f20] text-white py-5 rounded-md text-xl hover:opacity-90 transition">
+                                Continue to Payment
+                            </button>
+                        </div>
+
+                        <!-- Right Side -->
+                        <div class="bg-white rounded-lg overflow-hidden h-fit">
+                            <div class="bg-[#231f20] text-white px-6 py-4">
+                                <h2 class="font-serif text-2xl">Shopping Bag</h2>
+                            </div>
+
+                            <div class="p-5">
+
+                                <!-- PRODUCTS -->
+                                <div class="max-w-2xl mx-auto bg-white rounded-xl p-6 shadow">
+
+                                    <div class="space-y-5">
+
+                                        <!-- Product 1 -->
+                                        <div class="flex gap-4">
+                                            <img src="https://picsum.photos/id/1011/400/500" data-name="Maroon Ghaznavi"
+                                                data-price="Rs. 8,400" data-size="Custom Size" data-color="Maroon"
+                                                class="product-image w-20 h-24 object-cover rounded cursor-pointer hover:opacity-80 transition" />
+
+                                            <div class="flex-1">
+                                                <h4 class="font-medium">Maroon Ghaznavi</h4>
+                                                <p class="text-xs text-gray-500">Size: Custom Size</p>
+                                                <p class="text-xs text-gray-500">Color: Maroon</p>
+                                            </div>
+
+                                            <span class="font-medium">Rs. 8,400</span>
+                                        </div>
+
+                                        <!-- Product 2 -->
+                                        <div class="flex gap-4">
+                                            <img src="https://picsum.photos/id/1005/400/500" data-name="White T-Shirt"
+                                                data-price="Rs. 3,400" data-size="S" data-color="White"
+                                                class="product-image w-20 h-24 object-cover rounded cursor-pointer hover:opacity-80 transition" />
+
+                                            <div class="flex-1">
+                                                <h4 class="font-medium">White T-Shirt</h4>
+                                                <p class="text-xs text-gray-500">Size: S</p>
+                                                <p class="text-xs text-gray-500">Color: White</p>
+                                            </div>
+
+                                            <span class="font-medium">Rs. 3,400</span>
+                                        </div>
+
+                                        <!-- Product 3 -->
+                                        <div class="flex gap-4">
+                                            <img src="https://picsum.photos/id/1025/400/500" data-name="Co-ord Set"
+                                                data-price="Rs. 7,999" data-size="S" data-color="Brown"
+                                                class="product-image w-20 h-24 object-cover rounded cursor-pointer hover:opacity-80 transition" />
+
+                                            <div class="flex-1">
+                                                <h4 class="font-medium">Co-ord Set</h4>
+                                                <p class="text-xs text-gray-500">Size: S</p>
+                                                <p class="text-xs text-gray-500">Color: Brown</p>
+                                            </div>
+
+                                            <span class="font-medium">Rs. 7,999</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Coupon -->
+                                <div class="mt-8">
+                                    <label class="block text-sm mb-2 text-gray-600">
+                                        Promo / Coupon Code
+                                    </label>
+
+                                    <div class="flex">
+                                        <input
+                                            class="flex-1 border border-gray-200 px-3 py-2 rounded-l-md outline-none" />
+                                        <button class="bg-[#231f20] text-white px-5 rounded-r-md">
+                                            Apply
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Totals -->
+                                <div class="mt-8 border-t pt-6 space-y-3 text-sm">
+                                    <div class="flex justify-between">
+                                        <span>Subtotal</span>
+                                        <span>19,650</span>
+                                    </div>
+
+                                    <div class="flex justify-between">
+                                        <span>Shipping</span>
+                                        <span>100</span>
+                                    </div>
+
+                                    <div class="flex justify-between">
+                                        <span>Estimated Tax</span>
+                                        <span>49</span>
+                                    </div>
+
+                                    <div class="border-t pt-4 flex justify-between items-center">
+                                        <div>
+                                            <p class="text-lg font-serif">Total (PKR)</p>
+                                            <p class="text-xs text-gray-500">
+                                                inclusive of all taxes
+                                            </p>
+                                        </div>
+
+                                        <span class="text-2xl font-semibold text-[#d8b16f]">
+                                            19,799
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Delivery -->
+                                <div class="mt-6 bg-[#fbf5ea] border border-[#ead8b5] rounded-lg p-4">
+                                    <p class="font-medium text-sm">
+                                        Estimated Delivery: 5–7 Business Days
+                                    </p>
+                                    <p class="text-xs text-gray-500 mt-1">
+                                        Standard Shipping via TCS Leopard
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#F8F8F8] py-16">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2">
+
+                <!-- Brand -->
+                <div class="col-span-2">
+                    <img src="images/logo.png" alt="Logo" class="w-16 h-16 mb-4">
+
+                    <p class="text-[15px] font-normal leading-[133%] tracking-[0px] text-[#6B7280] max-w-[280px]"
+                        style="font-family: 'Inter', sans-serif;">
+                        Luxury fashion with the art of bespoke tailoring.
+                        Crafted for the discerning few.
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="flex items-center gap-3 mt-8">
+
+                        <a
+                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a
+                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a
+                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                        <a
+                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Collections -->
+                <div>
+                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
+                        style="font-family: 'Inter', sans-serif;">
+                        Collections
+                    </h3>
+
+                    <ul class="space-y-4 text-[#6B7280] text-sm">
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">
+                                Women
+                            </a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Men</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Bridal Lehenga</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Luxury Formals</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Part Wear</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Accessories</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
+                        style="font-family: 'Inter', sans-serif;">
+                        Services
+                    </h3>
+
+                    <ul class="space-y-4 text-[#6B7280] text-sm">
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Custom Tailoring</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Book Appointment</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Style Consultation</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Alterations</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Embroidery</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Customer Care -->
+                <div>
+                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
+                        style="font-family: 'Inter', sans-serif;">
+                        Customer Care
+                    </h3>
+
+                    <ul class="space-y-4 text-[#6B7280] text-sm">
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Track Order</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Returns & Exchange</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Size Guide</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">FAQs</a>
+                        </li>
+                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <a class="hover:text-black">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
+                        style="font-family: 'Inter', sans-serif;">
+                        Newsletter
+                    </h3>
+
+                    <p class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]">
+                        Get exclusive access to new collections and styling tips.
+                    </p>
+
+                    <form class="space-y-3 mt-8">
+                        <input type="email" placeholder="Your email address"
+                            class="w-full h-11 px-4 bg-[#262626] text-white text-[12px] placeholder:text-gray-400 rounded-md focus:outline-none">
+
+                        <button
+                            class="w-full h-11 bg-[#E0C183] text-[#2B2522] text-[12px] font-medium uppercase rounded-md hover:opacity-90 transition">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Login Popup -->
+    <div id="loginModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+
+        <div class="relative w-full max-w-md bg-white rounded-3xl p-6 md:p-8 shadow-2xl">
+
+            <!-- Close Button -->
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">
+                &times;
+            </button>
+
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-bold tracking-widest">WELCOME</h1>
+                <p class="text-gray-500 text-sm mt-2">Sign in to your account</p>
+            </div>
+
+            <form class="space-y-4">
+
+                <!-- Email -->
+                <div class="relative">
+                    <input type="email" placeholder="Enter Email"
+                        class="w-full h-12 rounded-lg bg-gray-100 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+
+                    <i class="fa-regular fa-envelope absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                </div>
+
+                <!-- Password -->
+                <div class="relative">
+                    <input id="passwordInput" type="password" placeholder="Enter Password"
+                        class="w-full h-12 rounded-lg bg-gray-100 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+
+                    <i id="togglePassword"
+                        class="fa-regular fa-eye-slash absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                </div>
+
+                <div class="flex justify-end">
+                    <a class="text-xs text-gray-500 hover:text-black">
+                        Recover Password?
+                    </a>
+                </div>
+
+                <button type="submit" class="w-full h-12 bg-black text-white rounded-lg font-medium hover:bg-gray-800">
+                    Sign In
+                </button>
+
+            </form>
+
+            <!-- Divider -->
+            <div class="flex items-center my-4">
+                <div class="flex-1 border-t border-gray-200"></div>
+
+                <span class="px-4 text-sm text-gray-400">
+                    Or continue with
+                </span>
+
+                <div class="flex-1 border-t border-gray-200"></div>
+            </div>
+
+            <!-- Social Login -->
+            <div class="grid grid-cols-3 gap-3">
+
+                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
+                    <i class="fa-brands fa-google text-red-500 text-lg"></i>
+                </button>
+
+                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
+                    <i class="fa-brands fa-apple text-black text-xl"></i>
+                </button>
+
+                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
+                    <i class="fa-brands fa-facebook-f text-blue-600 text-lg"></i>
+                </button>
+
+            </div>
+
+            <div class="text-center mt-6 text-sm text-gray-500">
+                Don't have an account?
+                <a class="font-semibold text-black hover:underline">
+                    Sign Up
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="fixed top-0 left-0 h-screen w-[520px] bg-white z-50 shadow-2xl transition-all duration-300"
+        style="transform: translateX(-100%);">
+
+        <!-- Overlay -->
+        <div class="p-6">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <img src="images/logo.png" alt="Logo" class="w-10 h-10 rounded-full object-cover">
+                    <h1 class="text-2xl font-serif font-semibold tracking-wide">
+                        CUSTOM SUITS
+                    </h1>
+                </div>
+
+                <button id="closeSidebar">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Categories -->
+            <div class="flex gap-16 mt-12 text-lg">
+                <button class="font-semibold underline underline-offset-4">
+                    WOMAN
+                </button>
+
+                <button class="text-gray-800">
+                    JEWELERY
+                </button>
+
+                <button class="text-gray-800">
+                    SHOES
+                </button>
+            </div>
+
+            <!-- Menu List -->
+            <div class="mt-12 space-y-8 text-2xl">
+                <a class="block text-gray-900">
+                    Casual
+                </a>
+
+                <a class="block underline underline-offset-4 text-gray-900">
+                    Luxury Formals
+                </a>
+
+                <a class="block text-gray-900">
+                    Bridal
+                </a>
+
+                <a class="block text-gray-900">
+                    Party Wear
+                </a>
+
+                <a class="block text-gray-900">
+                    Western
+                </a>
+
+                <a class="block text-gray-900">
+                    Jewelery
+                </a>
+
+                <a class="block text-gray-900">
+                    Shoes
+                </a>
+
+                <a class="block text-red-600 uppercase tracking-wide mt-12">
+                    Special Offers
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CheckOut MODAL -->
+    <div id="checkOutModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4">
+
+        <div class="relative w-full max-w-4xl bg-white rounded-md shadow-lg p-6">
+
+            <!-- Close Button -->
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl">
+                ✕
+            </button>
+
+            <div class="grid md:grid-cols-[280px_1fr] gap-8">
+
+                <!-- Product Image -->
+                <div>
+                    <img id="modalImage" src="" alt="Product" class="w-full h-[420px] object-cover rounded" />
+                </div>
+
+                <!-- Product Details -->
+                <div class="flex flex-col">
+
+                    <h2 id="modalName" class="text-4xl font-medium text-[#4a4a4a] mb-2">
+                        Product Name
+                    </h2>
+
+                    <p id="modalPrice" class="text-2xl text-[#2f2522] font-medium mb-8">
+                        Rs. 8,400
+                    </p>
+
+                    <!-- Size -->
+                    <div class="mb-3">
+                        <span class="text-sm text-gray-500">
+                            Size:
+                        </span>
+                        <span id="modalSize" class="font-semibold uppercase ml-1">
+                            CS
+                        </span>
+                    </div>
+
+                    <!-- Size Selector -->
+                    <div class="flex items-center justify-between mb-6">
+
+                        <div class="flex gap-2 flex-wrap">
+
+                            <button class="w-14 h-10 border border-gray-200 rounded text-sm hover:border-gray-400">
+                                S
+                            </button>
+
+                            <button class="w-14 h-10 border border-gray-200 rounded text-sm hover:border-gray-400">
+                                M
+                            </button>
+
+                            <button class="w-14 h-10 border border-gray-200 rounded text-sm hover:border-gray-400">
+                                L
+                            </button>
+
+                            <button class="w-14 h-10 border border-gray-200 rounded text-sm hover:border-gray-400">
+                                XL
+                            </button>
+
+                            <button class="px-4 h-10 rounded bg-[#d0b06f] text-white text-sm font-medium">
+                                Custom Size
+                            </button>
+
+                        </div>
+
+                        <a href="#" class="text-xs text-gray-500 underline">
+                            View Size Chart
+                        </a>
+
+                    </div>
+
+                    <!-- Color -->
+                    <div class="mb-6">
+                        <span class="text-sm text-gray-500">Color:</span>
+                        <span id="modalColor" class="font-medium ml-1">
+                            Maroon
+                        </span>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="flex items-center gap-4 mb-8">
+
+                        <button
+                            class="w-7 h-7 rounded-full bg-black text-white flex items-center justify-center text-sm">
+                            −
+                        </button>
+
+                        <span class="font-medium">
+                            1
+                        </span>
+
+                        <button
+                            class="w-7 h-7 rounded-full bg-black text-white flex items-center justify-center text-sm">
+                            +
+                        </button>
+
+                    </div>
+
+                    <!-- CTA -->
+                    <button class="w-full h-14 bg-[#231f20] text-white font-medium rounded hover:opacity-90 transition">
+                        Add / Replace Item
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JS Login Popup -->
+    <script>
+        const loginBtn = document.getElementById("loginBtn");
+        const loginModal = document.getElementById("loginModal");
+
+        loginBtn.addEventListener("click", () => {
+            loginModal.classList.remove("hidden");
+            loginModal.classList.add("flex");
+        });
+
+        function closeLoginModal() {
+            loginModal.classList.add("hidden");
+            loginModal.classList.remove("flex");
+        }
+
+        // Close when clicking outside
+        loginModal.addEventListener("click", function (e) {
+            if (e.target === this) {
+                closeLoginModal();
+            }
+        });
+
+        // Toggle Password
+        document.getElementById("togglePassword").addEventListener("click", function () {
+            const password = document.getElementById("passwordInput");
+
+            if (password.type === "password") {
+                password.type = "text";
+                this.classList.remove("fa-eye-slash");
+                this.classList.add("fa-eye");
+            } else {
+                password.type = "password";
+                this.classList.remove("fa-eye");
+                this.classList.add("fa-eye-slash");
+            }
+        });
+    </script>
+
+    <!-- JS Sidebar-->
+    <script>
+        // Sidebar
+        const menuBtn = document.getElementById("menuBtn");
+        const sidebar = document.getElementById("sidebar");
+        const sidebarOverlay = document.getElementById("sidebarOverlay");
+        const closeSidebar = document.getElementById("closeSidebar");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.style.transform = "translateX(0)";
+            sidebarOverlay.classList.remove("hidden");
+        });
+
+        function closeMenu() {
+            sidebar.style.transform = "translateX(-100%)";
+            sidebarOverlay.classList.add("hidden");
+        }
+
+        closeSidebar.addEventListener("click", closeMenu);
+        sidebarOverlay.addEventListener("click", closeMenu);
+    </script>
+
+    <script>
+        const modal = document.getElementById("checkOutModal");
+        const modalImage = document.getElementById("modalImage");
+        const modalName = document.getElementById("modalName");
+        const modalPrice = document.getElementById("modalPrice");
+        const modalSize = document.getElementById("modalSize");
+        const modalColor = document.getElementById("modalColor");
+
+        document.querySelectorAll(".product-image").forEach(img => {
+
+            img.addEventListener("click", () => {
+
+                modalImage.src = img.src;
+                modalName.textContent = img.dataset.name;
+                modalPrice.textContent = img.dataset.price;
+                modalSize.textContent = img.dataset.size;
+                modalColor.textContent = img.dataset.color;
+
+                modal.classList.remove("hidden");
+                modal.classList.add("flex");
+            });
+
+        });
+
+        document.getElementById("closeModal").addEventListener("click", () => {
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.add("hidden");
+                modal.classList.remove("flex");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
