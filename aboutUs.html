@@ -26,7 +26,7 @@
         body {
             font-family: Inter, sans-serif;
             overflow-x: hidden;
-            background: #F8F5EE;
+            background: #f6f3ee;
         }
 
         .container {
@@ -59,129 +59,6 @@
             color: white;
         }
 
-        /* Hero */
-
-        .hero {
-            height: 100vh;
-            background: url("images/hero.jpg") center center/cover no-repeat;
-            position: relative;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, .35);
-        }
-
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: #fff;
-        }
-
-        /* Category */
-
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        .category-overlay {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, .3);
-            color: white;
-            padding: 20px;
-            font-weight: 600;
-        }
-
-        /* Products */
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            background: linear-gradient(135deg,
-                    #FFFFFF 0%,
-                    #F3F3F3 50%,
-                    #EBEBEB 100%);
-        }
-
-        .product-content {
-            padding: 12px;
-        }
-
-
-        .btn {
-            background: #222;
-            color: white;
-            text-decoration: none;
-            padding: 10px 16px;
-            display: inline-block;
-            font-size: 12px;
-        }
-
-        /* Appointment */
-
-        .appointment {
-            min-height: 650px;
-            background: url("images/appointment.jpg") center/cover;
-            position: relative;
-        }
-
-        .appointment::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, .45);
-        }
-
-        .appointment-content {
-            position: relative;
-            color: white;
-            max-width: 500px;
-            padding-top: 180px;
-        }
-
-        .appointment-content h2 {
-            color: white;
-            text-align: left;
-        }
-
-        /* Accessories */
-
-        .accessories-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        /* Features */
-
-        .features {
-            background: #faf8f3;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            text-align: center;
-        }
-
-        /* Instagram */
-
-        .instagram {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 15px;
-        }
 
         /* Footer */
 
@@ -264,10 +141,10 @@
 
             <!-- Logo -->
             <div class="flex justify-center">
-    <a href="home.html">
-        <img src="images/logo.png" alt="Logo" class="h-20 md:h-24 w-auto cursor-pointer">
-    </a>
-</div>
+                <a href="home.html">
+                    <img src="images/logo.png" alt="Logo" class="h-20 md:h-24 w-auto cursor-pointer">
+                </a>
+            </div>
 
             <!-- Right Icons -->
             <div class="flex justify-end items-center gap-5 text-black text-lg">
@@ -290,17 +167,17 @@
                 </button>
 
                 <a href="checkOut.html">
-    <button>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
-            <path d="M16 10a4 4 0 0 1-8 0" />
-            <path d="M3.103 6.034h17.794" />
-            <path
-                d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-        </svg>
-    </button>
-</a>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                            <path d="M3.103 6.034h17.794" />
+                            <path
+                                d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                        </svg>
+                    </button>
+                </a>
                 <button id="loginBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -315,207 +192,334 @@
         <div class="w-full h-px bg-[radial-gradient(circle,_#A3A3A3_1px,_transparent_1px)] bg-[length:7px_1px]"></div>
     </header>
 
+
+
+    <!-- ABOUT -->
     <section>
-        <div class="mx-auto p-4  bg-[#EBE3CF] mt-40 ">
-            <p class="text-xs uppercase tracking-[0.2em] text-[#A58C5E]">
-                Homepage • PRIVACY POLICY
-            </p>
+        <div class="max-w-7xl mx-auto my-40">
 
-            <h1 class="mt-2 text-4xl font-serif font-semibold text-[#2D2A26]">
-                Privacy Policy
-            </h1>
+            <div class="bg-[#faf7f2]">
 
-            <div class="w-20 h-[2px] bg-[#D4AF37] mt-4"></div>
+                <!-- ================= HERO SECTION ================= -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+
+                    <!-- LEFT CONTENT -->
+                    <div class="bg-black text-white flex flex-col justify-center px-10 py-16">
+
+                        <!-- Breadcrumb -->
+                        <p class="text-xs text-gray-400 mb-6">
+                            Homepagge &gt; <span class="text-white">About Us</span>
+                        </p>
+
+                        <!-- Title -->
+                        <h2 class="text-3xl md:text-4xl tracking-wider text-gray-300">
+                            ABOUT
+                        </h2>
+
+                        <h1 class="text-5xl md:text-6xl font-serif font-bold mt-2">
+                            CUSTOM SUITS
+                        </h1>
+
+                        <!-- Subtitle -->
+                        <p class="text-sm text-gray-400 mt-4 italic">
+                            Crafting Timeless Elegance Since Day One
+                        </p>
+
+                        <!-- Button -->
+                        <button
+                            class="mt-8 border border-yellow-500 text-yellow-500 px-6 py-2 w-fit hover:bg-yellow-500 hover:text-black transition">
+                            Discover
+                        </button>
+
+                    </div>
+
+                    <!-- RIGHT IMAGE -->
+                    <div class="h-full">
+                        <img src="https://picsum.photos/id/1011/400/500" class="w-full h-full object-cover" />
+                    </div>
+
+                </div>
+
+                <!-- ================= CONTENT SECTION ================= -->
+                <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+                    <!-- LEFT TEXT -->
+                    <div>
+
+                        <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 leading-snug">
+                            More Than Just a <br /> Clothing Brand
+                        </h2>
+
+                        <div class="w-16 h-[2px] bg-yellow-500 my-4"></div>
+
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            The Custom Suit is more than just a clothing brand; it’s a destination for fashion-forward
+                            individuals seeking both clothing and accessories to elevate their style. Custom Suit
+                            epitomizes the fusion of classical elegance and contemporary flair in its diverse range of
+                            offerings.
+                            <br><br>
+                            But Custom Suit doesn’t stop at clothing. We understand that accessories play a crucial role
+                            in completing a look, which is why we’re constantly expanding our accessory offerings.
+                        </p>
+
+                        <!-- Buttons -->
+                        <div class="flex gap-4 mt-8">
+
+                            <button class="bg-yellow-500 text-white px-6 py-2 text-sm hover:bg-yellow-600 transition">
+                                CONTACT US
+                            </button>
+
+                            <button
+                                class="border border-yellow-500 text-yellow-500 px-6 py-2 text-sm hover:bg-yellow-500 hover:text-white transition">
+                                SHOP NOW
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT IMAGE GRID -->
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <img src="https://picsum.photos/id/1011/400/500" class="rounded-2xl object-cover h-64 w-full" />
+
+                        <img src="https://picsum.photos/id/1011/400/500"
+                            class="rounded-2xl object-cover h-64 w-full row-span-2" />
+
+                        <img src="https://picsum.photos/id/1011/400/500" class="rounded-2xl object-cover h-48 w-full" />
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
-        <div class="max-w-4xl mx-auto px-4 mt-10">
+    </section>
 
-            <!-- Header -->
+    <section class="bg-[#1d1715] py-20">
+        <div class="max-w-6xl mx-auto px-6">
 
+            <!-- Heading -->
+            <div class="text-center mb-14">
+                <h2 class="text-5xl font-serif font-semibold text-white">
+                    Our Pillars
+                </h2>
+                <div class="w-16 h-[2px] bg-[#caa85c] mx-auto mt-4"></div>
+            </div>
 
-            <!-- Intro -->
-            <div class="max-w-3xl mb-10">
-                <p class="text-sm leading-7 text-[#666]">
-                    At Custom Suits, we are committed to protecting the privacy and security of our customers’ personal
-                    information. This Privacy Policy outlines how we collect, use, disclose, and protect the information
-                    you provide when using our website or services.
+            <!-- Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Card -->
+                <div class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center">
+
+                    <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8">
+                    </div>
+
+                    <h3 class="text-white font-serif text-xl mb-4">
+                        Our Vision
+                    </h3>
+
+                    <p class="text-white/90 text-sm leading-relaxed">
+                        To redefine elegance and tailored perfection. Empowering
+                        modern men with confidence and style, blending tradition
+                        with modern sophistication.
+                    </p>
+
+                </div>
+
+                <!-- Card -->
+                <div class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[320px] flex flex-col justify-center">
+
+                    <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8">
+                    </div>
+
+                    <h3 class="text-white font-serif text-xl mb-4">
+                        Our Mission
+                    </h3>
+
+                    <p class="text-white/90 text-sm leading-relaxed">
+                        To craft high-quality, custom-made suits designed to
+                        celebrate individuality and grace. Every stitch reflects
+                        passion and precision.
+                    </p>
+
+                </div>
+
+                <!-- Card -->
+                <div class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center">
+
+                    <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8">
+                    </div>
+
+                    <h3 class="text-white font-serif text-xl mb-4">
+                        Our Support
+                    </h3>
+
+                    <p class="text-white/90 text-sm leading-relaxed">
+                        We believe in personalized care and trust. Ensuring every
+                        customer feels valued and heard from consultation to final
+                        fitting.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="bg-[#f5f3ef] py-24">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-serif font-semibold text-[#2d2522]">
+                    Why Choose Custom Suits
+                </h2>
+
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+                    We combine craftsmanship, technology and passion to deliver
+                    perfection.
                 </p>
             </div>
 
-            <!-- Terms List -->
-            <div class="space-y-8">
+            <div class="grid md:grid-cols-4 gap-10">
 
-                <!-- Item 1 -->
-                <div class="flex gap-4">
+                <!-- Feature -->
+                <div class="text-center">
                     <div
-                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center">
-                        1
+                        class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center">
+
+                        <svg class="w-10 h-10 text-[#d4b16a]" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24">
+                            <path d="M12 4v16M4 12h16"></path>
+                        </svg>
+
                     </div>
 
-                    <div>
-                        <h3 class="text-xl font-semibold text-[#2D2A26]">
-                            Information We Collect
-                        </h3>
-                        <h4>
-                            Personal Information:
-                        </h4>
+                    <h3 class="font-serif text-xl text-[#2d2522] mb-3">
+                        Quick Size
+                    </h3>
 
-                        <p class="mt-2 text-sm leading-7 text-[#666]">
-                            When you make a purchase or create an account with us, we may collect personal information
-                            such as your name, email address, phone number, shipping address, and payment details.
-                        </p>
-                        <h4>
-                            Browsing Information:
-                        </h4>
-
-                        <p class="mt-2 text-sm leading-7 text-[#666]">
-                            We may also collect non-personal information such as your IP address, browser type, and
-                            device information when you visit our website.
-                        </p>
-                        <h4>
-                            Cookies:
-                        </h4>
-
-                        <p class="mt-2 text-sm leading-7 text-[#666]">
-                            Like many websites, we use cookies to enhance your browsing experience and track usage
-                            patterns. You can choose to disable cookies in your browser settings, but please note that
-                            certain features of our website may not function properly as a result.
-                        </p>
-                    </div>
+                    <p class="text-gray-500 text-sm">
+                        Looking for your perfect fit? Our advanced sizing system
+                        provides custom measurements.
+                    </p>
                 </div>
 
-                <!-- Item 2 -->
-                <div class="flex gap-4">
+                <!-- Feature -->
+                <div class="text-center">
                     <div
-                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center">
-                        1
+                        class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center">
+
+                        <svg class="w-10 h-10 text-[#d4b16a]" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24">
+                            <path d="M4 8h16M4 16h16"></path>
+                        </svg>
+
                     </div>
 
-                    <div>
-                        <h3 class="text-xl font-semibold text-[#2D2A26]">
-                            How We Use Your Information
-                        </h3>
-                        <h4>
-                            To Process Orders:
-                        </h4>
+                    <h3 class="font-serif text-xl text-[#2d2522] mb-3">
+                        Perfect Fitting
+                    </h3>
 
-                        <p class="mt-2 text-sm leading-7 text-[#666]">
-                            We use the information you provide to process and fulfill your orders, communicate with you
-                            about your purchases, and provide customer support.
-                        </p>
-                        <h4>
-                            Personalization:
-                        </h4>
-
-                        <p class="mt-2 text-sm leading-7 text-[#666]">
-                            We may use your information to personalize your shopping experience, recommend products that
-                            may interest you, and tailor our marketing communications.
-                        </p>
-                        <h4>
-                            Marketing:
-                        </h4>
-
-                        <p class="mt-2 text-sm leading-7 text-[#666]">
-                            With your consent, we may send you promotional emails or messages about new products,
-                            special offers, or upcoming events. You can opt out of marketing communications at any time
-                            by following the instructions provided in the messages or contacting us directly.
-                        </p>
-
-                        <h4>
-                            Legal Compliance:
-                        </h4>
-
-                        <p class="mt-2 text-sm leading-7 text-[#666]">
-                            We may use your information to comply with applicable laws, regulations, or legal processes,
-                            or to protect our rights and interests in accordance with the law. </p>
-                    </div>
+                    <p class="text-gray-500 text-sm">
+                        We ensure the perfect fit for every client through multiple
+                        fitting trials.
+                    </p>
                 </div>
 
-                <!-- Item 3 -->
-                <div class="flex gap-4">
+                <!-- Feature -->
+                <div class="text-center">
                     <div
-                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center">
-                        3
+                        class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center">
+
+                        <svg class="w-10 h-10 text-[#d4b16a]" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24">
+                            <path d="M12 2v20M6 6h12"></path>
+                        </svg>
+
                     </div>
 
-                    <div>
-                        <h3 class="text-xl font-semibold text-[#2D2A26]">
-                            Data Security
-                        </h3>
+                    <h3 class="font-serif text-xl text-[#2d2522] mb-3">
+                        Italian Fabrics
+                    </h3>
 
-
-                        <p class="mt-2 text-sm leading-7 text-[#666]">
-                            We employ industry-standard security measures to protect your information from unauthorized
-                            access, disclosure, alteration, or destruction. Despite our best efforts, no method of
-                            transmission over the internet or electronic storage is completely secure. Therefore, while
-                            we strive to protect your information, we cannot guarantee its absolute security.
-                        </p>
-                    </div>
-                </div>
-                <!-- Item 4 -->
-
-                <div class="flex gap-4">
-                    <div
-                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center">
-                        4
-                    </div>
-
-                    <div>
-                        <h3 class="text-xl font-semibold text-[#2D2A26]">
-                             Your Rights
-                        </h3>
-
-
-                        <p class="mt-2 text-sm leading-7 text-[#666]">
-                            You have the right to access, update, or delete the personal information we hold about you.
-                            You can manage your account settings or contact us directly to exercise these rights. You
-                            may also have the right to restrict or object to the processing of your personal
-                            information, as well as the right to data portability.
-                        </p>
-                    </div>
+                    <p class="text-gray-500 text-sm">
+                        Choose from more than 3000 premium fabrics sourced from the
+                        world's finest mills.
+                    </p>
                 </div>
 
-                <!-- Item 5 -->
-
-                <div class="flex gap-4">
+                <!-- Feature -->
+                <div class="text-center">
                     <div
-                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center">
-                        5
+                        class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center">
+
+                        <svg class="w-10 h-10 text-[#d4b16a]" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24">
+                            <rect x="5" y="5" width="14" height="14"></rect>
+                        </svg>
+
                     </div>
 
-                    <div>
-                        <h3 class="text-xl font-semibold text-[#2D2A26]">
-                            Updates to this Policy
-                        </h3>
+                    <h3 class="font-serif text-xl text-[#2d2522] mb-3">
+                        Quality Stitching
+                    </h3>
 
-                        <p class="mt-2 text-sm leading-7 text-[#666]">
-                            We may update this Privacy Policy from time to time to reflect changes in our practices or
-                            legal requirements. We will notify you of any material changes by posting the updated policy
-                            on our website or sending you a notification.
-                        </p>
-                    </div>
-                </div>
-                <!-- Item 6 -->
-
-                <div class="flex gap-4">
-                    <div
-                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center">
-                        6
-                    </div>
-
-                    <div>
-                        <h3 class="text-xl font-semibold text-[#2D2A26]">
-                            Contact Us
-                        </h3>
-                        <p class="mt-2 text-sm leading-7 text-[#666]">
-                            If you have any questions, concerns, or requests regarding this Privacy Policy or our
-                            handling of your personal information, please contact us at info@thecustomsuits.com.
-
-                            Thank you for trusting Custom Suits with your personal information. We are committed to
-                            maintaining your privacy and earning your continued trust.
-                        </p>
-                    </div>
+                    <p class="text-gray-500 text-sm">
+                        High needle stitching with exceptional precision and
+                        durability.
+                    </p>
                 </div>
 
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Our Pillars -->
+    <section class="bg-[#1d1715] py-16">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="grid md:grid-cols-4 divide-x divide-[#3a312d]">
+
+                <div class="text-center px-6">
+                    <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">
+                        5000+
+                    </h3>
+                    <p class="text-white mt-2">
+                        Happy Customers
+                    </p>
+                </div>
+
+                <div class="text-center px-6">
+                    <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">
+                        3000+
+                    </h3>
+                    <p class="text-white mt-2">
+                        Italian Fabrics
+                    </p>
+                </div>
+
+                <div class="text-center px-6">
+                    <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">
+                        100%
+                    </h3>
+                    <p class="text-white mt-2">
+                        Custom Fit
+                    </p>
+                </div>
+
+                <div class="text-center px-6">
+                    <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">
+                        10+
+                    </h3>
+                    <p class="text-white mt-2">
+                        Years Experience
+                    </p>
+                </div>
 
             </div>
 
@@ -850,7 +854,6 @@
 
         </div>
     </div>
-
 
     <!-- JS Login Popup -->
     <script>

@@ -141,7 +141,9 @@
 
             <!-- Logo -->
             <div class="flex justify-center">
-                <img src="images/logo.png" alt="Logo" class="h-20 md:h-24 w-auto">
+                <a href="home.html">
+                    <img src="images/logo.png" alt="Logo" class="h-20 md:h-24 w-auto cursor-pointer">
+                </a>
             </div>
 
             <!-- Right Icons -->
@@ -164,16 +166,18 @@
                     </svg>
                 </button>
 
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
-                        <path d="M16 10a4 4 0 0 1-8 0" />
-                        <path d="M3.103 6.034h17.794" />
-                        <path
-                            d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                    </svg>
-                </button>
+                <a href="checkOut.html">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                            <path d="M3.103 6.034h17.794" />
+                            <path
+                                d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                        </svg>
+                    </button>
+                </a>
                 <button id="loginBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -378,48 +382,138 @@
                                     <div class="space-y-5">
 
                                         <!-- Product 1 -->
-                                        <div class="flex gap-4">
-                                            <img src="https://picsum.photos/id/1011/400/500" data-name="Maroon Ghaznavi"
-                                                data-price="Rs. 8,400" data-size="Custom Size" data-color="Maroon"
-                                                class="product-image w-20 h-24 object-cover rounded cursor-pointer hover:opacity-80 transition" />
+                                        <div class="flex items-start justify-between border-b pb-4 gap-4">
 
-                                            <div class="flex-1">
-                                                <h4 class="font-medium">Maroon Ghaznavi</h4>
-                                                <p class="text-xs text-gray-500">Size: Custom Size</p>
-                                                <p class="text-xs text-gray-500">Color: Maroon</p>
+                                            <!-- LEFT: Image + Product Info -->
+                                            <div class="flex gap-3">
+
+                                                <!-- Image -->
+                                                <img src="https://picsum.photos/id/1011/400/500"
+                                                    class="w-20 h-24 object-cover rounded-md" />
+
+                                                <!-- Details -->
+                                                <div>
+                                                    <h4 class="font-medium text-sm">Maroon Chikankari</h4>
+
+                                                    <p class="text-xs text-gray-500 mt-1">
+                                                        Size: <span class="text-gray-700">Custom Size</span>
+                                                    </p>
+
+                                                    <p class="text-xs text-gray-500">
+                                                        Color: <span class="text-gray-700">Maroon</span>
+                                                    </p>
+
+                                                    <p class="text-xs text-gray-500">
+                                                        Qty: <span class="text-gray-700">1</span>
+                                                    </p>
+
+                                                    <!-- Quantity Controls -->
+                                                    <div class="flex items-center mt-3">
+
+                                                        <button
+                                                            class="w-8 h-8 flex items-center justify-center border rounded-l-md">
+                                                            <i class="fa-solid fa-minus text-xs"></i>
+                                                        </button>
+
+                                                        <input type="text" value="1"
+                                                            class="w-10 h-8 text-center border-t border-b outline-none text-sm" />
+
+                                                        <button
+                                                            class="w-8 h-8 flex items-center justify-center border rounded-r-md">
+                                                            <i class="fa-solid fa-plus text-xs"></i>
+                                                        </button>
+
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                            <span class="font-medium">Rs. 8,400</span>
+                                            <!-- RIGHT: Price + Actions -->
+                                            <div class="flex flex-col items-end justify-between h-full">
+
+                                                <!-- Price -->
+                                                <span class="font-medium text-sm">Rs. 8,400</span>
+
+                                                <!-- Edit / Delete -->
+                                                <div class="flex items-center gap-3 mt-10">
+
+                                                    <button class="text-gray-600 hover:text-blue-600">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                    </button>
+
+                                                    <button class="text-gray-600 hover:text-red-600">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+
                                         </div>
+                                         <!-- Product 2 -->
+                                        <div class="flex items-start justify-between border-b pb-4 gap-4">
 
-                                        <!-- Product 2 -->
-                                        <div class="flex gap-4">
-                                            <img src="https://picsum.photos/id/1005/400/500" data-name="White T-Shirt"
-                                                data-price="Rs. 3,400" data-size="S" data-color="White"
-                                                class="product-image w-20 h-24 object-cover rounded cursor-pointer hover:opacity-80 transition" />
+                                            <!-- LEFT: Image + Product Info -->
+                                            <div class="flex gap-3">
 
-                                            <div class="flex-1">
-                                                <h4 class="font-medium">White T-Shirt</h4>
-                                                <p class="text-xs text-gray-500">Size: S</p>
-                                                <p class="text-xs text-gray-500">Color: White</p>
+                                                <!-- Image -->
+                                                <img src="https://picsum.photos/id/1011/400/500"
+                                                    class="w-20 h-24 object-cover rounded-md" />
+
+                                                <!-- Details -->
+                                                <div>
+                                                    <h4 class="font-medium text-sm">Maroon Chikankari</h4>
+
+                                                    <p class="text-xs text-gray-500 mt-1">
+                                                        Size: <span class="text-gray-700">Custom Size</span>
+                                                    </p>
+
+                                                    <p class="text-xs text-gray-500">
+                                                        Color: <span class="text-gray-700">Maroon</span>
+                                                    </p>
+
+                                                    <p class="text-xs text-gray-500">
+                                                        Qty: <span class="text-gray-700">1</span>
+                                                    </p>
+
+                                                    <!-- Quantity Controls -->
+                                                    <div class="flex items-center mt-3">
+
+                                                        <button
+                                                            class="w-8 h-8 flex items-center justify-center border rounded-l-md">
+                                                            <i class="fa-solid fa-minus text-xs"></i>
+                                                        </button>
+
+                                                        <input type="text" value="1"
+                                                            class="w-10 h-8 text-center border-t border-b outline-none text-sm" />
+
+                                                        <button
+                                                            class="w-8 h-8 flex items-center justify-center border rounded-r-md">
+                                                            <i class="fa-solid fa-plus text-xs"></i>
+                                                        </button>
+
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                            <span class="font-medium">Rs. 3,400</span>
-                                        </div>
+                                            <!-- RIGHT: Price + Actions -->
+                                            <div class="flex flex-col items-end justify-between h-full">
 
-                                        <!-- Product 3 -->
-                                        <div class="flex gap-4">
-                                            <img src="https://picsum.photos/id/1025/400/500" data-name="Co-ord Set"
-                                                data-price="Rs. 7,999" data-size="S" data-color="Brown"
-                                                class="product-image w-20 h-24 object-cover rounded cursor-pointer hover:opacity-80 transition" />
+                                                <!-- Price -->
+                                                <span class="font-medium text-sm">Rs. 8,400</span>
 
-                                            <div class="flex-1">
-                                                <h4 class="font-medium">Co-ord Set</h4>
-                                                <p class="text-xs text-gray-500">Size: S</p>
-                                                <p class="text-xs text-gray-500">Color: Brown</p>
+                                                <!-- Edit / Delete -->
+                                                <div class="flex items-center gap-3 mt-10">
+
+                                                    <button class="text-gray-600 hover:text-blue-600">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                    </button>
+
+                                                    <button class="text-gray-600 hover:text-red-600">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </button>
+
+                                                </div>
                                             </div>
 
-                                            <span class="font-medium">Rs. 7,999</span>
                                         </div>
 
                                     </div>
