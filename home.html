@@ -547,8 +547,8 @@
                                 XL
                             </button>
                             <button
-                                class="rounded border border-amber-300 bg-[#FFEDC8] px-2 py-1 text-[10px] text-[#674B36]">
-                                CUSTOM
+                                class="posePhotosModalBtn rounded border border-amber-300 bg-[#FFEDC8] px-2 py-1 text-[10px] text-[#674B36]">
+                                CUSTOM1
                             </button>
                         </div>
 
@@ -2040,7 +2040,7 @@
             </div>
 
             <!-- Menu List -->
-            <div class="mt-12 space-y-8 text-2xl">
+            <div class="mt-12 space-y-3 text-2xl">
                 <a class="block text-gray-900">
                     Casual
                 </a>
@@ -2074,12 +2074,12 @@
                 </a>
             </div>
 
-            <div class="mt-5">
-                <a href="measurements.html">measurements</a>
-                <a href="posePhotos.html">posePhotos</a>
-                <a href="privacyPolicy.html">privacyPolicy</a>
-                <a href="TermsandCondition.html">TermsandCondition</a>
-                <a href="fitting.html">fitting</a>
+            <div class="mt-12 space-y-2 text-2xl">
+                <a class="block text-gray-900" href="measurements.html">measurements</a>
+                <a class="block text-gray-900" href="posePhotos.html">posePhotos</a>
+                <a class="block text-gray-900" href="privacyPolicy.html">privacyPolicy</a>
+                <a class="block text-gray-900" href="TermsandCondition.html">TermsandCondition</a>
+                <a class="block text-gray-900" href="fitting.html">fitting</a>
             </div>
 
 
@@ -2672,6 +2672,535 @@
 
         render();
 
+    </script>
+
+    <!-- Custom Modal Overlay 1 -->
+    <div id="modal1" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 p-4 overflow-y-auto">
+
+        <div class="w-full max-w-3xl bg-white rounded-[24px] border border-[#E7DCC6] shadow-lg p-6 relative">
+
+            <!-- Header -->
+            <div class="flex items-start justify-between">
+                <div>
+                    <div class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 8l-6 6-6-6" />
+                        </svg>
+                        Tailored For You
+                    </div>
+
+                    <h2 class="text-2xl font-semibold mt-1">
+                        Custom Size Studio
+                    </h2>
+                </div>
+
+                <!-- Close -->
+                <button id="closeModal"
+                    class="w-8 h-8 rounded-lg bg-gray-100 text-gray-500 flex items-center justify-center hover:bg-gray-200">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Steps -->
+            <div class="flex items-center justify-between mt-8">
+                <div class="flex items-center gap-2">
+                    <span
+                        class="w-5 h-5 rounded-full bg-[#C8953D] text-white text-xs flex items-center justify-center">1</span>
+                    <span class="bg-[#E6C68C] text-[#8A6223] px-4 py-2 rounded-lg text-sm font-medium">
+                        Pose Photos
+                    </span>
+                </div>
+
+                <div class="flex-1 h-px bg-gray-300 mx-4"></div>
+
+                <div class="flex items-center gap-2">
+                    <span
+                        class="w-5 h-5 rounded-full bg-gray-200 text-gray-600 text-xs flex items-center justify-center">2</span>
+                    <span class="text-sm">Measurements</span>
+                </div>
+
+                <div class="flex-1 h-px bg-gray-300 mx-4"></div>
+
+                <div class="flex items-center gap-2">
+                    <span
+                        class="w-5 h-5 rounded-full bg-gray-200 text-gray-600 text-xs flex items-center justify-center">3</span>
+                    <span class="text-sm">Fitting & type</span>
+                </div>
+            </div>
+
+            <div class="border-t mt-8 pt-5">
+                <p class="text-sm text-gray-500">
+                    Upload three pose photos so our tailors can craft the perfect fit.
+                </p>
+            </div>
+
+            <!-- Upload Cards -->
+            <div class="grid grid-cols-3 gap-4 mt-5">
+
+                <!-- Front -->
+                <div>
+                    <div
+                        class="relative h-48 bg-[#F3DEB2] border border-[#D8A54C] rounded-2xl flex flex-col items-center justify-center">
+                        <button
+                            class="absolute top-3 right-3 w-5 h-5 rounded-full bg-[#D8A54C] text-white text-xs flex items-center justify-center">
+                            ✓
+                        </button>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#B57E1E]" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 16V4m0 0l-4 4m4-4l4 4M4 20h16" />
+                        </svg>
+
+                        <span class="text-xs text-[#B57E1E] mt-1">Upload</span>
+                    </div>
+                    <p class="text-center text-sm mt-3">Front view</p>
+                </div>
+
+                <!-- Back -->
+                <div>
+                    <div class="h-48 bg-[#F6EFE3] rounded-2xl"></div>
+                    <p class="text-center text-sm mt-3">Back view</p>
+                </div>
+
+                <!-- Side -->
+                <div>
+                    <div class="h-48 bg-[#F6EFE3] rounded-2xl"></div>
+                    <p class="text-center text-sm mt-3">Side view</p>
+                </div>
+
+            </div>
+
+            <!-- Note -->
+            <div class="mt-5 flex gap-3 items-start bg-[#FAE7C5] border border-[#D8A54C] rounded-xl p-4 text-[#8A6223]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+
+                <p class="text-sm">
+                    Stand straight with arms slightly away from the body.
+                    Wear fitted clothing for accurate measurements.
+                    Photos are kept strictly private and used only for tailoring purposes.
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="flex items-center justify-between mt-6">
+
+                <button
+                    class="px-5 py-2 bg-gray-100 text-gray-400 rounded-lg text-sm font-medium flex items-center gap-2">
+                    ← Back
+                </button>
+
+                <div class="flex items-center gap-1">
+                    <div class="w-8 h-2 rounded-full bg-[#C8953D]"></div>
+                    <div class="w-2 h-2 rounded-full bg-[#E0B76A]"></div>
+                    <div class="w-2 h-2 rounded-full bg-[#E0B76A]"></div>
+                    <div class="w-2 h-2 rounded-full bg-[#E0B76A]"></div>
+                </div>
+
+                <button id="toModal2" class="px-6 py-2 bg-[#D4B06A] text-black rounded-lg text-sm font-medium">
+                    Next →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Custom Modal Overlay 2 -->
+    <div id="modal2" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 p-4 overflow-y-auto">
+
+        <div class="w-full max-w-4xl bg-white rounded-[24px] border border-[#E8DFC9] shadow-lg p-6">
+
+            <div class="w-full max-w-4xl bg-white rounded-[24px] border border-[#E8DFC9] shadow-lg p-6">
+
+                <!-- Header -->
+                <div class="flex items-start justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-[10px] uppercase text-gray-500 tracking-wider">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18 8l-6 6-6-6" />
+                            </svg>
+                            Tailored For You
+                        </div>
+
+                        <h2 class="text-[34px] font-semibold leading-tight mt-1">
+                            Custom Size Studio
+                        </h2>
+                    </div>
+
+                    <!-- Close -->
+                    <button id="closeModal2"
+                        class="w-8 h-8 rounded-lg bg-gray-100 text-gray-500 flex items-center justify-center">
+                        ✕
+                    </button>
+                </div>
+
+                <!-- Stepper -->
+                <div class="flex items-center justify-between mt-10">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-gray-200 text-[10px] flex items-center justify-center">
+                            1
+                        </span>
+                        <span class="text-[#C88D17] font-medium">Pose Photos</span>
+                    </div>
+
+                    <div class="flex-1 h-px bg-gray-300 mx-6"></div>
+
+                    <div class="flex items-center gap-2 bg-[#E7C98A] text-[#9A6A10] px-4 py-2 rounded-lg font-medium">
+                        <span
+                            class="w-5 h-5 rounded-full bg-[#C88D17] text-white text-[10px] flex items-center justify-center">
+                            2
+                        </span>
+                        Measurements
+                    </div>
+
+                    <div class="flex-1 h-px bg-gray-300 mx-6"></div>
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-gray-200 text-[10px] flex items-center justify-center">
+                            3
+                        </span>
+                        <span>Fitting & type</span>
+                    </div>
+
+                </div>
+
+                <div class="border-t mt-6 pt-6">
+                    <p class="text-gray-500 text-sm">
+                        Enter all measurements in inches or cm. Be precise for the best fit.
+                    </p>
+                </div>
+
+                <!-- FORM -->
+                <form class="mt-6">
+                    <div class="grid grid-cols-3 gap-x-4 gap-y-4">
+
+                        <div>
+                            <label class="block text-[11px] text-gray-500 mb-1">Profile Name</label>
+                            <input class="w-full h-12 rounded-xl border border-[#D8B15A] bg-[#F7F0DF] px-4">
+                        </div>
+
+                        <div>
+                            <label class="block text-[11px] text-gray-500 mb-1">Shoulder Width</label>
+                            <input class="w-full h-12 rounded-xl border border-[#D8B15A] bg-[#F7F0DF] px-4">
+                        </div>
+
+                        <div>
+                            <label class="block text-[11px] text-gray-500 mb-1">Sleeves Length</label>
+                            <input class="w-full h-12 rounded-xl border border-[#D8B15A] bg-[#F7F0DF] px-4">
+                        </div>
+
+                        <div>
+                            <label class="block text-[11px] text-gray-500 mb-1">Bicep *</label>
+                            <input class="w-full h-12 rounded-xl border border-[#D8B15A] bg-[#F7F0DF] px-4">
+                        </div>
+
+                        <div>
+                            <label class="block text-[11px] text-gray-500 mb-1">Wrist *</label>
+                            <input class="w-full h-12 rounded-xl border border-[#D8B15A] bg-[#F7F0DF] px-4">
+                        </div>
+
+                        <div>
+                            <label class="block text-[11px] text-gray-500 mb-1">Neck *</label>
+                            <input class="w-full h-12 rounded-xl border border-[#D8B15A] bg-[#F7F0DF] px-4">
+                        </div>
+
+                    </div>
+
+                    <!-- Instructions -->
+                    <div class="mt-4">
+                        <label class="block text-[11px] text-gray-500 mb-1">
+                            Special Instructions
+                        </label>
+                        <textarea rows="2"
+                            class="w-full rounded-xl border border-[#D8B15A] bg-[#F7F0DF] px-4 py-3 resize-none"></textarea>
+                    </div>
+                </form>
+
+                <!-- FOOTER -->
+                <div class="flex items-center justify-between mt-6">
+
+                    <!-- BACK -->
+                    <button id="backTo1" class="px-5 py-2 bg-gray-100 text-gray-500 rounded-lg text-sm">
+                        ← Back
+                    </button>
+
+                    <!-- STEP INDICATOR -->
+                    <div class="flex items-center gap-1">
+                        <div class="w-8 h-2 rounded-full bg-[#C88D17]"></div>
+                        <div class="w-2 h-2 rounded-full bg-[#E7C98A]"></div>
+                        <div class="w-2 h-2 rounded-full bg-[#E7C98A]"></div>
+                    </div>
+
+                    <!-- NEXT -->
+                    <button id="toModal3"
+                        class="px-6 py-2 bg-[#D8B15A] text-black rounded-lg text-sm font-medium flex items-center gap-2">
+                        Next →
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Custom Modal Overlay 3 -->
+    <div id="modal3" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 p-4 overflow-y-auto">
+
+        <div class="w-full max-w-4xl bg-white rounded-[28px] border border-[#E6DCC8] shadow-lg p-5">
+
+            <div class="w-full max-w-4xl bg-white rounded-[28px] border border-[#E6DCC8] shadow-lg p-5">
+
+                <!-- Header -->
+                <div class="flex items-start justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-[10px] uppercase tracking-wider text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18 8l-6 6-6-6" />
+                            </svg>
+                            Tailored For You
+                        </div>
+
+                        <h2 class="text-[22px] font-semibold mt-1">
+                            Custom Size Studio
+                        </h2>
+                    </div>
+
+                    <!-- CLOSE -->
+                    <button id="closeModal3"
+                        class="w-8 h-8 rounded-lg bg-gray-100 text-gray-500 flex items-center justify-center">
+                        ✕
+                    </button>
+                </div>
+
+                <!-- STEPPEr -->
+                <div class="flex items-center justify-between mt-8">
+
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="w-5 h-5 rounded-full bg-gray-200 text-[10px] flex items-center justify-center">1</span>
+                        <span class="text-[#B88412] font-medium">Pose Photos</span>
+                    </div>
+
+                    <div class="flex-1 h-px bg-gray-300 mx-5"></div>
+
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="w-5 h-5 rounded-full bg-gray-200 text-[10px] flex items-center justify-center">2</span>
+                        <span class="text-[#B88412] font-medium">Measurements</span>
+                    </div>
+
+                    <div class="flex-1 h-px bg-gray-300 mx-5"></div>
+
+                    <div class="flex items-center gap-2 bg-[#E5C98B] px-4 py-2 rounded-lg text-[#8E6610] font-medium">
+                        <span
+                            class="w-5 h-5 rounded-full bg-[#C79B34] text-white text-[10px] flex items-center justify-center">
+                            3
+                        </span>
+                        Fitting & type
+                    </div>
+
+                </div>
+
+                <div class="border-t border-gray-200 mt-4 pt-4">
+
+                    <!-- Fitting -->
+                    <div>
+                        <h3 class="text-[18px] font-semibold border-l-2 border-[#C79B34] pl-2 mb-3">
+                            Fitting type
+                        </h3>
+
+                        <div class="grid grid-cols-3 gap-4">
+
+                            <button class="h-14 rounded-2xl bg-[#FEF6E8] text-[#D2AF68] text-sm">Slim</button>
+
+                            <button
+                                class="relative h-14 rounded-2xl border border-[#D1A74E] bg-[#feeabf] text-[#9B7316] text-sm">
+                                Regular
+                                <span
+                                    class="absolute top-2 right-2 w-5 h-5 rounded-full bg-[#D1A74E] text-white text-[10px] flex items-center justify-center">
+                                    ✓
+                                </span>
+                            </button>
+
+                            <button class="h-14 rounded-2xl bg-[#FEF6E8] text-[#D2AF68] text-sm">Loose</button>
+
+                        </div>
+                    </div>
+
+                    <!-- Shoulder -->
+                    <div class="mt-5">
+                        <h3 class="text-[18px] font-semibold border-l-2 border-[#C79B34] pl-2 mb-3">
+                            Shoulder type
+                        </h3>
+
+                        <div class="grid grid-cols-3 gap-4">
+
+                            <div class="bg-[#FEF6E8] rounded-3xl p-4 flex flex-col items-center">
+                                <img src="images/squareShoulder.png" class="h-20 object-contain">
+                                <span class="text-xs text-[#D2AF68] mt-2">Square Shoulder</span>
+                            </div>
+
+                            <div
+                                class="relative bg-[#feeabf] border border-[#D1A74E] rounded-3xl p-4 flex flex-col items-center">
+                                <span
+                                    class="absolute top-3 right-3 w-5 h-5 rounded-full bg-[#D1A74E] text-white text-[10px] flex items-center justify-center">
+                                    ✓
+                                </span>
+                                <img src="images/normalShoulder.png" class="h-20 object-contain">
+                                <span class="text-xs text-[#9B7316] mt-2">Normal Shoulder</span>
+                            </div>
+
+                            <div class="bg-[#FEF6E8] rounded-3xl p-4 flex flex-col items-center">
+                                <img src="images/downShoulder.png" class="h-20 object-contain">
+                                <span class="text-xs text-[#D2AF68] mt-2">Down Shoulder</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="mt-5">
+                        <h3 class="text-[18px] font-semibold border-l-2 border-[#C79B34] pl-2 mb-3">
+                            Body type
+                        </h3>
+
+                        <div class="grid grid-cols-4 gap-4">
+
+                            <div class="bg-[#FEF6E8] rounded-3xl p-4 flex flex-col items-center">
+                                <img src="images/muscular-body.png" class="h-20 object-contain">
+                                <span class="text-xs text-[#D2AF68] mt-2">Muscular body</span>
+                            </div>
+
+                            <div
+                                class="relative bg-[#feeabf] border border-[#D1A74E] rounded-3xl p-4 flex flex-col items-center">
+                                <span
+                                    class="absolute top-3 right-3 w-5 h-5 rounded-full bg-[#D1A74E] text-white text-[10px] flex items-center justify-center">
+                                    ✓
+                                </span>
+                                <img src="images/triangle-body.png" class="h-20 object-contain">
+                                <span class="text-xs text-[#9B7316] mt-2">Triangle Body</span>
+                            </div>
+
+                            <div class="bg-[#FEF6E8] rounded-3xl p-4 flex flex-col items-center">
+                                <img src="images/rectangular-body.png" class="h-20 object-contain">
+                                <span class="text-xs text-[#D2AF68] mt-2">Rectangular Body</span>
+                            </div>
+
+                            <div class="bg-[#FEF6E8] rounded-3xl p-4 flex flex-col items-center">
+                                <img src="images/oval-body.png" class="h-20 object-contain">
+                                <span class="text-xs text-[#D2AF68] mt-2">Oval Body</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- FOOTER -->
+                <div class="flex items-center justify-between mt-5">
+
+                    <!-- BACK -->
+                    <button id="backTo2" class="px-5 py-2 bg-gray-100 text-gray-500 rounded-lg text-sm">
+                        ← Back
+                    </button>
+
+                    <!-- PROGRESS -->
+                    <div class="flex items-center gap-1">
+                        <div class="w-8 h-2 rounded-full bg-[#C79B34]"></div>
+                        <div class="w-2 h-2 rounded-full bg-[#E5C98B]"></div>
+                        <div class="w-2 h-2 rounded-full bg-[#E5C98B]"></div>
+                    </div>
+
+                    <!-- ACTION -->
+                    <button
+                        class="px-6 py-2 bg-[#D4B06A] text-black rounded-lg text-sm font-medium flex items-center gap-2">
+                        Save & Add to Cart
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- JS Modal Overlay -->
+    <script>
+        const modal1 = document.getElementById('modal1');
+        const modal2 = document.getElementById('modal2');
+        const modal3 = document.getElementById('modal3');
+
+        const openBtn = document.querySelector('.posePhotosModalBtn');
+
+        const toModal2 = document.getElementById('toModal2');
+        const toModal3 = document.getElementById('toModal3');
+
+        const backTo1 = document.getElementById('backTo1');
+        const backTo2 = document.getElementById('backTo2');
+
+        // OPEN MODAL 1
+        openBtn.addEventListener('click', () => {
+            modal1.classList.remove('hidden');
+            modal1.classList.add('flex');
+        });
+
+        // MODAL 1 → MODAL 2
+        toModal2.addEventListener('click', () => {
+            modal1.classList.add('hidden');
+            modal1.classList.remove('flex');
+
+            modal2.classList.remove('hidden');
+            modal2.classList.add('flex');
+        });
+
+        // MODAL 2 → MODAL 3
+        toModal3.addEventListener('click', () => {
+            modal2.classList.add('hidden');
+            modal2.classList.remove('flex');
+
+            modal3.classList.remove('hidden');
+            modal3.classList.add('flex');
+        });
+
+        // BACK MODAL 2 → MODAL 1
+        backTo1.addEventListener('click', () => {
+            modal2.classList.add('hidden');
+            modal2.classList.remove('flex');
+
+            modal1.classList.remove('hidden');
+            modal1.classList.add('flex');
+        });
+
+        // BACK MODAL 3 → MODAL 2
+        backTo2.addEventListener('click', () => {
+            modal3.classList.add('hidden');
+            modal3.classList.remove('flex');
+
+            modal2.classList.remove('hidden');
+            modal2.classList.add('flex');
+        });
+
+        // CLOSE ON OUTSIDE CLICK (optional for all modals)
+        [modal1, modal2, modal3].forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }
+            });
+        });
     </script>
 
 </body>
