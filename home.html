@@ -443,11 +443,14 @@
                 </div>
 
                 <!-- Party Wear -->
-                <div class="h-48 md:h-[350px] lg:h-[400px] group relative overflow-hidden cursor-pointer">
-                    <img src="images/party.png" alt="Party Wear" class="w-full h-full object-cover object-[50%_20%]">
+                <div class="h-48 md:h-[350px] lg:h-[400px] group relative overflow-hidden cursor-pointer 
+            col-span-2 lg:col-span-1">
+
+                    <img src="images/party.png" alt="Party Wear" class="w-full h-full object-cover object-[50%_10%]">
 
                     <div
                         class="absolute bottom-0 left-0 right-0 bg-black/30 text-white px-3 md:px-5 py-3 md:py-6 flex items-center justify-between">
+
                         <span class="font-['Abril_Fatface'] text-base md:text-2xl lg:text-[28px]">
                             Party Wear
                         </span>
@@ -461,6 +464,7 @@
                                 <path d="M8 7h9v9" />
                             </svg>
                         </span>
+
                     </div>
                 </div>
 
@@ -489,7 +493,7 @@
                 </div>
 
                 <a href="shop.html"
-                    class="font-[Poppins] text-[#7A7A7A] text-sm md:text-[16px] font-medium underline flex items-bottom">
+                    class="font-[Poppins] text-[#7A7A7A] text-sm md:text-[16px] font-medium underline flex self-end mb-1">
                     View all
                 </a>
 
@@ -1838,25 +1842,33 @@
         <div class="w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-xl border border-[#C9A227] bg-[#F8F6F0]">
 
             <!-- Header -->
-            <div class="flex items-center justify-between px-8 py-4 border-b border-[#E0D7B8]">
+            <div
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 px-4 sm:px-8 py-4 border-b border-[#E0D7B8] relative pr-14 sm:pr-8">
 
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-[#C9A227] flex items-center justify-center text-white text-xl">
+                <!-- Left Content -->
+                <div class="flex items-start sm:items-center gap-3 sm:gap-4">
+
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#C9A227] flex items-center justify-center text-white text-lg sm:text-xl shrink-0">
                         ✨
                     </div>
 
                     <div>
-                        <h2 class="text-2xl font-bold tracking-[4px] text-[#3A2D0B] uppercase">
+                        <h2
+                            class="text-lg sm:text-2xl font-bold tracking-[2px] sm:tracking-[4px] text-[#3A2D0B] uppercase">
                             Book Appointment
                         </h2>
-                        <p class="text-[#C9A227] text-sm">
+
+                        <p class="text-[#C9A227] text-xs sm:text-sm leading-snug">
                             Mon–Sat · 11:00 AM–5:00 PM · Fri break 12:30–2:30 PM
                         </p>
                     </div>
+
                 </div>
 
+                <!-- CLOSE BUTTON -->
                 <button onclick="closeModal()"
-                    class="w-12 h-12 rounded-full border-2 border-[#C9A227] text-[#C9A227] text-2xl hover:bg-[#C9A227] hover:text-white transition">
+                    class="absolute top-3 right-3 sm:static w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#C9A227] text-[#C9A227] text-xl sm:text-2xl hover:bg-[#C9A227] hover:text-white transition">
                     ×
                 </button>
 
@@ -2710,15 +2722,17 @@
                     <div class="w-2 h-2 rounded-full bg-[#E5C98B]"></div>
                     <div class="w-2 h-2 rounded-full bg-[#E5C98B]"></div>
                 </div>
+                <a href="checkOut.html">
 
-                <button
-                    class="px-6 py-2 bg-[#D4B06A] text-black rounded-lg text-sm whitespace-nowrap flex items-center gap-2">
-                    Save & Add to Cart
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
+                    <button
+                        class="px-6 py-2 bg-[#D4B06A] text-black rounded-lg text-sm whitespace-nowrap flex items-center gap-2">
+                        Save & Add to Cart
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </a>
 
             </div>
 
