@@ -1713,26 +1713,62 @@
             </div>
 
             <!-- Social Login -->
-            <div class="grid grid-cols-3 gap-3">
-
-                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
+            <div class="flex justify-center">
+                <button class="h-12 w-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
                     <i class="fa-brands fa-google text-red-500 text-lg"></i>
                 </button>
-
-                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
-                    <i class="fa-brands fa-apple text-black text-xl"></i>
-                </button>
-
-                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
-                    <i class="fa-brands fa-facebook-f text-blue-600 text-lg"></i>
-                </button>
-
             </div>
 
             <div class="text-center mt-6 text-sm text-gray-500">
                 Don't have an account?
-                <a class="font-semibold text-black hover:underline">
+                <a id="openSignup" class="font-semibold text-black hover:underline cursor-pointer">
                     Sign Up
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+
+        <div class="relative w-full max-w-md bg-white rounded-3xl p-6 md:p-8 shadow-2xl">
+
+            <!-- Close Button -->
+            <button onclick="closeSignupModal()" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">
+                &times;
+            </button>
+
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-bold tracking-widest">CREATE ACCOUNT</h1>
+                <p class="text-gray-500 text-sm mt-2">Sign up to get started</p>
+            </div>
+
+            <form class="space-y-4">
+
+                <!-- Name -->
+                <input type="text" placeholder="Full Name"
+                    class="w-full h-12 rounded-lg bg-gray-100 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+
+                <!-- Email -->
+                <input type="email" placeholder="Enter Email"
+                    class="w-full h-12 rounded-lg bg-gray-100 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+
+                <!-- Password -->
+                <input type="password" placeholder="Create Password"
+                    class="w-full h-12 rounded-lg bg-gray-100 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+
+                <button type="submit" class="w-full h-12 bg-black text-white rounded-lg font-medium hover:bg-gray-800">
+                    Sign Up
+                </button>
+
+            </form>
+
+            <div class="text-center mt-6 text-sm text-gray-500">
+                Already have an account?
+                <a id="goToLogin" class="font-semibold text-black hover:underline cursor-pointer">
+                    Sign In
                 </a>
             </div>
 
@@ -1743,28 +1779,29 @@
     <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
 
     <!-- Sidebar -->
-    <div id="sidebar" class="fixed top-0 left-0 h-screen w-[520px] bg-white z-50 shadow-2xl transition-all duration-300"
-        style="transform: translateX(-100%);">
+    <div id="sidebar"
+    class="fixed top-0 left-0 h-screen w-full sm:w-[380px] md:w-[520px] bg-white z-50 shadow-2xl transition-transform duration-300 overflow-y-auto"
+    style="transform: translateX(-100%);">  
 
-        <!-- Overlay -->
-        <div class="p-6">
+        <!-- Content -->
+        <div class="p-4 sm:p-6">
 
             <!-- Header -->
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <img src="images/logo.png" alt="Logo" class="w-10 h-10 rounded-full object-cover">
-                    <h1 class="text-2xl font-serif font-semibold tracking-wide">
+                    <img src="images/logo.png" alt="Logo" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover">
+                    <h1 class="text-lg sm:text-2xl font-serif font-semibold tracking-wide">
                         CUSTOM SUITS
                     </h1>
                 </div>
 
                 <button id="closeSidebar">
-                    <i class="fa-solid fa-xmark text-2xl"></i>
+                    <i class="fa-solid fa-xmark text-xl sm:text-2xl"></i>
                 </button>
             </div>
 
             <!-- Categories -->
-            <div class="flex gap-16 mt-12 text-lg">
+            <div class="flex gap-6 sm:gap-16 mt-8 sm:mt-12 text-base sm:text-lg flex-wrap">
                 <button class="font-semibold underline underline-offset-4">
                     WOMAN
                 </button>
@@ -1779,57 +1816,47 @@
             </div>
 
             <!-- Menu List -->
-            <div class="mt-12 space-y-3 text-2xl">
-                <a class="block text-gray-900">
-                    Casual
-                </a>
+            <div class="mt-8 sm:mt-12 space-y-2 sm:space-y-3 text-lg sm:text-2xl">
+                <a class="block text-gray-900">Casual</a>
 
                 <a class="block underline underline-offset-4 text-gray-900">
                     Luxury Formals
                 </a>
 
-                <a class="block text-gray-900">
-                    Bridal
-                </a>
+                <a class="block text-gray-900">Bridal</a>
 
-                <a class="block text-gray-900">
-                    Party Wear
-                </a>
+                <a class="block text-gray-900">Party Wear</a>
 
-                <a class="block text-gray-900">
-                    Western
-                </a>
+                <a class="block text-gray-900">Western</a>
 
-                <a class="block text-gray-900">
-                    Jewelery
-                </a>
+                <a class="block text-gray-900">Jewelery</a>
 
-                <a class="block text-gray-900">
-                    Shoes
-                </a>
+                <a class="block text-gray-900">Shoes</a>
 
-                <a class="block text-red-600 uppercase tracking-wide mt-12">
+                <a class="block text-red-600 uppercase tracking-wide mt-8 sm:mt-12">
                     Special Offers
                 </a>
             </div>
 
-        </div>
-        <div class="md:hidden border-t mt-6 pt-6">
+            <!-- Mobile Footer Links -->
+            <div class="md:hidden border-t mt-8 pt-6">
 
-            <a href="#" class="flex items-center gap-3 py-3">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <span>Search</span>
-            </a>
+                <a href="#" class="flex items-center gap-3 py-2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search</span>
+                </a>
 
-            <a href="#" class="flex items-center gap-3 py-3">
-                <i class="fa-regular fa-heart"></i>
-                <span>Wishlist</span>
-            </a>
+                <a href="#" class="flex items-center gap-3 py-2">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Wishlist</span>
+                </a>
 
-            <a href="#" class="flex items-center gap-3 py-3">
-                <i class="fa-regular fa-user"></i>
-                <span>My Account</span>
-            </a>
+                <a href="#" class="flex items-center gap-3 py-2">
+                    <i class="fa-regular fa-user"></i>
+                    <span>My Account</span>
+                </a>
+
+            </div>
 
         </div>
     </div>
@@ -2728,15 +2755,16 @@
 
     <!-- ============================== JS ================================= -->
 
-    <!-- JS Login Modal -->
+    <!-- JS Login/Signup Modal -->
     <script>
         const loginModal = document.getElementById("loginModal");
+        const signupModal = document.getElementById("signupModal");
 
-        // Get both buttons safely
         const loginBtnDesktop = document.getElementById("loginBtnDesktop");
         const loginBtnMobile = document.getElementById("loginBtnMobile");
 
         function openLoginModal() {
+            signupModal.classList.add("hidden");
             loginModal.classList.remove("hidden");
             loginModal.classList.add("flex");
         }
@@ -2746,18 +2774,37 @@
             loginModal.classList.remove("flex");
         }
 
-        // Attach events safely
+        function openSignupModal() {
+            loginModal.classList.add("hidden");
+            signupModal.classList.remove("hidden");
+            signupModal.classList.add("flex");
+        }
+
+        function closeSignupModal() {
+            signupModal.classList.add("hidden");
+            signupModal.classList.remove("flex");
+        }
+
         loginBtnDesktop?.addEventListener("click", openLoginModal);
         loginBtnMobile?.addEventListener("click", openLoginModal);
 
-        // Close when clicking outside modal
+        // Click Sign Up → open signup modal
+        document.getElementById("openSignup")?.addEventListener("click", openSignupModal);
+
+        // Click Sign In inside signup → go back login
+        document.getElementById("goToLogin")?.addEventListener("click", openLoginModal);
+
+        // Close outside click (login)
         loginModal?.addEventListener("click", function (e) {
-            if (e.target === this) {
-                closeLoginModal();
-            }
+            if (e.target === this) closeLoginModal();
         });
 
-        // Toggle Password (safe version)
+        // Close outside click (signup)
+        signupModal?.addEventListener("click", function (e) {
+            if (e.target === this) closeSignupModal();
+        });
+
+        // Password toggle
         const togglePassword = document.getElementById("togglePassword");
 
         togglePassword?.addEventListener("click", function () {
@@ -2767,12 +2814,10 @@
 
             if (password.type === "password") {
                 password.type = "text";
-                this.classList.remove("fa-eye-slash");
-                this.classList.add("fa-eye");
+                this.classList.replace("fa-eye-slash", "fa-eye");
             } else {
                 password.type = "password";
-                this.classList.remove("fa-eye");
-                this.classList.add("fa-eye-slash");
+                this.classList.replace("fa-eye", "fa-eye-slash");
             }
         });
     </script>
@@ -2889,7 +2934,7 @@
         goToSlide(0);
     </script>
 
-    <!-- JS Slider (Royal Bridal Lehenga) -->
+    <!-- JS Slider Royal Bridal Lehenga -->
     <script>
 
         const products = [
