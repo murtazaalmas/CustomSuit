@@ -35,29 +35,8 @@
             margin: auto;
         }
 
-        /* Header */
 
-        .header {
-            position: absolute;
-            top: 40px;
-            left: 0;
-            width: 100%;
-            z-index: 50;
-            padding: 0 40px;
-        }
 
-        .header-inner {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-        }
-
-        .header-icons {
-            display: flex;
-            justify-content: flex-end;
-            gap: 20px;
-            color: white;
-        }
 
         /* Hero */
 
@@ -234,10 +213,6 @@
                 height: 350px;
             }
 
-            .header {
-                padding: 0 20px;
-            }
-
         }
     </style>
 </head>
@@ -251,13 +226,13 @@
     </div>
 
     <!-- Header -->
-    <header class="absolute top-7 left-0 right-0 z-30 px-6 md:px-10 bg-[#D9D9D9] bg-opacity-20">
+    <header class="absolute top-9 md:top-7 left-0 right-0 z-30 px-4 md:px-10 md:bg-[#D9D9D9]/20">
 
-        <div class="grid grid-cols-3 items-center px-10">
+        <div class="grid grid-cols-3 items-center">
 
             <!-- Menu -->
             <div>
-                <button id="menuBtn" class="text-white text-2xl">
+                <button id="menuBtn" class="text-white text-xl md:text-2xl">
                     <i class="fa-solid fa-bars-staggered"></i>
                 </button>
             </div>
@@ -265,50 +240,83 @@
             <!-- Logo -->
             <div class="flex justify-center">
                 <a href="home.html">
-                    <img src="images/logo.png" alt="Logo" class="h-20 md:h-24 w-auto cursor-pointer">
+                    <img src="images/logo.png" alt="Logo" class="h-14 sm:h-16 md:h-24 w-auto">
                 </a>
             </div>
 
-            <!-- Right Icons -->
-            <div class="flex justify-end items-center gap-5 text-white text-lg">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-search-icon lucide-search">
-                        <path d="m21 21-4.34-4.34" />
-                        <circle cx="11" cy="11" r="8" />
-                    </svg>
-                </button>
+            <!-- Right Side -->
+            <div class="flex justify-end items-center gap-3">
 
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-heart-icon lucide-heart">
-                        <path
-                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-                    </svg>
-                </button>
+                <!-- Desktop Icons ONLY -->
+                <div class="hidden md:flex items-center gap-5 text-white">
 
-                <a href="checkOut.html">
-                    <button>
+                    <!-- Search -->
+                    <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m21 21-4.34-4.34" />
+                            <circle cx="11" cy="11" r="8" />
+                        </svg>
+                    </a>
+
+                    <!-- Wishlist -->
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
+                    </a>
+
+                    <!-- Cart -->
+                    <a href="checkOut.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 10a4 4 0 0 1-8 0" />
                             <path d="M3.103 6.034h17.794" />
                             <path
                                 d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
                         </svg>
+                    </a>
+
+                    <!-- Account -->
+                    <button id="loginBtnDesktop">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="5" />
+                            <path d="M20 21a8 8 0 0 0-16 0" />
+                        </svg>
                     </button>
-                </a>
-                <button id="loginBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-user-round-icon lucide-user-round">
-                        <circle cx="12" cy="8" r="5" />
-                        <path d="M20 21a8 8 0 0 0-16 0" />
-                    </svg>
-                </button>
+
+                </div>
+
+                <!-- MOBILE: Cart + Account ONLY -->
+                <div class="md:hidden flex items-center gap-3 text-white">
+
+                    <!-- Cart -->
+                    <a href="checkOut.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                            <path d="M3.103 6.034h17.794" />
+                            <path
+                                d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+                        </svg>
+                    </a>
+
+
+                    <!-- Account -->
+                    <button id="loginBtnMobile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="5" />
+                            <path d="M20 21a8 8 0 0 0-16 0" />
+                        </svg>
+                    </button>
+
+
+                </div>
+
             </div>
 
         </div>
@@ -352,110 +360,135 @@
 
     <!-- Shop by Category -->
     <section>
-        <div>
-            <div class="my-8 text-center flex flex-col items-center">
-                <small class="font-light text-[20px] leading-[100%] tracking-normal text-[#E4C587] font-[Inter]">
-                    DISCOVER
-                </small>
 
-                <h2
-                    class="mt-2 font-['Abril_Fatface'] text-[50px] font-normal text-[#221E1B] tracking-[0px] leading-[100%]">
-                    Shop by Category
-                </h2>
+        <!-- Header -->
+        <div class="my-6 md:my-8 text-center flex flex-col items-center px-4">
 
-                <p
-                    class="mt-3 font-inter font-normal text-[20px] leading-[100%] tracking-[0px] text-[#636161] font-[Inter]">
-                    Curated collections for every occasion
-                </p>
-            </div>
+            <small class="font-light text-sm sm:text-base md:text-[20px] text-[#E4C587] font-[Inter]">
+                DISCOVER
+            </small>
 
-            <div class="category-grid">
+            <h2
+                class="mt-2 font-['Abril_Fatface'] text-3xl sm:text-4xl md:text-5xl lg:text-[50px] text-[#221E1B] leading-tight">
+                Shop by Category
+            </h2>
 
-                <div class="h-[400px] group relative overflow-hidden  cursor-pointer">
-                    <img src="images/western.jpg" alt="Western" class=" w-full object-cover object-[50%_20%]">
+            <p class="mt-3 font-[Inter] text-sm sm:text-base md:text-lg lg:text-[20px] text-[#636161] max-w-2xl">
+                Curated collections for every occasion
+            </p>
+
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="px-4 md:px-6 lg:px-8">
+
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-0 lg:auto-rows-[400px]">
+
+                <!-- Western -->
+                <div class="h-48 md:h-[350px] lg:h-[400px] group relative overflow-hidden cursor-pointer">
+                    <img src="images/western.jpg" alt="Western" class="w-full h-full object-cover object-[50%_20%]">
 
                     <div
-                        class="absolute bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.3)] text-white px-5 py-6 flex items-center justify-between">
-                        <span class="font-['Abril_Fatface'] text-[28px] font-normal  tracking-normal">
+                        class="absolute bottom-0 left-0 right-0 bg-black/30 text-white px-3 md:px-5 py-3 md:py-6 flex items-center justify-between">
+                        <span class="font-['Abril_Fatface'] text-base md:text-2xl lg:text-[28px]">
                             Western
                         </span>
 
-                        <span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <span
+                            class="opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-8 md:h-8" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M7 17L17 7" />
                                 <path d="M8 7h9v9" />
                             </svg>
                         </span>
                     </div>
                 </div>
-                <div class="h-[400px] group relative overflow-hidden  cursor-pointer">
-                    <img src="images/casual.png" alt="Casual" class=" w-full object-cover object-[50%_20%]">
+
+                <!-- Casual -->
+                <div class="h-48 md:h-[350px] lg:h-[400px] group relative overflow-hidden cursor-pointer">
+                    <img src="images/casual.png" alt="Casual" class="w-full h-full object-cover object-[50%_20%]">
 
                     <div
-                        class="absolute bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.3)] text-white px-5 py-6 flex items-center justify-between">
-                        <span class="font-['Abril_Fatface'] text-[28px] font-normal  tracking-normal">
+                        class="absolute bottom-0 left-0 right-0 bg-black/30 text-white px-3 md:px-5 py-3 md:py-6 flex items-center justify-between">
+                        <span class="font-['Abril_Fatface'] text-base md:text-2xl lg:text-[28px]">
                             Casual
                         </span>
 
-                        <span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <span
+                            class="opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-8 md:h-8" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M7 17L17 7" />
                                 <path d="M8 7h9v9" />
                             </svg>
                         </span>
                     </div>
                 </div>
-                <div class="h-[800px] row-span-2 group relative overflow-hidden  cursor-pointer">
+
+                <!-- Bridal Lehnga -->
+                <div class="h-48 md:h-[350px] lg:h-auto lg:row-span-2 group relative overflow-hidden cursor-pointer">
                     <img src="images/bridal.jpg" alt="Bridal Lehnga"
-                        class="h-full w-full object-cover object-[50%_20%]">
+                        class="w-full h-full object-cover object-[50%_20%]">
 
                     <div
-                        class="absolute bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.3)] text-white px-5 py-6 flex items-center justify-between">
-                        <span class="font-['Abril_Fatface'] text-[28px] font-normal  tracking-normal">
+                        class="absolute bottom-0 left-0 right-0 bg-black/30 text-white px-3 md:px-5 py-3 md:py-6 flex items-center justify-between">
+                        <span class="font-['Abril_Fatface'] text-base md:text-2xl lg:text-[28px]">
                             Bridal Lehnga
                         </span>
 
-                        <span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <span
+                            class="opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-8 md:h-8" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M7 17L17 7" />
                                 <path d="M8 7h9v9" />
                             </svg>
                         </span>
                     </div>
                 </div>
-                <div class="h-[400px] group relative overflow-hidden  cursor-pointer">
-                    <img src="images/luxury.jpg" alt="Luxury Formals" class="w-full object-cover object-[50%_20%]">
+
+                <!-- Luxury Formals -->
+                <div class="h-48 md:h-[350px] lg:h-[400px] group relative overflow-hidden cursor-pointer">
+                    <img src="images/luxury.jpg" alt="Luxury Formals"
+                        class="w-full h-full object-cover object-[50%_20%]">
 
                     <div
-                        class="absolute bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.3)] text-white px-5 py-6 flex items-center justify-between">
-                        <span class="font-['Abril_Fatface'] text-[28px] font-normal  tracking-normal">
+                        class="absolute bottom-0 left-0 right-0 bg-black/30 text-white px-3 md:px-5 py-3 md:py-6 flex items-center justify-between">
+                        <span class="font-['Abril_Fatface'] text-base md:text-2xl lg:text-[28px]">
                             Luxury Formals
                         </span>
 
-                        <span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <span
+                            class="opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-8 md:h-8" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M7 17L17 7" />
                                 <path d="M8 7h9v9" />
                             </svg>
                         </span>
                     </div>
                 </div>
-                <div class="h-[400px] group relative overflow-hidden  cursor-pointer">
-                    <img src="images/party.png" alt="Party Wear" class=" w-full object-cover object-[50%_20%]">
+
+                <!-- Party Wear -->
+                <div class="h-48 md:h-[350px] lg:h-[400px] group relative overflow-hidden cursor-pointer">
+                    <img src="images/party.png" alt="Party Wear" class="w-full h-full object-cover object-[50%_20%]">
 
                     <div
-                        class="absolute bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.3)] text-white px-5 py-6 flex items-center justify-between">
-                        <span class="font-['Abril_Fatface'] text-[28px] font-normal  tracking-normal">
+                        class="absolute bottom-0 left-0 right-0 bg-black/30 text-white px-3 md:px-5 py-3 md:py-6 flex items-center justify-between">
+                        <span class="font-['Abril_Fatface'] text-base md:text-2xl lg:text-[28px]">
                             Party Wear
                         </span>
 
-                        <span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <span
+                            class="opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-8 md:h-8" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M7 17L17 7" />
                                 <path d="M8 7h9v9" />
                             </svg>
@@ -471,92 +504,71 @@
 
     <!-- Best Selling Pieces -->
     <section>
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto px-4">
 
-            <div class="my-8 flex items-end justify-between">
-                <!-- Left Content -->
+            <!-- Header -->
+            <div class="my-6 md:my-8 flex  md:items-end justify-between gap-3">
+
                 <div class="flex flex-col items-start">
-                    <small class="font-light text-[20px] leading-[100%] tracking-normal text-[#E4C587] font-[Inter]">
+                    <small class="font-light text-sm md:text-[20px] text-[#E4C587] font-[Inter]">
                         Handpicked
                     </small>
 
                     <h2
-                        class="mt-2 font-['Abril_Fatface'] text-[50px] font-normal text-[#221E1B] tracking-[0px] leading-[100%]">
+                        class="mt-1 md:mt-2 font-['Abril_Fatface'] text-2xl md:text-[50px] text-[#221E1B] leading-tight">
                         Best Selling Pieces
                     </h2>
                 </div>
 
-                <!-- Right Content -->
                 <a href="shop.html"
-                    class="font-['Poppins'] text-[#7A7A7A] text-[16px] font-medium leading-[120%] tracking-normal align-bottom underline flex items-center gap-2">
+                    class="font-[Poppins] text-[#7A7A7A] text-sm md:text-[16px] font-medium underline flex items-bottom">
                     View all
                 </a>
+
             </div>
-            <div
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[25px] bg-[linear-gradient(135deg,_#FFFFFF_0%,_#EBEBEB_100%)] mb-6">
 
-                <!-- Repeat Cards -->
+            <!-- Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-[25px]
+            bg-[linear-gradient(135deg,_#FFFFFF_0%,_#EBEBEB_100%)] p-2 md:p-0">
 
-                <div class=" border-gray-200 bg-white p-4">
-                    <!-- Product Image -->
+                <!-- CARD 1 -->
+                <div class="bg-white p-2 md:p-4">
+
                     <div class="overflow-hidden rounded-lg">
-                        <img src="images/product1.png" alt="Camel Chikankari"
-                            class="h-full w-full object-cover object-[50%_25%]" />
+                        <img src="images/product1.png"
+                            class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]" />
                     </div>
 
-                    <!-- Content -->
-                    <div class="mt-3">
-                        <p class="text-[10px] uppercase tracking-wide text-[#8A8A8A]">
-                            Bridal
-                        </p>
+                    <div class="mt-2 md:mt-3">
 
-                        <h3 class="mt-1 text-[16px] font-medium text-[#484848]">
+                        <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">Bridal</p>
+
+                        <h3 class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]">
                             Camel Chikankari
                         </h3>
 
-                        <!-- Rating -->
-                        <div class="mt-1 flex items-center gap-1 text-[12px]">
-                            <div class="flex text-[#FCA120]">
-                                ★★★★★
-                            </div>
-                            <span class="text-[10px] text-[#C4C4C4]">(24)</span>
+                        <div class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]">
+                            <span class="text-[#FCA120]">★★★★★</span>
+                            <span class="text-[#C4C4C4]">(24)</span>
                         </div>
 
-                        <!-- Price -->
-                        <div class="mt-2 flex items-center gap-2 text-sm">
+                        <div class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm">
                             <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                            <span class="text-xs text-[#C4C4C4] line-through">
-                                Rs. 16,000
-                            </span>
-                            <span class="rounded px-1.5 py-0.5 text-[10px] font-medium text-[#1BA439]">
-                                20% OFF
-                            </span>
+                            <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs">Rs. 16,000</span>
+                            <span class="text-[9px] md:text-[10px] text-[#1BA439] font-medium">20% OFF</span>
                         </div>
 
-                        <!-- Sizes -->
-                        <div class="mt-2 flex flex-wrap gap-1 text-[#818181]">
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XS
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                S
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                M
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                L
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XL
-                            </button>
-                            <button
-                                class="posePhotosModalBtn rounded border border-amber-300 bg-[#FFEDC8] px-2 py-1 text-[10px] text-[#674B36]">
+                        <div class="mt-2 flex flex-wrap gap-1">
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XS</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">S</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">M</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">L</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XL</button>
+                            <button class="bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]">
                                 CUSTOM
                             </button>
                         </div>
 
-                        <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -570,83 +582,52 @@
                             Tailored for you
                         </p>
 
-                        <!-- Button -->
                         <a href="checkOut.html"
-                            class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M16 10a4 4 0 0 1-8 0" />
-                                <path d="M3.103 6.034h17.794" />
-                                <path
-                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                            </svg>
-
+                            class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md rounded-md">
                             ADD TO BAG
                         </a>
+
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-4">
-                    <!-- Product Image -->
+
+                <!-- CARD 2 -->
+                <div class="bg-white p-2 md:p-4">
+
                     <div class="overflow-hidden rounded-lg">
-                        <img src="images/product2.png" alt="Camel Chikankari"
-                            class="h-full w-full object-cover object-[50%_25%]" />
+                        <img src="images/product2.png"
+                            class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]" />
                     </div>
 
-                    <!-- Content -->
-                    <div class="mt-3">
-                        <p class="text-[10px] uppercase tracking-wide text-[#8A8A8A]">
-                            Bridal
-                        </p>
+                    <div class="mt-2 md:mt-3">
 
-                        <h3 class="mt-1 text-[16px] font-medium text-[#484848]">
+                        <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">Bridal</p>
+
+                        <h3 class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]">
                             Camel Chikankari
                         </h3>
 
-                        <!-- Rating -->
-                        <div class="mt-1 flex items-center gap-1 text-[12px]">
-                            <div class="flex text-[#FCA120]">
-                                ★★★★★
-                            </div>
-                            <span class="text-[10px] text-[#C4C4C4]">(24)</span>
+                        <div class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]">
+                            <span class="text-[#FCA120]">★★★★★</span>
+                            <span class="text-[#C4C4C4]">(24)</span>
                         </div>
 
-                        <!-- Price -->
-                        <div class="mt-2 flex items-center gap-2 text-sm">
+                        <div class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm">
                             <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                            <span class="text-xs text-[#C4C4C4] line-through">
-                                Rs. 16,000
-                            </span>
-                            <span class="rounded px-1.5 py-0.5 text-[10px] font-medium text-[#1BA439]">
-                                20% OFF
-                            </span>
+                            <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs">Rs. 16,000</span>
+                            <span class="text-[9px] md:text-[10px] text-[#1BA439] font-medium">20% OFF</span>
                         </div>
 
-                        <!-- Sizes -->
-                        <div class="mt-2 flex flex-wrap gap-1 text-[#818181]">
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XS
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                S
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                M
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                L
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XL
-                            </button>
-                            <button
-                                class="rounded border border-amber-300 bg-[#FFEDC8] px-2 py-1 text-[10px] text-[#674B36]">
+                        <div class="mt-2 flex flex-wrap gap-1">
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XS</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">S</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">M</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">L</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XL</button>
+                            <button class="bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]">
                                 CUSTOM
                             </button>
                         </div>
 
-                        <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -660,83 +641,52 @@
                             Tailored for you
                         </p>
 
-                        <!-- Button -->
                         <a href="checkOut.html"
-                            class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M16 10a4 4 0 0 1-8 0" />
-                                <path d="M3.103 6.034h17.794" />
-                                <path
-                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                            </svg>
-
+                            class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md">
                             ADD TO BAG
                         </a>
+
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-4">
-                    <!-- Product Image -->
+
+                <!-- CARD 3 -->
+                <div class="bg-white p-2 md:p-4">
+
                     <div class="overflow-hidden rounded-lg">
-                        <img src="images/product3.png" alt="Camel Chikankari"
-                            class="h-full w-full object-cover object-[50%_25%]" />
+                        <img src="images/product3.png"
+                            class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]" />
                     </div>
 
-                    <!-- Content -->
-                    <div class="mt-3">
-                        <p class="text-[10px] uppercase tracking-wide text-[#8A8A8A]">
-                            Bridal
-                        </p>
+                    <div class="mt-2 md:mt-3">
 
-                        <h3 class="mt-1 text-[16px] font-medium text-[#484848]">
+                        <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">Bridal</p>
+
+                        <h3 class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]">
                             Camel Chikankari
                         </h3>
 
-                        <!-- Rating -->
-                        <div class="mt-1 flex items-center gap-1 text-[12px]">
-                            <div class="flex text-[#FCA120]">
-                                ★★★★★
-                            </div>
-                            <span class="text-[10px] text-[#C4C4C4]">(24)</span>
+                        <div class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]">
+                            <span class="text-[#FCA120]">★★★★★</span>
+                            <span class="text-[#C4C4C4]">(24)</span>
                         </div>
 
-                        <!-- Price -->
-                        <div class="mt-2 flex items-center gap-2 text-sm">
+                        <div class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm">
                             <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                            <span class="text-xs text-[#C4C4C4] line-through">
-                                Rs. 16,000
-                            </span>
-                            <span class="rounded px-1.5 py-0.5 text-[10px] font-medium text-[#1BA439]">
-                                20% OFF
-                            </span>
+                            <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs">Rs. 16,000</span>
+                            <span class="text-[9px] md:text-[10px] text-[#1BA439] font-medium">20% OFF</span>
                         </div>
 
-                        <!-- Sizes -->
-                        <div class="mt-2 flex flex-wrap gap-1 text-[#818181]">
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XS
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                S
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                M
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                L
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XL
-                            </button>
-                            <button
-                                class="rounded border border-amber-300 bg-[#FFEDC8] px-2 py-1 text-[10px] text-[#674B36]">
+                        <div class="mt-2 flex flex-wrap gap-1">
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XS</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">S</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">M</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">L</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XL</button>
+                            <button class="bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]">
                                 CUSTOM
                             </button>
                         </div>
 
-                        <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -750,83 +700,52 @@
                             Tailored for you
                         </p>
 
-                        <!-- Button -->
                         <a href="checkOut.html"
-                            class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M16 10a4 4 0 0 1-8 0" />
-                                <path d="M3.103 6.034h17.794" />
-                                <path
-                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                            </svg>
-
+                            class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md">
                             ADD TO BAG
                         </a>
+
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-4">
-                    <!-- Product Image -->
+
+                <!-- CARD 4 -->
+                <div class="bg-white p-2 md:p-4">
+
                     <div class="overflow-hidden rounded-lg">
-                        <img src="images/product4.png" alt="Camel Chikankari"
-                            class="h-full w-full object-cover object-[50%_25%]" />
+                        <img src="images/product4.png"
+                            class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]" />
                     </div>
 
-                    <!-- Content -->
-                    <div class="mt-3">
-                        <p class="text-[10px] uppercase tracking-wide text-[#8A8A8A]">
-                            Bridal
-                        </p>
+                    <div class="mt-2 md:mt-3">
 
-                        <h3 class="mt-1 text-[16px] font-medium text-[#484848]">
+                        <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">Bridal</p>
+
+                        <h3 class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]">
                             Camel Chikankari
                         </h3>
 
-                        <!-- Rating -->
-                        <div class="mt-1 flex items-center gap-1 text-[12px]">
-                            <div class="flex text-[#FCA120]">
-                                ★★★★★
-                            </div>
-                            <span class="text-[10px] text-[#C4C4C4]">(24)</span>
+                        <div class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]">
+                            <span class="text-[#FCA120]">★★★★★</span>
+                            <span class="text-[#C4C4C4]">(24)</span>
                         </div>
 
-                        <!-- Price -->
-                        <div class="mt-2 flex items-center gap-2 text-sm">
+                        <div class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm">
                             <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                            <span class="text-xs text-[#C4C4C4] line-through">
-                                Rs. 16,000
-                            </span>
-                            <span class="rounded px-1.5 py-0.5 text-[10px] font-medium text-[#1BA439]">
-                                20% OFF
-                            </span>
+                            <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs">Rs. 16,000</span>
+                            <span class="text-[9px] md:text-[10px] text-[#1BA439] font-medium">20% OFF</span>
                         </div>
 
-                        <!-- Sizes -->
-                        <div class="mt-2 flex flex-wrap gap-1 text-[#818181]">
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XS
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                S
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                M
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                L
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XL
-                            </button>
-                            <button
-                                class="rounded border border-amber-300 bg-[#FFEDC8] px-2 py-1 text-[10px] text-[#674B36]">
+                        <div class="mt-2 flex flex-wrap gap-1">
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XS</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">S</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">M</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">L</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XL</button>
+                            <button class="bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]">
                                 CUSTOM
                             </button>
                         </div>
 
-                        <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -840,83 +759,52 @@
                             Tailored for you
                         </p>
 
-                        <!-- Button -->
                         <a href="checkOut.html"
-                            class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M16 10a4 4 0 0 1-8 0" />
-                                <path d="M3.103 6.034h17.794" />
-                                <path
-                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                            </svg>
-
+                            class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md">
                             ADD TO BAG
                         </a>
+
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-4">
-                    <!-- Product Image -->
+
+                <!-- CARD 5 -->
+                <div class="bg-white p-2 md:p-4">
+
                     <div class="overflow-hidden rounded-lg">
-                        <img src="images/product5.png" alt="Camel Chikankari"
-                            class="h-full w-full object-cover object-[50%_25%]" />
+                        <img src="images/product5.png"
+                            class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]" />
                     </div>
 
-                    <!-- Content -->
-                    <div class="mt-3">
-                        <p class="text-[10px] uppercase tracking-wide text-[#8A8A8A]">
-                            Bridal
-                        </p>
+                    <div class="mt-2 md:mt-3">
 
-                        <h3 class="mt-1 text-[16px] font-medium text-[#484848]">
+                        <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">Bridal</p>
+
+                        <h3 class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]">
                             Camel Chikankari
                         </h3>
 
-                        <!-- Rating -->
-                        <div class="mt-1 flex items-center gap-1 text-[12px]">
-                            <div class="flex text-[#FCA120]">
-                                ★★★★★
-                            </div>
-                            <span class="text-[10px] text-[#C4C4C4]">(24)</span>
+                        <div class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]">
+                            <span class="text-[#FCA120]">★★★★★</span>
+                            <span class="text-[#C4C4C4]">(24)</span>
                         </div>
 
-                        <!-- Price -->
-                        <div class="mt-2 flex items-center gap-2 text-sm">
+                        <div class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm">
                             <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                            <span class="text-xs text-[#C4C4C4] line-through">
-                                Rs. 16,000
-                            </span>
-                            <span class="rounded px-1.5 py-0.5 text-[10px] font-medium text-[#1BA439]">
-                                20% OFF
-                            </span>
+                            <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs">Rs. 16,000</span>
+                            <span class="text-[9px] md:text-[10px] text-[#1BA439] font-medium">20% OFF</span>
                         </div>
 
-                        <!-- Sizes -->
-                        <div class="mt-2 flex flex-wrap gap-1 text-[#818181]">
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XS
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                S
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                M
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                L
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XL
-                            </button>
-                            <button
-                                class="rounded border border-amber-300 bg-[#FFEDC8] px-2 py-1 text-[10px] text-[#674B36]">
+                        <div class="mt-2 flex flex-wrap gap-1">
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XS</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">S</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">M</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">L</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XL</button>
+                            <button class="bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]">
                                 CUSTOM
                             </button>
                         </div>
 
-                        <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -930,83 +818,52 @@
                             Tailored for you
                         </p>
 
-                        <!-- Button -->
                         <a href="checkOut.html"
-                            class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M16 10a4 4 0 0 1-8 0" />
-                                <path d="M3.103 6.034h17.794" />
-                                <path
-                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                            </svg>
-
+                            class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md">
                             ADD TO BAG
                         </a>
+
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-4">
-                    <!-- Product Image -->
+
+                <!-- CARD 6 -->
+                <div class="bg-white p-2 md:p-4">
+
                     <div class="overflow-hidden rounded-lg">
-                        <img src="images/product6.png" alt="Camel Chikankari"
-                            class="h-full w-full object-cover object-[50%_25%]" />
+                        <img src="images/product6.png"
+                            class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]" />
                     </div>
 
-                    <!-- Content -->
-                    <div class="mt-3">
-                        <p class="text-[10px] uppercase tracking-wide text-[#8A8A8A]">
-                            Bridal
-                        </p>
+                    <div class="mt-2 md:mt-3">
 
-                        <h3 class="mt-1 text-[16px] font-medium text-[#484848]">
+                        <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">Bridal</p>
+
+                        <h3 class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]">
                             Camel Chikankari
                         </h3>
 
-                        <!-- Rating -->
-                        <div class="mt-1 flex items-center gap-1 text-[12px]">
-                            <div class="flex text-[#FCA120]">
-                                ★★★★★
-                            </div>
-                            <span class="text-[10px] text-[#C4C4C4]">(24)</span>
+                        <div class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]">
+                            <span class="text-[#FCA120]">★★★★★</span>
+                            <span class="text-[#C4C4C4]">(24)</span>
                         </div>
 
-                        <!-- Price -->
-                        <div class="mt-2 flex items-center gap-2 text-sm">
+                        <div class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm">
                             <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                            <span class="text-xs text-[#C4C4C4] line-through">
-                                Rs. 16,000
-                            </span>
-                            <span class="rounded px-1.5 py-0.5 text-[10px] font-medium text-[#1BA439]">
-                                20% OFF
-                            </span>
+                            <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs">Rs. 16,000</span>
+                            <span class="text-[9px] md:text-[10px] text-[#1BA439] font-medium">20% OFF</span>
                         </div>
 
-                        <!-- Sizes -->
-                        <div class="mt-2 flex flex-wrap gap-1 text-[#818181]">
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XS
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                S
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                M
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                L
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XL
-                            </button>
-                            <button
-                                class="rounded border border-amber-300 bg-[#FFEDC8] px-2 py-1 text-[10px] text-[#674B36]">
+                        <div class="mt-2 flex flex-wrap gap-1">
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XS</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">S</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">M</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">L</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XL</button>
+                            <button class="bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]">
                                 CUSTOM
                             </button>
                         </div>
 
-                        <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1020,83 +877,52 @@
                             Tailored for you
                         </p>
 
-                        <!-- Button -->
                         <a href="checkOut.html"
-                            class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M16 10a4 4 0 0 1-8 0" />
-                                <path d="M3.103 6.034h17.794" />
-                                <path
-                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                            </svg>
-
+                            class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md">
                             ADD TO BAG
                         </a>
+
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-4">
-                    <!-- Product Image -->
+
+                <!-- CARD 7 -->
+                <div class="bg-white p-2 md:p-4">
+
                     <div class="overflow-hidden rounded-lg">
-                        <img src="images/product7.png" alt="Camel Chikankari"
-                            class="h-full w-full object-cover object-[50%_25%]" />
+                        <img src="images/product7.png"
+                            class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]" />
                     </div>
 
-                    <!-- Content -->
-                    <div class="mt-3">
-                        <p class="text-[10px] uppercase tracking-wide text-[#8A8A8A]">
-                            Bridal
-                        </p>
+                    <div class="mt-2 md:mt-3">
 
-                        <h3 class="mt-1 text-[16px] font-medium text-[#484848]">
+                        <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">Bridal</p>
+
+                        <h3 class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]">
                             Camel Chikankari
                         </h3>
 
-                        <!-- Rating -->
-                        <div class="mt-1 flex items-center gap-1 text-[12px]">
-                            <div class="flex text-[#FCA120]">
-                                ★★★★★
-                            </div>
-                            <span class="text-[10px] text-[#C4C4C4]">(24)</span>
+                        <div class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]">
+                            <span class="text-[#FCA120]">★★★★★</span>
+                            <span class="text-[#C4C4C4]">(24)</span>
                         </div>
 
-                        <!-- Price -->
-                        <div class="mt-2 flex items-center gap-2 text-sm">
+                        <div class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm">
                             <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                            <span class="text-xs text-[#C4C4C4] line-through">
-                                Rs. 16,000
-                            </span>
-                            <span class="rounded px-1.5 py-0.5 text-[10px] font-medium text-[#1BA439]">
-                                20% OFF
-                            </span>
+                            <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs">Rs. 16,000</span>
+                            <span class="text-[9px] md:text-[10px] text-[#1BA439] font-medium">20% OFF</span>
                         </div>
 
-                        <!-- Sizes -->
-                        <div class="mt-2 flex flex-wrap gap-1 text-[#818181]">
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XS
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                S
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                M
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                L
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XL
-                            </button>
-                            <button
-                                class="rounded border border-amber-300 bg-[#FFEDC8] px-2 py-1 text-[10px] text-[#674B36]">
+                        <div class="mt-2 flex flex-wrap gap-1">
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XS</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">S</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">M</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">L</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XL</button>
+                            <button class="bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]">
                                 CUSTOM
                             </button>
                         </div>
 
-                        <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1110,83 +936,52 @@
                             Tailored for you
                         </p>
 
-                        <!-- Button -->
                         <a href="checkOut.html"
-                            class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M16 10a4 4 0 0 1-8 0" />
-                                <path d="M3.103 6.034h17.794" />
-                                <path
-                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                            </svg>
-
+                            class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md">
                             ADD TO BAG
                         </a>
+
                     </div>
                 </div>
-                <div class=" border-gray-200 bg-white p-4">
-                    <!-- Product Image -->
+
+                <!-- CARD 8 -->
+                <div class="bg-white p-2 md:p-4">
+
                     <div class="overflow-hidden rounded-lg">
-                        <img src="images/product8.png" alt="Camel Chikankari"
-                            class="h-full w-full object-cover object-[50%_25%]" />
+                        <img src="images/product8.png"
+                            class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]" />
                     </div>
 
-                    <!-- Content -->
-                    <div class="mt-3">
-                        <p class="text-[10px] uppercase tracking-wide text-[#8A8A8A]">
-                            Bridal
-                        </p>
+                    <div class="mt-2 md:mt-3">
 
-                        <h3 class="mt-1 text-[16px] font-medium text-[#484848]">
+                        <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">Bridal</p>
+
+                        <h3 class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]">
                             Camel Chikankari
                         </h3>
 
-                        <!-- Rating -->
-                        <div class="mt-1 flex items-center gap-1 text-[12px]">
-                            <div class="flex text-[#FCA120]">
-                                ★★★★★
-                            </div>
-                            <span class="text-[10px] text-[#C4C4C4]">(24)</span>
+                        <div class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]">
+                            <span class="text-[#FCA120]">★★★★★</span>
+                            <span class="text-[#C4C4C4]">(24)</span>
                         </div>
 
-                        <!-- Price -->
-                        <div class="mt-2 flex items-center gap-2 text-sm">
+                        <div class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm">
                             <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                            <span class="text-xs text-[#C4C4C4] line-through">
-                                Rs. 16,000
-                            </span>
-                            <span class="rounded px-1.5 py-0.5 text-[10px] font-medium text-[#1BA439]">
-                                20% OFF
-                            </span>
+                            <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs">Rs. 16,000</span>
+                            <span class="text-[9px] md:text-[10px] text-[#1BA439] font-medium">20% OFF</span>
                         </div>
 
-                        <!-- Sizes -->
-                        <div class="mt-2 flex flex-wrap gap-1 text-[#818181]">
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XS
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                S
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                M
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                L
-                            </button>
-                            <button class="rounded border border-gray-300 px-2 py-1 text-[10px]">
-                                XL
-                            </button>
-                            <button
-                                class="rounded border border-amber-300 bg-[#FFEDC8] px-2 py-1 text-[10px] text-[#674B36]">
+                        <div class="mt-2 flex flex-wrap gap-1">
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XS</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">S</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">M</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">L</button>
+                            <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">XL</button>
+                            <button class="bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]">
                                 CUSTOM
                             </button>
                         </div>
 
-                        <!-- Recommendation -->
                         <p class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1200,21 +995,11 @@
                             Tailored for you
                         </p>
 
-                        <!-- Button -->
                         <a href="checkOut.html"
-                            class="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-medium text-white transition hover:bg-gray-900">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M16 10a4 4 0 0 1-8 0" />
-                                <path d="M3.103 6.034h17.794" />
-                                <path
-                                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                            </svg>
-
+                            class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md">
                             ADD TO BAG
                         </a>
+
                     </div>
                 </div>
 
@@ -1224,24 +1009,27 @@
     </section>
 
     <!-- BESPOKE SERVICE -->
-    <section class="relative h-screen overflow-hidden bg-black">
+    <section class="relative min-h-screen overflow-hidden bg-black">
+
         <!-- Background Image -->
         <img src="images/bespokeService.jpg" alt="Bespoke Service"
-            class="absolute inset-0 h-full w-full object-cover scale-x-[-1] translate-x-[30%]" />
+            class="absolute inset-0 h-full w-full object-cover scale-x-[-1] translate-x-[20%] sm:translate-x-[30%]" />
 
         <!-- Dark Overlay -->
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/20"></div>
 
         <!-- Content -->
-        <div class="relative z-10 flex h-full items-center">
-            <div class="mx-auto w-full max-w-7xl px-6 lg:px-12">
+        <div class="relative z-10 flex min-h-screen items-center py-12 sm:py-16">
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-12">
 
                 <div class="max-w-3xl">
+
                     <!-- Badge -->
                     <div
-                        class="mb-8 inline-flex items-center gap-2 rounded-full border border-[#C9A96E]/40 p-4 font-['Poppins'] font-normal text-[23.3px] leading-[100%] tracking-[0px] text-[#C0A96E]">
+                        class="mb-6 sm:mb-8 inline-flex items-center gap-2 rounded-full border border-[#C9A96E]/40 px-3 py-2 sm:px-4 sm:py-3 font-['Poppins'] text-[14px] sm:text-[18px] lg:text-[23px] text-[#C0A96E]">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <!-- icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path
                                 d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" />
@@ -1255,11 +1043,10 @@
                     </div>
 
                     <!-- Heading -->
-                    <h1 class=" font-extrabold text-[75px] leading-[90%] tracking-[0px] text-white"
+                    <h1 class="font-extrabold text-[32px] sm:text-[48px] lg:text-[75px] leading-[1.1] text-white"
                         style="font-family:'Abhaya Libre', serif;">
 
                         Get the Perfect Fit-
-
                         <span class="block text-[#C9A96E]">
                             Made Just for You
                         </span>
@@ -1267,95 +1054,47 @@
                     </h1>
 
                     <!-- Cards -->
-                    <div class="mt-12 grid grid-cols-2 gap-8">
+                    <div class="mt-8 sm:mt-10 lg:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
 
-                        <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
-                            <div class="text-[28px] text-[#C9A96E]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
-                                    <path d="M16 10a4 4 0 0 1-8 0" />
-                                    <path d="M3.103 6.034h17.794" />
-                                    <path
-                                        d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                                </svg>
+                        <!-- Card 1 -->
+                        <div class="bg-[#1F1F1F]/90 p-4 rounded-xl backdrop-blur">
+                            <div class="text-[#C9A96E]">
+                                <!-- icon -->
                             </div>
-
-                            <h3 class="mt-2 font-['Poppins'] text-[16px] font-bold  tracking-normal text-white">
+                            <h3 class="mt-2 font-['Poppins'] text-sm sm:text-base font-bold text-white">
                                 Select Outfit
                             </h3>
-
-                            <p
-                                class=" font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
+                            <p class="text-xs sm:text-sm text-gray-400">
                                 Browse & choose your design
                             </p>
                         </div>
 
-                        <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
-                            <div class="text-[28px] text-[#C9A96E]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-ruler-icon lucide-ruler">
-                                    <path
-                                        d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" />
-                                    <path d="m14.5 12.5 2-2" />
-                                    <path d="m11.5 9.5 2-2" />
-                                    <path d="m8.5 6.5 2-2" />
-                                    <path d="m17.5 15.5 2-2" />
-                                </svg>
-                            </div>
-
-                            <h3 class="mt-2 font-['Poppins'] text-[16px] font-bold  tracking-normal text-white">
+                        <!-- Card 2 -->
+                        <div class="bg-[#1F1F1F]/90 p-4 rounded-xl backdrop-blur">
+                            <h3 class="mt-2 font-['Poppins'] text-sm sm:text-base font-bold text-white">
                                 Enter Measurements
                             </h3>
-
-                            <p
-                                class="font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
+                            <p class="text-xs sm:text-sm text-gray-400">
                                 Provide your exact measurements
                             </p>
                         </div>
 
-                        <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
-                            <div class="text-[28px] text-[#C9A96E]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-scissors-icon lucide-scissors">
-                                    <circle cx="6" cy="6" r="3" />
-                                    <path d="M8.12 8.12 12 12" />
-                                    <path d="M20 4 8.12 15.88" />
-                                    <circle cx="6" cy="18" r="3" />
-                                    <path d="M14.8 14.8 20 20" />
-                                </svg>
-                            </div>
-
-                            <h3 class="mt-2 font-['Poppins'] text-[16px] font-bold  tracking-normal text-white">
+                        <!-- Card 3 -->
+                        <div class="bg-[#1F1F1F]/90 p-4 rounded-xl backdrop-blur">
+                            <h3 class="mt-2 font-['Poppins'] text-sm sm:text-base font-bold text-white">
                                 Tailoring in Progress
                             </h3>
-
-                            <p
-                                class="font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
+                            <p class="text-xs sm:text-sm text-gray-400">
                                 Expert craftsmanship begins
                             </p>
                         </div>
 
-                        <div class="bg-[#1F1F1F]/90 p-4 backdrop-blur rounded-xl">
-                            <div class="text-[28px] text-[#C9A96E]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-box-icon lucide-box">
-                                    <path
-                                        d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-                                    <path d="m3.3 7 8.7 5 8.7-5" />
-                                    <path d="M12 22V12" />
-                                </svg>
-                            </div>
-
-                            <h3 class="mt-2 font-['Poppins'] text-[16px] font-bold  tracking-normal text-white">
+                        <!-- Card 4 -->
+                        <div class="bg-[#1F1F1F]/90 p-4 rounded-xl backdrop-blur">
+                            <h3 class="mt-2 font-['Poppins'] text-sm sm:text-base font-bold text-white">
                                 Delivered to You
                             </h3>
-
-                            <p
-                                class="font-['Poppins'] text-[12px] font-light leading-[12.94px] tracking-normal text-gray-400">
+                            <p class="text-xs sm:text-sm text-gray-400">
                                 Arrives beautifully packaged
                             </p>
                         </div>
@@ -1364,48 +1103,49 @@
 
                     <!-- CTA -->
                     <button onclick="openModal()"
-                        class="mt-12 inline-flex items-center gap-4 rounded-xl bg-gradient-to-r from-[#E4C587] to-[#D8C5A0] text-[#221E1B] px-8 py-4 font-['Poppins'] text-[18px] font-medium transition hover:opacity-90">
-                        BOOK AN APPOINTMENT
-                        <i class="fa-solid fa-arrow-right "></i>
-                    </button>
-                </div>
+                        class="mt-8 sm:mt-10 lg:mt-12 w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-[#E4C587] to-[#D8C5A0] text-[#221E1B] px-6 sm:px-8 py-3 sm:py-4 font-['Poppins'] text-sm sm:text-base lg:text-lg font-medium transition hover:opacity-90">
 
+                        BOOK AN APPOINTMENT
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Luxury Accessories -->
     <section>
-        <div class="px-4">
+        <div class="px-4 sm:px-6 lg:px-8">
 
             <!-- Heading -->
-            <div class="my-8 flex flex-col items-center text-center">
-                <small class="font-[Inter] text-[20px] font-light leading-[100%] text-[#E4C587]">
+            <div class="my-6 sm:my-8 flex flex-col items-center text-center">
+                <small class="font-[Inter] text-sm sm:text-lg lg:text-[20px] font-light text-[#E4C587]">
                     COMPLETE THE LOOK
                 </small>
 
                 <h2
-                    class="mt-2 font-['Abril_Fatface'] text-[50px] font-normal text-[#221E1B] tracking-[0px] leading-[100%]">
+                    class="mt-2 font-['Abril_Fatface'] text-3xl sm:text-4xl lg:text-[50px] font-normal text-[#221E1B] leading-none">
                     Luxury Accessories
                 </h2>
             </div>
 
             <!-- Grid -->
-            <div class="grid grid-cols-4 gap-6 mb-6">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-6">
 
                 <!-- Card 1 -->
-                <div class="group relative overflow-hidden rounded-2xl aspect-[3/5]">
+                <div class="group relative overflow-hidden rounded-xl sm:rounded-2xl aspect-[3/5]">
                     <img src="images/Luxury1.jpg" alt="Jewellery"
                         class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105">
 
                     <div
-                        class="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-black/30 px-5 py-4 backdrop-blur-sm">
-                        <span class="font-['Abhaya_Libre'] text-[28px] font-bold text-white">
+                        class="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-black/30 px-3 sm:px-5 py-3 sm:py-4 backdrop-blur-sm">
+                        <span class="font-['Abhaya_Libre'] text-base sm:text-xl lg:text-[28px] font-bold text-white">
                             Explore
                         </span>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 text-white"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M7 17L17 7" />
                             <path d="M10 7H17V14" />
                         </svg>
@@ -1413,14 +1153,14 @@
                 </div>
 
                 <!-- Center Column -->
-                <div class="grid grid-rows-2 gap-6">
+                <div class="grid grid-rows-2 gap-3 sm:gap-4">
 
-                    <div class="relative overflow-hidden rounded-2xl aspect-[5/4]">
+                    <div class="relative overflow-hidden rounded-xl sm:rounded-2xl aspect-[5/4]">
                         <img src="images/Luxury2.jpg" alt="Clutch"
                             class="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105">
                     </div>
 
-                    <div class="relative overflow-hidden rounded-2xl aspect-[5/4]">
+                    <div class="relative overflow-hidden rounded-xl sm:rounded-2xl aspect-[5/4]">
                         <img src="images/Luxury3.png" alt="Shoes"
                             class="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105 object-[50%_70%]">
                     </div>
@@ -1428,24 +1168,24 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="relative overflow-hidden rounded-2xl aspect-[3/5]">
+                <div class="relative overflow-hidden rounded-xl sm:rounded-2xl aspect-[3/5]">
                     <img src="images/Luxury4.jpg" alt="Belt"
                         class="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105">
                 </div>
 
                 <!-- Card 4 -->
-                <div class="group relative overflow-hidden rounded-2xl aspect-[3/5]">
+                <div class="group relative overflow-hidden rounded-xl sm:rounded-2xl aspect-[3/5]">
                     <img src="images/Luxury5.jpg" alt="Gift Box"
                         class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105">
 
                     <div
-                        class="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-black/30 px-5 py-4 backdrop-blur-sm">
-                        <span class="font-['Abhaya_Libre'] text-[28px] font-bold text-white">
+                        class="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-black/30 px-3 sm:px-5 py-3 sm:py-4 backdrop-blur-sm">
+                        <span class="font-['Abhaya_Libre'] text-base sm:text-xl lg:text-[28px] font-bold text-white">
                             Explore
                         </span>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 text-white"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M7 17L17 7" />
                             <path d="M10 7H17V14" />
                         </svg>
@@ -1459,60 +1199,62 @@
 
     <!-- Shop By Occasion -->
     <section>
-        <div class="grid grid-cols-1 lg:grid-cols-7 min-h-[700px]">
+        <div class="grid grid-cols-1 lg:grid-cols-7 min-h-auto lg:min-h-[700px]">
 
             <!-- Left Content -->
-            <div class="lg:col-span-2 flex items-center px-8 py-16">
-                <div>
-                    <h2
-                        class="font-['Abril_Fatface'] text-[48px] font-normal text-[#221E1B] tracking-[0px] leading-[100%]]">
+            <div class="lg:col-span-2 flex items-center px-4 sm:px-6 py-8">
+                <div class="w-full">
+
+                    <h2 class="font-['Abril_Fatface'] text-3xl lg:text-[50px] font-normal text-[#221E1B] leading-none">
                         Shop <br>
                         By Occasion
                     </h2>
 
                     <p
-                        class="mt-8 font-['Inter'] font-medium text-[20px] leading-[100%] tracking-normal text-[#A69C9C] w-[70%]">
+                        class="mt-6 font-['Inter'] font-medium text-base sm:text-lg lg:text-[20px] leading-snug text-[#A69C9C] w-full sm:w-[80%] lg:w-[70%]">
                         Celebrate Eid in effortless elegance.
                         Timeless designs made for moments that matter.
                     </p>
 
                     <button
-                        class="mt-12 inline-flex items-center gap-4 rounded-xl bg-gradient-to-r from-[#E4C587] to-[#D8C5A0] text-[#221E1B] px-8 py-4 font-['Poppins'] text-[18px] font-medium transition hover:opacity-90">
-                        SHOP
+                        class="mt-8 w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-[#E4C587] to-[#D8C5A0] text-[#221E1B] px-6 sm:px-8 py-3 sm:py-4 font-['Poppins'] text-base sm:text-lg font-medium transition hover:opacity-90">
 
+                        SHOP
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
+
                 </div>
             </div>
 
             <!-- Right Banner -->
-            <div class="lg:col-span-5 relative overflow-hidden">
+            <div class="lg:col-span-5 relative overflow-hidden min-h-[300px] sm:min-h-[450px] lg:min-h-full">
 
                 <!-- Slides -->
-                <div class="relative w-full h-full">
+                <div class="relative w-full h-full min-h-[300px] sm:min-h-[450px] lg:min-h-full">
 
                     <img src="images/eid-banner.png"
-                        class="slide absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-700 ">
-                    <img src="images/eid-banner.png"
-                        class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700">
+                        class="slide absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-700">
+
                     <img src="images/eid-banner.png"
                         class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700">
 
+                    <img src="images/eid-banner.png"
+                        class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700">
                 </div>
 
                 <!-- Title -->
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <h1 class="text-white text-[63.88px] font-normal leading-[115%] tracking-[0px]"
+                <div class="absolute inset-0 flex items-center justify-center px-4">
+                    <h1 class="text-white text-3xl sm:text-5xl lg:text-[63px] font-normal text-center leading-tight"
                         style="font-family: 'Abril Fatface', serif;">
                         EID EDIT
                     </h1>
                 </div>
 
                 <!-- Dots -->
-                <div class="absolute bottom-6 right-6 flex items-center gap-2">
-                    <button class="dot w-10 h-3 bg-white rounded-full"></button>
-                    <button class="dot w-3 h-3 bg-white rounded-full"></button>
-                    <button class="dot w-3 h-3 bg-white rounded-full"></button>
+                <div class="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 flex items-center gap-2">
+                    <button class="dot w-8 sm:w-10 h-2 sm:h-3 bg-white rounded-full"></button>
+                    <button class="dot w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full"></button>
+                    <button class="dot w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full"></button>
                 </div>
 
             </div>
@@ -1521,50 +1263,58 @@
     </section>
 
     <!-- Royal Bridal Lehenga -->
-    <section class="max-w-7xl mx-auto py-10 px-5">
+    <section class="max-w-7xl mx-auto py-8 sm:py-10 px-4 sm:px-5">
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-            <!-- LEFT IMAGE -->
-            <div class="lg:col-span-5">
-                <img src="images/bridal-main.jpg" class="w-full h-full object-cover scale-x-[-1] rounded-xl">
+            <!-- LEFT IMAGE (moves below title on mobile naturally) -->
+            <div class="lg:col-span-5 order-2 lg:order-1">
+                <img src="images/bridal-main.jpg"
+                    class="w-full lg:h-full object-cover object-[50%_25%] scale-x-[-1] rounded-xl ">
             </div>
 
             <!-- RIGHT SIDE -->
-            <div class="lg:col-span-7">
+            <div class="lg:col-span-7 order-1 lg:order-2">
 
-                <!-- HEADER -->
-                <div class="flex justify-between items-center mb-8">
+                <!-- TITLE + CONTROLS (TOP ON MOBILE) -->
+                <div class="mb-6 sm:mb-8">
 
-                    <h2 class="text-[32px] font-normal leading-[100%] tracking-[0px] text-[#221E1B]"
+                    <h2 class="text-2xl sm:text-3xl lg:text-[32px] font-normal text-[#221E1B] leading-tight"
                         style="font-family: 'Abril Fatface', serif;">
                         Royal Bridal Lehenga
                     </h2>
-                    <div class="flex items-center gap-4">
-                        <a class="text-[20px] font-light leading-[100%] tracking-[0px] text-[#303030] "
+
+                    <div class="flex items-center justify-between mt-4">
+
+                        <a class="text-sm sm:text-base font-light text-[#303030]"
                             style="font-family: 'Inter', sans-serif;">
                             View all
                         </a>
-                        <button onclick="prevGroup()">
-                            <i class="fa-solid fa-arrow-left text-xl"></i>
-                        </button>
 
-                        <button onclick="nextGroup()">
-                            <i class="fa-solid fa-arrow-right text-xl"></i>
-                        </button>
+                        <div class="flex items-center gap-3">
+                            <button onclick="prevGroup()" class="p-2 rounded-full hover:bg-gray-100 transition">
+                                <i class="fa-solid fa-arrow-left text-base"></i>
+                            </button>
+
+                            <button onclick="nextGroup()" class="p-2 rounded-full hover:bg-gray-100 transition">
+                                <i class="fa-solid fa-arrow-right text-base"></i>
+                            </button>
+                        </div>
 
                     </div>
-
                 </div>
 
-                <!-- GRID (3 ITEMS VIEW) -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="cardContainer"></div>
+                <!-- GRID -->
+                <div id="cardContainer" class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
+                </div>
 
                 <!-- PROGRESS BAR -->
-                <div class="mt-10">
-                    <div id="barContainer" class="w-full h-2 bg-gray-200 rounded-full cursor-pointer relative">
+                <div class="mt-6 sm:mt-8">
+                    <div id="barContainer"
+                        class="w-full h-2 bg-gray-200 rounded-full cursor-pointer relative overflow-hidden">
 
-                        <div id="progressBar" class="h-2 bg-gray-700 rounded-full transition-all duration-500"></div>
+                        <div id="progressBar" class="h-2 bg-gray-700 rounded-full transition-all duration-500">
+                        </div>
 
                     </div>
                 </div>
@@ -1575,17 +1325,18 @@
     </section>
 
     <!-- Features Section -->
-    <section class="p-20 bg-[#FAF8F5]">
+    <section class="bg-[#FAF8F5] py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-20">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 text-center">
 
             <!-- Feature -->
-            <div>
+            <div class="flex flex-col items-center">
+
                 <div
-                    class="w-16 h-16 mx-auto border border-[#EBE4D7] bg-white rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="#C0A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-crown-icon lucide-crown">
+                    class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border border-[#EBE4D7] bg-white rounded-full flex items-center justify-center">
+                    <!-- icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24"
+                        fill="none" stroke="#C0A96E" stroke-width="2">
                         <path
                             d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
                         <path d="M5 21h14" />
@@ -1593,24 +1344,23 @@
                 </div>
 
                 <h3
-                    class="mt-5 font-['Inter'] text-[20px] font-semibold leading-[100%] tracking-normal text-[#303030] text-center">
-
+                    class="mt-4 sm:mt-5 font-['Inter'] text-sm sm:text-base lg:text-[20px] font-semibold text-[#303030]">
                     Premium Fabric
                 </h3>
 
-                <p class="font-['Inter'] text-[15px] font-normal leading-[100%] tracking-normal text-[#818181] mt-2">
+                <p class="mt-1 text-xs sm:text-sm lg:text-[15px] text-[#818181]">
                     Curated from finest mills worldwide
                 </p>
+
             </div>
 
-            <!-- Feature -->
-            <div>
+            <!-- Feature 2 -->
+            <div class="flex flex-col items-center">
+
                 <div
-                    class="w-16 h-16 mx-auto border border-[#EBE4D7] bg-white rounded-full flex items-center justify-center">
-                    <!-- <i class="fa-solid fa-scissors text-[#C0A96E]"></i> -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="#C0A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-scissors-icon lucide-scissors">
+                    class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border border-[#EBE4D7] bg-white rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24"
+                        fill="none" stroke="#C0A96E" stroke-width="2">
                         <circle cx="6" cy="6" r="3" />
                         <path d="M8.12 8.12 12 12" />
                         <path d="M20 4 8.12 15.88" />
@@ -1620,23 +1370,23 @@
                 </div>
 
                 <h3
-                    class="mt-5 font-['Inter'] text-[20px] font-semibold leading-[100%] tracking-normal text-[#303030] text-center">
-
+                    class="mt-4 sm:mt-5 font-['Inter'] text-sm sm:text-base lg:text-[20px] font-semibold text-[#303030]">
                     Custom Tailoring
                 </h3>
 
-                <p class="font-['Inter'] text-[15px] font-normal leading-[100%] tracking-normal text-[#818181] mt-2">
+                <p class="mt-1 text-xs sm:text-sm lg:text-[15px] text-[#818181]">
                     Made-to-measure for your perfect fit
                 </p>
+
             </div>
 
-            <!-- Feature -->
-            <div>
+            <!-- Feature 3 -->
+            <div class="flex flex-col items-center">
+
                 <div
-                    class="w-16 h-16 mx-auto border border-[#EBE4D7] bg-white rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="#C0A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-truck-icon lucide-truck">
+                    class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border border-[#EBE4D7] bg-white rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24"
+                        fill="none" stroke="#C0A96E" stroke-width="2">
                         <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
                         <path d="M15 18H9" />
                         <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
@@ -1646,23 +1396,23 @@
                 </div>
 
                 <h3
-                    class="mt-5 font-['Inter'] text-[20px] font-semibold leading-[100%] tracking-normal text-[#303030] text-center">
-
+                    class="mt-4 sm:mt-5 font-['Inter'] text-sm sm:text-base lg:text-[20px] font-semibold text-[#303030]">
                     Worldwide Delivery
                 </h3>
 
-                <p class="font-['Inter'] text-[15px] font-normal leading-[100%] tracking-normal text-[#818181] mt-2">
+                <p class="mt-1 text-xs sm:text-sm lg:text-[15px] text-[#818181]">
                     Express shipping to 50+ countries
                 </p>
+
             </div>
 
-            <!-- Feature -->
-            <div>
+            <!-- Feature 4 -->
+            <div class="flex flex-col items-center">
+
                 <div
-                    class="w-16 h-16 mx-auto border border-[#EBE4D7] bg-white rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="#C0A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-package-open-icon lucide-package-open">
+                    class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border border-[#EBE4D7] bg-white rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24"
+                        fill="none" stroke="#C0A96E" stroke-width="2">
                         <path d="M12 22v-9" />
                         <path
                             d="M15.17 2.21a1.67 1.67 0 0 1 1.63 0L21 4.57a1.93 1.93 0 0 1 0 3.36L8.82 14.79a1.655 1.655 0 0 1-1.64 0L3 12.43a1.93 1.93 0 0 1 0-3.36z" />
@@ -1674,13 +1424,14 @@
                 </div>
 
                 <h3
-                    class="mt-5 font-['Inter'] text-[20px] font-semibold leading-[100%] tracking-normal text-[#303030] text-center">
+                    class="mt-4 sm:mt-5 font-['Inter'] text-sm sm:text-base lg:text-[20px] font-semibold text-[#303030]">
                     Easy Returns
                 </h3>
 
-                <p class="font-['Inter'] text-[15px] font-normal leading-[100%] tracking-normal text-[#818181] mt-2">
+                <p class="mt-1 text-xs sm:text-sm lg:text-[15px] text-[#818181]">
                     30-day hassle-free return policy
                 </p>
+
             </div>
 
         </div>
@@ -1692,55 +1443,54 @@
         <div class="px-4">
 
             <!-- Heading -->
-
             <div class="my-8 text-center flex flex-col items-center">
-                <small class="font-light text-[20px] leading-[100%] tracking-normal text-[#E4C587] font-[Inter]">
+                <small class="font-light text-[14px] sm:text-[20px] leading-[100%] text-[#E4C587] font-[Inter]">
                     Social Proof
                 </small>
 
                 <h2
-                    class="mt-2 font-['Abril_Fatface'] text-[50px] font-normal text-[#221E1B] tracking-[0px] leading-[100%]">
+                    class="mt-2 font-['Abril_Fatface'] text-[32px] sm:text-[50px] font-normal text-[#221E1B] leading-[100%]">
                     #WearCustomsuits
                 </h2>
 
-                <p
-                    class="mt-3 font-inter font-normal text-[20px] leading-[100%] tracking-[0px] text-[#636161] font-[Inter]">
+                <p class="mt-3 font-inter font-normal text-[14px] sm:text-[20px] text-[#636161] font-[Inter]">
                     Real customers, real style
                 </p>
             </div>
 
-            <!-- Gallery -->
-            <div class="mb-4 flex justify-center gap-4 overflow-x-auto px-4 scrollbar-hide">
+            <!-- Gallery (FIXED MOBILE SCROLL ISSUE) -->
+            <div
+                class="mb-4 flex justify-start sm:justify-center gap-3 sm:gap-4 overflow-x-auto px-2 sm:px-4 scrollbar-hide scroll-pl-4">
 
-                <div class="w-[175px] md:w-[220px] h-[300px] md:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
+                <div class="w-[140px] sm:w-[220px] h-[220px] sm:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
                     <img src="images/look1.jpg" class="w-full h-full object-cover" alt="">
                 </div>
 
-                <div class="w-[175px] md:w-[220px] h-[300px] md:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
+                <div class="w-[140px] sm:w-[220px] h-[220px] sm:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
                     <img src="images/look2.jpg" class="w-full h-full object-cover" alt="">
                 </div>
 
-                <div class="w-[175px] md:w-[220px] h-[300px] md:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
+                <div class="w-[140px] sm:w-[220px] h-[220px] sm:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
                     <img src="images/look3.jpg" class="w-full h-full object-cover" alt="">
                 </div>
 
-                <div class="w-[175px] md:w-[220px] h-[300px] md:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
+                <div class="w-[140px] sm:w-[220px] h-[220px] sm:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
                     <img src="images/look4.jpg" class="w-full h-full object-cover" alt="">
                 </div>
 
-                <div class="w-[175px] md:w-[220px] h-[300px] md:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
+                <div class="w-[140px] sm:w-[220px] h-[220px] sm:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
                     <img src="images/look5.jpg" class="w-full h-full object-cover" alt="">
                 </div>
 
-                <div class="w-[175px] md:w-[220px] h-[300px] md:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
+                <div class="w-[140px] sm:w-[220px] h-[220px] sm:h-[420px] rounded-2xl overflow-hidden flex-shrink-0">
                     <img src="images/look6.jpg" class="w-full h-full object-cover" alt="">
                 </div>
 
             </div>
 
-            <!-- Slider Dots -->
+            <!-- Dots -->
             <div class="flex items-center justify-center gap-2 mt-6">
-                <span class="w-11 h-2 rounded-full bg-[#B89B5E]"></span>
+                <span class="w-8 sm:w-11 h-2 rounded-full bg-[#B89B5E]"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
@@ -1749,185 +1499,152 @@
             <!-- Instagram Button -->
             <div class="flex justify-center my-8">
                 <a
-                    class="inline-flex items-center gap-3 px-8 py-4 border border-gray-200 rounded-xl bg-white text-gray-700 hover:bg-gray-50 transition">
+                    class="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 border border-gray-200 rounded-xl bg-white text-gray-700 hover:bg-gray-50 transition">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
                         <rect x="3" y="3" width="18" height="18" rx="5" stroke-width="2" />
                         <circle cx="12" cy="12" r="4" stroke-width="2" />
                         <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
                     </svg>
 
-                    <span class="uppercase text-[16px] font-normal leading-[100%] tracking-[0px] text-[#221E1B]"
+                    <span class="uppercase text-[12px] sm:text-[16px] text-[#221E1B]"
                         style="font-family: 'Inter', sans-serif;">
                         Follow @CustomSuits
                     </span>
+
                 </a>
             </div>
 
         </div>
     </section>
 
-    <footer class="bg-[#F8F8F8] py-16">
+    <!-- Footer -->
+    <footer class="bg-[#F8F8F8] py-10 sm:py-16 px-4 sm:px-6 lg:px-0">
+
         <div class="max-w-7xl mx-auto">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-10 lg:gap-2">
 
                 <!-- Brand -->
-                <div class="col-span-2">
-                    <img src="images/logo.png" alt="Logo" class="w-16 h-16 mb-4">
+                <div class="lg:col-span-2">
 
-                    <p class="text-[15px] font-normal leading-[133%] tracking-[0px] text-[#6B7280] max-w-[280px]"
+                    <img src="images/logo.png" alt="Logo" class="w-14 h-14 sm:w-16 sm:h-16 mb-4">
+
+                    <p class="text-sm sm:text-[15px] text-[#6B7280] max-w-full sm:max-w-[280px]"
                         style="font-family: 'Inter', sans-serif;">
                         Luxury fashion with the art of bespoke tailoring.
                         Crafted for the discerning few.
                     </p>
 
                     <!-- Social Icons -->
-                    <div class="flex items-center gap-3 mt-8">
+                    <div class="flex items-center gap-3 mt-6 sm:mt-8">
 
                         <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
+                            class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
 
                         <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
+                            class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
 
                         <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
+                            class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
                             <i class="fa-brands fa-twitter"></i>
                         </a>
 
                         <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
+                            class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
 
                     </div>
+
                 </div>
 
                 <!-- Collections -->
                 <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
+
+                    <h3 class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
                         style="font-family: 'Inter', sans-serif;">
                         Collections
                     </h3>
 
-                    <ul class="space-y-4 text-[#6B7280] text-sm">
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">
-                                Women
-                            </a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Men</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Bridal Lehenga</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Luxury Formals</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Part Wear</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Accessories</a>
-                        </li>
+                    <ul class="space-y-2 sm:space-y-4">
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Women</a></li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Men</a></li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Bridal Lehenga</a></li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Luxury Formals</a></li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Party Wear</a></li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Accessories</a></li>
                     </ul>
+
                 </div>
 
                 <!-- Services -->
                 <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
+
+                    <h3 class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
                         style="font-family: 'Inter', sans-serif;">
                         Services
                     </h3>
 
-                    <ul class="space-y-4 text-[#6B7280] text-sm">
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Custom Tailoring</a>
+                    <ul class="space-y-2 sm:space-y-4">
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Custom Tailoring</a></li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Book Appointment</a></li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Style Consultation</a>
                         </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Book Appointment</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Style Consultation</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Alterations</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Embroidery</a>
-                        </li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Alterations</a></li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Embroidery</a></li>
                     </ul>
+
                 </div>
 
                 <!-- Customer Care -->
                 <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
+
+                    <h3 class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
                         style="font-family: 'Inter', sans-serif;">
                         Customer Care
                     </h3>
 
-                    <ul class="space-y-4 text-[#6B7280] text-sm">
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Track Order</a>
+                    <ul class="space-y-2 sm:space-y-4">
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Track Order</a></li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Returns & Exchange</a>
                         </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Returns & Exchange</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Size Guide</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">FAQs</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Contact Us</a>
-                        </li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Size Guide</a></li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">FAQs</a></li>
+                        <li><a class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black">Contact Us</a></li>
                     </ul>
+
                 </div>
 
                 <!-- Newsletter -->
                 <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
+
+                    <h3 class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
                         style="font-family: 'Inter', sans-serif;">
                         Newsletter
                     </h3>
 
-                    <p class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]">
+                    <p class="text-sm sm:text-[15px] text-[#6A7282] leading-relaxed">
                         Get exclusive access to new collections and styling tips.
                     </p>
 
-                    <form class="space-y-3 mt-8">
+                    <form class="space-y-3 mt-5 sm:mt-8">
+
                         <input type="email" placeholder="Your email address"
-                            class="w-full h-11 px-4 bg-[#262626] text-white text-[12px] placeholder:text-gray-400 rounded-md focus:outline-none">
+                            class="w-full h-10 sm:h-11 px-3 sm:px-4 bg-[#262626] text-white text-xs sm:text-sm placeholder:text-gray-400 rounded-md focus:outline-none">
 
                         <button
-                            class="w-full h-11 bg-[#E0C183] text-[#2B2522] text-[12px] font-medium uppercase rounded-md hover:opacity-90 transition">
+                            class="w-full h-10 sm:h-11 bg-[#E0C183] text-[#2B2522] text-xs sm:text-sm font-medium uppercase rounded-md hover:opacity-90 transition">
                             Subscribe
                         </button>
+
                     </form>
+
                 </div>
 
             </div>
@@ -1936,7 +1653,9 @@
 
     </footer>
 
-    <!-- Login Popup -->
+    <!-- ============================== Modal ================================= -->
+
+    <!-- Login Modal -->
     <div id="loginModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
 
         <div class="relative w-full max-w-md bg-white rounded-3xl p-6 md:p-8 shadow-2xl">
@@ -2094,19 +1813,28 @@
                 </a>
             </div>
 
-            <div class="mt-12 space-y-2 text-2xl">
-                <a class="block text-gray-900" href="measurements.html">measurements</a>
-                <a class="block text-gray-900" href="posePhotos.html">posePhotos</a>
-                <a class="block text-gray-900" href="privacyPolicy.html">privacyPolicy</a>
-                <a class="block text-gray-900" href="TermsandCondition.html">TermsandCondition</a>
-                <a class="block text-gray-900" href="fitting.html">fitting</a>
-            </div>
+        </div>
+        <div class="md:hidden border-t mt-6 pt-6">
 
+            <a href="#" class="flex items-center gap-3 py-3">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search</span>
+            </a>
+
+            <a href="#" class="flex items-center gap-3 py-3">
+                <i class="fa-regular fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+
+            <a href="#" class="flex items-center gap-3 py-3">
+                <i class="fa-regular fa-user"></i>
+                <span>My Account</span>
+            </a>
 
         </div>
     </div>
 
-    <!-- Popup Modal (BOOK AN APPOINTMENT) -->
+    <!-- BOOK AN APPOINTMENT Modal -->
     <div id="appointmentModal" class="hidden fixed inset-0 z-50 items-center justify-center bg-black/50 p-4">
 
         <!-- Modal -->
@@ -2454,245 +2182,6 @@
 
         </div>
     </div>
-
-    <!-- JS Login Popup -->
-    <script>
-        const loginBtn = document.getElementById("loginBtn");
-        const loginModal = document.getElementById("loginModal");
-
-        loginBtn.addEventListener("click", () => {
-            loginModal.classList.remove("hidden");
-            loginModal.classList.add("flex");
-        });
-
-        function closeLoginModal() {
-            loginModal.classList.add("hidden");
-            loginModal.classList.remove("flex");
-        }
-
-        // Close when clicking outside
-        loginModal.addEventListener("click", function (e) {
-            if (e.target === this) {
-                closeLoginModal();
-            }
-        });
-
-        // Toggle Password
-        document.getElementById("togglePassword").addEventListener("click", function () {
-            const password = document.getElementById("passwordInput");
-
-            if (password.type === "password") {
-                password.type = "text";
-                this.classList.remove("fa-eye-slash");
-                this.classList.add("fa-eye");
-            } else {
-                password.type = "password";
-                this.classList.remove("fa-eye");
-                this.classList.add("fa-eye-slash");
-            }
-        });
-    </script>
-
-    <!-- JS Slider Main -->
-    <script>
-        const images = [
-            "images/home-bg.png",
-            "images/region-bg.png",
-            "images/eid-banner.png"
-        ];
-
-        function changeSlide(index) {
-            document.getElementById("slideImage").src = images[index];
-
-            const dots = document.querySelectorAll(".dot");
-
-            dots.forEach(dot => {
-                dot.classList.remove("w-12", "bg-[#c8b06d]");
-                dot.classList.add("w-3", "bg-white");
-            });
-
-            dots[index].classList.remove("w-3", "bg-white");
-            dots[index].classList.add("w-12", "bg-[#c8b06d]");
-        }
-    </script>
-
-    <!-- JS Sidebar-->
-    <script>
-        // Sidebar
-        const menuBtn = document.getElementById("menuBtn");
-        const sidebar = document.getElementById("sidebar");
-        const sidebarOverlay = document.getElementById("sidebarOverlay");
-        const closeSidebar = document.getElementById("closeSidebar");
-
-        menuBtn.addEventListener("click", () => {
-            sidebar.style.transform = "translateX(0)";
-            sidebarOverlay.classList.remove("hidden");
-        });
-
-        function closeMenu() {
-            sidebar.style.transform = "translateX(-100%)";
-            sidebarOverlay.classList.add("hidden");
-        }
-
-        closeSidebar.addEventListener("click", closeMenu);
-        sidebarOverlay.addEventListener("click", closeMenu);
-    </script>
-
-    <!-- JS Popup Modal (BOOK AN APPOINTMENT -->
-    <script>
-        function openModal() {
-            document.getElementById('appointmentModal').classList.remove('hidden');
-            document.getElementById('appointmentModal').classList.add('flex');
-        }
-
-        function closeModal() {
-            document.getElementById('appointmentModal').classList.add('hidden');
-            document.getElementById('appointmentModal').classList.remove('flex');
-        }
-
-        // Close popup when clicking outside
-        document.getElementById('appointmentModal').addEventListener('click', function (e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
-    </script>
-
-    <!-- JS Slider Shop By Occasion -->
-    <script>
-        const slides = document.querySelectorAll(".slide");
-        const dots = document.querySelectorAll(".dot");
-
-        let current = 0;
-
-        function goToSlide(index) {
-
-            // hide all slides
-            slides.forEach((slide, i) => {
-                slide.style.opacity = (i === index) ? "1" : "0";
-            });
-
-            // update dots style
-            dots.forEach((dot, i) => {
-                if (i === index) {
-                    dot.classList.add("w-10");
-                    dot.classList.remove("w-3");
-                    dot.style.opacity = "1";
-                } else {
-                    dot.classList.add("w-3");
-                    dot.classList.remove("w-10");
-                    dot.style.opacity = "0.5";
-                }
-            });
-
-            current = index;
-        }
-
-        // click dots → slide change
-        dots.forEach((dot, index) => {
-            dot.addEventListener("click", () => {
-                goToSlide(index);
-            });
-        });
-
-        // auto slide
-        setInterval(() => {
-            let next = (current + 1) % slides.length;
-            goToSlide(next);
-        }, 4000);
-
-        // init
-        goToSlide(0);
-    </script>
-
-    <!-- JS Slider (Royal Bridal Lehenga) -->
-    <script>
-
-        const products = [
-            { img: "images/gold.jpg", name: "Gold", price: "Rs. 950,000" },
-            { img: "images/lilac.jpg", name: "Lilac", price: "Rs. 950,000" },
-            { img: "images/rosegold.jpg", name: "Rose Gold", price: "Rs. 950,000" },
-
-            { img: "images/green.jpg", name: "Green", price: "Rs. 850,000" },
-            { img: "images/red.jpg", name: "Red", price: "Rs. 920,000" },
-            { img: "images/blue.jpg", name: "Blue", price: "Rs. 990,000" }
-        ];
-
-        let startIndex = 0;
-        const perPage = 3;
-
-        const container = document.getElementById("cardContainer");
-        const progressBar = document.getElementById("progressBar");
-        const barContainer = document.getElementById("barContainer");
-
-        const totalGroups = Math.ceil(products.length / perPage);
-
-        function render() {
-
-            container.innerHTML = "";
-
-            const slice = products.slice(startIndex, startIndex + perPage);
-
-            slice.forEach(p => {
-                container.innerHTML += `
-            <div>
-                <div class="overflow-hidden rounded-[28px]">
-                    <img src="${p.img}" class="w-full h-[430px] object-cover">
-                </div>
-                <h3
-                class="mt-3 text-[22px] font-light leading-[100%] tracking-[0px] text-[#575757]"
-                style="font-family: 'Inter', sans-serif;">
-                ${p.name}
-                </h3>
-                <p class="text-[#303030] font-serif text-[19px]">${p.price}</p>
-            </div>
-        `;
-            });
-
-            updateProgress();
-        }
-
-        function updateProgress() {
-            const currentGroup = startIndex / perPage;
-            const percent = ((currentGroup + 1) / totalGroups) * 100;
-            progressBar.style.width = percent + "%";
-        }
-
-        function nextGroup() {
-            if (startIndex + perPage < products.length) {
-                startIndex += perPage;
-            } else {
-                startIndex = 0;
-            }
-            render();
-        }
-
-        function prevGroup() {
-            if (startIndex - perPage >= 0) {
-                startIndex -= perPage;
-            } else {
-                startIndex = (totalGroups - 1) * perPage;
-            }
-            render();
-        }
-
-        // CLICK ON PROGRESS BAR
-        barContainer.addEventListener("click", (e) => {
-            const rect = barContainer.getBoundingClientRect();
-            const clickX = e.clientX - rect.left;
-
-            const percent = clickX / rect.width;
-
-            const targetGroup = Math.floor(percent * totalGroups);
-
-            startIndex = targetGroup * perPage;
-
-            render();
-        });
-
-        render();
-
-    </script>
 
     <!-- Custom Modal Overlay 1 -->
     <div id="modal1" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 p-4 overflow-y-auto">
@@ -3235,7 +2724,262 @@
             </div>
         </div>
     </div>
-    <!-- JS Modal Overlay -->
+
+
+    <!-- ============================== JS ================================= -->
+
+    <!-- JS Login Modal -->
+    <script>
+        const loginModal = document.getElementById("loginModal");
+
+        // Get both buttons safely
+        const loginBtnDesktop = document.getElementById("loginBtnDesktop");
+        const loginBtnMobile = document.getElementById("loginBtnMobile");
+
+        function openLoginModal() {
+            loginModal.classList.remove("hidden");
+            loginModal.classList.add("flex");
+        }
+
+        function closeLoginModal() {
+            loginModal.classList.add("hidden");
+            loginModal.classList.remove("flex");
+        }
+
+        // Attach events safely
+        loginBtnDesktop?.addEventListener("click", openLoginModal);
+        loginBtnMobile?.addEventListener("click", openLoginModal);
+
+        // Close when clicking outside modal
+        loginModal?.addEventListener("click", function (e) {
+            if (e.target === this) {
+                closeLoginModal();
+            }
+        });
+
+        // Toggle Password (safe version)
+        const togglePassword = document.getElementById("togglePassword");
+
+        togglePassword?.addEventListener("click", function () {
+            const password = document.getElementById("passwordInput");
+
+            if (!password) return;
+
+            if (password.type === "password") {
+                password.type = "text";
+                this.classList.remove("fa-eye-slash");
+                this.classList.add("fa-eye");
+            } else {
+                password.type = "password";
+                this.classList.remove("fa-eye");
+                this.classList.add("fa-eye-slash");
+            }
+        });
+    </script>
+
+    <!-- JS Slider Main -->
+    <script>
+        const images = [
+            "images/home-bg.png",
+            "images/region-bg.png",
+            "images/eid-banner.png"
+        ];
+
+        function changeSlide(index) {
+            document.getElementById("slideImage").src = images[index];
+
+            const dots = document.querySelectorAll(".dot");
+
+            dots.forEach(dot => {
+                dot.classList.remove("w-12", "bg-[#c8b06d]");
+                dot.classList.add("w-3", "bg-white");
+            });
+
+            dots[index].classList.remove("w-3", "bg-white");
+            dots[index].classList.add("w-12", "bg-[#c8b06d]");
+        }
+    </script>
+
+    <!-- JS Sidebar-->
+    <script>
+        // Sidebar
+        const menuBtn = document.getElementById("menuBtn");
+        const sidebar = document.getElementById("sidebar");
+        const sidebarOverlay = document.getElementById("sidebarOverlay");
+        const closeSidebar = document.getElementById("closeSidebar");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.style.transform = "translateX(0)";
+            sidebarOverlay.classList.remove("hidden");
+        });
+
+        function closeMenu() {
+            sidebar.style.transform = "translateX(-100%)";
+            sidebarOverlay.classList.add("hidden");
+        }
+
+        closeSidebar.addEventListener("click", closeMenu);
+        sidebarOverlay.addEventListener("click", closeMenu);
+    </script>
+
+    <!-- JS BOOK AN APPOINTMENT Modal-->
+    <script>
+        function openModal() {
+            document.getElementById('appointmentModal').classList.remove('hidden');
+            document.getElementById('appointmentModal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('appointmentModal').classList.add('hidden');
+            document.getElementById('appointmentModal').classList.remove('flex');
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('appointmentModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+
+    <!-- JS Slider Shop By Occasion -->
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+
+        let current = 0;
+
+        function goToSlide(index) {
+
+            // hide all slides
+            slides.forEach((slide, i) => {
+                slide.style.opacity = (i === index) ? "1" : "0";
+            });
+
+            // update dots style
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add("w-10");
+                    dot.classList.remove("w-3");
+                    dot.style.opacity = "1";
+                } else {
+                    dot.classList.add("w-3");
+                    dot.classList.remove("w-10");
+                    dot.style.opacity = "0.5";
+                }
+            });
+
+            current = index;
+        }
+
+        // click dots → slide change
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                goToSlide(index);
+            });
+        });
+
+        // auto slide
+        setInterval(() => {
+            let next = (current + 1) % slides.length;
+            goToSlide(next);
+        }, 4000);
+
+        // init
+        goToSlide(0);
+    </script>
+
+    <!-- JS Slider (Royal Bridal Lehenga) -->
+    <script>
+
+        const products = [
+            { img: "images/gold.jpg", name: "Gold", price: "Rs. 950,000" },
+            { img: "images/lilac.jpg", name: "Lilac", price: "Rs. 950,000" },
+            { img: "images/rosegold.jpg", name: "Rose Gold", price: "Rs. 950,000" },
+
+            { img: "images/rosegold.jpg", name: "Red", price: "Rs. 950,000" },
+            { img: "images/gold.jpg", name: "Green", price: "Rs. 950,000" },
+            { img: "images/lilac.jpg", name: "Blue", price: "Rs. 950,000" },
+
+        ];
+
+        let startIndex = 0;
+        const perPage = 3;
+
+        const container = document.getElementById("cardContainer");
+        const progressBar = document.getElementById("progressBar");
+        const barContainer = document.getElementById("barContainer");
+
+        const totalGroups = Math.ceil(products.length / perPage);
+
+        function render() {
+
+            container.innerHTML = "";
+
+            const slice = products.slice(startIndex, startIndex + perPage);
+
+            slice.forEach(p => {
+                container.innerHTML += `
+            <div>
+                <div class="overflow-hidden rounded-[28px]">
+                    <img src="${p.img}" class="w-full h-64 md:h-[430px] object-cover">
+                </div>
+                <h3
+                class="mt-3 text-[22px] font-light leading-[100%] tracking-[0px] text-[#575757]"
+                style="font-family: 'Inter', sans-serif;">
+                ${p.name}
+                </h3>
+                <p class="text-[#303030] font-serif text-[19px]">${p.price}</p>
+            </div>
+        `;
+            });
+
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const currentGroup = startIndex / perPage;
+            const percent = ((currentGroup + 1) / totalGroups) * 100;
+            progressBar.style.width = percent + "%";
+        }
+
+        function nextGroup() {
+            if (startIndex + perPage < products.length) {
+                startIndex += perPage;
+            } else {
+                startIndex = 0;
+            }
+            render();
+        }
+
+        function prevGroup() {
+            if (startIndex - perPage >= 0) {
+                startIndex -= perPage;
+            } else {
+                startIndex = (totalGroups - 1) * perPage;
+            }
+            render();
+        }
+
+        // CLICK ON PROGRESS BAR
+        barContainer.addEventListener("click", (e) => {
+            const rect = barContainer.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+
+            const percent = clickX / rect.width;
+
+            const targetGroup = Math.floor(percent * totalGroups);
+
+            startIndex = targetGroup * perPage;
+
+            render();
+        });
+
+        render();
+
+    </script>
+
+    <!-- JS Custom Modal Overlay -->
     <script>
         const modal1 = document.getElementById('modal1');
         const modal2 = document.getElementById('modal2');
