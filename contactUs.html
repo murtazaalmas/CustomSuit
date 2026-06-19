@@ -1,499 +1,620 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Fashion Store</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Suit</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Abril+Fatface&family=Inter:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Abril+Fatface&family=Inter:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
+  <body>
+    <!-- TOP WRAPPER -->
+    <div class="fixed top-0 left-0 right-0 z-50">
+      <!-- Top Bar -->
+      <div
+        class="py-2 text-center font-inter font-bold text-[10px] sm:text-[12px] text-[#C0A96E]"
+        style="
+          background: linear-gradient(
+            90deg,
+            #221e1b 0%,
+            #3c2b1e 50%,
+            #211e1b 100%
+          );
+        "
+      >
+        FREE SHIPPING ON ORDERS ABOVE Rs. 10,000 |
+        <span class="block sm:inline">CUSTOM TAILORING AVAILABLE</span>
+      </div>
 
-</head>
+      <!-- Header -->
+      <header class="px-4 md:px-10 md:bg-[#D9D9D9]/20">
+        <div class="grid grid-cols-3 items-center">
+          <!-- Menu -->
+          <div>
+            <button id="menuBtn" class="text-white text-xl md:text-2xl">
+              <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+          </div>
 
-<body>
+          <!-- Logo -->
+          <div class="flex justify-center">
+            <a href="home.html">
+              <img
+                src="images/logo.png"
+                alt="Logo"
+                class="h-14 sm:h-16 md:h-24 w-auto"
+              />
+            </a>
+          </div>
 
-    <!-- Top Bar -->
-    <div class="absolute top-0 left-0 right-0 z-30 text-center font-inter font-bold text-[12px] leading-[100%] tracking-[0px] text-[#C0A96E] py-2"
-        style="background: linear-gradient(90deg, #221E1B 0%, #3C2B1E 50%, #211E1B 100%);">
-        FREE SHIPPING ON ORDERS ABOVE Rs. 10,000 | CUSTOM TAILORING AVAILABLE
+          <!-- Right Side -->
+          <div class="flex justify-end items-center gap-3">
+            <!-- Desktop Icons ONLY -->
+            <div class="hidden md:flex items-center gap-5 text-white">
+              <a href="#" id="searchBtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m21 21-4.34-4.34" />
+                  <circle cx="11" cy="11" r="8" />
+                </svg>
+              </a>
+
+              <!-- Wishlist -->
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+                  />
+                </svg>
+              </a>
+
+              <!-- Cart -->
+              <a href="checkOut.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M16 10a4 4 0 0 1-8 0" />
+                  <path d="M3.103 6.034h17.794" />
+                  <path
+                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Account -->
+              <button id="loginBtnDesktop">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="8" r="5" />
+                  <path d="M20 21a8 8 0 0 0-16 0" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- MOBILE: Cart + Account ONLY -->
+            <div class="md:hidden flex items-center gap-3 text-white">
+              <!-- Cart -->
+              <a href="checkOut.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M16 10a4 4 0 0 1-8 0" />
+                  <path d="M3.103 6.034h17.794" />
+                  <path
+                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Account -->
+              <button id="loginBtnMobile">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="8" r="5" />
+                  <path d="M20 21a8 8 0 0 0-16 0" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
     </div>
 
-    <!-- Header -->
-    <header class="absolute top-7 left-0 right-0 z-30 px-6 md:px-10">
-
-        <div class="grid grid-cols-3 items-center px-10">
-
-            <!-- Menu -->
-            <div>
-                <button id="menuBtn" class="text-black text-2xl">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </button>
-            </div>
-
-            <!-- Logo -->
-            <div class="flex justify-center">
-                <a href="home.html">
-                    <img src="images/logo.png" alt="Logo" class="h-20 md:h-24 w-auto cursor-pointer">
-                </a>
-            </div>
-
-            <!-- Right Icons -->
-            <div class="flex justify-end items-center gap-5 text-black text-lg">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-search-icon lucide-search">
-                        <path d="m21 21-4.34-4.34" />
-                        <circle cx="11" cy="11" r="8" />
-                    </svg>
-                </button>
-
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-heart-icon lucide-heart">
-                        <path
-                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-                    </svg>
-                </button>
-
-                <a href="checkOut.html">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
-                            <path d="M16 10a4 4 0 0 1-8 0" />
-                            <path d="M3.103 6.034h17.794" />
-                            <path
-                                d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                        </svg>
-                    </button>
-                </a>
-                <button id="loginBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-user-round-icon lucide-user-round">
-                        <circle cx="12" cy="8" r="5" />
-                        <path d="M20 21a8 8 0 0 0-16 0" />
-                    </svg>
-                </button>
-            </div>
-
-        </div>
-        <div class="w-full h-px bg-[radial-gradient(circle,_#A3A3A3_1px,_transparent_1px)] bg-[length:7px_1px]"></div>
-    </header>
-
-
-
     <section class="mt-40">
-        <div class="max-w-7xl mx-auto px-6">
-            <p class="text-sm text-gray-400 mb-4">
-                Homepage <span class="mx-2">›</span> Contact Us
-            </p>
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="text-sm text-gray-400 mb-4">
+          Homepage <span class="mx-2">›</span> Contact Us
+        </p>
 
-            <h1 class="text-5xl font-serif font-semibold">Contact Us</h1>
+        <h1 class="text-5xl font-serif font-semibold">Contact Us</h1>
 
-            <div class="w-16 h-[2px] bg-[#c4a46a] mt-4"></div>
-        </div>
+        <div class="w-16 h-[2px] bg-[#c4a46a] mt-4"></div>
+      </div>
     </section>
 
     <!-- Content -->
     <section class="py-12">
-        <div class="max-w-7xl mx-auto px-6">
-
-            <!-- Top Cards -->
-            <div class="grid md:grid-cols-3 gap-6 mb-8">
-
-                <div class="bg-white rounded-lg p-8 shadow-sm text-center">
-                    <div class="w-14 h-14 mx-auto rounded-full bg-[#f4efe7] flex items-center justify-center mb-4">
-                        📍
-                    </div>
-                    <h3 class="text-sm font-medium mb-4">Visit Us</h3>
-                    <p class="text-gray-500 text-sm leading-6">
-                        IQ 33/I Divine Mega Two, Airport Road,<br>
-                        Near Brocway Commercial,<br>
-                        DHA Phase 8 Lahore
-                    </p>
-                </div>
-
-                <div class="bg-white rounded-lg p-8 shadow-sm text-center">
-                    <div class="w-14 h-14 mx-auto rounded-full bg-[#f4efe7] flex items-center justify-center mb-4">
-                        📞
-                    </div>
-                    <h3 class="text-sm font-medium mb-2">Call Us</h3>
-                    <p class="text-[#c39a56] font-semibold">
-                        +92322 5656987
-                    </p>
-                    <p class="text-gray-500 text-sm mt-2">
-                        Mon-Sat, 10am-8pm
-                    </p>
-                </div>
-
-                <div class="bg-white rounded-lg p-8 shadow-sm text-center">
-                    <div class="w-14 h-14 mx-auto rounded-full bg-[#f4efe7] flex items-center justify-center mb-4">
-                        ✉️
-                    </div>
-                    <h3 class="text-sm font-medium mb-2">Email Us</h3>
-                    <p class="text-[#c39a56] font-semibold">
-                        info@thecustomsuits.com
-                    </p>
-                    <p class="text-gray-500 text-sm mt-2">
-                        We reply within 24 hours
-                    </p>
-                </div>
-
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Top Cards -->
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white rounded-lg p-8 shadow-sm text-center">
+            <div
+              class="w-14 h-14 mx-auto rounded-full bg-[#f4efe7] flex items-center justify-center mb-4"
+            >
+              📍
             </div>
+            <h3 class="text-sm font-medium mb-4">Visit Us</h3>
+            <p class="text-gray-500 text-sm leading-6">
+              IQ 33/I Divine Mega Two, Airport Road,<br />
+              Near Brocway Commercial,<br />
+              DHA Phase 8 Lahore
+            </p>
+          </div>
 
-            <!-- Main Grid -->
-            <div class="grid lg:grid-cols-3 gap-6">
-
-                <!-- Contact Form -->
-                <div class="lg:col-span-2 bg-white rounded-lg p-8 shadow-sm">
-
-                    <h2 class="text-3xl font-serif mb-2">
-                        Send Us a Message
-                    </h2>
-
-                    <p class="text-gray-500 text-sm mb-8">
-                        Have a question or need a custom order?
-                        We'd love to hear from you.
-                    </p>
-
-                    <form class="space-y-6">
-
-                        <div>
-                            <label class="text-xs uppercase text-gray-500">
-                                Your Name *
-                            </label>
-                            <input type="text"
-                                class="w-full border-b border-gray-300 py-3 outline-none focus:border-[#c39a56]">
-                        </div>
-
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="text-xs uppercase text-gray-500">
-                                    Your Email *
-                                </label>
-                                <input type="email"
-                                    class="w-full border-b border-gray-300 py-3 outline-none focus:border-[#c39a56]">
-                            </div>
-
-                            <div>
-                                <label class="text-xs uppercase text-gray-500">
-                                    Your Phone *
-                                </label>
-                                <input type="text"
-                                    class="w-full border-b border-gray-300 py-3 outline-none focus:border-[#c39a56]">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="text-xs uppercase text-gray-500">
-                                Subject
-                            </label>
-                            <select class="w-full border-b border-gray-300 py-3 outline-none bg-transparent">
-                                <option>General Inquiry</option>
-                                <option>Custom Suit</option>
-                                <option>Appointment</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="text-xs uppercase text-gray-500">
-                                Your Message
-                            </label>
-                            <textarea rows="6"
-                                class="w-full border-b border-gray-300 py-3 outline-none resize-none"></textarea>
-                        </div>
-
-                        <div class="text-sm text-gray-400">
-                            📎 Attach reference image (optional)
-                        </div>
-
-                        <button
-                            class="bg-[#b99757] hover:bg-[#a8894f] text-white px-10 py-4 rounded w-full md:w-auto font-medium transition">
-                            SEND MESSAGE
-                        </button>
-
-                    </form>
-
-                </div>
-
-                <!-- Right Sidebar -->
-                <div class="space-y-6">
-
-                    <!-- Appointment -->
-                    <div class="bg-white rounded-lg p-8 shadow-sm text-center">
-
-                        <div class="w-14 h-14 mx-auto rounded-full bg-[#f4efe7] flex items-center justify-center mb-5">
-                            📅
-                        </div>
-
-                        <h3 class="text-2xl font-serif mb-4">
-                            Book an Appointment
-                        </h3>
-
-                        <p class="text-gray-500 text-sm leading-6 mb-6">
-                            Schedule a personal fitting session with our expert
-                            tailors. Choose your preferred time and let us craft
-                            the perfect outfit for you.
-                        </p>
-
-                        <button
-                            class="w-full border border-[#c39a56] text-[#c39a56] py-3 text-sm font-medium hover:bg-[#c39a56] hover:text-white transition">
-                            BOOK APPOINTMENT
-                        </button>
-                    </div>
-
-                    <!-- Quick Connect -->
-                    <div class="bg-white rounded-lg p-8 shadow-sm">
-
-                        <h3 class="text-2xl font-serif mb-6">
-                            Quick Connect
-                        </h3>
-
-                        <div class="space-y-6 text-sm">
-
-                            <div class="flex gap-4">
-                                <span>🟢</span>
-                                <div>
-                                    <p class="text-gray-400 uppercase text-xs">
-                                        Whatsapp
-                                    </p>
-                                    <p class="text-[#c39a56] font-medium">
-                                        +92322 5656987 — Chat now
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-4">
-                                <span>📸</span>
-                                <div>
-                                    <p class="text-gray-400 uppercase text-xs">
-                                        Instagram
-                                    </p>
-                                    <p class="text-[#c39a56] font-medium">
-                                        @thecustomsuits — Follow us
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-4">
-                                <span>📍</span>
-                                <div>
-                                    <p class="text-gray-400 uppercase text-xs">
-                                        Directions
-                                    </p>
-                                    <p class="text-[#c39a56] font-medium">
-                                        Get Directions — DHA Phase 8
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+          <div class="bg-white rounded-lg p-8 shadow-sm text-center">
+            <div
+              class="w-14 h-14 mx-auto rounded-full bg-[#f4efe7] flex items-center justify-center mb-4"
+            >
+              📞
             </div>
+            <h3 class="text-sm font-medium mb-2">Call Us</h3>
+            <p class="text-[#c39a56] font-semibold">+92322 5656987</p>
+            <p class="text-gray-500 text-sm mt-2">Mon-Sat, 10am-8pm</p>
+          </div>
 
+          <div class="bg-white rounded-lg p-8 shadow-sm text-center">
+            <div
+              class="w-14 h-14 mx-auto rounded-full bg-[#f4efe7] flex items-center justify-center mb-4"
+            >
+              ✉️
+            </div>
+            <h3 class="text-sm font-medium mb-2">Email Us</h3>
+            <p class="text-[#c39a56] font-semibold">info@thecustomsuits.com</p>
+            <p class="text-gray-500 text-sm mt-2">We reply within 24 hours</p>
+          </div>
         </div>
+
+        <!-- Main Grid -->
+        <div class="grid lg:grid-cols-3 gap-6">
+          <!-- Contact Form -->
+          <div class="lg:col-span-2 bg-white rounded-lg p-8 shadow-sm">
+            <h2 class="text-3xl font-serif mb-2">Send Us a Message</h2>
+
+            <p class="text-gray-500 text-sm mb-8">
+              Have a question or need a custom order? We'd love to hear from
+              you.
+            </p>
+
+            <form class="space-y-6">
+              <div>
+                <label class="text-xs uppercase text-gray-500">
+                  Your Name *
+                </label>
+                <input
+                  type="text"
+                  class="w-full border-b border-gray-300 py-3 outline-none focus:border-[#c39a56]"
+                />
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="text-xs uppercase text-gray-500">
+                    Your Email *
+                  </label>
+                  <input
+                    type="email"
+                    class="w-full border-b border-gray-300 py-3 outline-none focus:border-[#c39a56]"
+                  />
+                </div>
+
+                <div>
+                  <label class="text-xs uppercase text-gray-500">
+                    Your Phone *
+                  </label>
+                  <input
+                    type="text"
+                    class="w-full border-b border-gray-300 py-3 outline-none focus:border-[#c39a56]"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="text-xs uppercase text-gray-500"> Subject </label>
+                <select
+                  class="w-full border-b border-gray-300 py-3 outline-none bg-transparent"
+                >
+                  <option>General Inquiry</option>
+                  <option>Custom Suit</option>
+                  <option>Appointment</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="text-xs uppercase text-gray-500">
+                  Your Message
+                </label>
+                <textarea
+                  rows="6"
+                  class="w-full border-b border-gray-300 py-3 outline-none resize-none"
+                ></textarea>
+              </div>
+
+              <div class="text-sm text-gray-400">
+                📎 Attach reference image (optional)
+              </div>
+
+              <button
+                class="bg-[#b99757] hover:bg-[#a8894f] text-white px-10 py-4 rounded w-full md:w-auto font-medium transition"
+              >
+                SEND MESSAGE
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Sidebar -->
+          <div class="space-y-6">
+            <!-- Appointment -->
+            <div class="bg-white rounded-lg p-8 shadow-sm text-center">
+              <div
+                class="w-14 h-14 mx-auto rounded-full bg-[#f4efe7] flex items-center justify-center mb-5"
+              >
+                📅
+              </div>
+
+              <h3 class="text-2xl font-serif mb-4">Book an Appointment</h3>
+
+              <p class="text-gray-500 text-sm leading-6 mb-6">
+                Schedule a personal fitting session with our expert tailors.
+                Choose your preferred time and let us craft the perfect outfit
+                for you.
+              </p>
+
+              <button
+                class="w-full border border-[#c39a56] text-[#c39a56] py-3 text-sm font-medium hover:bg-[#c39a56] hover:text-white transition"
+              >
+                BOOK APPOINTMENT
+              </button>
+            </div>
+
+            <!-- Quick Connect -->
+            <div class="bg-white rounded-lg p-8 shadow-sm">
+              <h3 class="text-2xl font-serif mb-6">Quick Connect</h3>
+
+              <div class="space-y-6 text-sm">
+                <div class="flex gap-4">
+                  <span>🟢</span>
+                  <div>
+                    <p class="text-gray-400 uppercase text-xs">Whatsapp</p>
+                    <p class="text-[#c39a56] font-medium">
+                      +92322 5656987 — Chat now
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <span>📸</span>
+                  <div>
+                    <p class="text-gray-400 uppercase text-xs">Instagram</p>
+                    <p class="text-[#c39a56] font-medium">
+                      @thecustomsuits — Follow us
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <span>📍</span>
+                  <div>
+                    <p class="text-gray-400 uppercase text-xs">Directions</p>
+                    <p class="text-[#c39a56] font-medium">
+                      Get Directions — DHA Phase 8
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="py-12">
-        <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto px-6">
+        <h1 class="text-5xl font-serif font-semibold">Find Us Here</h1>
+        <div class="w-16 h-[2px] bg-[#c4a46a] my-4"></div>
 
-            <h1 class="text-5xl font-serif font-semibold">Find Us Here</h1>
-            <div class="w-16 h-[2px] bg-[#c4a46a] my-4"></div>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.41941548468174!3d37.77492927975942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5f3c3b6d%3A0x4b0b6b2f6c5c5c5!2sSan%20Francisco!5e0!3m2!1sen!2sus!4v0000000000000"
-                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-            </iframe>
-        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.41941548468174!3d37.77492927975942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5f3c3b6d%3A0x4b0b6b2f6c5c5c5!2sSan%20Francisco!5e0!3m2!1sen!2sus!4v0000000000000"
+          width="100%"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="bg-[#F8F8F8] py-10 sm:py-16 px-4 sm:px-6 lg:px-0">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-10 lg:gap-2"
+        >
+          <!-- Brand -->
+          <div class="lg:col-span-2">
+            <img
+              src="images/logo.png"
+              alt="Logo"
+              class="w-14 h-14 sm:w-16 sm:h-16 mb-4"
+            />
 
+            <p
+              class="text-sm sm:text-[15px] text-[#6B7280] max-w-full sm:max-w-[280px]"
+              style="font-family: &quot;Inter&quot;, sans-serif"
+            >
+              Luxury fashion with the art of bespoke tailoring. Crafted for the
+              discerning few.
+            </p>
 
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3 mt-6 sm:mt-8">
+              <a
+                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
 
-    <footer class="bg-[#F8F8F8] py-16">
-        <div class="max-w-7xl mx-auto">
+              <a
+                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2">
+              <a
+                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
 
-                <!-- Brand -->
-                <div class="col-span-2">
-                    <img src="images/logo.png" alt="Logo" class="w-16 h-16 mb-4">
-
-                    <p class="text-[15px] font-normal leading-[133%] tracking-[0px] text-[#6B7280] max-w-[280px]"
-                        style="font-family: 'Inter', sans-serif;">
-                        Luxury fashion with the art of bespoke tailoring.
-                        Crafted for the discerning few.
-                    </p>
-
-                    <!-- Social Icons -->
-                    <div class="flex items-center gap-3 mt-8">
-
-                        <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-                        <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-
-                        <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-
-                        <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-
-                    </div>
-                </div>
-
-                <!-- Collections -->
-                <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
-                        style="font-family: 'Inter', sans-serif;">
-                        Collections
-                    </h3>
-
-                    <ul class="space-y-4 text-[#6B7280] text-sm">
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">
-                                Women
-                            </a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Men</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Bridal Lehenga</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Luxury Formals</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Part Wear</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Accessories</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Services -->
-                <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
-                        style="font-family: 'Inter', sans-serif;">
-                        Services
-                    </h3>
-
-                    <ul class="space-y-4 text-[#6B7280] text-sm">
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Custom Tailoring</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Book Appointment</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Style Consultation</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Alterations</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Embroidery</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Customer Care -->
-                <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
-                        style="font-family: 'Inter', sans-serif;">
-                        Customer Care
-                    </h3>
-
-                    <ul class="space-y-4 text-[#6B7280] text-sm">
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Track Order</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Returns & Exchange</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Size Guide</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">FAQs</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter -->
-                <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
-                        style="font-family: 'Inter', sans-serif;">
-                        Newsletter
-                    </h3>
-
-                    <p class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]">
-                        Get exclusive access to new collections and styling tips.
-                    </p>
-
-                    <form class="space-y-3 mt-8">
-                        <input type="email" placeholder="Your email address"
-                            class="w-full h-11 px-4 bg-[#262626] text-white text-[12px] placeholder:text-gray-400 rounded-md focus:outline-none">
-
-                        <button
-                            class="w-full h-11 bg-[#E0C183] text-[#2B2522] text-[12px] font-medium uppercase rounded-md hover:opacity-90 transition">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
-
+              <a
+                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
             </div>
+          </div>
 
+          <!-- Collections -->
+          <div>
+            <h3
+              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
+              style="font-family: &quot;Inter&quot;, sans-serif"
+            >
+              Collections
+            </h3>
+
+            <ul class="space-y-2 sm:space-y-4">
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Women</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Men</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Bridal Lehenga</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Luxury Formals</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Party Wear</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Accessories</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3
+              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
+              style="font-family: &quot;Inter&quot;, sans-serif"
+            >
+              Services
+            </h3>
+
+            <ul class="space-y-2 sm:space-y-4">
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Custom Tailoring</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Book Appointment</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Style Consultation</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Alterations</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Embroidery</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Customer Care -->
+          <div>
+            <h3
+              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
+              style="font-family: &quot;Inter&quot;, sans-serif"
+            >
+              Customer Care
+            </h3>
+
+            <ul class="space-y-2 sm:space-y-4">
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Track Order</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Returns & Exchange</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Size Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div>
+            <h3
+              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
+              style="font-family: &quot;Inter&quot;, sans-serif"
+            >
+              Newsletter
+            </h3>
+
+            <p class="text-sm sm:text-[15px] text-[#6A7282] leading-relaxed">
+              Get exclusive access to new collections and styling tips.
+            </p>
+
+            <form class="space-y-3 mt-5 sm:mt-8">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="w-full h-10 sm:h-11 px-3 sm:px-4 bg-[#262626] text-white text-xs sm:text-sm placeholder:text-gray-400 rounded-md focus:outline-none"
+              />
+
+              <button
+                class="w-full h-10 sm:h-11 bg-[#E0C183] text-[#2B2522] text-xs sm:text-sm font-medium uppercase rounded-md hover:opacity-90 transition"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
         </div>
-
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>

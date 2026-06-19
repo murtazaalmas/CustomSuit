@@ -1,899 +1,722 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Fashion Store</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Suit</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Abril+Fatface&family=Inter:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Abril+Fatface&family=Inter:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <body>
+    <!-- TOP WRAPPER -->
+    <div class="fixed top-0 left-0 right-0 z-50">
+      <!-- Top Bar -->
+      <div
+        class="py-2 text-center font-inter font-bold text-[10px] sm:text-[12px] text-[#C0A96E]"
+        style="
+          background: linear-gradient(
+            90deg,
+            #221e1b 0%,
+            #3c2b1e 50%,
+            #211e1b 100%
+          );
+        "
+      >
+        FREE SHIPPING ON ORDERS ABOVE Rs. 10,000 |
+        <span class="block sm:inline">CUSTOM TAILORING AVAILABLE</span>
+      </div>
 
-        body {
-            font-family: Inter, sans-serif;
-            overflow-x: hidden;
-            background: #f6f3ee;
-        }
+      <!-- Header -->
+      <header class="px-4 md:px-10 md:bg-[#D9D9D9]/20">
+        <div class="grid grid-cols-3 items-center">
+          <!-- Menu -->
+          <div>
+            <button id="menuBtn" class="text-white text-xl md:text-2xl">
+              <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+          </div>
 
-        .container {
-            width: 90%;
-            max-width: 1400px;
-            margin: auto;
-        }
+          <!-- Logo -->
+          <div class="flex justify-center">
+            <a href="home.html">
+              <img
+                src="images/logo.png"
+                alt="Logo"
+                class="h-14 sm:h-16 md:h-24 w-auto"
+              />
+            </a>
+          </div>
 
-       
+          <!-- Right Side -->
+          <div class="flex justify-end items-center gap-3">
+            <!-- Desktop Icons ONLY -->
+            <div class="hidden md:flex items-center gap-5 text-white">
+              <a href="#" id="searchBtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m21 21-4.34-4.34" />
+                  <circle cx="11" cy="11" r="8" />
+                </svg>
+              </a>
 
-       
+              <!-- Wishlist -->
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+                  />
+                </svg>
+              </a>
 
-        /* Footer */
+              <!-- Cart -->
+              <a href="checkOut.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M16 10a4 4 0 0 1-8 0" />
+                  <path d="M3.103 6.034h17.794" />
+                  <path
+                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"
+                  />
+                </svg>
+              </a>
 
-        footer {
-            background: #f7f4ee;
-            padding: 70px 0;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-        }
-
-        .footer-grid ul {
-            list-style: none;
-        }
-
-        .footer-grid li {
-            margin-bottom: 12px;
-        }
-
-        .footer-grid input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-        }
-
-        .bag-outline {
-            color: transparent;
-            -webkit-text-stroke: 1.5px #fff;
-        }
-
-        @media(max-width:991px) {
-
-            .hero-content h1 {
-                font-size: 42px;
-            }
-
-            .category-grid,
-            .product-grid,
-            .accessories-grid,
-            .feature-grid,
-            .instagram,
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .category-large {
-                height: 350px;
-            }
-
-            .header {
-                padding: 0 20px;
-            }
-
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Top Bar -->
-    <div class="absolute top-0 left-0 right-0 z-30 text-center font-inter font-bold text-[12px] leading-[100%] tracking-[0px] text-[#C0A96E] py-2"
-        style="background: linear-gradient(90deg, #221E1B 0%, #3C2B1E 50%, #211E1B 100%);">
-        FREE SHIPPING ON ORDERS ABOVE Rs. 10,000 | CUSTOM TAILORING AVAILABLE
-    </div>
-
-    <!-- Header -->
-    <header class="absolute top-7 left-0 right-0 z-30 px-6 md:px-10">
-
-        <div class="grid grid-cols-3 items-center px-10">
-
-            <!-- Menu -->
-            <div>
-                <button id="menuBtn" class="text-black text-2xl">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </button>
+              <!-- Account -->
+              <button id="loginBtnDesktop">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="8" r="5" />
+                  <path d="M20 21a8 8 0 0 0-16 0" />
+                </svg>
+              </button>
             </div>
 
-            <!-- Logo -->
-            <div class="flex justify-center">
-                <a href="home.html">
-                    <img src="images/logo.png" alt="Logo" class="h-20 md:h-24 w-auto cursor-pointer">
-                </a>
+            <!-- MOBILE: Cart + Account ONLY -->
+            <div class="md:hidden flex items-center gap-3 text-white">
+              <!-- Cart -->
+              <a href="checkOut.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M16 10a4 4 0 0 1-8 0" />
+                  <path d="M3.103 6.034h17.794" />
+                  <path
+                    d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Account -->
+              <button id="loginBtnMobile">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="8" r="5" />
+                  <path d="M20 21a8 8 0 0 0-16 0" />
+                </svg>
+              </button>
             </div>
-
-            <!-- Right Icons -->
-            <div class="flex justify-end items-center gap-5 text-black text-lg">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-search-icon lucide-search">
-                        <path d="m21 21-4.34-4.34" />
-                        <circle cx="11" cy="11" r="8" />
-                    </svg>
-                </button>
-
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-heart-icon lucide-heart">
-                        <path
-                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-                    </svg>
-                </button>
-
-                <a href="checkOut.html">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-shopping-bag-icon lucide-shopping-bag">
-                            <path d="M16 10a4 4 0 0 1-8 0" />
-                            <path d="M3.103 6.034h17.794" />
-                            <path
-                                d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                        </svg>
-                    </button>
-                </a>
-                <button id="loginBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-user-round-icon lucide-user-round">
-                        <circle cx="12" cy="8" r="5" />
-                        <path d="M20 21a8 8 0 0 0-16 0" />
-                    </svg>
-                </button>
-            </div>
-
+          </div>
         </div>
-        <div class="w-full h-px bg-[radial-gradient(circle,_#A3A3A3_1px,_transparent_1px)] bg-[length:7px_1px]"></div>
-    </header>
-
-
+      </header>
+    </div>
 
     <!-- ABOUT -->
     <section>
-        <div class="max-w-7xl mx-auto my-40">
+      <div class="max-w-7xl mx-auto my-40">
+        <div class="bg-[#faf7f2]">
+          <!-- ================= HERO SECTION ================= -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+            <!-- LEFT CONTENT -->
+            <div
+              class="bg-black text-white flex flex-col justify-center px-10 py-16"
+            >
+              <!-- Breadcrumb -->
+              <p class="text-xs text-gray-400 mb-6">
+                Homepagge &gt; <span class="text-white">About Us</span>
+              </p>
 
-            <div class="bg-[#faf7f2]">
+              <!-- Title -->
+              <h2 class="text-3xl md:text-4xl tracking-wider text-gray-300">
+                ABOUT
+              </h2>
 
-                <!-- ================= HERO SECTION ================= -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+              <h1 class="text-5xl md:text-6xl font-serif font-bold mt-2">
+                CUSTOM SUITS
+              </h1>
 
-                    <!-- LEFT CONTENT -->
-                    <div class="bg-black text-white flex flex-col justify-center px-10 py-16">
+              <!-- Subtitle -->
+              <p class="text-sm text-gray-400 mt-4 italic">
+                Crafting Timeless Elegance Since Day One
+              </p>
 
-                        <!-- Breadcrumb -->
-                        <p class="text-xs text-gray-400 mb-6">
-                            Homepagge &gt; <span class="text-white">About Us</span>
-                        </p>
-
-                        <!-- Title -->
-                        <h2 class="text-3xl md:text-4xl tracking-wider text-gray-300">
-                            ABOUT
-                        </h2>
-
-                        <h1 class="text-5xl md:text-6xl font-serif font-bold mt-2">
-                            CUSTOM SUITS
-                        </h1>
-
-                        <!-- Subtitle -->
-                        <p class="text-sm text-gray-400 mt-4 italic">
-                            Crafting Timeless Elegance Since Day One
-                        </p>
-
-                        <!-- Button -->
-                        <button
-                            class="mt-8 border border-yellow-500 text-yellow-500 px-6 py-2 w-fit hover:bg-yellow-500 hover:text-black transition">
-                            Discover
-                        </button>
-
-                    </div>
-
-                    <!-- RIGHT IMAGE -->
-                    <div class="h-full">
-                        <img src="https://picsum.photos/id/1011/400/500" class="w-full h-full object-cover" />
-                    </div>
-
-                </div>
-
-                <!-- ================= CONTENT SECTION ================= -->
-                <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-10">
-
-                    <!-- LEFT TEXT -->
-                    <div>
-
-                        <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 leading-snug">
-                            More Than Just a <br /> Clothing Brand
-                        </h2>
-
-                        <div class="w-16 h-[2px] bg-yellow-500 my-4"></div>
-
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            The Custom Suit is more than just a clothing brand; it’s a destination for fashion-forward
-                            individuals seeking both clothing and accessories to elevate their style. Custom Suit
-                            epitomizes the fusion of classical elegance and contemporary flair in its diverse range of
-                            offerings.
-                            <br><br>
-                            But Custom Suit doesn’t stop at clothing. We understand that accessories play a crucial role
-                            in completing a look, which is why we’re constantly expanding our accessory offerings.
-                        </p>
-
-                        <!-- Buttons -->
-                        <div class="flex gap-4 mt-8">
-
-                            <button class="bg-yellow-500 text-white px-6 py-2 text-sm hover:bg-yellow-600 transition">
-                                CONTACT US
-                            </button>
-
-                            <button
-                                class="border border-yellow-500 text-yellow-500 px-6 py-2 text-sm hover:bg-yellow-500 hover:text-white transition">
-                                SHOP NOW
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    <!-- RIGHT IMAGE GRID -->
-                    <div class="grid grid-cols-2 gap-4">
-
-                        <img src="https://picsum.photos/id/1011/400/500" class="rounded-2xl object-cover h-64 w-full" />
-
-                        <img src="https://picsum.photos/id/1011/400/500"
-                            class="rounded-2xl object-cover h-64 w-full row-span-2" />
-
-                        <img src="https://picsum.photos/id/1011/400/500" class="rounded-2xl object-cover h-48 w-full" />
-
-                    </div>
-
-                </div>
-
+              <!-- Button -->
+              <button
+                class="mt-8 border border-yellow-500 text-yellow-500 px-6 py-2 w-fit hover:bg-yellow-500 hover:text-black transition"
+              >
+                Discover
+              </button>
             </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="h-full">
+              <img
+                src="https://picsum.photos/id/1011/400/500"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- ================= CONTENT SECTION ================= -->
+          <div
+            class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-10"
+          >
+            <!-- LEFT TEXT -->
+            <div>
+              <h2
+                class="text-3xl md:text-4xl font-semibold text-gray-800 leading-snug"
+              >
+                More Than Just a <br />
+                Clothing Brand
+              </h2>
+
+              <div class="w-16 h-[2px] bg-yellow-500 my-4"></div>
+
+              <p class="text-sm text-gray-600 leading-relaxed">
+                The Custom Suit is more than just a clothing brand; it’s a
+                destination for fashion-forward individuals seeking both
+                clothing and accessories to elevate their style. Custom Suit
+                epitomizes the fusion of classical elegance and contemporary
+                flair in its diverse range of offerings.
+                <br /><br />
+                But Custom Suit doesn’t stop at clothing. We understand that
+                accessories play a crucial role in completing a look, which is
+                why we’re constantly expanding our accessory offerings.
+              </p>
+
+              <!-- Buttons -->
+              <div class="flex gap-4 mt-8">
+                <button
+                  class="bg-yellow-500 text-white px-6 py-2 text-sm hover:bg-yellow-600 transition"
+                >
+                  CONTACT US
+                </button>
+
+                <button
+                  class="border border-yellow-500 text-yellow-500 px-6 py-2 text-sm hover:bg-yellow-500 hover:text-white transition"
+                >
+                  SHOP NOW
+                </button>
+              </div>
+            </div>
+
+            <!-- RIGHT IMAGE GRID -->
+            <div class="grid grid-cols-2 gap-4">
+              <img
+                src="https://picsum.photos/id/1011/400/500"
+                class="rounded-2xl object-cover h-64 w-full"
+              />
+
+              <img
+                src="https://picsum.photos/id/1011/400/500"
+                class="rounded-2xl object-cover h-64 w-full row-span-2"
+              />
+
+              <img
+                src="https://picsum.photos/id/1011/400/500"
+                class="rounded-2xl object-cover h-48 w-full"
+              />
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="bg-[#1d1715] py-20">
-        <div class="max-w-6xl mx-auto px-6">
-
-            <!-- Heading -->
-            <div class="text-center mb-14">
-                <h2 class="text-5xl font-serif font-semibold text-white">
-                    Our Pillars
-                </h2>
-                <div class="w-16 h-[2px] bg-[#caa85c] mx-auto mt-4"></div>
-            </div>
-
-            <!-- Cards -->
-            <div class="grid md:grid-cols-3 gap-8">
-
-                <!-- Card -->
-                <div class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center">
-
-                    <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8">
-                    </div>
-
-                    <h3 class="text-white font-serif text-xl mb-4">
-                        Our Vision
-                    </h3>
-
-                    <p class="text-white/90 text-sm leading-relaxed">
-                        To redefine elegance and tailored perfection. Empowering
-                        modern men with confidence and style, blending tradition
-                        with modern sophistication.
-                    </p>
-
-                </div>
-
-                <!-- Card -->
-                <div class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[320px] flex flex-col justify-center">
-
-                    <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8">
-                    </div>
-
-                    <h3 class="text-white font-serif text-xl mb-4">
-                        Our Mission
-                    </h3>
-
-                    <p class="text-white/90 text-sm leading-relaxed">
-                        To craft high-quality, custom-made suits designed to
-                        celebrate individuality and grace. Every stitch reflects
-                        passion and precision.
-                    </p>
-
-                </div>
-
-                <!-- Card -->
-                <div class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center">
-
-                    <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8">
-                    </div>
-
-                    <h3 class="text-white font-serif text-xl mb-4">
-                        Our Support
-                    </h3>
-
-                    <p class="text-white/90 text-sm leading-relaxed">
-                        We believe in personalized care and trust. Ensuring every
-                        customer feels valued and heard from consultation to final
-                        fitting.
-                    </p>
-
-                </div>
-
-            </div>
-
+      <div class="max-w-6xl mx-auto px-6">
+        <!-- Heading -->
+        <div class="text-center mb-14">
+          <h2 class="text-5xl font-serif font-semibold text-white">
+            Our Pillars
+          </h2>
+          <div class="w-16 h-[2px] bg-[#caa85c] mx-auto mt-4"></div>
         </div>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card -->
+          <div
+            class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center"
+          >
+            <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8"></div>
+
+            <h3 class="text-white font-serif text-xl mb-4">Our Vision</h3>
+
+            <p class="text-white/90 text-sm leading-relaxed">
+              To redefine elegance and tailored perfection. Empowering modern
+              men with confidence and style, blending tradition with modern
+              sophistication.
+            </p>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[320px] flex flex-col justify-center"
+          >
+            <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8"></div>
+
+            <h3 class="text-white font-serif text-xl mb-4">Our Mission</h3>
+
+            <p class="text-white/90 text-sm leading-relaxed">
+              To craft high-quality, custom-made suits designed to celebrate
+              individuality and grace. Every stitch reflects passion and
+              precision.
+            </p>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center"
+          >
+            <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8"></div>
+
+            <h3 class="text-white font-serif text-xl mb-4">Our Support</h3>
+
+            <p class="text-white/90 text-sm leading-relaxed">
+              We believe in personalized care and trust. Ensuring every customer
+              feels valued and heard from consultation to final fitting.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Why Choose -->
     <section class="bg-[#f5f3ef] py-24">
-        <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-20">
+          <h2 class="text-5xl font-serif font-semibold text-[#2d2522]">
+            Why Choose Custom Suits
+          </h2>
 
-            <div class="text-center mb-20">
-                <h2 class="text-5xl font-serif font-semibold text-[#2d2522]">
-                    Why Choose Custom Suits
-                </h2>
-
-                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
-                    We combine craftsmanship, technology and passion to deliver
-                    perfection.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-4 gap-10">
-
-                <!-- Feature -->
-                <div class="text-center">
-                    <div
-                        class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center">
-
-                        <svg class="w-10 h-10 text-[#d4b16a]" fill="none" stroke="currentColor" stroke-width="1.5"
-                            viewBox="0 0 24 24">
-                            <path d="M12 4v16M4 12h16"></path>
-                        </svg>
-
-                    </div>
-
-                    <h3 class="font-serif text-xl text-[#2d2522] mb-3">
-                        Quick Size
-                    </h3>
-
-                    <p class="text-gray-500 text-sm">
-                        Looking for your perfect fit? Our advanced sizing system
-                        provides custom measurements.
-                    </p>
-                </div>
-
-                <!-- Feature -->
-                <div class="text-center">
-                    <div
-                        class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center">
-
-                        <svg class="w-10 h-10 text-[#d4b16a]" fill="none" stroke="currentColor" stroke-width="1.5"
-                            viewBox="0 0 24 24">
-                            <path d="M4 8h16M4 16h16"></path>
-                        </svg>
-
-                    </div>
-
-                    <h3 class="font-serif text-xl text-[#2d2522] mb-3">
-                        Perfect Fitting
-                    </h3>
-
-                    <p class="text-gray-500 text-sm">
-                        We ensure the perfect fit for every client through multiple
-                        fitting trials.
-                    </p>
-                </div>
-
-                <!-- Feature -->
-                <div class="text-center">
-                    <div
-                        class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center">
-
-                        <svg class="w-10 h-10 text-[#d4b16a]" fill="none" stroke="currentColor" stroke-width="1.5"
-                            viewBox="0 0 24 24">
-                            <path d="M12 2v20M6 6h12"></path>
-                        </svg>
-
-                    </div>
-
-                    <h3 class="font-serif text-xl text-[#2d2522] mb-3">
-                        Italian Fabrics
-                    </h3>
-
-                    <p class="text-gray-500 text-sm">
-                        Choose from more than 3000 premium fabrics sourced from the
-                        world's finest mills.
-                    </p>
-                </div>
-
-                <!-- Feature -->
-                <div class="text-center">
-                    <div
-                        class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center">
-
-                        <svg class="w-10 h-10 text-[#d4b16a]" fill="none" stroke="currentColor" stroke-width="1.5"
-                            viewBox="0 0 24 24">
-                            <rect x="5" y="5" width="14" height="14"></rect>
-                        </svg>
-
-                    </div>
-
-                    <h3 class="font-serif text-xl text-[#2d2522] mb-3">
-                        Quality Stitching
-                    </h3>
-
-                    <p class="text-gray-500 text-sm">
-                        High needle stitching with exceptional precision and
-                        durability.
-                    </p>
-                </div>
-
-            </div>
-
+          <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+            We combine craftsmanship, technology and passion to deliver
+            perfection.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-4 gap-10">
+          <!-- Feature -->
+          <div class="text-center">
+            <div
+              class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center"
+            >
+              <svg
+                class="w-10 h-10 text-[#d4b16a]"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 4v16M4 12h16"></path>
+              </svg>
+            </div>
+
+            <h3 class="font-serif text-xl text-[#2d2522] mb-3">Quick Size</h3>
+
+            <p class="text-gray-500 text-sm">
+              Looking for your perfect fit? Our advanced sizing system provides
+              custom measurements.
+            </p>
+          </div>
+
+          <!-- Feature -->
+          <div class="text-center">
+            <div
+              class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center"
+            >
+              <svg
+                class="w-10 h-10 text-[#d4b16a]"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M4 8h16M4 16h16"></path>
+              </svg>
+            </div>
+
+            <h3 class="font-serif text-xl text-[#2d2522] mb-3">
+              Perfect Fitting
+            </h3>
+
+            <p class="text-gray-500 text-sm">
+              We ensure the perfect fit for every client through multiple
+              fitting trials.
+            </p>
+          </div>
+
+          <!-- Feature -->
+          <div class="text-center">
+            <div
+              class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center"
+            >
+              <svg
+                class="w-10 h-10 text-[#d4b16a]"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2v20M6 6h12"></path>
+              </svg>
+            </div>
+
+            <h3 class="font-serif text-xl text-[#2d2522] mb-3">
+              Italian Fabrics
+            </h3>
+
+            <p class="text-gray-500 text-sm">
+              Choose from more than 3000 premium fabrics sourced from the
+              world's finest mills.
+            </p>
+          </div>
+
+          <!-- Feature -->
+          <div class="text-center">
+            <div
+              class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center"
+            >
+              <svg
+                class="w-10 h-10 text-[#d4b16a]"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <rect x="5" y="5" width="14" height="14"></rect>
+              </svg>
+            </div>
+
+            <h3 class="font-serif text-xl text-[#2d2522] mb-3">
+              Quality Stitching
+            </h3>
+
+            <p class="text-gray-500 text-sm">
+              High needle stitching with exceptional precision and durability.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Our Pillars -->
     <section class="bg-[#1d1715] py-16">
-        <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 divide-x divide-[#3a312d]">
+          <div class="text-center px-6">
+            <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">5000+</h3>
+            <p class="text-white mt-2">Happy Customers</p>
+          </div>
 
-            <div class="grid md:grid-cols-4 divide-x divide-[#3a312d]">
+          <div class="text-center px-6">
+            <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">3000+</h3>
+            <p class="text-white mt-2">Italian Fabrics</p>
+          </div>
 
-                <div class="text-center px-6">
-                    <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">
-                        5000+
-                    </h3>
-                    <p class="text-white mt-2">
-                        Happy Customers
-                    </p>
-                </div>
+          <div class="text-center px-6">
+            <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">100%</h3>
+            <p class="text-white mt-2">Custom Fit</p>
+          </div>
 
-                <div class="text-center px-6">
-                    <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">
-                        3000+
-                    </h3>
-                    <p class="text-white mt-2">
-                        Italian Fabrics
-                    </p>
-                </div>
-
-                <div class="text-center px-6">
-                    <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">
-                        100%
-                    </h3>
-                    <p class="text-white mt-2">
-                        Custom Fit
-                    </p>
-                </div>
-
-                <div class="text-center px-6">
-                    <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">
-                        10+
-                    </h3>
-                    <p class="text-white mt-2">
-                        Years Experience
-                    </p>
-                </div>
-
-            </div>
-
+          <div class="text-center px-6">
+            <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">10+</h3>
+            <p class="text-white mt-2">Years Experience</p>
+          </div>
         </div>
+      </div>
     </section>
+    
+    <!-- Footer -->
+    <footer class="bg-[#F8F8F8] py-10 sm:py-16 px-4 sm:px-6 lg:px-0">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-10 lg:gap-2"
+        >
+          <!-- Brand -->
+          <div class="lg:col-span-2">
+            <img
+              src="images/logo.png"
+              alt="Logo"
+              class="w-14 h-14 sm:w-16 sm:h-16 mb-4"
+            />
 
-    <footer class="bg-[#F8F8F8] py-16">
-        <div class="max-w-7xl mx-auto">
+            <p
+              class="text-sm sm:text-[15px] text-[#6B7280] max-w-full sm:max-w-[280px]"
+              style="font-family: &quot;Inter&quot;, sans-serif"
+            >
+              Luxury fashion with the art of bespoke tailoring. Crafted for the
+              discerning few.
+            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2">
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3 mt-6 sm:mt-8">
+              <a
+                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
 
-                <!-- Brand -->
-                <div class="col-span-2">
-                    <img src="images/logo.png" alt="Logo" class="w-16 h-16 mb-4">
+              <a
+                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
 
-                    <p class="text-[15px] font-normal leading-[133%] tracking-[0px] text-[#6B7280] max-w-[280px]"
-                        style="font-family: 'Inter', sans-serif;">
-                        Luxury fashion with the art of bespoke tailoring.
-                        Crafted for the discerning few.
-                    </p>
+              <a
+                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
 
-                    <!-- Social Icons -->
-                    <div class="flex items-center gap-3 mt-8">
-
-                        <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-                        <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-
-                        <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-
-                        <a
-                            class="w-10 h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-
-                    </div>
-                </div>
-
-                <!-- Collections -->
-                <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
-                        style="font-family: 'Inter', sans-serif;">
-                        Collections
-                    </h3>
-
-                    <ul class="space-y-4 text-[#6B7280] text-sm">
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">
-                                Women
-                            </a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Men</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Bridal Lehenga</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Luxury Formals</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Part Wear</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Accessories</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Services -->
-                <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
-                        style="font-family: 'Inter', sans-serif;">
-                        Services
-                    </h3>
-
-                    <ul class="space-y-4 text-[#6B7280] text-sm">
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Custom Tailoring</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Book Appointment</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Style Consultation</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Alterations</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Embroidery</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Customer Care -->
-                <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
-                        style="font-family: 'Inter', sans-serif;">
-                        Customer Care
-                    </h3>
-
-                    <ul class="space-y-4 text-[#6B7280] text-sm">
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Track Order</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Returns & Exchange</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Size Guide</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">FAQs</a>
-                        </li>
-                        <li class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]"
-                            style="font-family: 'Inter', sans-serif;">
-                            <a class="hover:text-black">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter -->
-                <div>
-                    <h3 class="text-[15px] font-bold leading-[133%] tracking-[0px] uppercase text-[#2B1D1D] mb-6"
-                        style="font-family: 'Inter', sans-serif;">
-                        Newsletter
-                    </h3>
-
-                    <p class="text-[15px] font-normal leading-[260%] tracking-[0px] text-[#6A7282]">
-                        Get exclusive access to new collections and styling tips.
-                    </p>
-
-                    <form class="space-y-3 mt-8">
-                        <input type="email" placeholder="Your email address"
-                            class="w-full h-11 px-4 bg-[#262626] text-white text-[12px] placeholder:text-gray-400 rounded-md focus:outline-none">
-
-                        <button
-                            class="w-full h-11 bg-[#E0C183] text-[#2B2522] text-[12px] font-medium uppercase rounded-md hover:opacity-90 transition">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
-
+              <a
+                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
             </div>
+          </div>
 
-        </div>
+          <!-- Collections -->
+          <div>
+            <h3
+              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
+              style="font-family: &quot;Inter&quot;, sans-serif"
+            >
+              Collections
+            </h3>
 
-    </footer>
+            <ul class="space-y-2 sm:space-y-4">
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Women</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Men</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Bridal Lehenga</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Luxury Formals</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Party Wear</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Accessories</a
+                >
+              </li>
+            </ul>
+          </div>
 
-    <!-- Login Popup -->
-    <div id="loginModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+          <!-- Services -->
+          <div>
+            <h3
+              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
+              style="font-family: &quot;Inter&quot;, sans-serif"
+            >
+              Services
+            </h3>
 
-        <div class="relative w-full max-w-md bg-white rounded-3xl p-6 md:p-8 shadow-2xl">
+            <ul class="space-y-2 sm:space-y-4">
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Custom Tailoring</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Book Appointment</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Style Consultation</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Alterations</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Embroidery</a
+                >
+              </li>
+            </ul>
+          </div>
 
-            <!-- Close Button -->
-            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">
-                &times;
-            </button>
+          <!-- Customer Care -->
+          <div>
+            <h3
+              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
+              style="font-family: &quot;Inter&quot;, sans-serif"
+            >
+              Customer Care
+            </h3>
 
-            <div class="text-center mb-6">
-                <h1 class="text-3xl font-bold tracking-widest">WELCOME</h1>
-                <p class="text-gray-500 text-sm mt-2">Sign in to your account</p>
-            </div>
+            <ul class="space-y-2 sm:space-y-4">
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Track Order</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Returns & Exchange</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Size Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
 
-            <form class="space-y-4">
+          <!-- Newsletter -->
+          <div>
+            <h3
+              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
+              style="font-family: &quot;Inter&quot;, sans-serif"
+            >
+              Newsletter
+            </h3>
 
-                <!-- Email -->
-                <div class="relative">
-                    <input type="email" placeholder="Enter Email"
-                        class="w-full h-12 rounded-lg bg-gray-100 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+            <p class="text-sm sm:text-[15px] text-[#6A7282] leading-relaxed">
+              Get exclusive access to new collections and styling tips.
+            </p>
 
-                    <i class="fa-regular fa-envelope absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                </div>
+            <form class="space-y-3 mt-5 sm:mt-8">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="w-full h-10 sm:h-11 px-3 sm:px-4 bg-[#262626] text-white text-xs sm:text-sm placeholder:text-gray-400 rounded-md focus:outline-none"
+              />
 
-                <!-- Password -->
-                <div class="relative">
-                    <input id="passwordInput" type="password" placeholder="Enter Password"
-                        class="w-full h-12 rounded-lg bg-gray-100 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-black">
-
-                    <i id="togglePassword"
-                        class="fa-regular fa-eye-slash absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
-                </div>
-
-                <div class="flex justify-end">
-                    <a class="text-xs text-gray-500 hover:text-black">
-                        Recover Password?
-                    </a>
-                </div>
-
-                <button type="submit" class="w-full h-12 bg-black text-white rounded-lg font-medium hover:bg-gray-800">
-                    Sign In
-                </button>
-
+              <button
+                class="w-full h-10 sm:h-11 bg-[#E0C183] text-[#2B2522] text-xs sm:text-sm font-medium uppercase rounded-md hover:opacity-90 transition"
+              >
+                Subscribe
+              </button>
             </form>
-
-            <!-- Divider -->
-            <div class="flex items-center my-4">
-                <div class="flex-1 border-t border-gray-200"></div>
-
-                <span class="px-4 text-sm text-gray-400">
-                    Or continue with
-                </span>
-
-                <div class="flex-1 border-t border-gray-200"></div>
-            </div>
-
-            <!-- Social Login -->
-            <div class="grid grid-cols-3 gap-3">
-
-                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
-                    <i class="fa-brands fa-google text-red-500 text-lg"></i>
-                </button>
-
-                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
-                    <i class="fa-brands fa-apple text-black text-xl"></i>
-                </button>
-
-                <button class="h-12 border rounded-lg flex items-center justify-center hover:bg-gray-50">
-                    <i class="fa-brands fa-facebook-f text-blue-600 text-lg"></i>
-                </button>
-
-            </div>
-
-            <div class="text-center mt-6 text-sm text-gray-500">
-                Don't have an account?
-                <a class="font-semibold text-black hover:underline">
-                    Sign Up
-                </a>
-            </div>
-
+          </div>
         </div>
-    </div>
-
-    <!-- Sidebar Overlay -->
-    <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
-
-    <!-- Sidebar -->
-    <div id="sidebar" class="fixed top-0 left-0 h-screen w-[520px] bg-white z-50 shadow-2xl transition-all duration-300"
-        style="transform: translateX(-100%);">
-
-        <!-- Overlay -->
-        <div class="p-6">
-
-            <!-- Header -->
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <img src="images/logo.png" alt="Logo" class="w-10 h-10 rounded-full object-cover">
-                    <h1 class="text-2xl font-serif font-semibold tracking-wide">
-                        CUSTOM SUITS
-                    </h1>
-                </div>
-
-                <button id="closeSidebar">
-                    <i class="fa-solid fa-xmark text-2xl"></i>
-                </button>
-            </div>
-
-            <!-- Categories -->
-            <div class="flex gap-16 mt-12 text-lg">
-                <button class="font-semibold underline underline-offset-4">
-                    WOMAN
-                </button>
-
-                <button class="text-gray-800">
-                    JEWELERY
-                </button>
-
-                <button class="text-gray-800">
-                    SHOES
-                </button>
-            </div>
-
-            <!-- Menu List -->
-            <div class="mt-12 space-y-8 text-2xl">
-                <a class="block text-gray-900">
-                    Casual
-                </a>
-
-                <a class="block underline underline-offset-4 text-gray-900">
-                    Luxury Formals
-                </a>
-
-                <a class="block text-gray-900">
-                    Bridal
-                </a>
-
-                <a class="block text-gray-900">
-                    Party Wear
-                </a>
-
-                <a class="block text-gray-900">
-                    Western
-                </a>
-
-                <a class="block text-gray-900">
-                    Jewelery
-                </a>
-
-                <a class="block text-gray-900">
-                    Shoes
-                </a>
-
-                <a class="block text-red-600 uppercase tracking-wide mt-12">
-                    Special Offers
-                </a>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- JS Login Popup -->
-    <script>
-        const loginBtn = document.getElementById("loginBtn");
-        const loginModal = document.getElementById("loginModal");
-
-        loginBtn.addEventListener("click", () => {
-            loginModal.classList.remove("hidden");
-            loginModal.classList.add("flex");
-        });
-
-        function closeLoginModal() {
-            loginModal.classList.add("hidden");
-            loginModal.classList.remove("flex");
-        }
-
-        // Close when clicking outside
-        loginModal.addEventListener("click", function (e) {
-            if (e.target === this) {
-                closeLoginModal();
-            }
-        });
-
-        // Toggle Password
-        document.getElementById("togglePassword").addEventListener("click", function () {
-            const password = document.getElementById("passwordInput");
-
-            if (password.type === "password") {
-                password.type = "text";
-                this.classList.remove("fa-eye-slash");
-                this.classList.add("fa-eye");
-            } else {
-                password.type = "password";
-                this.classList.remove("fa-eye");
-                this.classList.add("fa-eye-slash");
-            }
-        });
-    </script>
-
-    <!-- JS Sidebar-->
-    <script>
-        // Sidebar
-        const menuBtn = document.getElementById("menuBtn");
-        const sidebar = document.getElementById("sidebar");
-        const sidebarOverlay = document.getElementById("sidebarOverlay");
-        const closeSidebar = document.getElementById("closeSidebar");
-
-        menuBtn.addEventListener("click", () => {
-            sidebar.style.transform = "translateX(0)";
-            sidebarOverlay.classList.remove("hidden");
-        });
-
-        function closeMenu() {
-            sidebar.style.transform = "translateX(-100%)";
-            sidebarOverlay.classList.add("hidden");
-        }
-
-        closeSidebar.addEventListener("click", closeMenu);
-        sidebarOverlay.addEventListener("click", closeMenu);
-    </script>
-
-</body>
-
+      </div>
+    </footer>
+  </body>
 </html>
