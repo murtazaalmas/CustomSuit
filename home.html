@@ -3085,32 +3085,39 @@
     >
       <!-- MODAL BOX (SCROLL AREA) -->
       <div
-        class="w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white rounded-[24px] border border-[#E7DCC6] shadow-lg p-4 sm:p-6 relative scroll-smooth"
+        class="w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white rounded-[24px] border border-[#E7DCC6] shadow-lg p-4 sm:p-6 relative scroll-smooth space-y-5"
       >
         <!-- Header -->
         <div class="flex items-start justify-between gap-3">
           <div>
             <div
-              class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-gray-500"
+              class="flex items-center gap-2 font-[Poppins] font-normal text-[12.3px] leading-[100%] tracking-[0px] text-gray-500"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-3 h-3"
-                fill="none"
+                width="12"
+                height="12"
                 viewBox="0 0 24 24"
+                fill="none"
                 stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-scissors-icon lucide-scissors"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M18 8l-6 6-6-6"
-                />
+                <circle cx="6" cy="6" r="3" />
+                <path d="M8.12 8.12 12 12" />
+                <path d="M20 4 8.12 15.88" />
+                <circle cx="6" cy="18" r="3" />
+                <path d="M14.8 14.8 20 20" />
               </svg>
+
               Tailored For You
             </div>
 
-            <h2 class="text-xl sm:text-2xl font-semibold mt-1">
+            <h2
+              class="font-[Poppins] font-bold text-[24.35px] leading-[100%] tracking-[0px] mt-4"
+            >
               Custom Size Studio
             </h2>
           </div>
@@ -3125,16 +3132,19 @@
         </div>
 
         <!-- Steps -->
-        <div class="mt-6 sm:mt-8 flex items-center w-full">
+        <div class="flex items-center w-full">
           <!-- Step 1 -->
-          <div class="flex items-center gap-2 flex-shrink-0">
+          <div
+            class="flex items-center gap-2 flex-shrink-0 font-[Poppins] rounded-lg bg-[#E0C183] font-semibold text-[20px] leading-[100%] tracking-[0px] p-3"
+          >
             <span
-              class="w-5 h-5 rounded-full bg-[#C8953D] text-white text-xs flex items-center justify-center"
+              class="w-5 h-5 rounded-full bg-[#C2A24F] text-[#966C00] font-[Poppins] font-bold text-[12.35px] leading-[100%] tracking-[0px] flex items-center justify-center"
             >
               1
             </span>
+
             <span
-              class="bg-[#E6C68C] text-[#8A6223] px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap"
+              class="text-[#966C00] rounded-lg text-[20px] font-semibold whitespace-nowrap"
             >
               Pose Photos
             </span>
@@ -3146,11 +3156,13 @@
           <!-- Step 2 -->
           <div class="flex items-center gap-2 flex-shrink-0">
             <span
-              class="w-5 h-5 rounded-full bg-gray-200 text-gray-600 text-xs flex items-center justify-center"
+              class="w-6 h-6 rounded-full bg-[#ECEEF4] text-[#303030] font-[Poppins] text-[12.35px] leading-[100%] tracking-[0px] flex items-center justify-center"
             >
               2
             </span>
-            <span class="text-xs sm:text-sm whitespace-nowrap">
+            <span
+              class="font-[Poppins] font-normal text-[20px] leading-[100%] tracking-[0px] whitespace-nowrap"
+            >
               Measurements
             </span>
           </div>
@@ -3161,28 +3173,32 @@
           <!-- Step 3 -->
           <div class="flex items-center gap-2 flex-shrink-0">
             <span
-              class="w-5 h-5 rounded-full bg-gray-200 text-gray-600 text-xs flex items-center justify-center"
+              class="w-6 h-6 rounded-full bg-[#ECEEF4] text-[#303030] font-[Poppins] text-[12.35px] leading-[100%] tracking-[0px] flex items-center justify-center"
             >
               3
             </span>
-            <span class="text-xs sm:text-sm whitespace-nowrap">
+            <span
+              class="font-[Poppins] font-normal text-[20px] leading-[100%] tracking-[0px] whitespace-nowrap"
+            >
               Fitting & type
             </span>
           </div>
         </div>
 
         <!-- Description -->
-        <div class="border-t mt-6 sm:mt-8 pt-4">
-          <p class="text-sm text-gray-500">
+        <div class="border-t pt-4">
+          <p
+            class="font-[Poppins] font-normal text-[20px] leading-[100%] tracking-[0px] text-gray-500"
+          >
             Upload three pose photos so our tailors can craft the perfect fit.
           </p>
         </div>
 
         <!-- Upload Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-5">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
           <div>
             <div
-              class="relative h-44 sm:h-48 bg-[#F3DEB2] border border-[#D8A54C] rounded-2xl flex flex-col items-center justify-center"
+              class="relative h-44 sm:h-56 bg-[#F3DEB2] border border-[#D8A54C] rounded-2xl flex flex-col items-center justify-end pb-4"
             >
               <button
                 class="absolute top-3 right-3 w-6 h-6 sm:w-5 sm:h-5 rounded-full bg-[#D8A54C] text-white text-xs flex items-center justify-center"
@@ -3207,40 +3223,54 @@
 
               <span class="text-xs text-[#B57E1E] mt-1">Upload</span>
             </div>
-            <p class="text-center text-sm mt-3">Front view</p>
+            <p
+              class="text-center font-[Poppins] font-normal text-[16px] leading-[100%] tracking-[0px] mt-3"
+            >
+              Front view
+            </p>
           </div>
 
           <div>
-            <div class="h-44 sm:h-48 bg-[#F6EFE3] rounded-2xl"></div>
-            <p class="text-center text-sm mt-3">Back view</p>
+            <div class="h-44 sm:h-56 bg-[#F6EFE3] rounded-2xl"></div>
+            <p
+              class="text-center font-[Poppins] font-normal text-[16px] leading-[100%] tracking-[0px] mt-3"
+            >
+              Back view
+            </p>
           </div>
 
           <div>
-            <div class="h-44 sm:h-48 bg-[#F6EFE3] rounded-2xl"></div>
-            <p class="text-center text-sm mt-3">Side view</p>
+            <div class="h-44 sm:h-56 bg-[#F6EFE3] rounded-2xl"></div>
+            <p
+              class="text-center font-[Poppins] font-normal text-[16px] leading-[100%] tracking-[0px] mt-3"
+            >
+              Side view
+            </p>
           </div>
         </div>
 
         <!-- Note -->
         <div
-          class="mt-5 flex gap-3 items-start bg-[#FAE7C5] border border-[#D8A54C] rounded-xl p-4 text-[#8A6223]"
+          class="flex gap-3 items-start bg-[#FFEABF] border border-[#FFEABF] rounded-xl p-4 text-[#C38F0A]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-5 h-5 mt-0.5 flex-shrink-0"
-            fill="none"
+            class="w-[40px] h-[40px]"
             viewBox="0 0 24 24"
+            fill="none"
             stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-user-round-icon lucide-user-round"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
+            <circle cx="12" cy="8" r="5" />
+            <path d="M20 21a8 8 0 0 0-16 0" />
           </svg>
 
-          <p class="text-sm">
+          <p
+            class="font-[Poppins] font-normal text-[16px] leading-[100%] tracking-[0px]"
+          >
             Stand straight with arms slightly away from the body. Wear fitted
             clothing for accurate measurements. Photos are kept strictly private
             and used only for tailoring purposes.
@@ -3248,24 +3278,55 @@
         </div>
 
         <!-- Footer (ONE LINE BACK + NEXT) -->
-        <div class="flex items-center justify-between gap-3 mt-6">
+        <div class="flex items-center justify-between gap-3">
           <button
-            class="flex-1 sm:flex-none px-5 py-2 bg-gray-100 text-gray-500 rounded-lg text-sm font-medium"
+            class="font-[Poppins] px-4 py-2 rounded-lg font-medium text-[17.45px] leading-[100%] tracking-[0px] text-[#B7B7B7] bg-[#F0F0F0] flex items-center gap-2"
           >
-            ← Back
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-move-left-icon lucide-move-left"
+            >
+              <path d="M6 8L2 12L6 16" />
+              <path d="M2 12H22" />
+            </svg>
+            Back
           </button>
 
           <div class="flex items-center gap-1">
             <div class="w-8 h-2 rounded-full bg-[#C8953D]"></div>
             <div class="w-2 h-2 rounded-full bg-[#E0B76A]"></div>
             <div class="w-2 h-2 rounded-full bg-[#E0B76A]"></div>
+            <div class="w-2 h-2 rounded-full bg-[#E0B76A]"></div>
           </div>
 
           <button
             id="toModal2"
-            class="flex-1 sm:flex-none px-6 py-2 bg-[#D4B06A] text-black rounded-lg text-sm font-medium"
+            class="font-[Poppins] px-4 py-2 rounded-lg font-medium text-[17.45px] leading-[100%] tracking-[0px] text-[#221E1B] bg-[#E4C587] flex items-center gap-2"
           >
-            Next →
+            Next
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-move-right-icon lucide-move-right"
+            >
+              <path d="M18 8L22 12L18 16" />
+              <path d="M2 12H22" />
+            </svg>
           </button>
         </div>
       </div>
@@ -3302,7 +3363,7 @@
               Tailored For You
             </div>
 
-            <h2 class="text-xl sm:text-[34px] font-semibold leading-tight mt-1">
+            <h2 class="text-xl sm:text-[34px] font-semibold leading-tight mt-2">
               Custom Size Studio
             </h2>
           </div>
