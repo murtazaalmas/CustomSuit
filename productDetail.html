@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Suit</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Abril+Fatface&family=Inter:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -41,11 +44,11 @@
       </div>
 
       <!-- Header -->
-      <header class="px-4 md:px-10 md:bg-[#D9D9D9]/20">
+      <header class="px-4 md:px-10 md:bg-[#fff]/70">
         <div class="grid grid-cols-3 items-center">
           <!-- Menu -->
           <div>
-            <button id="menuBtn" class="text-white text-xl md:text-2xl">
+            <button id="menuBtn" class="text-black text-xl md:text-2xl">
               <i class="fa-solid fa-bars-staggered"></i>
             </button>
           </div>
@@ -64,8 +67,8 @@
           <!-- Right Side -->
           <div class="flex justify-end items-center gap-3">
             <!-- Desktop Icons ONLY -->
-            <div class="hidden md:flex items-center gap-5 text-white">
-              <a href="#" id="searchBtn">
+            <div class="hidden md:flex items-center gap-5 text-black">
+              <a id="searchBtn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -83,7 +86,7 @@
               </a>
 
               <!-- Wishlist -->
-              <a href="#">
+              <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -142,7 +145,7 @@
             </div>
 
             <!-- MOBILE: Cart + Account ONLY -->
-            <div class="md:hidden flex items-center gap-3 text-white">
+            <div class="md:hidden flex items-center gap-3 text-black">
               <!-- Cart -->
               <a href="checkOut.html">
                 <svg
@@ -189,19 +192,48 @@
 
     <!-- Product Detail -->
     <section>
-      <div class="max-w-7xl mx-auto my-24 lg:my-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 my-24 lg:my-32">
         <!-- dotted line -->
-        <hr
-          class="mx-4 lg:mx-6 my-6 border-0 h-[1px] bg-[repeating-linear-gradient(to_right,#A3A3A3_0_2px,transparent_2px_12px)]"
-        />
-
+        <hr class="my-6 border-t border-dashed border-[#A3A3A3]" />
         <!-- breadcrumb -->
-
         <div
-          class="font-medium text-[14px] lg:text-[16px] text-[#8F8F8F] leading-[160%]"
+          class="font-medium text-[14px] md:text-[16px] text-[#8F8F8F] leading-[160%] flex items-center gap-2"
           style="font-family: &quot;Poppins&quot;, sans-serif"
         >
-          Homepage &gt; Home
+          <span>Homepage</span>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-[#8F8F8F]"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+
+          <span>Casual</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-[#8F8F8F]"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+
+          <span class="text-black">Embroidered suit</span>
         </div>
 
         <div
@@ -257,57 +289,87 @@
           <!-- RIGHT: PRODUCT INFO -->
           <div class="space-y-4 lg:space-y-5 x-4">
             <p
-              class="text-[10px] lg:text-xs uppercase tracking-widest text-gray-500"
+              class="font-[Poppins] font-medium text-[16.9px] leading-[120%] tracking-[0.169px] text-gray-500 align-bottom"
             >
               Embroidered Suit
             </p>
 
-            <h1 class="text-xl lg:text-3xl font-semibold text-gray-900">
+            <h1
+              class="font-[Poppins] font-semibold text-[38.03px] leading-[120%] tracking-[-0.19px] text-gray-900 align-bottom"
+            >
               Shirt - Farshi Shalwar
             </h1>
 
-            <!-- price -->
             <div class="flex items-center justify-between flex-wrap gap-3">
               <!-- Price -->
               <div class="flex items-center gap-3">
-                <span class="line-through text-gray-400 text-sm lg:text-base">
+                <p
+                  class="font-[Poppins] font-medium text-[19.02px] leading-[120%] tracking-[0px] line-through text-gray-400 align-bottom"
+                >
                   RS. 20,000
-                </span>
-                <span class="text-xl lg:text-2xl font-bold text-black">
+                </p>
+
+                <p
+                  class="font-[Poppins] font-semibold text-[29.58px] leading-[120%] tracking-[0] text-black align-bottom"
+                >
                   RS. 16,990
-                </span>
+                </p>
               </div>
 
               <!-- Sold + Rating -->
-              <div
-                class="flex items-center gap-3 text-xs lg:text-sm text-gray-600"
-              >
-                <span>1,238 Sold</span>
+              <div class="flex items-center gap-3">
+                <p
+                  class="font-[Inter] font-normal text-[21.13px] leading-[100%] tracking-[0] text-gray-600 align-bottom"
+                >
+                  1,238 Sold
+                </p>
 
-                <span class="flex items-center gap-1 text-orange-500">
-                  ★ <span class="text-gray-700">4.5</span>
-                </span>
+                <div class="flex items-center gap-1">
+                  <p
+                    class="font-[Poppins] font-semibold text-[25.36px] leading-[100%] tracking-[0px] text-orange-500"
+                  >
+                    ★
+                  </p>
+
+                  <p
+                    class="font-[Poppins] font-semibold text-[25.36px] leading-[100%] tracking-[0] align-bottom"
+                  >
+                    4.5
+                  </p>
+                </div>
               </div>
             </div>
-            <hr class="border-gray-300" />
+            <hr class="my-6 border-t border-dashed border-[#A3A3A3]" />
 
             <!-- description -->
             <div>
-              <h3 class="font-semibold text-gray-800">Description:</h3>
-              <p class="text-xs lg:text-sm text-gray-600 mt-2 leading-relaxed">
+              <h3
+                class="font-[Raleway] font-bold text-[21.13px] leading-[120%] tracking-[0] text-gray-800 align-bottom"
+              >
+                Description:
+              </h3>
+              <p
+                class="font-[Inter] font-normal text-[16.9px] leading-[130%] tracking-[0] text-gray-600 mt-2 align-bottom"
+              >
                 Experience understated elegance in this soft pale orange
                 embroidered suit, featuring delicate paisley motifs and a unique
-                cut-out neckline...
-                <span class="text-black font-medium cursor-pointer"
-                  >See More</span
-                >
+                cut-out neckline. The shirt is finished with an intricate
+                scalloped hem, perfectly paired with cream-colored shalwar that
+                boast a colorful floral embroidered border. A graceful and
+                breezy ensemble ideal for any festive daytime gathering.
+                <span class="text-black font-medium cursor-pointer">
+                  See More
+                </span>
               </p>
             </div>
 
             <!-- color -->
             <div>
-              <p class="text-xs lg:text-sm font-medium text-gray-700 mb-2">
-                Color: Floral Pink
+              <p
+                class="font-[Poppins] text-[21.13px] leading-[120%] tracking-[0] mb-2"
+              >
+                <span class="font-medium text-[#8F8F8F]">Color:</span>
+                <span class="font-semibold text-black">Floral Pink</span>
               </p>
               <div
                 class="w-7 h-7 lg:w-16 lg:h-8 p-1 border border-black rounded"
@@ -319,31 +381,42 @@
             <!-- size -->
             <div>
               <div class="flex items-center justify-between">
-                <p class="text-xs lg:text-sm font-medium text-gray-700">
-                  Size: M
-                </p>
-                <a href="#" class="text-xs lg:text-sm text-gray-500 underline"
-                  >View Size Chart</a
+                <p
+                  class="font-[Poppins] text-[21.13px] leading-[120%] tracking-[0] mb-2"
                 >
+                  <span class="font-medium text-[#8F8F8F]">Size:</span>
+                  <span class="font-semibold text-black">M</span>
+                </p>
+                <a
+                  class="font-[Poppins] font-medium text-[16.9px] leading-[120%] tracking-[0] text-right text-gray-500 underline align-bottom"
+                >
+                  View Size Chart
+                </a>
               </div>
 
               <div class="flex flex-wrap gap-2 mt-3">
-                <button class="px-3 lg:px-4 py-2 border rounded-md text-sm">
+                <button
+                  class="px-4 lg:px-6 py-2 border rounded-md font-[Poppins] font-semibold text-[21.13px] leading-[120%] tracking-[0] align-middle"
+                >
                   S
                 </button>
                 <button
-                  class="px-3 lg:px-4 py-2 border rounded-md bg-black text-white text-sm"
+                  class="px-4 lg:px-6 py-2 border rounded-md font-[Poppins] font-semibold text-[21.13px] leading-[120%] tracking-[0] align-middle bg-[#EBEBEB] text-black"
                 >
                   M
                 </button>
-                <button class="px-3 lg:px-4 py-2 border rounded-md text-sm">
+                <button
+                  class="px-4 lg:px-6 py-2 border rounded-md font-[Poppins] font-semibold text-[21.13px] leading-[120%] tracking-[0] align-middle"
+                >
                   L
                 </button>
-                <button class="px-3 lg:px-4 py-2 border rounded-md text-sm">
+                <button
+                  class="px-4 lg:px-6 py-2 border rounded-md font-[Poppins] font-semibold text-[21.13px] leading-[120%] tracking-[0] align-middle"
+                >
                   XL
                 </button>
                 <button
-                  class="px-3 lg:px-4 py-2 bg-yellow-500 text-white rounded-md text-sm"
+                  class="px-4 lg:px-6 py-2 bg-[#C0A96E] text-white rounded-md font-[Poppins] font-semibold text-[21.13px] leading-[120%] tracking-[0] align-middle"
                 >
                   Custom Size
                 </button>
@@ -353,16 +426,20 @@
             <!-- buttons -->
             <div class="flex flex-col sm:flex-row gap-3 pt-4">
               <button
-                class="w-full bg-black text-white py-3 rounded-lg font-medium"
+                class="w-full bg-black text-white py-3 rounded-lg font-[Poppins] font-semibold text-[21.13px] leading-[120%] tracking-[0] align-bottom"
               >
                 Add To Cart
               </button>
-              <button class="w-full border py-3 rounded-lg font-medium">
+              <button
+                class="w-full border py-3 rounded-lg font-[Poppins] font-medium text-[21.13px] leading-[120%] tracking-[0]"
+              >
                 Checkout Now
               </button>
             </div>
 
-            <p class="text-xs text-gray-400 underline cursor-pointer">
+            <p
+              class="font-[Poppins] font-medium text-[16.9px] leading-[120%] tracking-[0] text-gray-400 underline cursor-pointer"
+            >
               Delivery T&C
             </p>
           </div>
@@ -372,13 +449,13 @@
 
     <!-- Product Reviews -->
     <section>
-      <div class="max-w-7xl mx-auto bg-white px-4 sm:px-6 lg:px-0">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <!-- Heading -->
         <div
           class="my-6 sm:my-8 text-center flex flex-col items-start sm:items-start"
         >
           <h2
-            class="mt-2 font-['Abril_Fatface'] text-[28px] sm:text-[40px] lg:text-[50px] font-normal text-[#221E1B] leading-[100%]"
+            class="mt-2 font-['Abril_Fatface'] text-[50.46px] font-normal text-[#221E1B] leading-[100%] tracking-[0]"
           >
             Product Reviews
           </h2>
@@ -392,162 +469,627 @@
             <!-- Overall Rating -->
             <div class="flex items-center gap-4 min-w-[180px]">
               <div
-                class="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-orange-400 flex items-center justify-center font-semibold text-gray-800"
+                class="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center relative font-[Clash_Grotesk] font-semibold text-[20px] leading-[140%] tracking-[0] text-gray-800"
               >
-                4.5
+                <div
+                  class="absolute inset-0 rounded-full"
+                  style="
+                    background: conic-gradient(
+                      #d1d5db 0% 20%,
+                      #f97316 20% 100%
+                    );
+                  "
+                ></div>
+
+                <div
+                  class="absolute inset-[3px] bg-white rounded-full flex items-center justify-center z-10"
+                >
+                  4.5
+                </div>
               </div>
 
               <div>
-                <div class="flex text-orange-400 text-sm mb-1">★★★★★</div>
-                <p class="text-xs text-gray-500">from 125k reviews</p>
+                <div class="flex text-[#FFA439] text-sm mb-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="font-[Poppins] font-normal text-[16px] leading-[160%] tracking-[0] text-gray-500"
+                >
+                  from 125k reviews
+                </p>
               </div>
             </div>
 
             <!-- Rating Bars -->
             <div class="flex-1 space-y-3">
               <div class="flex items-center gap-2 sm:gap-3">
-                <span class="w-8 text-xs">5.0 ★</span>
+                <span
+                  class="inline-flex items-center gap-1 font-[Poppins] font-medium text-[16px] leading-[160%] text-gray-800"
+                >
+                  5.0
+                  <span class="text-[#FFA439]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-star-icon lucide-star"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      />
+                    </svg>
+                  </span>
+                </span>
                 <div class="flex-1 h-1.5 bg-gray-200 rounded-full">
                   <div class="h-full w-[85%] bg-gray-700 rounded-full"></div>
                 </div>
-                <span class="text-xs">2823</span>
+                <span
+                  class="font-[Poppins] font-medium text-[16px] leading-[160%] tracking-[0] text-gray-800"
+                  >2823</span
+                >
               </div>
 
               <div class="flex items-center gap-2 sm:gap-3">
-                <span class="w-8 text-xs">4.0 ★</span>
+                <span
+                  class="inline-flex items-center gap-1 font-[Poppins] font-medium text-[16px] leading-[160%] text-gray-800"
+                >
+                  4.0
+                  <span class="text-[#FFA439]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-star-icon lucide-star"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      />
+                    </svg>
+                  </span>
+                </span>
                 <div class="flex-1 h-1.5 bg-gray-200 rounded-full">
                   <div class="h-full w-[48%] bg-gray-700 rounded-full"></div>
                 </div>
-                <span class="text-xs">38</span>
+                <span
+                  class="font-[Poppins] font-medium text-[16px] leading-[160%] tracking-[0] text-gray-800"
+                  >38</span
+                >
               </div>
 
               <div class="flex items-center gap-2 sm:gap-3">
-                <span class="w-8 text-xs">3.0 ★</span>
+                <span
+                  class="inline-flex items-center gap-1 font-[Poppins] font-medium text-[16px] leading-[160%] text-gray-800"
+                >
+                  3.0
+                  <span class="text-[#FFA439]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-star-icon lucide-star"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      />
+                    </svg>
+                  </span>
+                </span>
                 <div class="flex-1 h-1.5 bg-gray-200 rounded-full">
                   <div class="h-full w-[15%] bg-gray-700 rounded-full"></div>
                 </div>
-                <span class="text-xs">4</span>
+                <span
+                  class="font-[Poppins] font-medium text-[16px] leading-[160%] tracking-[0] text-gray-800"
+                  >4</span
+                >
               </div>
 
               <div class="flex items-center gap-2 sm:gap-3">
-                <span class="w-8 text-xs">2.0 ★</span>
+                <span
+                  class="inline-flex items-center gap-1 font-[Poppins] font-medium text-[16px] leading-[160%] text-gray-800"
+                >
+                  2.0
+                  <span class="text-[#FFA439]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-star-icon lucide-star"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      />
+                    </svg>
+                  </span>
+                </span>
                 <div class="flex-1 h-1.5 bg-gray-200 rounded-full"></div>
-                <span class="text-xs">0</span>
+                <span
+                  class="font-[Poppins] font-medium text-[16px] leading-[160%] tracking-[0] text-gray-800"
+                  >0</span
+                >
               </div>
 
               <div class="flex items-center gap-2 sm:gap-3">
-                <span class="w-8 text-xs">1.0 ★</span>
+                <span
+                  class="inline-flex items-center gap-1 font-[Poppins] font-medium text-[16px] leading-[160%] text-gray-800"
+                >
+                  1.0
+                  <span class="text-[#FFA439]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-star-icon lucide-star"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      />
+                    </svg>
+                  </span>
+                </span>
                 <div class="flex-1 h-1.5 bg-gray-200 rounded-full"></div>
-                <span class="text-xs">0</span>
+                <span
+                  class="font-[Poppins] font-medium text-[16px] leading-[160%] tracking-[0] text-gray-800"
+                  >0</span
+                >
               </div>
             </div>
           </div>
         </div>
 
         <!-- Reviews Section -->
-        <div
-          class="grid grid-cols-1 lg:grid-cols-4 border border-dashed border-gray-300 rounded-lg overflow-hidden"
-        >
+        <div class="grid grid-cols-1 lg:grid-cols-4 rounded-lg overflow-hidden">
           <!-- Sidebar Filter -->
-          <div
-            class="p-4 sm:p-5 border-b lg:border-b-0 lg:border-r border-dashed border-gray-300"
-          >
-            <h3 class="font-semibold text-sm mb-4">Reviews Filter</h3>
-
-            <div class="border-t pt-4">
+          <div class="p-4 sm:p-5 border border-dashed">
+            <h3
+              class="font-[Clash_Grotesk] font-semibold text-[20px] leading-[140%] tracking-[-0.2px] mb-4"
+            >
+              Reviews Filter
+            </h3>
+            <div class="border-t border-b border-dashed py-4 mb-6">
               <div class="flex items-center justify-between mb-3">
-                <span class="font-medium text-xs">Rating</span>
-                <span>⌃</span>
+                <span
+                  class="font-[Clash_Grotesk] font-semibold text-[16px] leading-[140%] tracking-[-0.2px] text-gray-800"
+                >
+                  Rating
+                </span>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-up-icon lucide-chevron-up"
+                  >
+                    <path d="m18 15-6-6-6 6" />
+                  </svg>
+                </span>
               </div>
 
               <div class="space-y-3 text-sm">
                 <label class="flex items-center gap-2">
                   <input type="checkbox" />
-                  <span class="text-orange-400">★ 5</span>
+                  <span
+                    class="inline-flex items-center gap-1 font-[Clash_Grotesk] font-semibold text-[16px] leading-[160%] tracking-[0]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#FFA439"
+                      stroke="#FFA439"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      />
+                    </svg>
+
+                    <span class="text-[#818B9C]"> 5 </span>
+                  </span>
                 </label>
 
                 <label class="flex items-center gap-2">
                   <input type="checkbox" />
-                  <span class="text-orange-400">★ 4</span>
-                </label>
+                  <span
+                    class="inline-flex items-center gap-1 font-[Clash_Grotesk] font-semibold text-[16px] leading-[160%] tracking-[0]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#FFA439"
+                      stroke="#FFA439"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      />
+                    </svg>
 
+                    <span class="text-[#818B9C]"> 4 </span>
+                  </span>
+                </label>
                 <label class="flex items-center gap-2">
                   <input type="checkbox" />
-                  <span class="text-orange-400">★ 3</span>
-                </label>
+                  <span
+                    class="inline-flex items-center gap-1 font-[Clash_Grotesk] font-semibold text-[16px] leading-[160%] tracking-[0]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#FFA439"
+                      stroke="#FFA439"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      />
+                    </svg>
 
+                    <span class="text-[#818B9C]"> 3 </span>
+                  </span>
+                </label>
                 <label class="flex items-center gap-2">
                   <input type="checkbox" />
-                  <span class="text-orange-400">★ 2</span>
-                </label>
+                  <span
+                    class="inline-flex items-center gap-1 font-[Clash_Grotesk] font-semibold text-[16px] leading-[160%] tracking-[0]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#FFA439"
+                      stroke="#FFA439"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      />
+                    </svg>
 
+                    <span class="text-[#818B9C]"> 2 </span>
+                  </span>
+                </label>
                 <label class="flex items-center gap-2">
                   <input type="checkbox" />
-                  <span class="text-orange-400">★ 1</span>
+                  <span
+                    class="inline-flex items-center gap-1 font-[Clash_Grotesk] font-semibold text-[16px] leading-[160%] tracking-[0]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#FFA439"
+                      stroke="#FFA439"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      />
+                    </svg>
+
+                    <span class="text-[#818B9C]"> 1 </span>
+                  </span>
                 </label>
               </div>
             </div>
           </div>
 
           <!-- Reviews Content -->
-          <div class="lg:col-span-3 p-4 sm:p-5">
-            <h3 class="font-semibold mb-4">Review Lists</h3>
-
+          <div class="lg:col-span-3 px-6 space-y-6">
+            <h3
+              class="font-[Clash_Grotesk] font-semibold text-[20px] leading-[140%] tracking-[-0.2px]"
+            >
+              Review Lists
+            </h3>
             <!-- Filter Buttons -->
-            <div class="flex flex-wrap gap-2 mb-6">
+            <div class="flex flex-wrap gap-2">
               <button
-                class="px-3 sm:px-4 py-2 text-xs border border-gray-300 rounded-md bg-gray-100"
+                class="px-3 sm:px-4 py-2 font-[Poppins] font-medium text-[14px] leading-[160%] tracking-[0px] border border-black rounded-md bg-[#EBEBEB] text-[#141414]"
               >
                 All Reviews
               </button>
 
               <button
-                class="px-3 sm:px-4 py-2 text-xs border border-gray-300 rounded-md"
+                class="px-3 sm:px-4 py-2 font-[Poppins] font-medium text-[14px] leading-[160%] tracking-[0px] border border-[#E6E6E6] rounded-md text-[#141414]"
               >
                 With Photo & Video
               </button>
 
               <button
-                class="px-3 sm:px-4 py-2 text-xs border border-gray-300 rounded-md"
+                class="px-3 sm:px-4 py-2 font-[Poppins] font-medium text-[14px] leading-[160%] tracking-[0px] border border-[#E6E6E6] rounded-md text-[#141414]"
               >
                 With Description
               </button>
             </div>
 
-            <!-- Review -->
-            <div class="border-b border-dashed border-gray-300 pb-5">
-              <div class="text-orange-400 mb-2">★★★★★</div>
-
-              <h4 class="font-semibold text-sm mb-2">
-                This is amazing product I have.
-              </h4>
-
-              <p class="text-xs text-gray-500 mb-4">April 2, 2026 03:29 PM</p>
-
-              <div
-                class="flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+            <!-- 5 Star -->
+            <div class="flex text-[#FFA439] text-sm mb-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-star-icon lucide-star"
               >
-                <div class="flex items-center gap-3">
-                  <img
-                    src="images/murtaza.jpeg"
-                    class="w-8 h-8 rounded-full object-cover object-top"
-                  />
-                  <span class="text-sm">Murtaza</span>
-                </div>
+                <path
+                  d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-star-icon lucide-star"
+              >
+                <path
+                  d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-star-icon lucide-star"
+              >
+                <path
+                  d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-star-icon lucide-star"
+              >
+                <path
+                  d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-star-icon lucide-star"
+              >
+                <path
+                  d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                />
+              </svg>
+            </div>
 
-                <div class="flex items-center gap-2">
-                  <button
-                    class="flex items-center gap-2 border border-gray-200 rounded-md px-3 py-2 text-xs"
-                  >
-                    👍 128
-                  </button>
+            <h4
+              class="font-[Clash_Grotesk] font-semibold text-[18px] leading-[140%] tracking-[-0.2px]"
+            >
+              This is amazing product I have.
+            </h4>
 
-                  <button
-                    class="border border-gray-200 rounded-md px-3 py-2 text-xs"
+            <p
+              class="font-[Poppins] font-normal text-[16px] leading-[160%] tracking-[0px] text-gray-500 mb-4"
+            >
+              April 2, 2026 03:29 PM
+            </p>
+
+            <!-- Profie -->
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 font-[Poppins] font-medium text-[16px] leading-[160%] tracking-[0px]"
+            >
+              <div class="flex items-center gap-3">
+                <img
+                  src="images/murtaza.jpeg"
+                  class="w-8 h-8 rounded-full object-cover object-top"
+                />
+                <span
+                  class="text-[16px] font-medium leading-[160%] tracking-[0px]"
+                >
+                  Murtaza
+                </span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <button
+                  class="flex items-center gap-2 border border-gray-200 rounded-md px-3 py-2 text-[16px] font-medium leading-[160%] tracking-[0px]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="#141414"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-thumbs-up-icon lucide-thumbs-up"
                   >
-                    👎
-                  </button>
-                </div>
+                    <path
+                      d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"
+                    />
+                    <path d="M7 10v12" />
+                  </svg>
+                  128
+                </button>
+
+                <button
+                  class="border border-gray-200 rounded-md px-3 py-2 text-[16px] font-medium leading-[160%] tracking-[0px]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-thumbs-down-icon lucide-thumbs-down"
+                  >
+                    <path
+                      d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"
+                    />
+                    <path d="M17 14V2" />
+                  </svg>
+                </button>
               </div>
             </div>
 
@@ -558,7 +1100,7 @@
               <input
                 type="text"
                 placeholder="Write review..."
-                class="w-full md:max-w-sm px-4 py-3 bg-gray-100 rounded-lg outline-none text-sm"
+                class="w-full md:max-w-sm px-4 py-3 bg-[#EFEFEF] rounded-lg outline-none text-sm"
               />
 
               <div class="flex flex-wrap items-center gap-2">
@@ -582,7 +1124,20 @@
                 >
                   19
                 </button>
-                <button class="text-lg px-2">›</button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
               </div>
             </div>
           </div>
