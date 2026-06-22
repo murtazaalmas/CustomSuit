@@ -21,7 +21,7 @@
     />
   </head>
 
-  <body>
+  <body class="bg-white">
     <!-- TOP WRAPPER -->
     <div class="fixed top-0 left-0 right-0 z-50">
       <!-- Top Bar -->
@@ -41,11 +41,11 @@
       </div>
 
       <!-- Header -->
-      <header class="px-4 md:px-10 md:bg-[#D9D9D9]/20">
+      <header class="px-4 md:px-10 md:bg-[#ffffff]/70">
         <div class="grid grid-cols-3 items-center">
           <!-- Menu -->
           <div>
-            <button id="menuBtn" class="text-white text-xl md:text-2xl">
+            <button id="menuBtn" class="text-black text-xl md:text-2xl">
               <i class="fa-solid fa-bars-staggered"></i>
             </button>
           </div>
@@ -64,7 +64,7 @@
           <!-- Right Side -->
           <div class="flex justify-end items-center gap-3">
             <!-- Desktop Icons ONLY -->
-            <div class="hidden md:flex items-center gap-5 text-white">
+            <div class="hidden md:flex items-center gap-5 text-black">
               <a href="#" id="searchBtn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -187,17 +187,17 @@
       </header>
     </div>
 
-    <!-- Casual -->
-    <section>
-      <div class="max-w-7xl mx-auto my-32">
-        <hr
-          class="mx-4 lg:mx-6 my-6 border-0 h-[1px] bg-[repeating-linear-gradient(to_right,#A3A3A3_0_2px,transparent_2px_12px)]"
-        />
-        <!-- Header -->
-        <div>
-          <!-- Breadcrumb -->
+    <div class="flex">
+      <!-- ✅ SIDEBAR -->
+      <div
+        id="filterSidebar"
+        class="bg-white h-screen overflow-hidden transition-all duration-300 my-48"
+        style="width: 0px"
+      >
+        <div class="w-[320px] flex flex-col">
+          <!-- Homepage -->
           <div
-            class="px-4 md:px-6 font-medium text-[14px] md:text-[16px] text-[#8F8F8F] leading-[160%] flex items-center gap-2"
+            class="px-4 md:px-6 flex items-center gap-2 text-[#8F8F8F] font-medium text-[14px] md:text-[16px] leading-[160%]"
             style="font-family: &quot;Poppins&quot;, sans-serif"
           >
             <span>Homepage</span>
@@ -219,1074 +219,1121 @@
 
             <span>Home</span>
           </div>
-
           <!-- Title -->
-          <div class="my-6 md:my-8 px-4 md:px-6 flex items-end justify-between">
+          <div class="my-6 md:my-8 px-4 flex items-end justify-between">
             <h2
-              class="font-['Abril_Fatface'] text-[34px] md:text-[50px] text-[#221E1B] leading-[100%]"
+              class="font-['Abril_Fatface'] font-normal text-[#221E1B] leading-[100%] text-[34px] md:text-[50.46px]"
             >
               Casual
             </h2>
           </div>
 
-          <!-- Filter + Sort (FORCED ONE ROW) -->
-          <div
-            class="my-6 md:my-8 px-4 md:px-6 flex items-center justify-between gap-4"
+          <!-- Filter -->
+          <button
+            id="closeFilter"
+            class="flex items-center gap-2 p-4 text-[#333333] hover:text-black"
           >
-            <!-- Filter -->
-            <button
-              class="flex items-center gap-2 text-gray-700 hover:text-black"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="align-bottom"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M10 5H3" />
-                <path d="M12 19H3" />
-                <path d="M14 3v4" />
-                <path d="M16 17v4" />
-                <path d="M21 12h-9" />
-                <path d="M21 19h-5" />
-                <path d="M21 5h-7" />
-                <path d="M8 10v4" />
-                <path d="M8 12H3" />
-              </svg>
+              <path d="M10 5H3" />
+              <path d="M12 19H3" />
+              <path d="M14 3v4" />
+              <path d="M16 17v4" />
+              <path d="M21 12h-9" />
+              <path d="M21 19h-5" />
+              <path d="M21 5h-7" />
+              <path d="M8 10v4" />
+              <path d="M8 12H3" />
+            </svg>
 
-              <span
-                class="text-[15px] md:text-[16px] font-medium text-[#333333]"
-                style="font-family: &quot;Poppins&quot;, sans-serif"
-              >
-                Show Filter’s
-              </span>
-            </button>
-
-            <!-- Sort -->
-            <button
-              class="flex items-center gap-2 text-gray-700 hover:text-black"
+            <span
+              class="font-poppins font-medium text-[16px] leading-[120%] tracking-[0px] text-[#333333] align-bottom"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m3 16 4 4 4-4" />
-                <path d="M7 20V4" />
-                <path d="m21 8-4-4-4 4" />
-                <path d="M17 4v16" />
-              </svg>
+              Show Filter’s
+            </span>
+          </button>
 
-              <span
-                class="text-[15px] md:text-[16px] font-medium text-[#333333]"
-                style="font-family: &quot;Poppins&quot;, sans-serif"
-              >
-                Sort
-              </span>
+          <!-- CONTENT -->
+          <div class="flex-1 overflow-y-auto p-4 space-y-6 text-sm">
+            <div class="flex justify-between font-poppins font-light text-[12.49px] leading-[100%] tracking-[0px] text-[#000]">
+              <span>SORT BY</span><span>+</span>
+            </div>
+            <button class="border px-2 py-1 text-xs">FEATURED</button>
+            <button class="border px-2 py-1 text-xs">BEST SELLING</button>
+
+            <div class="flex justify-between font-poppins font-light text-[12.49px] leading-[100%] tracking-[0px] text-[#000]">
+              <span>COLLECTION</span><span>+</span>
+            </div>
+            <div class="flex justify-between font-poppins font-light text-[12.49px] leading-[100%] tracking-[0px] text-[#000]">
+              <span>CATEGORY</span><span>+</span>
+            </div>
+            <div class="flex justify-between font-poppins font-light text-[12.49px] leading-[100%] tracking-[0px] text-[#000]">
+              <span>PRICE</span><span>+</span>
+            </div>
+            <div class="flex justify-between font-poppins font-light text-[12.49px] leading-[100%] tracking-[0px] text-[#000]">
+              <span>SIZE</span><span>+</span>
+            </div>
+            <div class="flex justify-between font-poppins font-light text-[12.49px] leading-[100%] tracking-[0px] text-[#000]">
+              <span>COLOR</span><span>+</span>
+            </div>
+            <div class="flex justify-between font-poppins font-light text-[12.49px] leading-[100%] tracking-[0px] text-[#000]">
+              <span>FABRIC</span><span>+</span>
+            </div>
+            <div class="flex justify-between font-poppins font-light text-[12.49px] leading-[100%] tracking-[0px] text-[#000]">
+              <span>PRODUCT TYPE</span><span>+</span>
+            </div>
+            <div class="flex justify-between font-poppins font-light text-[12.49px] leading-[100%] tracking-[0px] text-[#000]">
+              <span>AVAILABILITY</span><span>+</span>
+            </div>
+            <div class="flex justify-between font-poppins font-light text-[12.49px] leading-[100%] tracking-[0px] text-[#000]">
+              <span>SEASON</span><span>+</span>
+            </div>
+            <div class="flex justify-between font-poppins font-light text-[12.49px] leading-[100%] tracking-[0px] text-[#000]">
+              <span>PIECE</span><span>+</span>
+            </div>
+          </div>
+
+          <!-- FOOTER -->
+          <div class="flex border-t">
+            <button class="w-1/2 bg-gray-200 py-3 text-sm">RESET</button>
+            <button class="w-1/2 bg-[#b89b5e] text-white py-3 text-sm">
+              APPLY
             </button>
-          </div>
-        </div>
-
-        <!-- Grid -->
-        <div
-          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-[25px] bg-[linear-gradient(135deg,_#FFFFFF_0%,_#EBEBEB_100%)] p-2 md:p-0"
-        >
-          <!-- CARD 1 -->
-          <div class="bg-white p-2 md:p-4">
-            <div class="overflow-hidden rounded-lg">
-              <img
-                src="images/product1.png"
-                class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
-              />
-            </div>
-
-            <div class="mt-2 md:mt-3">
-              <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
-                Bridal
-              </p>
-
-              <h3
-                class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
-              >
-                Camel Chikankari
-              </h3>
-
-              <div
-                class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
-              >
-                <span class="text-[#FCA120]">★★★★★</span>
-                <span class="text-[#C4C4C4]">(24)</span>
-              </div>
-
-              <div
-                class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
-              >
-                <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
-                  >Rs. 16,000</span
-                >
-                <span
-                  class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
-                  >20% OFF</span
-                >
-              </div>
-
-              <div class="mt-2 flex flex-wrap gap-1">
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XS
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  S
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  M
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  L
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XL
-                </button>
-                <button
-                  class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
-                >
-                  CUSTOM
-                </button>
-              </div>
-
-              <p
-                class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-scissors-icon lucide-scissors"
-                >
-                  <circle cx="6" cy="6" r="3" />
-                  <path d="M8.12 8.12 12 12" />
-                  <path d="M20 4 8.12 15.88" />
-                  <circle cx="6" cy="18" r="3" />
-                  <path d="M14.8 14.8 20 20" />
-                </svg>
-                Tailored for you
-              </p>
-
-              <a
-                href="checkOut.html"
-                class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md rounded-md"
-              >
-                ADD TO BAG
-              </a>
-            </div>
-          </div>
-
-          <!-- CARD 2 -->
-          <div class="bg-white p-2 md:p-4">
-            <div class="overflow-hidden rounded-lg">
-              <img
-                src="images/product2.png"
-                class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
-              />
-            </div>
-
-            <div class="mt-2 md:mt-3">
-              <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
-                Bridal
-              </p>
-
-              <h3
-                class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
-              >
-                Camel Chikankari
-              </h3>
-
-              <div
-                class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
-              >
-                <span class="text-[#FCA120]">★★★★★</span>
-                <span class="text-[#C4C4C4]">(24)</span>
-              </div>
-
-              <div
-                class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
-              >
-                <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
-                  >Rs. 16,000</span
-                >
-                <span
-                  class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
-                  >20% OFF</span
-                >
-              </div>
-
-              <div class="mt-2 flex flex-wrap gap-1">
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XS
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  S
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  M
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  L
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XL
-                </button>
-                <button
-                  class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
-                >
-                  CUSTOM
-                </button>
-              </div>
-
-              <p
-                class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-scissors-icon lucide-scissors"
-                >
-                  <circle cx="6" cy="6" r="3" />
-                  <path d="M8.12 8.12 12 12" />
-                  <path d="M20 4 8.12 15.88" />
-                  <circle cx="6" cy="18" r="3" />
-                  <path d="M14.8 14.8 20 20" />
-                </svg>
-                Tailored for you
-              </p>
-
-              <a
-                href="checkOut.html"
-                class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
-              >
-                ADD TO BAG
-              </a>
-            </div>
-          </div>
-
-          <!-- CARD 3 -->
-          <div class="bg-white p-2 md:p-4">
-            <div class="overflow-hidden rounded-lg">
-              <img
-                src="images/product3.png"
-                class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
-              />
-            </div>
-
-            <div class="mt-2 md:mt-3">
-              <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
-                Bridal
-              </p>
-
-              <h3
-                class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
-              >
-                Camel Chikankari
-              </h3>
-
-              <div
-                class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
-              >
-                <span class="text-[#FCA120]">★★★★★</span>
-                <span class="text-[#C4C4C4]">(24)</span>
-              </div>
-
-              <div
-                class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
-              >
-                <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
-                  >Rs. 16,000</span
-                >
-                <span
-                  class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
-                  >20% OFF</span
-                >
-              </div>
-
-              <div class="mt-2 flex flex-wrap gap-1">
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XS
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  S
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  M
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  L
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XL
-                </button>
-                <button
-                  class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
-                >
-                  CUSTOM
-                </button>
-              </div>
-
-              <p
-                class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-scissors-icon lucide-scissors"
-                >
-                  <circle cx="6" cy="6" r="3" />
-                  <path d="M8.12 8.12 12 12" />
-                  <path d="M20 4 8.12 15.88" />
-                  <circle cx="6" cy="18" r="3" />
-                  <path d="M14.8 14.8 20 20" />
-                </svg>
-                Tailored for you
-              </p>
-
-              <a
-                href="checkOut.html"
-                class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
-              >
-                ADD TO BAG
-              </a>
-            </div>
-          </div>
-
-          <!-- CARD 4 -->
-          <div class="bg-white p-2 md:p-4">
-            <div class="overflow-hidden rounded-lg">
-              <img
-                src="images/product4.png"
-                class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
-              />
-            </div>
-
-            <div class="mt-2 md:mt-3">
-              <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
-                Bridal
-              </p>
-
-              <h3
-                class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
-              >
-                Camel Chikankari
-              </h3>
-
-              <div
-                class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
-              >
-                <span class="text-[#FCA120]">★★★★★</span>
-                <span class="text-[#C4C4C4]">(24)</span>
-              </div>
-
-              <div
-                class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
-              >
-                <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
-                  >Rs. 16,000</span
-                >
-                <span
-                  class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
-                  >20% OFF</span
-                >
-              </div>
-
-              <div class="mt-2 flex flex-wrap gap-1">
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XS
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  S
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  M
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  L
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XL
-                </button>
-                <button
-                  class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
-                >
-                  CUSTOM
-                </button>
-              </div>
-
-              <p
-                class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-scissors-icon lucide-scissors"
-                >
-                  <circle cx="6" cy="6" r="3" />
-                  <path d="M8.12 8.12 12 12" />
-                  <path d="M20 4 8.12 15.88" />
-                  <circle cx="6" cy="18" r="3" />
-                  <path d="M14.8 14.8 20 20" />
-                </svg>
-                Tailored for you
-              </p>
-
-              <a
-                href="checkOut.html"
-                class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
-              >
-                ADD TO BAG
-              </a>
-            </div>
-          </div>
-
-          <!-- CARD 5 -->
-          <div class="bg-white p-2 md:p-4">
-            <div class="overflow-hidden rounded-lg">
-              <img
-                src="images/product5.png"
-                class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
-              />
-            </div>
-
-            <div class="mt-2 md:mt-3">
-              <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
-                Bridal
-              </p>
-
-              <h3
-                class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
-              >
-                Camel Chikankari
-              </h3>
-
-              <div
-                class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
-              >
-                <span class="text-[#FCA120]">★★★★★</span>
-                <span class="text-[#C4C4C4]">(24)</span>
-              </div>
-
-              <div
-                class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
-              >
-                <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
-                  >Rs. 16,000</span
-                >
-                <span
-                  class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
-                  >20% OFF</span
-                >
-              </div>
-
-              <div class="mt-2 flex flex-wrap gap-1">
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XS
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  S
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  M
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  L
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XL
-                </button>
-                <button
-                  class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
-                >
-                  CUSTOM
-                </button>
-              </div>
-
-              <p
-                class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-scissors-icon lucide-scissors"
-                >
-                  <circle cx="6" cy="6" r="3" />
-                  <path d="M8.12 8.12 12 12" />
-                  <path d="M20 4 8.12 15.88" />
-                  <circle cx="6" cy="18" r="3" />
-                  <path d="M14.8 14.8 20 20" />
-                </svg>
-                Tailored for you
-              </p>
-
-              <a
-                href="checkOut.html"
-                class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
-              >
-                ADD TO BAG
-              </a>
-            </div>
-          </div>
-
-          <!-- CARD 6 -->
-          <div class="bg-white p-2 md:p-4">
-            <div class="overflow-hidden rounded-lg">
-              <img
-                src="images/product6.png"
-                class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
-              />
-            </div>
-
-            <div class="mt-2 md:mt-3">
-              <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
-                Bridal
-              </p>
-
-              <h3
-                class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
-              >
-                Camel Chikankari
-              </h3>
-
-              <div
-                class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
-              >
-                <span class="text-[#FCA120]">★★★★★</span>
-                <span class="text-[#C4C4C4]">(24)</span>
-              </div>
-
-              <div
-                class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
-              >
-                <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
-                  >Rs. 16,000</span
-                >
-                <span
-                  class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
-                  >20% OFF</span
-                >
-              </div>
-
-              <div class="mt-2 flex flex-wrap gap-1">
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XS
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  S
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  M
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  L
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XL
-                </button>
-                <button
-                  class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
-                >
-                  CUSTOM
-                </button>
-              </div>
-
-              <p
-                class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-scissors-icon lucide-scissors"
-                >
-                  <circle cx="6" cy="6" r="3" />
-                  <path d="M8.12 8.12 12 12" />
-                  <path d="M20 4 8.12 15.88" />
-                  <circle cx="6" cy="18" r="3" />
-                  <path d="M14.8 14.8 20 20" />
-                </svg>
-                Tailored for you
-              </p>
-
-              <a
-                href="checkOut.html"
-                class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
-              >
-                ADD TO BAG
-              </a>
-            </div>
-          </div>
-
-          <!-- CARD 7 -->
-          <div class="bg-white p-2 md:p-4">
-            <div class="overflow-hidden rounded-lg">
-              <img
-                src="images/product7.png"
-                class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
-              />
-            </div>
-
-            <div class="mt-2 md:mt-3">
-              <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
-                Bridal
-              </p>
-
-              <h3
-                class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
-              >
-                Camel Chikankari
-              </h3>
-
-              <div
-                class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
-              >
-                <span class="text-[#FCA120]">★★★★★</span>
-                <span class="text-[#C4C4C4]">(24)</span>
-              </div>
-
-              <div
-                class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
-              >
-                <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
-                  >Rs. 16,000</span
-                >
-                <span
-                  class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
-                  >20% OFF</span
-                >
-              </div>
-
-              <div class="mt-2 flex flex-wrap gap-1">
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XS
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  S
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  M
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  L
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XL
-                </button>
-                <button
-                  class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
-                >
-                  CUSTOM
-                </button>
-              </div>
-
-              <p
-                class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-scissors-icon lucide-scissors"
-                >
-                  <circle cx="6" cy="6" r="3" />
-                  <path d="M8.12 8.12 12 12" />
-                  <path d="M20 4 8.12 15.88" />
-                  <circle cx="6" cy="18" r="3" />
-                  <path d="M14.8 14.8 20 20" />
-                </svg>
-                Tailored for you
-              </p>
-
-              <a
-                href="checkOut.html"
-                class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
-              >
-                ADD TO BAG
-              </a>
-            </div>
-          </div>
-
-          <!-- CARD 8 -->
-          <div class="bg-white p-2 md:p-4">
-            <div class="overflow-hidden rounded-lg">
-              <img
-                src="images/product8.png"
-                class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
-              />
-            </div>
-
-            <div class="mt-2 md:mt-3">
-              <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
-                Bridal
-              </p>
-
-              <h3
-                class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
-              >
-                Camel Chikankari
-              </h3>
-
-              <div
-                class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
-              >
-                <span class="text-[#FCA120]">★★★★★</span>
-                <span class="text-[#C4C4C4]">(24)</span>
-              </div>
-
-              <div
-                class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
-              >
-                <span class="font-semibold text-[#484848]">Rs. 12,400</span>
-                <span class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
-                  >Rs. 16,000</span
-                >
-                <span
-                  class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
-                  >20% OFF</span
-                >
-              </div>
-
-              <div class="mt-2 flex flex-wrap gap-1">
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XS
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  S
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  M
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  L
-                </button>
-                <button class="border px-1.5 py-0.5 text-[9px] md:text-[10px]">
-                  XL
-                </button>
-                <button
-                  class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
-                >
-                  CUSTOM
-                </button>
-              </div>
-
-              <p
-                class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-scissors-icon lucide-scissors"
-                >
-                  <circle cx="6" cy="6" r="3" />
-                  <path d="M8.12 8.12 12 12" />
-                  <path d="M20 4 8.12 15.88" />
-                  <circle cx="6" cy="18" r="3" />
-                  <path d="M14.8 14.8 20 20" />
-                </svg>
-                Tailored for you
-              </p>
-
-              <a
-                href="checkOut.html"
-                class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
-              >
-                ADD TO BAG
-              </a>
-            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#F8F8F8] py-10 sm:py-16 px-4 sm:px-6 lg:px-0">
-      <div class="max-w-7xl mx-auto">
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-10 lg:gap-2"
-        >
-          <!-- Brand -->
-          <div class="lg:col-span-2">
-            <img
-              src="images/logo.png"
-              alt="Logo"
-              class="w-14 h-14 sm:w-16 sm:h-16 mb-4"
+      <!-- ✅ MAIN CONTENT -->
+      <div id="mainContent" class="flex-1 transition-all duration-300">
+        <!-- Casual -->
+        <section>
+          <div class="mx-auto my-32">
+            <hr
+              class="mx-4 lg:mx-6 my-6 border-0 h-[1px] bg-[repeating-linear-gradient(to_right,#A3A3A3_0_2px,transparent_2px_12px)]"
             />
+            <!-- Header -->
+            <div id="collectionHeader">
+              <!-- Breadcrumb -->
+              <div
+                id="breadcrumb"
+                class="px-4 md:px-6 font-medium text-[14px] md:text-[16px] text-[#8F8F8F] leading-[160%] flex items-center gap-2"
+                style="font-family: &quot;Poppins&quot;, sans-serif"
+              >
+                <span>Homepage</span>
 
-            <p
-              class="text-sm sm:text-[15px] text-[#6B7280] max-w-full sm:max-w-[280px]"
-              style="font-family: &quot;Inter&quot;, sans-serif"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-[#8F8F8F]"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+
+                <span>Home</span>
+              </div>
+
+              <!-- Title -->
+              <div
+                id="collectionTitle"
+                class="my-6 md:my-8 px-4 md:px-6 flex items-end justify-between"
+              >
+                <h2
+                  class="font-['Abril_Fatface'] text-[34px] md:text-[50px] text-[#221E1B] leading-[100%]"
+                >
+                  Casual
+                </h2>
+              </div>
+
+              <!-- Filter + Sort (FORCED ONE ROW) -->
+              <div
+                class="my-6 md:my-8 px-4 md:px-6 flex items-center justify-between gap-4"
+              >
+                <!-- Filter -->
+                <button
+                  id="openFilter"
+                  class="flex items-center gap-2 text-gray-700 hover:text-black"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M10 5H3" />
+                    <path d="M12 19H3" />
+                    <path d="M14 3v4" />
+                    <path d="M16 17v4" />
+                    <path d="M21 12h-9" />
+                    <path d="M21 19h-5" />
+                    <path d="M21 5h-7" />
+                    <path d="M8 10v4" />
+                    <path d="M8 12H3" />
+                  </svg>
+
+                  <span
+                    class="text-[15px] md:text-[16px] font-medium text-[#333333]"
+                    style="font-family: &quot;Poppins&quot;, sans-serif"
+                  >
+                    Show Filter’s
+                  </span>
+                </button>
+
+                <!-- Sort -->
+                <button
+                  id="sortBtn"
+                  class="flex items-center gap-2 text-gray-700 hover:text-black"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m3 16 4 4 4-4" />
+                    <path d="M7 20V4" />
+                    <path d="m21 8-4-4-4 4" />
+                    <path d="M17 4v16" />
+                  </svg>
+
+                  <span
+                    class="text-[15px] md:text-[16px] font-medium text-[#333333]"
+                    style="font-family: &quot;Poppins&quot;, sans-serif"
+                  >
+                    Sort
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Grid -->
+            <div
+              class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-[25px] bg-[linear-gradient(135deg,_#FFFFFF_0%,_#EBEBEB_100%)] p-2 md:p-0"
             >
-              Luxury fashion with the art of bespoke tailoring. Crafted for the
-              discerning few.
-            </p>
+              <!-- CARD 1 -->
+              <div class="bg-white p-2 md:p-4">
+                <div class="overflow-hidden rounded-lg">
+                  <img
+                    src="images/product1.png"
+                    class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
+                  />
+                </div>
 
-            <!-- Social Icons -->
-            <div class="flex items-center gap-3 mt-6 sm:mt-8">
-              <a
-                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
-              >
-                <i class="fa-brands fa-instagram"></i>
-              </a>
+                <div class="mt-2 md:mt-3">
+                  <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
+                    Bridal
+                  </p>
 
-              <a
-                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
-              >
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
+                  <h3
+                    class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
+                  >
+                    Camel Chikankari
+                  </h3>
 
-              <a
-                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
-              >
-                <i class="fa-brands fa-twitter"></i>
-              </a>
+                  <div
+                    class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
+                  >
+                    <span class="text-[#FCA120]">★★★★★</span>
+                    <span class="text-[#C4C4C4]">(24)</span>
+                  </div>
 
-              <a
-                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#6A7282] rounded-full text-[#6A7282] hover:text-black hover:border-black transition"
-              >
-                <i class="fa-brands fa-youtube"></i>
-              </a>
+                  <div
+                    class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
+                  >
+                    <span class="font-semibold text-[#484848]">Rs. 12,400</span>
+                    <span
+                      class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
+                      >Rs. 16,000</span
+                    >
+                    <span
+                      class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
+                      >20% OFF</span
+                    >
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap gap-1">
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XS
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      S
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      M
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      L
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XL
+                    </button>
+                    <button
+                      class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
+                    >
+                      CUSTOM
+                    </button>
+                  </div>
+
+                  <p
+                    class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-scissors-icon lucide-scissors"
+                    >
+                      <circle cx="6" cy="6" r="3" />
+                      <path d="M8.12 8.12 12 12" />
+                      <path d="M20 4 8.12 15.88" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M14.8 14.8 20 20" />
+                    </svg>
+                    Tailored for you
+                  </p>
+
+                  <a
+                    href="checkOut.html"
+                    class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md rounded-md"
+                  >
+                    ADD TO BAG
+                  </a>
+                </div>
+              </div>
+
+              <!-- CARD 2 -->
+              <div class="bg-white p-2 md:p-4">
+                <div class="overflow-hidden rounded-lg">
+                  <img
+                    src="images/product2.png"
+                    class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
+                  />
+                </div>
+
+                <div class="mt-2 md:mt-3">
+                  <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
+                    Bridal
+                  </p>
+
+                  <h3
+                    class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
+                  >
+                    Camel Chikankari
+                  </h3>
+
+                  <div
+                    class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
+                  >
+                    <span class="text-[#FCA120]">★★★★★</span>
+                    <span class="text-[#C4C4C4]">(24)</span>
+                  </div>
+
+                  <div
+                    class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
+                  >
+                    <span class="font-semibold text-[#484848]">Rs. 12,400</span>
+                    <span
+                      class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
+                      >Rs. 16,000</span
+                    >
+                    <span
+                      class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
+                      >20% OFF</span
+                    >
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap gap-1">
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XS
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      S
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      M
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      L
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XL
+                    </button>
+                    <button
+                      class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
+                    >
+                      CUSTOM
+                    </button>
+                  </div>
+
+                  <p
+                    class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-scissors-icon lucide-scissors"
+                    >
+                      <circle cx="6" cy="6" r="3" />
+                      <path d="M8.12 8.12 12 12" />
+                      <path d="M20 4 8.12 15.88" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M14.8 14.8 20 20" />
+                    </svg>
+                    Tailored for you
+                  </p>
+
+                  <a
+                    href="checkOut.html"
+                    class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
+                  >
+                    ADD TO BAG
+                  </a>
+                </div>
+              </div>
+
+              <!-- CARD 3 -->
+              <div class="bg-white p-2 md:p-4">
+                <div class="overflow-hidden rounded-lg">
+                  <img
+                    src="images/product3.png"
+                    class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
+                  />
+                </div>
+
+                <div class="mt-2 md:mt-3">
+                  <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
+                    Bridal
+                  </p>
+
+                  <h3
+                    class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
+                  >
+                    Camel Chikankari
+                  </h3>
+
+                  <div
+                    class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
+                  >
+                    <span class="text-[#FCA120]">★★★★★</span>
+                    <span class="text-[#C4C4C4]">(24)</span>
+                  </div>
+
+                  <div
+                    class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
+                  >
+                    <span class="font-semibold text-[#484848]">Rs. 12,400</span>
+                    <span
+                      class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
+                      >Rs. 16,000</span
+                    >
+                    <span
+                      class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
+                      >20% OFF</span
+                    >
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap gap-1">
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XS
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      S
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      M
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      L
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XL
+                    </button>
+                    <button
+                      class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
+                    >
+                      CUSTOM
+                    </button>
+                  </div>
+
+                  <p
+                    class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-scissors-icon lucide-scissors"
+                    >
+                      <circle cx="6" cy="6" r="3" />
+                      <path d="M8.12 8.12 12 12" />
+                      <path d="M20 4 8.12 15.88" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M14.8 14.8 20 20" />
+                    </svg>
+                    Tailored for you
+                  </p>
+
+                  <a
+                    href="checkOut.html"
+                    class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
+                  >
+                    ADD TO BAG
+                  </a>
+                </div>
+              </div>
+
+              <!-- CARD 4 -->
+              <div class="bg-white p-2 md:p-4">
+                <div class="overflow-hidden rounded-lg">
+                  <img
+                    src="images/product4.png"
+                    class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
+                  />
+                </div>
+
+                <div class="mt-2 md:mt-3">
+                  <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
+                    Bridal
+                  </p>
+
+                  <h3
+                    class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
+                  >
+                    Camel Chikankari
+                  </h3>
+
+                  <div
+                    class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
+                  >
+                    <span class="text-[#FCA120]">★★★★★</span>
+                    <span class="text-[#C4C4C4]">(24)</span>
+                  </div>
+
+                  <div
+                    class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
+                  >
+                    <span class="font-semibold text-[#484848]">Rs. 12,400</span>
+                    <span
+                      class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
+                      >Rs. 16,000</span
+                    >
+                    <span
+                      class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
+                      >20% OFF</span
+                    >
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap gap-1">
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XS
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      S
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      M
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      L
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XL
+                    </button>
+                    <button
+                      class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
+                    >
+                      CUSTOM
+                    </button>
+                  </div>
+
+                  <p
+                    class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-scissors-icon lucide-scissors"
+                    >
+                      <circle cx="6" cy="6" r="3" />
+                      <path d="M8.12 8.12 12 12" />
+                      <path d="M20 4 8.12 15.88" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M14.8 14.8 20 20" />
+                    </svg>
+                    Tailored for you
+                  </p>
+
+                  <a
+                    href="checkOut.html"
+                    class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
+                  >
+                    ADD TO BAG
+                  </a>
+                </div>
+              </div>
+
+              <!-- CARD 5 -->
+              <div class="bg-white p-2 md:p-4">
+                <div class="overflow-hidden rounded-lg">
+                  <img
+                    src="images/product5.png"
+                    class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
+                  />
+                </div>
+
+                <div class="mt-2 md:mt-3">
+                  <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
+                    Bridal
+                  </p>
+
+                  <h3
+                    class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
+                  >
+                    Camel Chikankari
+                  </h3>
+
+                  <div
+                    class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
+                  >
+                    <span class="text-[#FCA120]">★★★★★</span>
+                    <span class="text-[#C4C4C4]">(24)</span>
+                  </div>
+
+                  <div
+                    class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
+                  >
+                    <span class="font-semibold text-[#484848]">Rs. 12,400</span>
+                    <span
+                      class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
+                      >Rs. 16,000</span
+                    >
+                    <span
+                      class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
+                      >20% OFF</span
+                    >
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap gap-1">
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XS
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      S
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      M
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      L
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XL
+                    </button>
+                    <button
+                      class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
+                    >
+                      CUSTOM
+                    </button>
+                  </div>
+
+                  <p
+                    class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-scissors-icon lucide-scissors"
+                    >
+                      <circle cx="6" cy="6" r="3" />
+                      <path d="M8.12 8.12 12 12" />
+                      <path d="M20 4 8.12 15.88" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M14.8 14.8 20 20" />
+                    </svg>
+                    Tailored for you
+                  </p>
+
+                  <a
+                    href="checkOut.html"
+                    class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
+                  >
+                    ADD TO BAG
+                  </a>
+                </div>
+              </div>
+
+              <!-- CARD 6 -->
+              <div class="bg-white p-2 md:p-4">
+                <div class="overflow-hidden rounded-lg">
+                  <img
+                    src="images/product6.png"
+                    class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
+                  />
+                </div>
+
+                <div class="mt-2 md:mt-3">
+                  <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
+                    Bridal
+                  </p>
+
+                  <h3
+                    class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
+                  >
+                    Camel Chikankari
+                  </h3>
+
+                  <div
+                    class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
+                  >
+                    <span class="text-[#FCA120]">★★★★★</span>
+                    <span class="text-[#C4C4C4]">(24)</span>
+                  </div>
+
+                  <div
+                    class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
+                  >
+                    <span class="font-semibold text-[#484848]">Rs. 12,400</span>
+                    <span
+                      class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
+                      >Rs. 16,000</span
+                    >
+                    <span
+                      class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
+                      >20% OFF</span
+                    >
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap gap-1">
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XS
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      S
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      M
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      L
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XL
+                    </button>
+                    <button
+                      class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
+                    >
+                      CUSTOM
+                    </button>
+                  </div>
+
+                  <p
+                    class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-scissors-icon lucide-scissors"
+                    >
+                      <circle cx="6" cy="6" r="3" />
+                      <path d="M8.12 8.12 12 12" />
+                      <path d="M20 4 8.12 15.88" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M14.8 14.8 20 20" />
+                    </svg>
+                    Tailored for you
+                  </p>
+
+                  <a
+                    href="checkOut.html"
+                    class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
+                  >
+                    ADD TO BAG
+                  </a>
+                </div>
+              </div>
+
+              <!-- CARD 7 -->
+              <div class="bg-white p-2 md:p-4">
+                <div class="overflow-hidden rounded-lg">
+                  <img
+                    src="images/product7.png"
+                    class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
+                  />
+                </div>
+
+                <div class="mt-2 md:mt-3">
+                  <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
+                    Bridal
+                  </p>
+
+                  <h3
+                    class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
+                  >
+                    Camel Chikankari
+                  </h3>
+
+                  <div
+                    class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
+                  >
+                    <span class="text-[#FCA120]">★★★★★</span>
+                    <span class="text-[#C4C4C4]">(24)</span>
+                  </div>
+
+                  <div
+                    class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
+                  >
+                    <span class="font-semibold text-[#484848]">Rs. 12,400</span>
+                    <span
+                      class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
+                      >Rs. 16,000</span
+                    >
+                    <span
+                      class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
+                      >20% OFF</span
+                    >
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap gap-1">
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XS
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      S
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      M
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      L
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XL
+                    </button>
+                    <button
+                      class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
+                    >
+                      CUSTOM
+                    </button>
+                  </div>
+
+                  <p
+                    class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-scissors-icon lucide-scissors"
+                    >
+                      <circle cx="6" cy="6" r="3" />
+                      <path d="M8.12 8.12 12 12" />
+                      <path d="M20 4 8.12 15.88" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M14.8 14.8 20 20" />
+                    </svg>
+                    Tailored for you
+                  </p>
+
+                  <a
+                    href="checkOut.html"
+                    class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
+                  >
+                    ADD TO BAG
+                  </a>
+                </div>
+              </div>
+
+              <!-- CARD 8 -->
+              <div class="bg-white p-2 md:p-4">
+                <div class="overflow-hidden rounded-lg">
+                  <img
+                    src="images/product8.png"
+                    class="w-full h-36 sm:h-44 md:h-80 object-cover object-[50%_25%]"
+                  />
+                </div>
+
+                <div class="mt-2 md:mt-3">
+                  <p class="text-[9px] md:text-[10px] uppercase text-[#8A8A8A]">
+                    Bridal
+                  </p>
+
+                  <h3
+                    class="mt-1 text-sm md:text-[16px] font-medium text-[#484848]"
+                  >
+                    Camel Chikankari
+                  </h3>
+
+                  <div
+                    class="mt-1 flex items-center gap-1 text-[10px] md:text-[12px]"
+                  >
+                    <span class="text-[#FCA120]">★★★★★</span>
+                    <span class="text-[#C4C4C4]">(24)</span>
+                  </div>
+
+                  <div
+                    class="mt-2 flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm"
+                  >
+                    <span class="font-semibold text-[#484848]">Rs. 12,400</span>
+                    <span
+                      class="text-[#C4C4C4] line-through text-[10px] md:text-xs"
+                      >Rs. 16,000</span
+                    >
+                    <span
+                      class="text-[9px] md:text-[10px] text-[#1BA439] font-medium"
+                      >20% OFF</span
+                    >
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap gap-1">
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XS
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      S
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      M
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      L
+                    </button>
+                    <button
+                      class="border px-1.5 py-0.5 text-[9px] md:text-[10px]"
+                    >
+                      XL
+                    </button>
+                    <button
+                      class="posePhotosModalBtn bg-[#FFEDC8] border border-amber-300 px-1.5 py-0.5 text-[9px]"
+                    >
+                      CUSTOM
+                    </button>
+                  </div>
+
+                  <p
+                    class="mt-2 flex items-center gap-1 text-[10px] text-[#C0A96E]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-scissors-icon lucide-scissors"
+                    >
+                      <circle cx="6" cy="6" r="3" />
+                      <path d="M8.12 8.12 12 12" />
+                      <path d="M20 4 8.12 15.88" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M14.8 14.8 20 20" />
+                    </svg>
+                    Tailored for you
+                  </p>
+
+                  <a
+                    href="checkOut.html"
+                    class="mt-2 flex items-center justify-center bg-black text-white py-1.5 text-xs md:text-sm rounded-md"
+                  >
+                    ADD TO BAG
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- Collections -->
-          <div>
-            <h3
-              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
-              style="font-family: &quot;Inter&quot;, sans-serif"
-            >
-              Collections
-            </h3>
-
-            <ul class="space-y-2 sm:space-y-4">
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Women</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Men</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Bridal Lehenga</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Luxury Formals</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Party Wear</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Accessories</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Services -->
-          <div>
-            <h3
-              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
-              style="font-family: &quot;Inter&quot;, sans-serif"
-            >
-              Services
-            </h3>
-
-            <ul class="space-y-2 sm:space-y-4">
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Custom Tailoring</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Book Appointment</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Style Consultation</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Alterations</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Embroidery</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Customer Care -->
-          <div>
-            <h3
-              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
-              style="font-family: &quot;Inter&quot;, sans-serif"
-            >
-              Customer Care
-            </h3>
-
-            <ul class="space-y-2 sm:space-y-4">
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Track Order</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Returns & Exchange</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Size Guide</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >FAQs</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-sm sm:text-[15px] text-[#6A7282] hover:text-black"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Newsletter -->
-          <div>
-            <h3
-              class="text-sm sm:text-[15px] font-bold uppercase text-[#2B1D1D] mb-4 sm:mb-6"
-              style="font-family: &quot;Inter&quot;, sans-serif"
-            >
-              Newsletter
-            </h3>
-
-            <p class="text-sm sm:text-[15px] text-[#6A7282] leading-relaxed">
-              Get exclusive access to new collections and styling tips.
-            </p>
-
-            <form class="space-y-3 mt-5 sm:mt-8">
-              <input
-                type="email"
-                placeholder="Your email address"
-                class="w-full h-10 sm:h-11 px-3 sm:px-4 bg-[#262626] text-white text-xs sm:text-sm placeholder:text-gray-400 rounded-md focus:outline-none"
-              />
-
-              <button
-                class="w-full h-10 sm:h-11 bg-[#E0C183] text-[#2B2522] text-xs sm:text-sm font-medium uppercase rounded-md hover:opacity-90 transition"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
+        </section>
       </div>
-    </footer>
+    </div>
+
+    <!-- ✅ SCRIPT -->
+    <script>
+      const sidebar = document.getElementById("filterSidebar");
+      const main = document.getElementById("mainContent");
+      const breadcrumb = document.getElementById("breadcrumb");
+      const collectionTitle = document.getElementById("collectionTitle");
+      const openFilterBtn = document.getElementById("openFilter");
+      const sortBtn = document.getElementById("sortBtn");
+
+      function openSidebar() {
+        sidebar.style.width = "320px";
+        main.style.marginLeft = "10px";
+        if (breadcrumb) breadcrumb.style.display = "none";
+        if (collectionTitle) collectionTitle.style.display = "none";
+        if (openFilterBtn) openFilterBtn.style.display = "none";
+        if (sortBtn) {
+          sortBtn.style.display = "flex";
+          sortBtn.style.marginLeft = "auto";
+        }
+      }
+
+      function closeSidebar() {
+        sidebar.style.width = "0px";
+        main.style.marginLeft = "0px";
+        if (breadcrumb) breadcrumb.style.display = "";
+        if (collectionTitle) collectionTitle.style.display = "";
+        if (openFilterBtn) openFilterBtn.style.display = "";
+        if (sortBtn) {
+          sortBtn.style.display = "";
+          sortBtn.style.marginLeft = "";
+        }
+      }
+
+      if (openFilterBtn) openFilterBtn.addEventListener("click", openSidebar);
+      document
+        .getElementById("closeFilter")
+        .addEventListener("click", closeSidebar);
+    </script>
   </body>
 </html>
