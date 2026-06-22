@@ -2494,18 +2494,17 @@
       class="fixed top-0 left-0 h-screen w-full sm:w-[380px] md:w-[520px] bg-white z-50 shadow-2xl transition-transform duration-300 overflow-y-auto"
       style="transform: translateX(-100%)"
     >
-      <!-- Content -->
       <div class="p-4 sm:p-6">
-        <!-- Header -->
+        <!-- HEADER -->
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
             <img
               src="images/logo.png"
-              alt="Logo"
               class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover"
             />
+
             <h1
-              class="text-lg sm:text-2xl font-serif font-semibold tracking-wide"
+              class="font-abhaya text-[28.4px] leading-[120%] font-extrabold tracking-[0px]"
             >
               CUSTOM SUITS
             </h1>
@@ -2516,43 +2515,37 @@
           </button>
         </div>
 
-        <!-- Categories -->
-        <div
-          class="flex gap-6 sm:gap-16 mt-8 sm:mt-12 text-base sm:text-lg flex-wrap"
-        >
-          <button class="font-semibold underline underline-offset-4">
+        <!-- TABS -->
+        <div class="flex gap-6 sm:gap-16 mt-8 sm:mt-12 flex-wrap font-inter">
+          <button
+            id="tab-woman"
+            class="tab-btn text-[20.15px] leading-[100%] font-bold underline text-black"
+          >
             WOMAN
           </button>
 
-          <button class="text-gray-800">JEWELERY</button>
+          <button
+            id="tab-jewellery"
+            class="tab-btn text-[20.15px] leading-[100%] text-black"
+          >
+            JEWELERY
+          </button>
 
-          <button class="text-gray-800">SHOES</button>
+          <button
+            id="tab-shoes"
+            class="tab-btn text-[20.15px] leading-[100%] text-black"
+          >
+            SHOES
+          </button>
         </div>
 
-        <!-- Menu List -->
-        <div class="mt-8 sm:mt-12 space-y-2 sm:space-y-3 text-lg sm:text-2xl">
-          <a class="block text-gray-900">Casual</a>
+        <!-- MENU LIST -->
+        <div
+          id="menuList"
+          class="mt-8 sm:mt-12 space-y-2 sm:space-y-3 font-inter"
+        ></div>
 
-          <a class="block underline underline-offset-4 text-gray-900">
-            Luxury Formals
-          </a>
-
-          <a class="block text-gray-900">Bridal</a>
-
-          <a class="block text-gray-900">Party Wear</a>
-
-          <a class="block text-gray-900">Western</a>
-
-          <a class="block text-gray-900">Jewelery</a>
-
-          <a class="block text-gray-900">Shoes</a>
-
-          <a class="block text-red-600 uppercase tracking-wide mt-8 sm:mt-12">
-            Special Offers
-          </a>
-        </div>
-
-        <!-- Mobile Footer Links -->
+        <!-- MOBILE FOOTER -->
         <div class="md:hidden border-t mt-8 pt-6">
           <a href="#" class="flex items-center gap-3 py-2">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -3939,24 +3932,85 @@
 
     <!-- JS Sidebar-->
     <script>
-      // Sidebar
+      // ================= SIDEBAR CONTROLS =================
       const menuBtn = document.getElementById("menuBtn");
       const sidebar = document.getElementById("sidebar");
       const sidebarOverlay = document.getElementById("sidebarOverlay");
       const closeSidebar = document.getElementById("closeSidebar");
 
-      menuBtn.addEventListener("click", () => {
+      function openMenu() {
         sidebar.style.transform = "translateX(0)";
         sidebarOverlay.classList.remove("hidden");
-      });
+      }
 
       function closeMenu() {
         sidebar.style.transform = "translateX(-100%)";
         sidebarOverlay.classList.add("hidden");
       }
 
+      menuBtn.addEventListener("click", openMenu);
       closeSidebar.addEventListener("click", closeMenu);
       sidebarOverlay.addEventListener("click", closeMenu);
+
+      // ================= MENU DATA =================
+      const menuData = {
+        woman: [
+          "Casual",
+          "Luxury Formals",
+          "Bridal",
+          "Party Wear",
+          "Western",
+          "Jewellery",
+          "Shoes",
+        ],
+        jewellery: [
+          "Rings",
+          "Necklaces",
+          "Earrings",
+          "Bracelets",
+          "Luxury Sets",
+        ],
+        shoes: ["Sneakers", "Heels", "Flats", "Boots", "Formal Shoes"],
+      };
+
+      const menuList = document.getElementById("menuList");
+
+      const tabs = {
+        woman: document.getElementById("tab-woman"),
+        jewellery: document.getElementById("tab-jewellery"),
+        shoes: document.getElementById("tab-shoes"),
+      };
+
+      // ================= TAB SWITCH =================
+      function setActiveTab(active) {
+        Object.values(tabs).forEach((tab) => {
+          tab.classList.remove("font-bold", "underline");
+        });
+
+        tabs[active].classList.add("font-bold", "underline");
+
+        renderMenu(active);
+      }
+
+      function renderMenu(key) {
+        menuList.innerHTML = menuData[key]
+          .map(
+            (item) => `
+          <a class="block text-[20.15px] leading-[294%] font-normal text-gray-900 cursor-pointer hover:text-black">
+            ${item}
+          </a>
+        `,
+          )
+          .join("");
+      }
+
+      // ================= EVENTS =================
+      tabs.woman.addEventListener("click", () => setActiveTab("woman"));
+      tabs.jewellery.addEventListener("click", () => setActiveTab("jewellery"));
+      tabs.shoes.addEventListener("click", () => setActiveTab("shoes"));
+
+      // DEFAULT LOAD
+      setActiveTab("woman");
     </script>
 
     <!-- JS BOOK AN APPOINTMENT Modal-->
