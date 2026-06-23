@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Suit</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Abril+Fatface&family=Inter:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -21,7 +28,7 @@
     />
   </head>
 
-  <body>
+  <body class="bg-[#F8F5EE]">
     <!-- TOP WRAPPER -->
     <div class="fixed top-0 left-0 right-0 z-50">
       <!-- Top Bar -->
@@ -41,11 +48,11 @@
       </div>
 
       <!-- Header -->
-      <header class="px-4 md:px-10 md:bg-[#D9D9D9]/20">
+      <header class="px-4 md:px-10 md:bg-[#F8F5EE]/70">
         <div class="grid grid-cols-3 items-center">
           <!-- Menu -->
           <div>
-            <button id="menuBtn" class="text-white text-xl md:text-2xl">
+            <button id="menuBtn" class="text-black text-xl md:text-2xl">
               <i class="fa-solid fa-bars-staggered"></i>
             </button>
           </div>
@@ -64,7 +71,7 @@
           <!-- Right Side -->
           <div class="flex justify-end items-center gap-3">
             <!-- Desktop Icons ONLY -->
-            <div class="hidden md:flex items-center gap-5 text-white">
+            <div class="hidden md:flex items-center gap-5 text-black">
               <a href="#" id="searchBtn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +149,7 @@
             </div>
 
             <!-- MOBILE: Cart + Account ONLY -->
-            <div class="md:hidden flex items-center gap-3 text-white">
+            <div class="md:hidden flex items-center gap-3 text-black">
               <!-- Cart -->
               <a href="checkOut.html">
                 <svg
@@ -187,170 +194,226 @@
       </header>
     </div>
 
-    <!-- ABOUT -->
-    <section>
-      <div class="max-w-7xl mx-auto my-40">
-        <div class="bg-[#faf7f2]">
-          <!-- ================= HERO SECTION ================= -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
-            <!-- LEFT CONTENT -->
-            <div
-              class="bg-black text-white flex flex-col justify-center px-10 py-16"
+    <!-- ABOUT SECTION WRAPPER -->
+    <section class="pt-24 lg:pt-32 pb-10">
+      <!-- dotted line -->
+      <hr class="m-6 border-t border-dashed border-[#A3A3A3]" />
+
+      <!-- ================= HERO SECTION ================= -->
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 min-h-[350px] lg:min-h-[440px]"
+      >
+        <!-- LEFT CONTENT -->
+        <div
+          class="bg-black text-white flex flex-col px-6 lg:px-10 py-10 h-full min-h-[400px]"
+        >
+          <!-- TOP: Breadcrumb -->
+          <div
+            class="font-[Poppins] font-medium text-[16px] leading-[160%] flex items-center gap-2 text-[#6D6245]"
+          >
+            <span>Homepage</span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-[#6D6245]"
             >
-              <!-- Breadcrumb -->
-              <p class="text-xs text-gray-400 mb-6">
-                Homepagge &gt; <span class="text-white">About Us</span>
-              </p>
+              <path d="m9 18 6-6-6-6" />
+            </svg>
 
-              <!-- Title -->
-              <h2 class="text-3xl md:text-4xl tracking-wider text-gray-300">
+            <span class="text-[#C0A96E]">About Us</span>
+          </div>
+
+          <!-- CENTER AREA -->
+          <div class="flex-1 flex flex-col justify-center">
+            <div class="text-start">
+              <h1
+                class="font-['Abhaya_Libre'] font-normal text-[56.68px] leading-[100%] tracking-normal text-[#9C9C9C] mt-2"
+              >
                 ABOUT
-              </h2>
-
-              <h1 class="text-5xl md:text-6xl font-serif font-bold mt-2">
-                CUSTOM SUITS
               </h1>
-
-              <!-- Subtitle -->
-              <p class="text-sm text-gray-400 mt-4 italic">
+              <h2
+                class="font-['Abhaya_Libre'] font-bold text-[79.38px] leading-[100%] tracking-normal mt-2"
+              >
+                <span class="relative inline-block">
+                  <span>C</span>
+                  <span
+                    class="absolute left-0 -bottom-1 w-full h-[2px] bg-[#E4C065]"
+                  ></span> </span
+                >USTOM SUITS
+              </h2>
+              <p
+                class="font-[Poppins] font-normal italic text-[16px] leading-[160%] tracking-normal text-[#C0A96E] mt-4"
+              >
                 Crafting Timeless Elegance Since Day One
               </p>
 
-              <!-- Button -->
+              <!-- BUTTON directly after paragraph -->
               <button
-                class="mt-8 border border-yellow-500 text-yellow-500 px-6 py-2 w-fit hover:bg-yellow-500 hover:text-black transition"
+                class="mt-8 border border-[#C0A96E] text-[#C0A96E] px-10 py-3 w-fit mx-auto font-[Poppins] font-normal text-[16px] leading-[160%] tracking-normal italic hover:bg-[#C0A96E] hover:text-black transition"
               >
                 Discover
               </button>
             </div>
-
-            <!-- RIGHT IMAGE -->
-            <div class="h-full">
-              <img
-                src="https://picsum.photos/id/1011/400/500"
-                class="w-full h-full object-cover"
-              />
-            </div>
           </div>
+        </div>
 
-          <!-- ================= CONTENT SECTION ================= -->
-          <div
-            class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-10"
+        <!-- RIGHT IMAGE -->
+        <div class="h-full">
+          <img
+            src="images/home-bg.png"
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
+      </div>
+
+      <!-- ================= CONTENT SECTION ================= -->
+      <div
+        class="max-w-7xl mx-auto px-6 pt-16 grid grid-cols-1 lg:grid-cols-5 gap-10"
+      >
+        <!-- LEFT TEXT -->
+        <div class="col-span-3">
+          <h2
+            class="mt-6 font-['Abril_Fatface'] font-normal text-[50.46px] leading-[100%] tracking-normal text-[#221E1B]"
           >
-            <!-- LEFT TEXT -->
-            <div>
-              <h2
-                class="text-3xl md:text-4xl font-semibold text-gray-800 leading-snug"
-              >
-                More Than Just a <br />
-                Clothing Brand
-              </h2>
+            More Than Just a <br />
+            Clothing Brand
+          </h2>
 
-              <div class="w-16 h-[2px] bg-yellow-500 my-4"></div>
+          <div class="w-16 h-[2px] bg-[#E4C065] my-4"></div>
 
-              <p class="text-sm text-gray-600 leading-relaxed">
-                The Custom Suit is more than just a clothing brand; it’s a
-                destination for fashion-forward individuals seeking both
-                clothing and accessories to elevate their style. Custom Suit
-                epitomizes the fusion of classical elegance and contemporary
-                flair in its diverse range of offerings.
-                <br /><br />
-                But Custom Suit doesn’t stop at clothing. We understand that
-                accessories play a crucial role in completing a look, which is
-                why we’re constantly expanding our accessory offerings.
-              </p>
+          <p
+            class="mt-6 font-[Poppins] font-light text-[20px] leading-[160%] tracking-normal text-[#4B4A4A]"
+          >
+            The Custom Suit is more than just a clothing brand; it’s a
+            destination for fashion-forward individuals seeking both clothing
+            and accessories to elevate their style. Custom Suit epitomizes the
+            fusion of classical elegance and contemporary flair in its diverse
+            range of offerings.
+            <br /><br />
+            But Custom Suit doesn’t stop at clothing. We understand that
+            accessories play a crucial role in completing a look, which is why
+            we’re constantly expanding our accessory offerings.
+          </p>
+          <div class="flex gap-4 mt-12">
+            <button
+              class="bg-[#C0A96E] text-white px-8 py-2 text-sm hover:bg-[#A8935A] transition rounded-md"
+            >
+              CONTACT US
+            </button>
 
-              <!-- Buttons -->
-              <div class="flex gap-4 mt-8">
-                <button
-                  class="bg-yellow-500 text-white px-6 py-2 text-sm hover:bg-yellow-600 transition"
-                >
-                  CONTACT US
-                </button>
+            <button
+              class="border border-[#C0A96E] text-[#C0A96E] px-6 py-2 text-sm hover:text-[#A8935A] rounded-md transition"
+            >
+              SHOP NOW
+            </button>
+          </div>
+        </div>
 
-                <button
-                  class="border border-yellow-500 text-yellow-500 px-6 py-2 text-sm hover:bg-yellow-500 hover:text-white transition"
-                >
-                  SHOP NOW
-                </button>
-              </div>
-            </div>
+        <!-- RIGHT IMAGE GRID -->
+        <div class="col-span-2">
+          <div class="grid grid-cols-2 gap-4 auto-rows-[250px]">
+            <img
+              src="https://picsum.photos/id/1011/400/500"
+              class="rounded-2xl object-cover w-full h-full"
+            />
 
-            <!-- RIGHT IMAGE GRID -->
-            <div class="grid grid-cols-2 gap-4">
-              <img
-                src="https://picsum.photos/id/1011/400/500"
-                class="rounded-2xl object-cover h-64 w-full"
-              />
+            <img
+              src="https://picsum.photos/id/1011/400/500"
+              class="rounded-2xl object-cover w-full h-full row-span-2"
+            />
 
-              <img
-                src="https://picsum.photos/id/1011/400/500"
-                class="rounded-2xl object-cover h-64 w-full row-span-2"
-              />
-
-              <img
-                src="https://picsum.photos/id/1011/400/500"
-                class="rounded-2xl object-cover h-48 w-full"
-              />
-            </div>
+            <img
+              src="https://picsum.photos/id/1011/400/500"
+              class="rounded-2xl object-cover w-full h-full"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-[#1d1715] py-20">
+    <!-- ================= PILLARS SECTION ================= -->
+    <section class="bg-[#221E1B] py-20">
       <div class="max-w-6xl mx-auto px-6">
         <!-- Heading -->
         <div class="text-center mb-14">
-          <h2 class="text-5xl font-serif font-semibold text-white">
+          <h2
+            class="font-['Abril_Fatface'] font-normal text-[50.46px] leading-[100%] tracking-normal text-white"
+          >
             Our Pillars
           </h2>
-          <div class="w-16 h-[2px] bg-[#caa85c] mx-auto mt-4"></div>
+          <div class="w-16 h-[2px] bg-[#E4C065] mx-auto mt-4"></div>
         </div>
 
         <!-- Cards -->
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Card -->
+        <div class="grid md:grid-cols-3 gap-8 items-end">
+          <!-- Card 1 (normal) -->
           <div
-            class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center"
+            class="bg-gradient-to-b from-[#C0A96E] to-[#D2AD51] rounded-lg p-8 text-center flex flex-col justify-center min-h-[320px] -translate-y-6"
           >
-            <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8"></div>
-
-            <h3 class="text-white font-serif text-xl mb-4">Our Vision</h3>
-
-            <p class="text-white/90 text-sm leading-relaxed">
-              To redefine elegance and tailored perfection. Empowering modern
-              men with confidence and style, blending tradition with modern
+            <div
+              class="w-16 h-16 rounded-full bg-[#FFEDC838] mx-auto mb-8"
+            ></div>
+            <h3
+              class="font-['Abril_Fatface'] font-normal text-[16.25px] leading-[100%] tracking-[0] text-white mb-4"
+            >
+              Our Vision
+            </h3>
+            <p
+              class="mt-4 font-['Poppins'] font-medium italic text-[14px] leading-[160%] tracking-[0px] text-center text-white/90"
+            >
+              To redefine elegance with tailored perfection. Empowering women
+              with confidence and style. Blending tradition with modern
               sophistication.
             </p>
           </div>
 
-          <!-- Card -->
+          <!-- Card 2 (BIG / FEATURED) -->
           <div
-            class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[320px] flex flex-col justify-center"
+            class="bg-gradient-to-b from-[#C0A96E] to-[#D2AD51] rounded-lg p-8 text-center flex flex-col justify-center min-h-[370px] shadow-xl"
           >
-            <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8"></div>
-
-            <h3 class="text-white font-serif text-xl mb-4">Our Mission</h3>
-
-            <p class="text-white/90 text-sm leading-relaxed">
-              To craft high-quality, custom-made suits designed to celebrate
+            <div
+              class="w-16 h-16 rounded-full bg-[#FFEDC838] mx-auto mb-8"
+            ></div>
+            <h3
+              class="font-['Abril_Fatface'] font-normal text-[16.25px] leading-[100%] tracking-[0] text-white mb-4"
+            >
+              Our Mission
+            </h3>
+            <p
+              class="mt-4 font-['Poppins'] font-medium italic text-[14px] leading-[160%] tracking-[0px] text-center text-white/90"
+            >
+              To craft high-quality, custom-made suits. Designed to celebrate
               individuality and grace. Every stitch reflects passion and
-              precision.
+              precision. Delivering timeless fashion with a perfect fit.
             </p>
           </div>
 
-          <!-- Card -->
+          <!-- Card 3 (normal) -->
           <div
-            class="bg-[#caa85c] rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center"
+            class="bg-gradient-to-b from-[#C0A96E] to-[#D2AD51] rounded-lg p-8 text-center flex flex-col justify-center min-h-[320px] -translate-y-6"
           >
-            <div class="w-16 h-16 rounded-full bg-[#d7bc7e] mx-auto mb-8"></div>
-
-            <h3 class="text-white font-serif text-xl mb-4">Our Support</h3>
-
-            <p class="text-white/90 text-sm leading-relaxed">
+            <div
+              class="w-16 h-16 rounded-full bg-[#FFEDC838] mx-auto mb-8"
+            ></div>
+            <h3
+              class="font-['Abril_Fatface'] font-normal text-[16.25px] leading-[100%] tracking-[0] text-white mb-4"
+            >
+              Our Support
+            </h3>
+            <p
+              class="mt-4 font-['Poppins'] font-medium italic text-[14px] leading-[160%] tracking-[0px] text-center text-white/90"
+            >
               We believe in personalized care and trust. Ensuring every customer
-              feels valued and heard from consultation to final fitting.
+              feels valued and heard. From consultation to final fitting, we are
+              here. Offering an effortless and seamless experience.
             </p>
           </div>
         </div>
@@ -361,11 +424,14 @@
     <section class="bg-[#f5f3ef] py-24">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-20">
-          <h2 class="text-5xl font-serif font-semibold text-[#2d2522]">
+          <h2
+            class="font-['Abril_Fatface'] font-normal text-[50.46px] leading-[100%] tracking-[0%] text-[#2d2522]"
+          >
             Why Choose Custom Suits
           </h2>
-
-          <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+          <p
+            class="mt-4 max-w-2xl mx-auto font-[Poppins] font-normal italic text-[16px] leading-[160%] tracking-[0px] text-gray-500"
+          >
             We combine craftsmanship, technology and passion to deliver
             perfection.
           </p>
@@ -377,20 +443,17 @@
             <div
               class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center"
             >
-              <svg
-                class="w-10 h-10 text-[#d4b16a]"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 4v16M4 12h16"></path>
-              </svg>
+              <img src="images/quick-size.svg" alt="Quick Size" />
             </div>
 
-            <h3 class="font-serif text-xl text-[#2d2522] mb-3">Quick Size</h3>
-
-            <p class="text-gray-500 text-sm">
+            <h3
+              class="font-['Abril_Fatface'] font-normal text-[16.25px] leading-[100%] tracking-[0] text-[#C0A96E] mb-3"
+            >
+              Quick Size
+            </h3>
+            <p
+              class="font-[Poppins] font-medium italic text-[12px] leading-[160%] tracking-[0px] text-center text-[#969696]"
+            >
               Looking for your perfect fit? Our advanced sizing system provides
               custom measurements.
             </p>
@@ -401,22 +464,18 @@
             <div
               class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center"
             >
-              <svg
-                class="w-10 h-10 text-[#d4b16a]"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-              >
-                <path d="M4 8h16M4 16h16"></path>
-              </svg>
+              <img src="images/perfect-fitting.svg" alt="Perfect Fitting" />
             </div>
 
-            <h3 class="font-serif text-xl text-[#2d2522] mb-3">
+            <h3
+              class="font-['Abril_Fatface'] font-normal text-[16.25px] leading-[100%] tracking-[0] text-[#C0A96E] mb-3"
+            >
               Perfect Fitting
             </h3>
 
-            <p class="text-gray-500 text-sm">
+            <p
+              class="font-[Poppins] font-medium italic text-[12px] leading-[160%] tracking-[0px] text-center text-[#969696]"
+            >
               We ensure the perfect fit for every client through multiple
               fitting trials.
             </p>
@@ -427,22 +486,18 @@
             <div
               class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center"
             >
-              <svg
-                class="w-10 h-10 text-[#d4b16a]"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2v20M6 6h12"></path>
-              </svg>
+              <img src="images/italian-fabrics.svg" alt="Italian Fabrics" />
             </div>
 
-            <h3 class="font-serif text-xl text-[#2d2522] mb-3">
+            <h3
+              class="font-['Abril_Fatface'] font-normal text-[16.25px] leading-[100%] tracking-[0] text-[#C0A96E] mb-3"
+            >
               Italian Fabrics
             </h3>
 
-            <p class="text-gray-500 text-sm">
+            <p
+              class="font-[Poppins] font-medium italic text-[12px] leading-[160%] tracking-[0px] text-center text-[#969696]"
+            >
               Choose from more than 3000 premium fabrics sourced from the
               world's finest mills.
             </p>
@@ -453,22 +508,18 @@
             <div
               class="w-24 h-24 border border-[#d4b16a] rounded-full mx-auto mb-6 flex items-center justify-center"
             >
-              <svg
-                class="w-10 h-10 text-[#d4b16a]"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-              >
-                <rect x="5" y="5" width="14" height="14"></rect>
-              </svg>
+              <img src="images/quality-stitching.svg" alt="Quality Stitching" />
             </div>
 
-            <h3 class="font-serif text-xl text-[#2d2522] mb-3">
+            <h3
+              class="font-['Abril_Fatface'] font-normal text-[16.25px] leading-[100%] tracking-[0] text-[#C0A96E] mb-3"
+            >
               Quality Stitching
             </h3>
 
-            <p class="text-gray-500 text-sm">
+            <p
+              class="font-[Poppins] font-medium italic text-[12px] leading-[160%] tracking-[0px] text-center text-[#969696]"
+            >
               High needle stitching with exceptional precision and durability.
             </p>
           </div>
@@ -477,32 +528,64 @@
     </section>
 
     <!-- Our Pillars -->
-    <section class="bg-[#1d1715] py-16">
+    <section class="bg-[#221E1B] py-24">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-4 divide-x divide-[#3a312d]">
+        <div class="grid md:grid-cols-4 divide-x divide-[#635738]">
           <div class="text-center px-6">
-            <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">5000+</h3>
-            <p class="text-white mt-2">Happy Customers</p>
+            <h3
+              class="font-['Abril_Fatface'] font-normal text-[50.46px] leading-[100%] tracking-[0] text-[#C0A96E]"
+            >
+              5000+
+            </h3>
+            <p
+              class="font-[Poppins] font-normal text-[17.15px] leading-[160%] tracking-[0px] text-center text-white mt-2"
+            >
+              Happy Customers
+            </p>
           </div>
 
           <div class="text-center px-6">
-            <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">3000+</h3>
-            <p class="text-white mt-2">Italian Fabrics</p>
+            <h3
+              class="font-['Abril_Fatface'] font-normal text-[50.46px] leading-[100%] tracking-[0] text-[#C0A96E]"
+            >
+              3000+
+            </h3>
+            <p
+              class="font-[Poppins] font-normal text-[17.15px] leading-[160%] tracking-[0px] text-center text-white mt-2"
+            >
+              Italian Fabrics
+            </p>
           </div>
 
           <div class="text-center px-6">
-            <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">100%</h3>
-            <p class="text-white mt-2">Custom Fit</p>
+            <h3
+              class="font-['Abril_Fatface'] font-normal text-[50.46px] leading-[100%] tracking-[0] text-[#C0A96E]"
+            >
+              100%
+            </h3>
+            <p
+              class="font-[Poppins] font-normal text-[17.15px] leading-[160%] tracking-[0px] text-center text-white mt-2"
+            >
+              Custom Fit
+            </p>
           </div>
 
           <div class="text-center px-6">
-            <h3 class="text-[#d4b16a] text-5xl font-serif font-bold">10+</h3>
-            <p class="text-white mt-2">Years Experience</p>
+            <h3
+              class="font-['Abril_Fatface'] font-normal text-[50.46px] leading-[100%] tracking-[0] text-[#C0A96E]"
+            >
+              10+
+            </h3>
+            <p
+              class="font-[Poppins] font-normal text-[17.15px] leading-[160%] tracking-[0px] text-center text-white mt-2"
+            >
+              Years Experience
+            </p>
           </div>
         </div>
       </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="bg-[#F8F8F8] py-10 sm:py-16 px-4 sm:px-6 lg:px-0">
       <div class="max-w-7xl mx-auto">
