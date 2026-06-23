@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Suit</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Abril+Fatface&family=Inter:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -21,7 +28,7 @@
     />
   </head>
 
-  <body>
+  <body class="bg-[#F8F5EE]">
     <!-- TOP WRAPPER -->
     <div class="fixed top-0 left-0 right-0 z-50">
       <!-- Top Bar -->
@@ -41,11 +48,11 @@
       </div>
 
       <!-- Header -->
-      <header class="px-4 md:px-10 md:bg-[#D9D9D9]/20">
+      <header class="px-4 md:px-10 md:bg-[#F8F5EE]/70">
         <div class="grid grid-cols-3 items-center">
           <!-- Menu -->
           <div>
-            <button id="menuBtn" class="text-white text-xl md:text-2xl">
+            <button id="menuBtn" class="text-black text-xl md:text-2xl">
               <i class="fa-solid fa-bars-staggered"></i>
             </button>
           </div>
@@ -64,7 +71,7 @@
           <!-- Right Side -->
           <div class="flex justify-end items-center gap-3">
             <!-- Desktop Icons ONLY -->
-            <div class="hidden md:flex items-center gap-5 text-white">
+            <div class="hidden md:flex items-center gap-5 text-black">
               <a href="#" id="searchBtn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +149,7 @@
             </div>
 
             <!-- MOBILE: Cart + Account ONLY -->
-            <div class="md:hidden flex items-center gap-3 text-white">
+            <div class="md:hidden flex items-center gap-3 text-black">
               <!-- Cart -->
               <a href="checkOut.html">
                 <svg
@@ -189,20 +196,40 @@
 
     <!-- Secure Checkout -->
     <section>
-      <div class="max-w-7xl mx-auto my-40">
+      <div class="max-w-7xl mx-auto my-24 lg:my-32">
+        <!-- dotted line -->
+        <hr class="my-6 border-t border-dashed border-[#A3A3A3]" />
+        <!-- breadcrumb -->
         <div
-          class="px-6 font-medium text-[16px] text-[#8F8F8F] leading-[160%] tracking-[0px]"
+          class="font-medium text-[14px] md:text-[16px] text-[#8F8F8F] leading-[160%] flex items-center gap-2"
           style="font-family: &quot;Poppins&quot;, sans-serif"
         >
-          Homepage &gt; Home
+          <span>Homepage</span>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-[#8F8F8F]"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+
+          <span>Checkout</span>
         </div>
 
-        <div class="min-h-screen bg-[#f6f3ee] py-10 px-4">
+        <div class="min-h-screen bg-[#f6f3ee] py-6 px-4">
           <div class="max-w-7xl mx-auto">
             <!-- Header -->
             <div class="text-center mb-10">
               <h2
-                class="mt-2 font-['Abril_Fatface'] text-3xl sm:text-4xl lg:text-[50px] font-normal text-[#221E1B] leading-none"
+                class="mt-2 font-['Abril_Fatface'] font-normal text-[50.46px] leading-[100%] tracking-[0px] text-[#221E1B]"
               >
                 Secure Checkout
               </h2>
@@ -210,191 +237,288 @@
               <div class="flex items-center justify-center mt-8 gap-4">
                 <div class="flex items-center gap-2">
                   <div
-                    class="w-8 h-8 rounded-full bg-[#d8b16f] text-white flex items-center justify-center"
+                    class="w-10 h-10 rounded-full bg-[#d8b16f] text-white flex items-center justify-center"
                   >
-                    ✓
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-check-icon lucide-check"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
                   </div>
-                  <span class="text-xs uppercase tracking-wider text-gray-500">
+                  <span
+                    class="font-[Poppins] font-medium text-[16px] leading-[160%] tracking-[0px] text-gray-500"
+                  >
                     Shipping
                   </span>
                 </div>
 
-                <div class="w-20 h-[2px] bg-[#d8b16f]"></div>
-
                 <div
-                  class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 text-sm"
+                  class="w-20 h-[2px]"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #e4c587 40%,
+                      #ebebeb 40%
+                    );
+                  "
+                ></div>
+                <div
+                  class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 text-sm"
                 >
                   2
                 </div>
 
-                <span class="text-xs text-gray-500">Review & Payments</span>
+                <span
+                  class="font-[Poppins] font-medium text-[16px] leading-[160%] tracking-[0px] text-gray-500"
+                >
+                  Review &amp; Payments
+                </span>
               </div>
             </div>
 
             <!-- Content -->
-            <div class="grid lg:grid-cols-[1fr_360px] gap-8">
+            <div class="grid lg:grid-cols-[1fr_450px] gap-8">
               <!-- Left Side -->
-              <div
-                class="bg-white rounded-lg p-5 lg:p-8 flex flex-col justify-between lg:min-h-[900px]"
-              >
-                <div>
-                  <h2
-                    class="font-serif text-2xl lg:text-3xl text-[#2d2522] mb-2"
-                  >
-                    Shipping Address
-                  </h2>
+              <div class="flex flex-col justify-between lg:min-h-[900px]">
+                <div class="bg-white rounded-lg p-5 lg:p-8">
+                  <div>
+                    <h2
+                      class="font-['Abhaya_Libre'] font-normal text-[36.96px] leading-[100%] text-[#2d2522] mb-2"
+                    >
+                      <span class="border-b-2 border-[#E4C065]">Shippin</span>g
+                      Address
+                    </h2>
 
-                  <p class="text-sm text-gray-500 mb-6 lg:mb-8">
-                    Returning customer?
-                    <a href="#" class="text-[#c49b5f] hover:underline">
-                      Click here to login
-                    </a>
-                  </p>
+                    <p
+                      class="font-[Poppins] font-medium text-[16px] leading-[160%] tracking-[0px] text-gray-500 my-6"
+                    >
+                      Returning customer?
+                      <a href="#" class="text-[#c49b5f] hover:underline">
+                        Click here to login
+                      </a>
+                    </p>
 
-                  <form class="space-y-6 lg:space-y-8">
-                    <!-- Email -->
-                    <div>
-                      <label class="block text-sm text-gray-500 mb-2">
-                        Email Address*
-                      </label>
-                      <input
-                        type="email"
-                        class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
-                      />
-                    </div>
-
-                    <!-- Name -->
-                    <div>
-                      <label class="block text-sm text-gray-500 mb-2">
-                        Name*
-                      </label>
-                      <input
-                        type="text"
-                        class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
-                      />
-                    </div>
-
-                    <!-- Country / State -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+                    <form class="space-y-6 lg:space-y-8">
+                      <!-- Email -->
                       <div>
-                        <label class="block text-sm text-gray-500 mb-2">
-                          Country*
-                        </label>
-                        <input
-                          type="text"
-                          class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
-                        />
-                      </div>
-
-                      <div>
-                        <label class="block text-sm text-gray-500 mb-2">
-                          State/Province*
-                        </label>
-                        <input
-                          type="text"
-                          class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
-                        />
-                      </div>
-                    </div>
-
-                    <!-- City / Zip -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-                      <div>
-                        <label class="block text-sm text-gray-500 mb-2">
-                          City*
-                        </label>
-                        <input
-                          type="text"
-                          class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
-                        />
-                      </div>
-
-                      <div>
-                        <label class="block text-sm text-gray-500 mb-2">
-                          Zip/Postal Code
-                        </label>
-                        <input
-                          type="text"
-                          class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
-                        />
-                      </div>
-                    </div>
-
-                    <!-- Street -->
-                    <div>
-                      <label class="block text-sm text-gray-500 mb-2">
-                        Street Address*
-                      </label>
-                      <input
-                        type="text"
-                        class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
-                      />
-                    </div>
-
-                    <!-- Phone -->
-                    <div class="grid grid-cols-1 md:grid-cols-[70px_1fr] gap-4">
-                      <div>
-                        <label class="block text-sm text-gray-500 mb-2">
-                          Code
-                        </label>
-                        <input
-                          value="+92"
-                          class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
-                        />
-                      </div>
-
-                      <div>
-                        <label class="block text-sm text-gray-500 mb-2">
-                          Phone Number*
-                        </label>
-                        <input
-                          type="text"
-                          class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
-                        />
-                      </div>
-                    </div>
-
-                    <!-- Note -->
-                    <div>
-                      <label class="block text-sm text-gray-500 mb-2">
-                        Note
-                      </label>
-                      <textarea
-                        rows="3"
-                        class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none resize-none"
-                      ></textarea>
-                    </div>
-
-                    <!-- Shipping Method -->
-                    <div class="pt-6 lg:pt-8">
-                      <h3
-                        class="font-serif text-2xl lg:text-3xl text-[#2d2522] mb-6"
-                      >
-                        Shipping Method
-                      </h3>
-
-                      <div class="border border-gray-200 rounded-lg p-4">
                         <label
-                          class="flex items-start sm:items-center gap-3 cursor-pointer"
+                          class="font-[Poppins] font-light text-[14px] leading-[160%] tracking-[0px] text-gray-500 block"
                         >
-                          <input type="radio" checked class="mt-1 sm:mt-0" />
-
-                          <div>
-                            <p class="font-medium">Standard Shipping</p>
-
-                            <p class="text-sm text-gray-500">
-                              Delivery in 5-7 business days
-                            </p>
-                          </div>
+                          Email Address*
                         </label>
+                        <input
+                          type="email"
+                          class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
+                        />
                       </div>
-                    </div>
-                  </form>
+                      <div>
+                        <label
+                          class="font-[Poppins] font-light text-[14px] leading-[160%] tracking-[0px] text-gray-500 block"
+                        >
+                          Password*
+                        </label>
+
+                        <input
+                          type="password"
+                          class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
+                        />
+
+                        <!-- Bottom row -->
+                        <div class="flex items-center justify-between mt-4">
+                          <!-- Remember me -->
+                          <label
+                            class="flex items-center gap-2 text-sm text-gray-600"
+                          >
+                            <input type="checkbox" class="accent-black" />
+                            Remember me
+                          </label>
+
+                          <!-- Buttons -->
+                          <div class="flex items-center gap-3">
+                            <button
+                              type="button"
+                              class="px-8 py-2 font-[Inter] font-normal text-[16.29px] leading-[100%] tracking-[0] border border-black rounded-md hover:bg-black transition"
+                            >
+                              Cancel
+                            </button>
+                            <button
+                              type="submit"
+                              class="px-8 py-2 font-[Inter] font-normal text-[16.29px] leading-[100%] tracking-[0] bg-black text-white rounded-md hover:opacity-90 transition"
+                            >
+                              Login
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Name -->
+                      <div>
+                        <label
+                          class="font-[Poppins] font-light text-[14px] leading-[160%] tracking-[0px] text-gray-500 block"
+                        >
+                          Name*
+                        </label>
+                        <input
+                          type="text"
+                          class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
+                        />
+                      </div>
+
+                      <!-- Country / State -->
+                      <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6"
+                      >
+                        <div>
+                          <label
+                            class="font-[Poppins] font-light text-[14px] leading-[160%] tracking-[0px] text-gray-500 block"
+                          >
+                            Country*
+                          </label>
+                          <input
+                            type="text"
+                            class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            class="font-[Poppins] font-light text-[14px] leading-[160%] tracking-[0px] text-gray-500 block"
+                          >
+                            State/Province*
+                          </label>
+                          <input
+                            type="text"
+                            class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- City / Zip -->
+                      <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6"
+                      >
+                        <div>
+                          <label
+                            class="font-[Poppins] font-light text-[14px] leading-[160%] tracking-[0px] text-gray-500 block"
+                          >
+                            City*
+                          </label>
+                          <input
+                            type="text"
+                            class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            class="font-[Poppins] font-light text-[14px] leading-[160%] tracking-[0px] text-gray-500 block"
+                          >
+                            Zip/Postal Code
+                          </label>
+                          <input
+                            type="text"
+                            class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Street -->
+                      <div>
+                        <label
+                          class="font-[Poppins] font-light text-[14px] leading-[160%] tracking-[0px] text-gray-500 block"
+                        >
+                          Street Address*
+                        </label>
+                        <input
+                          type="text"
+                          class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
+                        />
+                      </div>
+
+                      <!-- Phone -->
+                      <div
+                        class="grid grid-cols-1 md:grid-cols-[70px_1fr] gap-4"
+                      >
+                        <div>
+                          <label
+                            class="font-[Poppins] font-light text-[14px] leading-[160%] tracking-[0px] text-gray-500 block"
+                          >
+                            Code
+                          </label>
+                          <input
+                            value="+92"
+                            class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            class="font-[Poppins] font-light text-[14px] leading-[160%] tracking-[0px] text-gray-500 block"
+                          >
+                            Phone Number*
+                          </label>
+                          <input
+                            type="text"
+                            class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Note -->
+                      <div>
+                        <label
+                          class="font-[Poppins] font-light text-[14px] leading-[160%] tracking-[0px] text-gray-500 block"
+                        >
+                          Note
+                        </label>
+                        <textarea
+                          rows="3"
+                          class="w-full border-b border-gray-200 bg-transparent py-3 lg:py-2 outline-none resize-none"
+                        ></textarea>
+                      </div>
+
+                      <!-- Shipping Method -->
+                      <div class="pt-6 lg:pt-8">
+                        <h3
+                          class="font-['Abhaya_Libre'] font-normal text-[36.96px] leading-[100%] text-[#2d2522] mb-4"
+                        >
+                          <span class="border-b-2 border-[#E4C065]"
+                            >Shippin</span
+                          >g Method
+                        </h3>
+
+                        <div class="border border-gray-200 rounded-lg p-4">
+                          <label
+                            class="flex items-start sm:items-center gap-3 cursor-pointer"
+                          >
+                            <input type="radio" checked class="mt-1 sm:mt-0" />
+
+                            <div>
+                              <p class="font-medium">Standard Shipping</p>
+
+                              <p class="text-sm text-gray-500">
+                                Delivery in 5-7 business days
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
 
                 <!-- CTA -->
                 <button
-                  class="mt-8 lg:mt-12 w-full bg-[#231f20] text-white py-4 lg:py-5 rounded-md text-lg lg:text-xl hover:opacity-90 transition"
+                  class="w-full bg-[#231f20] text-white py-4 lg:py-5 rounded-b-md font-inter font-normal text-[33.34px] leading-[100%] tracking-[0px] hover:opacity-90 transition"
                 >
                   Continue to Payment
                 </button>
@@ -403,168 +527,193 @@
               <!-- Right Side -->
               <div class="bg-white rounded-lg overflow-hidden h-fit">
                 <!-- Header -->
-                <div class="bg-[#231f20] text-white px-4 lg:px-6 py-4">
-                  <h2 class="font-serif text-xl lg:text-2xl">Shopping Bag</h2>
+                <div
+                  class="bg-[#231f20] text-white px-4 lg:px-6 py-4 rounded-t-[12px]"
+                >
+                  <h2
+                    class="font-['Abhaya_Libre'] font-normal text-[36.96px] leading-[100%] m-0"
+                  >
+                    Shopping Bag
+                  </h2>
                 </div>
 
                 <div class="p-4 lg:p-5">
                   <!-- PRODUCTS -->
-                  <div
-                    class="max-w-2xl mx-auto bg-white rounded-xl p-4 lg:p-6 shadow"
-                  >
+                  <div class="max-w-2xl mx-auto">
                     <div class="space-y-5">
                       <!-- Product -->
-                      <div
-                        class="flex flex-col sm:flex-row items-start justify-between border-b pb-4 gap-4"
-                      >
-                        <!-- LEFT -->
-                        <div class="flex gap-3 w-full">
-                          <img
-                            src="https://picsum.photos/id/1011/400/500"
-                            data-name="Maroon Ghaznavi"
-                            data-price="Rs. 8,400"
-                            data-size="Custom Size"
-                            data-color="Maroon"
-                            class="product-image w-16 h-20 lg:w-20 lg:h-24 object-cover rounded-md cursor-pointer"
-                          />
+                      <div class="flex gap-3 w-full">
+                        <!-- LEFT IMAGE -->
+                        <img
+                          src="https://picsum.photos/id/1011/400/500"
+                          class="w-24 h-32 object-cover rounded-md cursor-pointer"
+                        />
 
-                          <div class="flex-1 min-w-0">
-                            <h4 class="font-medium text-sm">
+                        <!-- RIGHT CONTENT -->
+                        <div
+                          class="flex-1 min-w-0 flex flex-col justify-between mt-1 space-y-3"
+                        >
+                          <!-- TITLE + PRICE -->
+                          <div class="flex items-center justify-between">
+                            <h4
+                              class="font-[Poppins] font-medium text-[12.49px] text-[#484848] leading-none"
+                            >
                               Maroon Chikankari
                             </h4>
 
-                            <p class="text-xs text-gray-500 mt-1">
-                              Size:
-                              <span class="text-gray-700"> Custom Size </span>
-                            </p>
+                            <span
+                              class="font-[Poppins] font-medium text-[12.49px] text-[#484848] leading-none whitespace-nowrap"
+                            >
+                              Rs. 8,400
+                            </span>
+                          </div>
 
-                            <p class="text-xs text-gray-500">
-                              Color:
-                              <span class="text-gray-700"> Maroon </span>
-                            </p>
+                          <!-- DETAILS -->
+                          <p
+                            class="font-[Poppins] font-medium text-[12.49px] text-[#9D9D9D] leading-none"
+                          >
+                            Size:
+                            <span class="text-[#484848]">Custom Size</span>
+                          </p>
+                          <p
+                            class="font-[Poppins] font-medium text-[12.49px] text-[#9D9D9D] leading-none"
+                          >
+                            Color: <span class="text-[#484848]">Maroon</span>
+                          </p>
+                          <p
+                            class="font-[Poppins] font-medium text-[12.49px] text-[#9D9D9D] leading-none"
+                          >
+                            Qty: <span class="text-[#484848]">1</span>
+                          </p>
 
-                            <p class="text-xs text-gray-500">
-                              Qty:
-                              <span class="text-gray-700"> 1 </span>
-                            </p>
-
-                            <!-- Quantity -->
-                            <div class="flex items-center mt-3">
+                          <!-- CONTROLS -->
+                          <div class="flex items-center justify-between w-full">
+                            <!-- LEFT: Quantity Controls -->
+                            <div class="flex items-center gap-3">
+                              <!-- Minus -->
                               <button
-                                class="w-8 h-8 flex items-center justify-center border rounded-l-md"
+                                class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full"
                               >
                                 <i class="fa-solid fa-minus text-xs"></i>
                               </button>
 
+                              <!-- Input -->
                               <input
                                 type="text"
                                 value="1"
-                                class="w-10 h-8 text-center border-t border-b outline-none text-sm"
+                                class="w-7 h-5 text-center outline-none text-sm font-medium"
                               />
 
+                              <!-- Plus -->
                               <button
-                                class="w-8 h-8 flex items-center justify-center border rounded-r-md"
+                                class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full"
                               >
                                 <i class="fa-solid fa-plus text-xs"></i>
                               </button>
                             </div>
-                          </div>
-                        </div>
 
-                        <!-- RIGHT -->
-                        <div
-                          class="flex flex-row sm:flex-col justify-between items-center sm:items-end w-full sm:w-auto gap-3"
-                        >
-                          <span class="font-medium text-sm whitespace-nowrap">
-                            Rs. 8,400
-                          </span>
+                            <!-- RIGHT: Actions -->
+                            <div class="flex items-center gap-3">
+                              <!-- Edit -->
+                              <button class="text-gray-600 hover:text-blue-600">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                              </button>
 
-                          <div class="flex items-center gap-3 sm:mt-10">
-                            <button class="text-gray-600 hover:text-blue-600">
-                              <i class="fa-regular fa-pen-to-square"></i>
-                            </button>
-
-                            <button class="text-gray-600 hover:text-red-600">
-                              <i class="fa-regular fa-trash-can"></i>
-                            </button>
+                              <!-- Delete -->
+                              <button class="text-gray-600 hover:text-red-600">
+                                <i
+                                  class="fa-regular fa-trash-can text-[#D1626CEE]"
+                                ></i>
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
-
                       <!-- Product -->
-                      <div
-                        class="flex flex-col sm:flex-row items-start justify-between border-b pb-4 gap-4"
-                      >
-                        <!-- LEFT -->
-                        <div class="flex gap-3 w-full">
-                          <img
-                            src="https://picsum.photos/id/1011/400/500"
-                            data-name="Maroon Ghaznavi"
-                            data-price="Rs. 8,400"
-                            data-size="Custom Size"
-                            data-color="Maroon"
-                            class="product-image w-16 h-20 lg:w-20 lg:h-24 object-cover rounded-md cursor-pointer"
-                          />
+                      <div class="flex gap-3 w-full">
+                        <!-- LEFT IMAGE -->
+                        <img
+                          src="https://picsum.photos/id/1011/400/500"
+                          class="w-24 h-32 object-cover rounded-md cursor-pointer"
+                        />
 
-                          <div class="flex-1 min-w-0">
-                            <h4 class="font-medium text-sm">
+                        <!-- RIGHT CONTENT -->
+                        <div
+                          class="flex-1 min-w-0 flex flex-col justify-between mt-1 space-y-3"
+                        >
+                          <!-- TITLE + PRICE -->
+                          <div class="flex items-center justify-between">
+                            <h4
+                              class="font-[Poppins] font-medium text-[12.49px] text-[#484848] leading-none"
+                            >
                               Maroon Chikankari
                             </h4>
 
-                            <p class="text-xs text-gray-500 mt-1">
-                              Size:
-                              <span class="text-gray-700"> Custom Size </span>
-                            </p>
+                            <span
+                              class="font-[Poppins] font-medium text-[12.49px] text-[#484848] leading-none whitespace-nowrap"
+                            >
+                              Rs. 8,400
+                            </span>
+                          </div>
 
-                            <p class="text-xs text-gray-500">
-                              Color:
-                              <span class="text-gray-700"> Maroon </span>
-                            </p>
+                          <!-- DETAILS -->
+                          <p
+                            class="font-[Poppins] font-medium text-[12.49px] text-[#9D9D9D] leading-none"
+                          >
+                            Size:
+                            <span class="text-[#484848]">Custom Size</span>
+                          </p>
+                          <p
+                            class="font-[Poppins] font-medium text-[12.49px] text-[#9D9D9D] leading-none"
+                          >
+                            Color: <span class="text-[#484848]">Maroon</span>
+                          </p>
+                          <p
+                            class="font-[Poppins] font-medium text-[12.49px] text-[#9D9D9D] leading-none"
+                          >
+                            Qty: <span class="text-[#484848]">1</span>
+                          </p>
 
-                            <p class="text-xs text-gray-500">
-                              Qty:
-                              <span class="text-gray-700"> 1 </span>
-                            </p>
-
-                            <!-- Quantity -->
-                            <div class="flex items-center mt-3">
+                          <!-- CONTROLS -->
+                          <div class="flex items-center justify-between w-full">
+                            <!-- LEFT: Quantity Controls -->
+                            <div class="flex items-center gap-3">
+                              <!-- Minus -->
                               <button
-                                class="w-8 h-8 flex items-center justify-center border rounded-l-md"
+                                class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full"
                               >
                                 <i class="fa-solid fa-minus text-xs"></i>
                               </button>
 
+                              <!-- Input -->
                               <input
                                 type="text"
                                 value="1"
-                                class="w-10 h-8 text-center border-t border-b outline-none text-sm"
+                                class="w-7 h-5 text-center outline-none text-sm font-medium"
                               />
 
+                              <!-- Plus -->
                               <button
-                                class="w-8 h-8 flex items-center justify-center border rounded-r-md"
+                                class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full"
                               >
                                 <i class="fa-solid fa-plus text-xs"></i>
                               </button>
                             </div>
-                          </div>
-                        </div>
 
-                        <!-- RIGHT -->
-                        <div
-                          class="flex flex-row sm:flex-col justify-between items-center sm:items-end w-full sm:w-auto gap-3"
-                        >
-                          <span class="font-medium text-sm whitespace-nowrap">
-                            Rs. 8,400
-                          </span>
+                            <!-- RIGHT: Actions -->
+                            <div class="flex items-center gap-3">
+                              <!-- Edit -->
+                              <button class="text-gray-600 hover:text-blue-600">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                              </button>
 
-                          <div class="flex items-center gap-3 sm:mt-10">
-                            <button class="text-gray-600 hover:text-blue-600">
-                              <i class="fa-regular fa-pen-to-square"></i>
-                            </button>
-
-                            <button class="text-gray-600 hover:text-red-600">
-                              <i class="fa-regular fa-trash-can"></i>
-                            </button>
+                              <!-- Delete -->
+                              <button class="text-gray-600 hover:text-red-600">
+                                <i
+                                  class="fa-regular fa-trash-can text-[#D1626CEE]"
+                                ></i>
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -573,17 +722,19 @@
 
                   <!-- Coupon -->
                   <div class="mt-8">
-                    <label class="block text-sm mb-2 text-gray-600">
+                    <label
+                      class="font-['Abhaya_Libre'] font-normal text-[18.44px] leading-none tracking-[0] text-[#221E1B] block mb-2"
+                    >
                       Promo / Coupon Code
                     </label>
 
                     <div class="flex flex-col sm:flex-row">
                       <input
-                        class="flex-1 border border-gray-200 px-3 py-3 lg:py-2 rounded-t-md sm:rounded-l-md sm:rounded-tr-none outline-none"
+                        class="flex-1 bg-[#FEF6E8] px-3 py-3 lg:py-2 rounded-md outline-none"
                       />
 
                       <button
-                        class="bg-[#231f20] text-white px-5 py-3 sm:py-0 rounded-b-md sm:rounded-r-md sm:rounded-bl-none"
+                        class="bg-[#231f20] text-white px-5 py-3 sm:py-0 rounded-md ml-1"
                       >
                         Apply
                       </button>
@@ -591,37 +742,62 @@
                   </div>
 
                   <!-- Totals -->
-                  <div class="mt-8 border-t pt-6 space-y-3 text-sm">
+                  <div class="mt-8 border-t pt-8 space-y-4 text-sm">
                     <div class="flex justify-between">
-                      <span>Subtotal</span>
-                      <span>19,650</span>
+                      <span
+                        class="font-[Poppins] font-medium text-[12.49px] leading-none tracking-[0] text-[#484848]"
+                      >
+                        Subtotal
+                      </span>
+                      <span
+                        class="font-[Poppins] font-bold text-[19.43px] leading-none tracking-[0] text-[#484848]"
+                      >
+                        19,650
+                      </span>
                     </div>
 
                     <div class="flex justify-between">
-                      <span>Shipping</span>
-                      <span>100</span>
+                      <span
+                        class="font-[Poppins] font-medium text-[12.49px] leading-none tracking-[0] text-[#484848]"
+                        >Shipping</span
+                      >
+                      <span
+                        class="font-[Poppins] font-medium text-[12.49px] leading-none tracking-[0] text-[#484848]"
+                      >
+                        100
+                      </span>
                     </div>
 
                     <div class="flex justify-between">
-                      <span>Estimated Tax</span>
-                      <span>49</span>
+                      <span
+                        class="font-[Poppins] font-medium text-[12.49px] leading-none tracking-[0] text-[#484848]"
+                        >Estimated Tax</span
+                      >
+                      <span
+                        class="font-[Poppins] font-medium text-[12.49px] leading-none tracking-[0] text-[#484848]"
+                        >49</span
+                      >
                     </div>
 
                     <div
                       class="border-t pt-4 flex justify-between items-center gap-4"
                     >
                       <div>
-                        <p class="text-base lg:text-lg font-serif">
+                        <p
+                          class="font-['Abhaya_Libre'] font-normal text-[27.65px] leading-none tracking-[0] text-[#221E1B]"
+                        >
                           Total (PKR)
                         </p>
 
-                        <p class="text-xs text-gray-500">
+                        <p
+                          class="font-[Poppins] font-medium text-[12.49px] leading-none tracking-[0] text-[#9D9D9D] m-2"
+                        >
                           inclusive of all taxes
                         </p>
                       </div>
 
                       <span
-                        class="text-xl lg:text-2xl font-semibold text-[#d8b16f]"
+                        class="font-[Poppins] font-bold text-[28.59px] leading-none tracking-[0] text-[#C0A96E]"
                       >
                         19,799
                       </span>
@@ -630,15 +806,43 @@
 
                   <!-- Delivery -->
                   <div
-                    class="mt-6 bg-[#fbf5ea] border border-[#ead8b5] rounded-lg p-3 lg:p-4"
+                    class="mt-8 bg-[#FEF6E8] border border-[#ead8b5] rounded-lg p-6 flex gap-4 items-start mb-6"
                   >
-                    <p class="font-medium text-sm">
-                      Estimated Delivery: 5–7 Business Days
-                    </p>
+                    <!-- ICON -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32px"
+                      height="32px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#C38F0A"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-package-icon lucide-package"
+                    >
+                      <path
+                        d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
+                      />
+                      <path d="M12 22V12" />
+                      <polyline points="3.29 7 12 12 20.71 7" />
+                      <path d="m7.5 4.27 9 5.15" />
+                    </svg>
 
-                    <p class="text-xs text-gray-500 mt-1">
-                      Standard Shipping via TCS Leopard
-                    </p>
+                    <!-- CONTENT -->
+                    <div>
+                      <p
+                        class="font-[Poppins] font-semibold text-[14.77px] leading-none tracking-[0] text-[#484848]"
+                      >
+                        Estimated Delivery: 5–7 Business Days
+                      </p>
+
+                      <p
+                        class="font-[Poppins] font-medium text-[12.49px] leading-none tracking-[0] text-[#6C6C6C] mt-1"
+                      >
+                        Standard Shipping via TCS Leopard
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
