@@ -544,9 +544,14 @@
                       <!-- Product -->
                       <div class="flex gap-3 w-full">
                         <!-- LEFT IMAGE -->
+
                         <img
-                          src="https://picsum.photos/id/1011/400/500"
-                          class="w-24 h-32 object-cover rounded-md cursor-pointer"
+                          src="images/bridal-main.jpg"
+                          class="product-image w-20 h-24 object-cover cursor-pointer rounded"
+                          data-name="Maroon Chikankari"
+                          data-price="Rs. 8,400"
+                          data-size="CS"
+                          data-color="Maroon"
                         />
 
                         <!-- RIGHT CONTENT -->
@@ -634,7 +639,11 @@
                         <!-- LEFT IMAGE -->
                         <img
                           src="https://picsum.photos/id/1011/400/500"
-                          class="w-24 h-32 object-cover rounded-md cursor-pointer"
+                          class="product-image w-20 h-24 object-cover cursor-pointer rounded"
+                          data-name="Maroon Chikankari"
+                          data-price="Rs. 8,400"
+                          data-size="CS"
+                          data-color="Maroon"
                         />
 
                         <!-- RIGHT CONTENT -->
@@ -1074,7 +1083,7 @@
       class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4 overflow-y-auto"
     >
       <div
-        class="relative w-full md:max-w-4xl bg-white rounded-2xl md:rounded-md shadow-lg p-4 max-h-[90vh] overflow-y-auto"
+        class="relative w-full md:max-w-4xl bg-white rounded-2xl md:rounded-md shadow-lg p-6 max-h-[90vh] overflow-y-auto"
       >
         <!-- Close Button -->
         <button
@@ -1084,105 +1093,94 @@
           ✕
         </button>
 
-        <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-5 md:gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-[320px_1fr] gap-5 md:gap-8">
           <!-- Product Image -->
           <div>
             <img
               id="modalImage"
               src=""
               alt="Product"
-              class="w-full h-60 sm:h-72 md:h-[420px] object-cover rounded"
+              class="w-full h-60 md:h-[380px] object-cover rounded"
             />
           </div>
 
           <!-- Product Details -->
-          <div class="flex flex-col">
+          <div class="flex flex-col space-y-6">
             <h2
               id="modalName"
-              class="text-2xl md:text-4xl font-medium text-[#4a4a4a] mb-2"
+              class="font-[Poppins] font-medium text-[41.05px] leading-[100%] tracking-[0] text-[#484848] mt-8"
             >
               Product Name
             </h2>
 
             <p
               id="modalPrice"
-              class="text-lg md:text-2xl text-[#2f2522] font-medium mb-5 md:mb-8"
+              class="font-[Poppins] font-medium text-[26.61px] leading-[100%] tracking-[0] text-[#484848]"
             >
-              Rs. 8,400
+              Rs. 0
             </p>
 
             <!-- Size -->
-            <div class="mb-3">
-              <span class="text-sm text-gray-500">Size:</span>
-              <span id="modalSize" class="font-semibold uppercase ml-1"
-                >CS</span
-              >
-            </div>
+            <div class="space-y-6">
+              <div class="flex items-center justify-between">
+                <p
+                  class="font-[Poppins] text-[21.13px] leading-[120%] tracking-[0]"
+                >
+                  <span class="font-medium text-[#8F8F8F]">Size:</span>
+                  <span class="font-semibold text-black">M</span>
+                </p>
+                <a
+                  class="font-[Poppins] font-medium text-[17.01px] leading-[120%] tracking-[0] text-[#8F8F8F] underline text-right block"
+                >
+                  View Size Chart
+                </a>
+              </div>
 
-            <!-- Size Selector -->
-            <div
-              class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6"
-            >
-              <div class="flex gap-2 flex-wrap">
+              <div class="flex flex-wrap gap-2 justify-between">
                 <button
-                  class="w-12 md:w-14 h-9 md:h-10 border border-gray-200 rounded text-xs md:text-sm hover:border-gray-400"
+                  class="px-4 lg:px-6 py-2 border rounded-md font-[Poppins] font-semibold text-[21.13px] leading-[120%] tracking-[0] align-middle"
                 >
                   S
                 </button>
                 <button
-                  class="w-12 md:w-14 h-9 md:h-10 border border-gray-200 rounded text-xs md:text-sm hover:border-gray-400"
+                  class="px-4 lg:px-6 py-2 border rounded-md font-[Poppins] font-semibold text-[21.13px] leading-[120%] tracking-[0] align-middle bg-[#EBEBEB] text-black"
                 >
                   M
                 </button>
                 <button
-                  class="w-12 md:w-14 h-9 md:h-10 border border-gray-200 rounded text-xs md:text-sm hover:border-gray-400"
+                  class="px-4 lg:px-6 py-2 border rounded-md font-[Poppins] font-semibold text-[21.13px] leading-[120%] tracking-[0] align-middle"
                 >
                   L
                 </button>
                 <button
-                  class="w-12 md:w-14 h-9 md:h-10 border border-gray-200 rounded text-xs md:text-sm hover:border-gray-400"
+                  class="px-4 lg:px-6 py-2 border rounded-md font-[Poppins] font-semibold text-[21.13px] leading-[120%] tracking-[0] align-middle"
                 >
                   XL
                 </button>
-
                 <button
-                  class="px-3 md:px-4 h-9 md:h-10 rounded bg-[#d0b06f] text-white text-xs md:text-sm font-medium"
+                  class="px-4 lg:px-6 py-2 bg-[#C0A96E] text-white rounded-md font-[Poppins] font-semibold text-[21.13px] leading-[120%] tracking-[0] align-middle"
                 >
                   Custom Size
                 </button>
               </div>
-
-              <a href="#" class="text-xs text-gray-500 underline">
-                View Size Chart
-              </a>
-            </div>
-
-            <!-- Color -->
-            <div class="mb-5 md:mb-6">
-              <span class="text-sm text-gray-500">Color:</span>
-              <span id="modalColor" class="font-medium ml-1">Maroon</span>
             </div>
 
             <!-- Quantity -->
             <div class="flex items-center gap-4 mb-6 md:mb-8">
               <button
-                class="qty-minus w-8 h-8 md:w-7 md:h-7 rounded-full bg-black text-white flex items-center justify-center text-sm"
+                class="qty-minus w-8 h-8 bg-black text-white rounded-full"
               >
                 −
               </button>
-
               <span id="qty" class="font-medium">1</span>
-
-              <button
-                class="qty-plus w-8 h-8 md:w-7 md:h-7 rounded-full bg-black text-white flex items-center justify-center text-sm"
-              >
+              <button class="qty-plus w-8 h-8 bg-black text-white rounded-full">
                 +
               </button>
             </div>
 
             <!-- CTA -->
             <button
-              class="w-full h-12 md:h-14 bg-[#231f20] text-white font-medium rounded hover:opacity-90 transition"
+              class="w-full h-12 md:h-14 bg-[#231f20] text-white font-[Poppins] font-semibold text-[22.04px] leading-[120%] rounded hover:opacity-90 transition align-middle"
             >
               Add / Replace Item
             </button>
@@ -1195,21 +1193,29 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const modal = document.getElementById("checkOutModal");
+
         const modalImage = document.getElementById("modalImage");
         const modalName = document.getElementById("modalName");
         const modalPrice = document.getElementById("modalPrice");
-        const modalSize = document.getElementById("modalSize");
-        const modalColor = document.getElementById("modalColor");
+        // const modalSize = document.getElementById("modalSize");
+        // const modalColor = document.getElementById("modalColor");
         const qty = document.getElementById("qty");
 
         // OPEN MODAL
         document.querySelectorAll(".product-image").forEach((img) => {
           img.addEventListener("click", () => {
+            // SAFE DATA READ (FIX FOR YOUR ISSUE)
+            const name = img.dataset.name || "No Name Found";
+            const price = img.dataset.price || "";
+            const size = img.dataset.size || "";
+            const color = img.dataset.color || "";
+
             modalImage.src = img.src;
-            modalName.textContent = img.dataset.name;
-            modalPrice.textContent = img.dataset.price;
-            modalSize.textContent = img.dataset.size;
-            modalColor.textContent = img.dataset.color;
+
+            modalName.textContent = name; // ✅ FIXED
+            modalPrice.textContent = price;
+            // modalSize.textContent = size;
+            // modalColor.textContent = color;
 
             qty.textContent = 1;
 
@@ -1218,7 +1224,7 @@
           });
         });
 
-        // CLOSE BUTTON
+        // CLOSE MODAL
         document.getElementById("closeModal").addEventListener("click", () => {
           modal.classList.add("hidden");
           modal.classList.remove("flex");
@@ -1240,7 +1246,7 @@
           }
         });
 
-        // QUANTITY FIX (SAFE)
+        // QTY
         document.querySelector(".qty-plus")?.addEventListener("click", () => {
           qty.textContent = parseInt(qty.textContent) + 1;
         });
