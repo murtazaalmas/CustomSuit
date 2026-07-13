@@ -21,7 +21,7 @@
     />
   </head>
 
-  <body>
+  <body class="bg-[#F8F5EE]">
     <!-- TOP WRAPPER -->
     <div class="fixed top-0 left-0 right-0 z-50">
       <!-- Top Bar -->
@@ -41,11 +41,11 @@
       </div>
 
       <!-- Header -->
-      <header class="px-4 md:px-10 md:bg-[#D9D9D9]/20">
+      <header class="px-4 md:px-10 md:bg-[#F8F5EE]/70">
         <div class="grid grid-cols-3 items-center">
           <!-- Menu -->
           <div>
-            <button id="menuBtn" class="text-white text-xl md:text-2xl">
+            <button id="menuBtn" class="text-black text-xl md:text-2xl">
               <i class="fa-solid fa-bars-staggered"></i>
             </button>
           </div>
@@ -64,7 +64,7 @@
           <!-- Right Side -->
           <div class="flex justify-end items-center gap-3">
             <!-- Desktop Icons ONLY -->
-            <div class="hidden md:flex items-center gap-5 text-white">
+            <div class="hidden md:flex items-center gap-5 text-black">
               <a href="#" id="searchBtn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +142,7 @@
             </div>
 
             <!-- MOBILE: Cart + Account ONLY -->
-            <div class="md:hidden flex items-center gap-3 text-white">
+            <div class="md:hidden flex items-center gap-3 text-black">
               <!-- Cart -->
               <a href="checkOut.html">
                 <svg
@@ -188,269 +188,319 @@
     </div>
 
     <section>
-      <div class="mx-auto p-4 bg-[#EBE3CF] mt-40">
-        <p class="text-xs uppercase tracking-[0.2em] text-[#A58C5E]">
-          Transparency • Terms & Conditions
-        </p>
+      <div class="mx-auto px-10 py-4 bg-[#EBE3CF] md:mt-40 mt-32">
+        <!-- TOP: Breadcrumb -->
+        <div
+          class="flex items-center gap-2 font-['Poppins'] font-medium text-[16px] leading-[160%]"
+        >
+          <span class="text-[#8F8F8F]">Homepage</span>
 
-        <h1 class="mt-2 text-4xl font-serif font-semibold text-[#2D2A26]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-[#8F8F8F]"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+
+          <span class="text-[#C2A24F]">TERMS & CONDITIONS</span>
+        </div>
+
+        <h1
+          class="mt-2 font-['Abril_Fatface'] text-[50.46px] font-normal leading-none tracking-normal text-[#221E1B]"
+        >
           Terms & Conditions
         </h1>
 
         <div class="w-20 h-[2px] bg-[#D4AF37] mt-4"></div>
       </div>
-      <div class="max-w-4xl mx-auto px-4 mt-10">
-        <!-- Header -->
-
+      <div class="max-w-5xl mx-auto px-4 mt-10">
         <!-- Intro -->
-        <div class="max-w-3xl mb-10">
-          <p class="text-sm leading-7 text-[#666]">
-            Welcome to Custom Suit Studio. These Terms and Conditions govern
-            your use of our website, products, and tailoring services. By
-            accessing or using our services, you agree to comply with these
-            terms. Please read them carefully.
+        <div class="max-w-5xl mx-auto px-2 mb-10">
+          <p
+            class="font-['Poppins'] text-[16px] font-normal italic leading-[160%] tracking-[0px] text-[#666666]"
+          >
+            Welcome to The Custom Suits! These terms and conditions ("Terms")
+            govern your use of our website ("Site") and services provided by
+            Custom Suits ("Company", "we", "us", or "our"). By accessing or
+            using the Site, you agree to be bound by these Terms. If you do not
+            agree to these Terms, please do not use the Site.
           </p>
         </div>
 
-        <!-- Terms List -->
-        <div class="space-y-8">
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+        <div class="max-w-5xl mx-auto px-4 py-10 bg-[#F8F5EF]">
+          <!-- Item 1 -->
+          <div class="relative flex mb-10">
+            <!-- Large Number -->
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
               1
-            </div>
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">
-                Account Creation
+            <!-- Content -->
+            <div class="pl-10 z-20">
+              <h3
+                class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]"
+              >
+                1. Account Creation
               </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
+              <p
+                class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]"
+              >
                 You may be required to create an account to access certain
-                features of the site. You are responsible for maintaining the
-                confidentiality of your credentials and ensuring the accuracy of
-                your account information.
+                features of the Site. When creating an account, you agree to
+                provide accurate and complete information and to keep your
+                account credentials secure. You are solely responsible for all
+                activities that occur under your account.
               </p>
             </div>
           </div>
 
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+          <!-- Item 2 -->
+          <div class="relative flex mb-10">
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
               2
-            </div>
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">
-                Product Information
+            <div class="pl-10 z-20">
+              <h3 class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]">
+                2. Product Information
               </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
-                We strive to provide accurate descriptions and images of our
-                products and services. Minor variations may occur due to screen
-                settings, lighting conditions, and tailoring specifications.
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]">
+                You may be required to create an account to access certain
+                features of the Site. When creating an account, you agree to
+                provide accurate and complete information and to keep your
+                account credentials secure. You are solely responsible for all
+                activities that occur under your account.
               </p>
             </div>
           </div>
 
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+          <!-- Item 3 -->
+          <div class="relative flex mb-10">
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
               3
-            </div>
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">
-                Ordering and Payment
+            <div class="pl-10 z-20">
+              <h3 class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]">
+                3. Ordering and Payment
               </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
-                By placing an order through our platform, you agree to provide
-                accurate information and complete payment for all purchased
-                products and services.
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]">
+                By placing an order through the Site, you agree to pay the
+                specified price for the products ordered, including any
+                applicable taxes and shipping fees. Payment can be made using
+                the provided payment methods. We reserve the right to refuse or
+                cancel any orders placed through the Site in our sole
+                discretion.
               </p>
             </div>
           </div>
 
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+          <!-- Item 4 -->
+          <div class="relative flex mb-10">
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
               4
-            </div>
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">
-                Shipping and Delivery
+            <div class="pl-10 z-20">
+              <h3 class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]">
+                4. Shipping and Delivery
               </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
-                Delivery timelines are estimates and may vary depending on
-                location, logistics, and external circumstances beyond our
-                control.
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]">
+                You may be required to create an account to access certain
+                features of the Site. When creating an account, you agree to
+                provide accurate and complete information and to keep your
+                account credentials secure. You are solely responsible for all
+                activities that occur under your account.
               </p>
             </div>
           </div>
-
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+          <!-- Item 5 -->
+          <div class="relative flex mb-10">
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
               5
-            </div>
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">
-                Intellectual Property
+            <div class="pl-10 z-20">
+              <h3 class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]">
+                5. Intellectual Property
               </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
-                All content, trademarks, logos, and materials displayed on this
-                website remain the property of the company unless otherwise
-                stated.
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]">
+                We will make reasonable efforts to ship orders promptly and
+                deliver them within the estimated timeframe. However, we are not
+                responsible for delays or failures in delivery caused by
+                circumstances beyond our control.
               </p>
             </div>
           </div>
-
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+          <!-- Item 6 -->
+          <div class="relative flex mb-10">
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
               6
-            </div>
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">User Conduct</h3>
+            <div class="pl-10 z-20">
+              <h3 class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]">
+                6. User Conduct
+              </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
-                Users agree not to misuse the platform, upload harmful content,
-                violate laws, or interfere with the operation of the website.
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]">
+                You agree not to use the Site for any unlawful or unauthorized
+                purpose, including but not limited to violating any applicable
+                laws or regulations, infringing upon the rights of others, or
+                transmitting harmful or malicious code.
               </p>
             </div>
           </div>
-
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+          <!-- Item 7 -->
+          <div class="relative flex mb-10">
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
-              7
-            </div>
+              7 
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">Privacy</h3>
+            <div class="pl-10 z-20">
+              <h3 class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]">
+                7. Privacy
+              </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
-                Your privacy is important to us. Please review our Privacy
-                Policy for details regarding data collection and usage.
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]">
+                Your privacy is important to us. Please review our Privacy
+                Policy to understand how we collect, use, and disclose your
+                information.
               </p>
             </div>
           </div>
-
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+          <!-- Item 8 -->
+          <div class="relative flex mb-10">
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
               8
-            </div>
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">
-                Disclaimer of Warranties
+            <div class="pl-10 z-20">
+              <h3 class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]">
+                8. Disclaimer of Warranties
               </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
-                Services are provided on an "as is" basis without warranties of
-                any kind, whether express or implied.
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]">
+                The Site and its content are provided on an “as is” and “as
+                available” basis without warranties of any kind, either express
+                or implied. We disclaim all warranties, including but not
+                limited to implied warranties of merchantability, fitness for a
+                particular purpose, and non-infringement.
               </p>
             </div>
           </div>
-
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+          <!-- Item 9 -->
+          <div class="relative flex mb-10">
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
               9
-            </div>
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">
-                Limitation of Liability
+            <div class="pl-10 z-20">
+              <h3 class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]">
+                9. Limitation of Liability
               </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
-                We are not liable for indirect, incidental, special, or
-                consequential damages arising from the use of our services.
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]">
+                In no event shall The Custom Suits or its affiliates be liable
+                for any indirect, incidental, special, consequential, or
+                punitive damages, including but not limited to lost profits,
+                arising out of or in connection with your use of the Site or any
+                products purchased through the Site.
               </p>
             </div>
           </div>
-
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+          <!-- Item 10 -->
+          <div class="relative flex mb-10">
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
               10
-            </div>
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">
-                Governing Law
+            <div class="pl-10 z-20">
+              <h3 class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]">
+                10. Governing Law
               </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
-                These terms shall be governed and interpreted according to
-                applicable laws within the relevant jurisdiction.
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]">
+                These Terms shall be governed by and construed in accordance
+                with the laws of Pakistan, without regard to its conflict of law
+                provisions.
               </p>
             </div>
           </div>
-
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+          <!-- Item 11 -->
+          <div class="relative flex mb-10">
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
               11
-            </div>
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">
-                Changes to Terms
+            <div class="pl-10 z-20">
+              <h3 class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]">
+                11. Changes to Terms
               </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
-                We reserve the right to update these terms at any time.
-                Continued use of our services constitutes acceptance of any
-                modifications.
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]">
+                We reserve the right to update or modify these Terms at any time
+                without prior notice. Your continued use of the Site after any
+                such changes constitutes your acceptance of the revised Terms.
               </p>
             </div>
           </div>
-
-          <!-- Item -->
-          <div class="flex gap-4">
-            <div
-              class="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E7C3] text-[#B88A19] font-semibold flex items-center justify-center"
+          <!-- Item 12 -->
+          <div class="relative flex mb-10">
+            <span
+              class="absolute -left-2 top-2 font-['Abril_Fatface'] text-[105.43px] font-normal leading-none tracking-normal text-[#F2EBDA] z-10"
             >
               12
-            </div>
+            </span>
 
-            <div>
-              <h3 class="text-xl font-semibold text-[#2D2A26]">Contact Us</h3>
+            <div class="pl-10 z-20">
+              <h3 class="mb-4 font-['Abyssinica_SIL'] text-[29.28px] font-normal leading-none tracking-normal text-[#221E1B]">
+                Contact Us
+              </h3>
 
-              <p class="mt-2 text-sm leading-7 text-[#666]">
-                If you have any questions regarding these Terms & Conditions,
-                please contact our support team for assistance.
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A]">
+                If you have any questions or concerns about these Terms, please
+                contact us at <span class="text-[#C0A96E]">info@thecustomsuits.com</span>
+              </p>
+              <p class="font-['Poppins'] text-[16px] font-medium leading-[160%] tracking-[0px] text-[#66545A] mt-10">
+                Thank you for reviewing our Terms and Conditions. We appreciate
+                your cooperation and hope you enjoy your experience with The
+                Custom Suits!
               </p>
             </div>
           </div>
